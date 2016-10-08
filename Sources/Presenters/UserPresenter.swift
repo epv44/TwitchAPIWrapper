@@ -15,18 +15,21 @@ public protocol UserPresenterDataSource: class {
     func handle(error: Error)
 }
 
-public class UserPresenter {
+public class UserPresenter: JSONConstructableRequest {
     private weak var dataSource: UserPresenterDataSource?
-    //private let operationQueue = OperationQueue()
+    var url: URL?
+    var headers: [String: String]
     
     init(dataSource: UserPresenterDataSource) {
         self.dataSource = dataSource
+        url = URL(string: Constants.network.userPath)
+        //will need to get client id from oauth response
+        headers = ["Client-ID": "akdjfkj"]
     }
     
     func get(path: String) {
-        let usersResource = UsersResource(path: path)
-        //construct request here and pass it into the send request method??
-        usersResource.sendRequest(completion: { [weak self] (result) in
+        let usersResource = UsersResource()
+        usersResource.send(request: buildRequest(),completion: { [weak self] (result) in
             switch result {
             case let .failure(error):
                 self?.dataSource?.handle(error: error)

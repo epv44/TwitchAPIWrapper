@@ -9,9 +9,11 @@
 import Foundation
 @testable import TwitchAPIWrapper
 
-class mockJSONResource: ConstructableRequest, JSONResource {
+class mockJSONResource: JSONConstructableRequest, JSONResource, RestRequest {
     typealias Model = User
-    var baseUrl: URL? = nil
-    //mock, not what we are testing
-    func buildRequest() -> URLRequest? { return nil }
+    var url: URL?
+    
+    init(url: URL) {
+        self.url = url
+    }
 }

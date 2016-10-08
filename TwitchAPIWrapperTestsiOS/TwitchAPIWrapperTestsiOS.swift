@@ -24,9 +24,12 @@ class TwitchAPIWrapperTestsiOS: XCTestCase {
     
     func testJSONResource() {
         //buidl request and then call response on the built request
-        let mjsr = mockJSONResource()
-        
-        
+        let mjsr = mockJSONResource(url: URL(string: "www.google.com")!)
+        let request = mjsr.buildRequest()
+        let method = request?.httpMethod
+        let url = request?.url?.absoluteString
+        XCTAssertEqual(method, "GET")
+        XCTAssertEqual(url, "www.google.com")
     }
     
     func testPerformanceExample() {

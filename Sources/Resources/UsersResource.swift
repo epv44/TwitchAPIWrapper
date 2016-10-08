@@ -8,19 +8,11 @@
 
 import Foundation
 
-protocol NetworkJSONRequestType: RestRequest, JSONConstructableRequest, SendableJSONRequest, JSONResource {}
+protocol NetworkJSONRequestType: SendableJSONRequest, JSONResource {}
 
 struct UsersResource: NetworkJSONRequestType {
+    typealias Resource = [User]
     typealias Model = [User]
-    var url: URL
-    var baseUrl: URL?
-    var pathh: String    
-    
-    init(path: String) {
-        url = URL(string: Constants.network.baseURL + path)!
-        pathh = ""
-        baseUrl = URL(string: "www.google.com")
-    }
     
     //MARK: - JSONResource
     func model(from jsonDictionary: JSONDictionaryType) -> [User]? {

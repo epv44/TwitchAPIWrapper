@@ -34,17 +34,14 @@ protocol ConstructableRequest: RestRequest {
 }
 
 protocol JSONConstructableRequest: ConstructableRequest {}
-protocol SendableJSONRequest: ConstructableRequest, JSONResource {
+protocol SendableJSONRequest: JSONResource {
     associatedtype Model
 }
 
 extension JSONConstructableRequest {
     func buildRequest() -> URLRequest? {
-        guard let baseURL = baseUrl else { return nil }
-        guard let URLComponents = NSURLComponents(url: baseURL as URL, resolvingAgainstBaseURL: true) else { return nil }
-        URLComponents.path = (URLComponents.path ?? "") + pathh
-        guard let URL = URLComponents.url else { return nil }
-        let request = NSMutableURLRequest(url: URL)
+        let request = NSMutableURLRequest(url: url!)
+        request.allHTTPHeaderFields = headers
         if method != "GET" {
             request.httpBody = try? JSONSerialization.data(withJSONObject: parameters, options: [])
         }
@@ -52,12 +49,11 @@ extension JSONConstructableRequest {
         return request as URLRequest
     }
 }
-//the request shouldn't be built inside of the send request it should be passed in
-//
+
 extension SendableJSONRequest {
-    func sendRequest(completion: @escaping (_ result: Result<Model>) -> ()) {
+    func send(request: URLRequest?, completion: @escaping (_ result: Result<Model>) -> ()) {
         let session = URLSession.shared
-        guard let request = buildRequest() else { return }
+        guard let request = request else { return }
         let task = session.dataTask(with: request, completionHandler: { data, response, error in
             if let error = error {
                 completion(.failure(NetworkJSONServiceError.networkError(error: error)))

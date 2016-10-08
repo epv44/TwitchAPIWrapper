@@ -16,8 +16,6 @@
 		D45A0BC01DA828E1004F5056 /* UsersResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BBF1DA828E1004F5056 /* UsersResource.swift */; };
 		D45A0BC21DA82947004F5056 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BC11DA82947004F5056 /* Constants.swift */; };
 		D45A0BC51DA83189004F5056 /* UserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BC41DA83189004F5056 /* UserPresenter.swift */; };
-		D45A0BC81DA8363E004F5056 /* ResourceOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BC71DA8363E004F5056 /* ResourceOperation.swift */; };
-		D45A0BCA1DA8386D004F5056 /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BC91DA8386D004F5056 /* BaseOperation.swift */; };
 		D45A0BD51DA87315004F5056 /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BD41DA87315004F5056 /* RestRequest.swift */; };
 		D45A0BD71DA8745F004F5056 /* ConstructableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BD61DA8745F004F5056 /* ConstructableRequest.swift */; };
 		D45A0BDD1DA8817A004F5056 /* JSONResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BDC1DA8817A004F5056 /* JSONResource.swift */; };
@@ -49,8 +47,6 @@
 		D45A0BBF1DA828E1004F5056 /* UsersResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsersResource.swift; path = ../Resources/UsersResource.swift; sourceTree = "<group>"; };
 		D45A0BC11DA82947004F5056 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D45A0BC41DA83189004F5056 /* UserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserPresenter.swift; sourceTree = "<group>"; };
-		D45A0BC71DA8363E004F5056 /* ResourceOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceOperation.swift; sourceTree = "<group>"; };
-		D45A0BC91DA8386D004F5056 /* BaseOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		D45A0BD41DA87315004F5056 /* RestRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestRequest.swift; path = Network/Protocols/RestRequest.swift; sourceTree = "<group>"; };
 		D45A0BD61DA8745F004F5056 /* ConstructableRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstructableRequest.swift; path = Network/Protocols/ConstructableRequest.swift; sourceTree = "<group>"; };
 		D45A0BDC1DA8817A004F5056 /* JSONResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResource.swift; sourceTree = "<group>"; };
@@ -108,7 +104,6 @@
 				D45A0B711DA6E9E6004F5056 /* Info-tvOS.plist */,
 				D45A0B671DA6E7DA004F5056 /* Info-iOS.plist */,
 				D45A0BC11DA82947004F5056 /* Constants.swift */,
-				D45A0BC61DA83635004F5056 /* Operations */,
 				D45A0BC31DA83141004F5056 /* Presenters */,
 				D45A0BA01DA7F122004F5056 /* Resources */,
 				D45A0B941DA7EAFE004F5056 /* Network */,
@@ -179,15 +174,6 @@
 				D45A0BC41DA83189004F5056 /* UserPresenter.swift */,
 			);
 			path = Presenters;
-			sourceTree = "<group>";
-		};
-		D45A0BC61DA83635004F5056 /* Operations */ = {
-			isa = PBXGroup;
-			children = (
-				D45A0BC71DA8363E004F5056 /* ResourceOperation.swift */,
-				D45A0BC91DA8386D004F5056 /* BaseOperation.swift */,
-			);
-			path = Operations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,8 +332,6 @@
 				D45A0BC51DA83189004F5056 /* UserPresenter.swift in Sources */,
 				D45A0BDD1DA8817A004F5056 /* JSONResource.swift in Sources */,
 				D45A0B9F1DA7F0B6004F5056 /* User.swift in Sources */,
-				D45A0BC81DA8363E004F5056 /* ResourceOperation.swift in Sources */,
-				D45A0BCA1DA8386D004F5056 /* BaseOperation.swift in Sources */,
 				D45A0BC01DA828E1004F5056 /* UsersResource.swift in Sources */,
 				D45A0BD51DA87315004F5056 /* RestRequest.swift in Sources */,
 				D45A0BC21DA82947004F5056 /* Constants.swift in Sources */,
