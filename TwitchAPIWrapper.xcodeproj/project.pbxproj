@@ -19,7 +19,7 @@
 		D45A0BD51DA87315004F5056 /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BD41DA87315004F5056 /* RestRequest.swift */; };
 		D45A0BD71DA8745F004F5056 /* ConstructableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BD61DA8745F004F5056 /* ConstructableRequest.swift */; };
 		D45A0BDD1DA8817A004F5056 /* JSONResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BDC1DA8817A004F5056 /* JSONResource.swift */; };
-		D45A0BE51DA89C02004F5056 /* MockJSONResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BE41DA89C02004F5056 /* MockJSONResource.swift */; };
+		D45A0BE51DA89C02004F5056 /* MockJSONRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BE41DA89C02004F5056 /* MockJSONRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		D45A0BD41DA87315004F5056 /* RestRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestRequest.swift; path = Network/Protocols/RestRequest.swift; sourceTree = "<group>"; };
 		D45A0BD61DA8745F004F5056 /* ConstructableRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConstructableRequest.swift; path = Network/Protocols/ConstructableRequest.swift; sourceTree = "<group>"; };
 		D45A0BDC1DA8817A004F5056 /* JSONResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONResource.swift; sourceTree = "<group>"; };
-		D45A0BE41DA89C02004F5056 /* MockJSONResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockJSONResource.swift; sourceTree = "<group>"; };
+		D45A0BE41DA89C02004F5056 /* MockJSONRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockJSONRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				D45A0B891DA6F07B004F5056 /* TwitchAPIWrapperTestsiOS.swift */,
-				D45A0BE41DA89C02004F5056 /* MockJSONResource.swift */,
+				D45A0BE61DA8B701004F5056 /* Mocks */,
 				D45A0B8B1DA6F07B004F5056 /* Info.plist */,
 			);
 			path = TwitchAPIWrapperTestsiOS;
@@ -174,6 +174,14 @@
 				D45A0BC41DA83189004F5056 /* UserPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		D45A0BE61DA8B701004F5056 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				D45A0BE41DA89C02004F5056 /* MockJSONRequest.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,7 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D45A0B8A1DA6F07B004F5056 /* TwitchAPIWrapperTestsiOS.swift in Sources */,
-				D45A0BE51DA89C02004F5056 /* MockJSONResource.swift in Sources */,
+				D45A0BE51DA89C02004F5056 /* MockJSONRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

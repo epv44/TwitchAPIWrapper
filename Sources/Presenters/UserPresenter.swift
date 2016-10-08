@@ -11,7 +11,7 @@ import Foundation
 public protocol UserPresenterDataSource: class {
     func startLoading()
     func finishLoading()
-    func set(users: [User]?)
+    func set(users: User?)
     func handle(error: Error)
 }
 

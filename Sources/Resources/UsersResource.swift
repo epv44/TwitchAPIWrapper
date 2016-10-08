@@ -11,14 +11,10 @@ import Foundation
 protocol NetworkJSONRequestType: SendableJSONRequest, JSONResource {}
 
 struct UsersResource: NetworkJSONRequestType {
-    typealias Resource = [User]
-    typealias Model = [User]
+    typealias Model = User
     
     //MARK: - JSONResource
-    func model(from jsonDictionary: JSONDictionaryType) -> [User]? {
-        guard let users: [JSONDictionaryType] = jsonDictionary["users"] as? [JSONDictionaryType] else {
-            return []
-        }
-        return users.flatMap(User.init)
+    func model(from jsonDictionary: JSONDictionaryType) -> Model? {
+        return User(json: jsonDictionary)
     }
 }
