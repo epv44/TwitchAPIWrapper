@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Endorsement {
+public struct Endorsement {
     var count: String?
     var userIds: [String]?
 }

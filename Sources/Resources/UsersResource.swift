@@ -13,7 +13,7 @@ protocol NetworkJSONRequestType: SendableJSONRequest, JSONResource {}
 struct UsersResource: NetworkJSONRequestType {
     typealias Model = User
     
-    //MARK: - JSONResource
+    //MARK: - JSONResource From Dictionary
     func model(from jsonDictionary: JSONDictionaryType) -> Model? {
         return User(json: jsonDictionary)
     }

@@ -6,6 +6,8 @@
 //
 //
 
+//Make sample app, call presenter which will check keychain for client-id if no client id then get it
+
 import Foundation
 
 public protocol UserPresenterDataSource: class {
@@ -20,14 +22,14 @@ public class UserPresenter: JSONConstructableRequest {
     var url: URL?
     var headers: [String: String]
     
-    init(dataSource: UserPresenterDataSource) {
+    public init(dataSource: UserPresenterDataSource) {
         self.dataSource = dataSource
         url = URL(string: Constants.network.userPath)
         //will need to get client id from oauth response
         headers = ["Client-ID": "akdjfkj"]
     }
     
-    func get(path: String) {
+    public func get(path: String) {
         let usersResource = UsersResource()
         usersResource.send(request: buildRequest(),completion: { [weak self] (result) in
             switch result {

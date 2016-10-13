@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Post {
+public struct Post {
     var id: String?
     var createdAt: String?
     var deleted: String?

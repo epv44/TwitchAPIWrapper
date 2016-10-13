@@ -9,17 +9,15 @@
 import Foundation
 
 public struct User {
-    let type: String?
-    let name: String?
-    let createdAt: String?
-    let updatedAt: String?
-    let links: String?
-    let logo: String?
-    let id: String?
-    let displayName: String?
-    let bio: String?
-    
-    
+    public let type: String?
+    public let name: String?
+    public let createdAt: String?
+    public let updatedAt: String?
+    public let links: String?
+    public let logo: String?
+    public let id: String?
+    public let displayName: String?
+    public let bio: String?
 }
 
 public extension User {
