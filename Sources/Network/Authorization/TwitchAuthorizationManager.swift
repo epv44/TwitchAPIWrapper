@@ -38,8 +38,12 @@ public enum AuthorizationError: Error {
      - parameter: url: The provided, invalid, url.
     */
     case invalidAuthURL(desc: String, url: String)
+    /**
+     Specifies that the authorization code returned is invalid, or missing.
+     - parameter: desc: Description of the missing code.
+    */
+    case noCode(desc: String)
 }
-///TODO: Abstract url request away
 ///TODO: Add facade for login with check for existing token or that the flow has already been started
 ///TODO: End flow in the case of exception user defaults
 /**
@@ -51,41 +55,64 @@ public class TwitchAuthorizationManager {
     ///Singleton instance of the Authorization manager.
     public static let sharedInstance = TwitchAuthorizationManager()
     
-    ///The Client Id used for authentication.
+    ///The Client Id used for authorization.
     public var clientID: String?
     
-    ///The Client Secret used for authentication.
+    ///The Client Secret used for authorization.
     public var clientSecret: String?
     
-    ///The Redirect URI used for authentication.
+    ///The Redirect URI used for authorization.
     public var redirectURI: String?
     
     ///The scopes the user is authorized.
     public var scopes: String?
     
-    ///Authorization Token **Read Only**.
+    ///Authorization token **Read Only**.
     public var authToken: String? {
         get {
-            return oauthToken
+            if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
+                NSLog("\(result)")
+                return result["accessToken"] as? String
+            } else {
+                NSLog("Bad rettrieval of access token")
+                return nil
+            }
         }
     }
     
-    private var oauthToken: String? {
+    ///Scopes authorized from server **Read Only**.
+    public var scope: [String]? {
         get {
-            guard let dictionary = Locksmith.loadDataForUserAccount(userAccount: userAccount) else {
-                NSLog("Could not get Locksmith dictionary.")
+            if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
+                return result["scopes"] as? [String]
+            } else {
+                NSLog("Bad rettrieval of the authorized scopes")
                 return nil
             }
-            guard let token = dictionary["token"] as? String else {
-                NSLog("Could not get token from Locksmith.")
+        }
+    }
+    
+    ///Authorization refresh token **Read Only**.
+    public var refreshToken: String? {
+        get {
+            if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
+                return result["refreshToken"] as? String
+            } else {
+                NSLog("Bad rettrieval of refresh token")
                 return nil
             }
-            return token
+        }
+    }
+    
+    private var credentials: Credentials? {
+        get {
+            return nil
         }
         set {
             if let valueToSave = newValue {
                 do{
-                    try Locksmith.updateData(data: ["token" : valueToSave], forUserAccount: userAccount)
+                    try Locksmith.updateData(data: ["accessToken" : valueToSave.accessToken!, "refreshToken" : valueToSave.refreshToken!, "scopes" : valueToSave.scope!], forUserAccount: userAccount)
+                    NSLog("saved scopes")
                 } catch LocksmithError.allocate {
                     NSLog(LocksmithError.allocate.rawValue)
                 } catch LocksmithError.authFailed {
@@ -132,13 +159,13 @@ public class TwitchAuthorizationManager {
     private init(){}
     
     //MARK: Public Functions
-    ///Returns a true if an valid authentication token exists.
+    ///Returns a true if an valid authorization token exists.
     public func hasOAuthToken() -> Bool {
-        return oauthToken != nil && !(oauthToken?.isEmpty)!
+        return authToken != nil && !authToken!.isEmpty
     }
     
     /**
-     Starts the login authentication flow with the Server.
+     Starts the login authorization flow with the Server.
      - throws: `AuthorizationException`.
     */
     public func login() throws {
@@ -157,20 +184,22 @@ public class TwitchAuthorizationManager {
             }
             UIApplication.shared.open(authURL, completionHandler: nil)
         } else {
-            NSLog("Authorization token exits or authorization is in progress...no need to authenticate again")
+            NSLog("Authorization token exits or authorization is in progress...no need to authorization again")
         }
     }
     
     /**
-     Processes the callback url and recieves authentication token from the server.
+     Processes the callback url and recieves authorization token from the server.
      - parameter url: The callback url.
      
      - throws: `AuthorizationException`.
     */
-    public func processOauthResponse(with url: URL) throws {
+    
+    public func processOauthResponse(with url: URL, completion: @escaping (_ result: Result<Credentials>) -> ()) {
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         guard let queryItems = components?.queryItems else {
-            throw AuthorizationError.invalidURLResponse(url: url)
+            completion(.failure(AuthorizationError.invalidURLResponse(url: url)))
+            return
         }
         
         let code: String? = queryItems.filter { $0.name.lowercased() == "code" }.first?.value
@@ -178,35 +207,22 @@ public class TwitchAuthorizationManager {
         if let receivedCode = code {
             let path = URL(string: Constants.network.oauthTokenURL)
             guard let clientID = clientID, let redirectURI = redirectURI, let clientSecret = clientSecret, let state = state else {
-                throw AuthorizationError.invalidQueryParameters(desc: "Must define values for the Client Id, Redirect URI,  and Client Secret")
+                completion(.failure(AuthorizationError.invalidQueryParameters(desc: "Must define values for the Client Id, Redirect URI,  and Client Secret")))
+                return
             }
-            //ascii string vs json??? & abstract the url session to a resource
             let postData = "client_id=\(clientID)&client_secret=\(clientSecret)&grant_type=authorization_code&redirect_uri=\(redirectURI)&code=\(receivedCode)&state=\(state)".data(using: .ascii)
-            let urlSession = URLSession.shared
-            var request = URLRequest(url: path!)
-            request.httpBody = postData
-            request.httpMethod = "POST"
-            let task = urlSession.dataTask(with: request, completionHandler: { data, response, error in
-                if error == nil {
-                    do {
-                        let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
-                        guard let jsonResponse = json as? [String: AnyObject] else {
-                            NSLog("Error parsing response")
-                            return
-                        }
-                        //probably want to save this refresh_token too...maybe move to retrievable model :)
-                        //NSLog(jsonResponse["refresh_token"] as? String ?? "bad json")
-                        print(json)
-                        
-                        self.oauthToken = "\(jsonResponse["access_token"])"
-                    } catch {
-                        NSLog("Error parsing json")
-                    }
-                } else {
-                    NSLog("Error: this needs to be updated...")
+            let authorizationResource = AuthorizationResource(data: postData!, url: path!)
+            authorizationResource.processAuthorization(completion: { [weak self] (result) in
+                switch result {
+                case let .failure(error):
+                    completion(.failure(error))
+                case let .success(credentials):
+                    self?.credentials = credentials
+                    completion(.success(credentials))
                 }
             })
-            task.resume()
+        } else {
+            completion(.failure(AuthorizationError.noCode(desc: "no code was present in the query items returned from the server")))
         }
     }
 }

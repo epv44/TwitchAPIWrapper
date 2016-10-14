@@ -38,7 +38,6 @@ public class UserPresenter: JSONConstructableRequest {
             case let .success(users):
                 self?.dataSource?.set(users: users)
                 self?.dataSource?.finishLoading()
-                break
             }
         })
     }

@@ -11,12 +11,12 @@ import Foundation
 protocol RestRequest {
     var url: URL? { get }
     var method: String { get }
-    var parameters: [String:String] { get }
+    var data: Data { get }
     var headers: [String: String] { get }
 }
 
 extension RestRequest {
     var method: String { return "GET" }
-    var parameters: [String:String] { return [:] }
+    var data: Data { return Data() }
     var headers: [String:String] { return [:] }
 }

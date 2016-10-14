@@ -44,7 +44,7 @@ class TwitchAPIWrapperTestsiOS: XCTestCase {
         XCTAssertEqual(TwitchAuthorizationManager.sharedInstance.scopes, "scope")
     }
     
-    func testBuildUSerModelFromJSON() {
+    func testBuildUserModelFromJSON() {
         let ur = UsersResource()
         let jsonDict: [String: AnyObject] = ["type": "user" as AnyObject,
                                              "name" : "Marshal Mathers" as AnyObject,
@@ -58,6 +58,14 @@ class TwitchAPIWrapperTestsiOS: XCTestCase {
         let user = ur.model(from: jsonDict)
         XCTAssertEqual(user?.name, "Marshal Mathers")
         XCTAssertEqual(user?.displayName, "Eminem")
+    }
+    
+    func testBuildCredentailsModelFromJSON() {
+        let jsonDict: [String: AnyObject] = ["access_token" : "accesstoken" as AnyObject, "refresh_token" : "refreshtoken" as AnyObject, "scope" : ["scope1", "scope2"] as AnyObject]
+        let credentials = Credentials(json: jsonDict)
+        XCTAssertEqual(credentials?.accessToken, "accesstoken")
+        XCTAssertEqual(credentials?.refreshToken, "refreshtoken")
+        XCTAssertEqual(credentials?.scope![0], "scope1")
     }
     
     func testPerformanceExample() {

@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/TwitchAPIWrapper.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		CNl3MC2pcbpiJ4CoQW6bly+gb3k=
+		NTssKcVvaOZobGurrBhmgSjKJzs=
 		</data>
 		<key>Modules/TwitchAPIWrapper.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		kuAK5ZTQL7lX43o9AsmPEkEIGlk=
+		TZLLCtwtAEQJgJdX1YtqxukefmM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -147,22 +147,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			CNl3MC2pcbpiJ4CoQW6bly+gb3k=
+			NTssKcVvaOZobGurrBhmgSjKJzs=
 			</data>
 			<key>hash2</key>
 			<data>
-			PQ7EwfNGXa6R5t+iJiBoifJxG68vSIYfhO93xWVU5P8=
+			TptoFMvPEdClSFXwn84sRNPrLvXeSQhjkVr0XC2hH8U=
 			</data>
 		</dict>
 		<key>Modules/TwitchAPIWrapper.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			kuAK5ZTQL7lX43o9AsmPEkEIGlk=
+			TZLLCtwtAEQJgJdX1YtqxukefmM=
 			</data>
 			<key>hash2</key>
 			<data>
-			NUywvXYuV+Kx2pJDH6uzHg07rJcxzT5cZ5x2zXY1iGc=
+			slxwLtQ4hsswO9Y9it1ffaLygpEfDjmHACHH8yuLyts=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

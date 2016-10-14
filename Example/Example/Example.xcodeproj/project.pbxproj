@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41C20461DB17687004239A7 /* TwitchAPIWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41C20451DB17687004239A7 /* TwitchAPIWrapper.framework */; };
+		D41C20471DB17687004239A7 /* TwitchAPIWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D41C20451DB17687004239A7 /* TwitchAPIWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D45A0C3A1DAD49DB004F5056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0C391DAD49DB004F5056 /* AppDelegate.swift */; };
 		D45A0C3C1DAD49DB004F5056 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0C3B1DAD49DB004F5056 /* ViewController.swift */; };
 		D45A0C3F1DAD49DB004F5056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A0C3D1DAD49DB004F5056 /* Main.storyboard */; };
@@ -14,8 +16,6 @@
 		D45A0C441DAD49DB004F5056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D45A0C421DAD49DB004F5056 /* LaunchScreen.storyboard */; };
 		D45A0C4F1DAD49DB004F5056 /* ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0C4E1DAD49DB004F5056 /* ExampleUITests.swift */; };
 		D4BA4C3B1DAEB71500844331 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4BA4C3A1DAEB71500844331 /* Environment.plist */; };
-		D4BA4CA31DB026F400844331 /* TwitchAPIWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BA4CA21DB026F400844331 /* TwitchAPIWrapper.framework */; };
-		D4BA4CA41DB026F400844331 /* TwitchAPIWrapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D4BA4CA21DB026F400844331 /* TwitchAPIWrapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D4BA4C8B1DB0125100844331 /* Embed Frameworks */ = {
+		D41C20481DB17687004239A7 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D4BA4CA41DB026F400844331 /* TwitchAPIWrapper.framework in Embed Frameworks */,
+				D41C20471DB17687004239A7 /* TwitchAPIWrapper.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -43,6 +43,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D41C20451DB17687004239A7 /* TwitchAPIWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitchAPIWrapper.framework; sourceTree = "<group>"; };
 		D45A0C361DAD49DB004F5056 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45A0C391DAD49DB004F5056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D45A0C3B1DAD49DB004F5056 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +56,6 @@
 		D45A0C501DAD49DC004F5056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4BA4C3A1DAEB71500844331 /* Environment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
 		D4BA4C8C1DB01DDB00844331 /* Example.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
-		D4BA4CA21DB026F400844331 /* TwitchAPIWrapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitchAPIWrapper.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4BA4CA31DB026F400844331 /* TwitchAPIWrapper.framework in Frameworks */,
+				D41C20461DB17687004239A7 /* TwitchAPIWrapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 		D45A0C2D1DAD49DB004F5056 = {
 			isa = PBXGroup;
 			children = (
-				D4BA4CA21DB026F400844331 /* TwitchAPIWrapper.framework */,
+				D41C20451DB17687004239A7 /* TwitchAPIWrapper.framework */,
 				D45A0C381DAD49DB004F5056 /* Example */,
 				D45A0C4D1DAD49DB004F5056 /* ExampleUITests */,
 				D45A0C371DAD49DB004F5056 /* Products */,
@@ -138,7 +138,7 @@
 				D45A0C321DAD49DB004F5056 /* Sources */,
 				D45A0C331DAD49DB004F5056 /* Frameworks */,
 				D45A0C341DAD49DB004F5056 /* Resources */,
-				D4BA4C8B1DB0125100844331 /* Embed Frameworks */,
+				D41C20481DB17687004239A7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
