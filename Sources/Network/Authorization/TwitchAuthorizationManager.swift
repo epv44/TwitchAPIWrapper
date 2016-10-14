@@ -14,43 +14,42 @@ import UIKit
 public enum AuthorizationError: Error {
     /**
      Specifies that the url response from the server does not contain `queryItems`
-     - parameter: url: The url that does not contain query items.
+     - parameter url: The url that does not contain query items.
     */
     case invalidURLResponse(url: URL)
     /**
      Specifies that the JSON response could not be properly parsed.
-     - parameter: JSON: The JSON that could not be parsed.
+     - parameter JSON: The JSON that could not be parsed.
     */
     case unableToParseJSON(json: String)
     /**
      Specifies that an unknown error has occured.
-     - parameter: Error: the error that was thrown.
+     - parameter Error: the error that was thrown.
      */
     case unknownError(Error)
     /**
      Specifies that the parameters included in the url request are not properly defined.
-     - parameter: desc: Description of what parameters must be defined.
+     - parameter desc: Description of what parameters must be defined.
      */
     case invalidQueryParameters(desc: String)
     /**
      Specifies that the authorization url is invalid.
-     - parameter: desc: Description of what makes a valid authorization url.
-     - parameter: url: The provided, invalid, url.
+     - parameter desc: Description of what makes a valid authorization url.
+     - parameter url: The provided, invalid, url.
     */
     case invalidAuthURL(desc: String, url: String)
     /**
      Specifies that the authorization code returned is invalid, or missing.
-     - parameter: desc: Description of the missing code.
+     - parameter desc: Description of the missing code.
     */
     case noCode(desc: String)
 }
-///TODO: Add facade for login with check for existing token or that the flow has already been started
-///TODO: End flow in the case of exception user defaults
+
 /**
  The `TwitchAuthorizationManager` is responsible for managing the oauth2 bearer token flow with the Twitch server.
  */
 public class TwitchAuthorizationManager {
-    //MARK: Properties
+    //MARK: - Properties
     
     ///Singleton instance of the Authorization manager.
     public static let sharedInstance = TwitchAuthorizationManager()
@@ -154,11 +153,13 @@ public class TwitchAuthorizationManager {
     private let userAccount = "twitch"
     private let userDefaultsKey = "loadingOauthToken"
     
-    //MARK: Initializer
+    //MARK: - Initializer
+    
     ///Others should not initialize the Singleton.
     private init(){}
     
-    //MARK: Public Functions
+    //MARK: - Public Functions
+    
     ///Returns a true if an valid authorization token exists.
     public func hasOAuthToken() -> Bool {
         return authToken != nil && !authToken!.isEmpty
@@ -171,8 +172,7 @@ public class TwitchAuthorizationManager {
     public func login() throws {
         //user defaults, what about refresh token i.e. when does token expire?
         let defaults = UserDefaults.standard
-        defaults.set(false, forKey: userDefaultsKey)
-        if !defaults.bool(forKey: userDefaultsKey) {
+        if !defaults.bool(forKey: userDefaultsKey) && authToken == nil {
             state = NSUUID().uuidString
             guard let clientID = clientID, let redirectURI = redirectURI, let scopes = scopes, let state = state else {
                 throw AuthorizationError.invalidQueryParameters(desc: "Must define values for the Client Id, Redirect URI, and scopes")
@@ -183,6 +183,7 @@ public class TwitchAuthorizationManager {
                 throw AuthorizationError.invalidAuthURL(desc: "Authorization url is invalid, please check your values for the Redirect URI, Client Id, and scopes", url: authPath)
             }
             UIApplication.shared.open(authURL, completionHandler: nil)
+            defaults.set(true, forKey: userDefaultsKey)
         } else {
             NSLog("Authorization token exits or authorization is in progress...no need to authorization again")
         }
@@ -191,13 +192,11 @@ public class TwitchAuthorizationManager {
     /**
      Processes the callback url and recieves authorization token from the server.
      - parameter url: The callback url.
-     
-     - throws: `AuthorizationException`.
     */
-    
     public func processOauthResponse(with url: URL, completion: @escaping (_ result: Result<Credentials>) -> ()) {
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         guard let queryItems = components?.queryItems else {
+            defaults.set(false, forKey: userDefaultsKey)
             completion(.failure(AuthorizationError.invalidURLResponse(url: url)))
             return
         }
@@ -208,11 +207,13 @@ public class TwitchAuthorizationManager {
             let path = URL(string: Constants.network.oauthTokenURL)
             guard let clientID = clientID, let redirectURI = redirectURI, let clientSecret = clientSecret, let state = state else {
                 completion(.failure(AuthorizationError.invalidQueryParameters(desc: "Must define values for the Client Id, Redirect URI,  and Client Secret")))
+                defaults.set(false, forKey: userDefaultsKey)
                 return
             }
             let postData = "client_id=\(clientID)&client_secret=\(clientSecret)&grant_type=authorization_code&redirect_uri=\(redirectURI)&code=\(receivedCode)&state=\(state)".data(using: .ascii)
             let authorizationResource = AuthorizationResource(data: postData!, url: path!)
             authorizationResource.processAuthorization(completion: { [weak self] (result) in
+                defaults.set(false, forKey: userDefaultsKey)
                 switch result {
                 case let .failure(error):
                     completion(.failure(error))
@@ -222,6 +223,7 @@ public class TwitchAuthorizationManager {
                 }
             })
         } else {
+            defaults.set(false, forKey: userDefaultsKey)
             completion(.failure(AuthorizationError.noCode(desc: "no code was present in the query items returned from the server")))
         }
     }
