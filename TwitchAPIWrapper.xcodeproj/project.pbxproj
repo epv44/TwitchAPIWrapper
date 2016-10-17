@@ -107,7 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				D45A0CC71DAD6133004F5056 /* TwitchAPIWrapper.h */,
-				D45A0B661DA6E796004F5056 /* Sources */,
+				D45A0B661DA6E796004F5056 /* Source */,
 				D45A0B881DA6F07B004F5056 /* TwitchAPIWrapperTestsiOS */,
 				D45A0B5D1DA6E706004F5056 /* Products */,
 				D45A0BE91DAD2A3E004F5056 /* Frameworks */,
@@ -124,7 +124,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D45A0B661DA6E796004F5056 /* Sources */ = {
+		D45A0B661DA6E796004F5056 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				D45A0B711DA6E9E6004F5056 /* Info-tvOS.plist */,
@@ -135,7 +135,7 @@
 				D45A0B941DA7EAFE004F5056 /* Network */,
 				D45A0B991DA7EED8004F5056 /* Models */,
 			);
-			path = Sources;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		D45A0B881DA6F07B004F5056 /* TwitchAPIWrapperTestsiOS */ = {

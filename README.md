@@ -196,6 +196,8 @@ Endpoints:
 1. GET /users/:user
 2. GET /user (requires Authorization)
 
+Protocol: UserPresenterDataSource
+DataSource Class: UserPresenter
 
 ## Unit Tests
 There are unit tests included with this project which may also be helpful to review when trying to better understand the library.
