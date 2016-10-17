@@ -148,6 +148,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 }
 ```
 The ```TwitchAuthorizationManager``` is a singleton, utilize the shared instance to access the following properties returned from authentication with Twitch:
+
 1. Refresh Token: ```TwitchAuthorizationManager.sharedInstance.refreshToken```
 2. Authentication Token: ```TwitchAuthorizationManager.sharedInstance.authToken```
 3. Scopes: ```TwitchAuthorizationManager.sharedInstance.scopes```
@@ -191,6 +192,7 @@ The included example project includes a more detailed implementation of all usab
 ## Currently Supported Models
 ### User
 Endpoints:
+
 1. GET /users/:user
 2. GET /user (requires Authorization)
 
