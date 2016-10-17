@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D41C206E1DB54E20004239A7 /* PresentationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D41C206D1DB54E20004239A7 /* PresentationErrors.swift */; };
 		D45A0B8C1DA6F07B004F5056 /* TwitchAPIWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A0B5C1DA6E706004F5056 /* TwitchAPIWrapper.framework */; };
 		D45A0B9B1DA7EF67004F5056 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0B9A1DA7EF67004F5056 /* Post.swift */; };
 		D45A0B9D1DA7F08E004F5056 /* Endorsement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0B9C1DA7F08E004F5056 /* Endorsement.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D41C206D1DB54E20004239A7 /* PresentationErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationErrors.swift; sourceTree = "<group>"; };
 		D45A0B5C1DA6E706004F5056 /* TwitchAPIWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwitchAPIWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45A0B671DA6E7DA004F5056 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D45A0B6E1DA6E9E6004F5056 /* TwitchAPIWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwitchAPIWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				D45A0BC41DA83189004F5056 /* UserPresenter.swift */,
+				D41C206D1DB54E20004239A7 /* PresentationErrors.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				D45A0BDD1DA8817A004F5056 /* JSONResource.swift in Sources */,
 				D45A0B9F1DA7F0B6004F5056 /* User.swift in Sources */,
 				D45A0BC01DA828E1004F5056 /* UsersResource.swift in Sources */,
+				D41C206E1DB54E20004239A7 /* PresentationErrors.swift in Sources */,
 				D45A0BD51DA87315004F5056 /* RestRequest.swift in Sources */,
 				D45A0BC21DA82947004F5056 /* Constants.swift in Sources */,
 			);

@@ -8,6 +8,7 @@
 
 import Foundation
 
+///Model representing a post from the Twitch API.
 public struct Post {
     var id: String?
     var createdAt: String?

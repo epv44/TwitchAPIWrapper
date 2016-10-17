@@ -21,13 +21,14 @@ public struct Credentials {
     public let refreshToken: String?
 }
 
-//MARK: - Init Extension
+//MARK: - Init Extension.
 extension Credentials {
     /**
-     Constructs a new credential
-     - parameter json: The `[String : Any]` dictionary returned from the network
+     Constructs a new credential.
      
-     - returns: A new `Credential` instance
+     - parameter json: The `[String : Any]` dictionary returned from the network.
+     
+     - returns: A new `Credential` instance.
     */
     public init?(json: JSON) {
         self.accessToken = "access_token" <~~ json

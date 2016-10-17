@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TwitchAPIWrapper  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="TwitchAPIWrapper  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">TwitchAPIWrapper Docs</a> (82% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">TwitchAPIWrapper Reference</a>
+        <img id="carat" src="img/carat.png" />
+        TwitchAPIWrapper  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/TwitchAuthorizationManager.html">TwitchAuthorizationManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UserPresenter.html">UserPresenter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AuthorizationError.html">AuthorizationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/NetworkJSONServiceError.html">NetworkJSONServiceError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ParsingError.html">ParsingError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/PresentationError.html">PresentationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Result.html">Result</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/JSONResource.html">JSONResource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols.html#/s:P16TwitchAPIWrapper12ResourceType">ResourceType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/UserPresenterDataSource.html">UserPresenterDataSource</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:V16TwitchAPIWrapper11Endorsement">Endorsement</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:V16TwitchAPIWrapper4Post">Post</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/User.html">User</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:16TwitchAPIWrapper13JSONArrayType">JSONArrayType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:16TwitchAPIWrapper18JSONDictionaryType">JSONDictionaryType</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#twitch-api-wrapper' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='twitch-api-wrapper'>Twitch API Wrapper</h1>
+<a href='#about' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about'>About</h2>
+
+<p>Very much a work in progress, however, this will be a generic API client with a dataSource wrapper allowing easy calls to the Twitch API.  There will be seperate dataSource objects corresponding with the JSON requests in the Twitch API and a presenter layer (utilizing the Delegate Design Pattern) that will allow users to hook in to the specific Objects they want.</p>
+<a href='#current-progress' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='current-progress'>Current Progress</h2>
+
+<ul>
+<li>Created API skeleton</li>
+<li>Implemented OAuth client</li>
+<li>Created sample app skeleton</li>
+</ul>
+<a href='#todo' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='todo'>TODO</h2>
+
+<ul>
+<li>Refactor OAuth client</li>
+<li>Build out models/presenters</li>
+<li>Build example app</li>
+<li>Documentation</li>
+<li>Test Coverage</li>
+<li>Cocoapods/Carthage/Swift Package Manager Connections</li>
+<li>Continuous integration</li>
+<li>Code coverage</li>
+</ul>
+<a href='#requirements' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='requirements'>Requirements</h2>
+
+<ul>
+<li>Swift 3.0+</li>
+<li>iOS 10.0 +</li>
+</ul>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://github.com/epv44/TwitchAPIWrapper" target="_blank" rel="external">Eric Vennaro</a>. All rights reserved. (Last updated: 2016-10-17)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

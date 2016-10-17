@@ -20,11 +20,13 @@ public protocol ResourceType {
 public enum Result<T> {
     /**
      Successful network request and parsing into a Model.
+     
      - parameter T: Generic model object that is returned as the result of a succesful network request.
     */
     case success(T)
     /**
      Unsuccessful network request resulting in an `Error`.
+     
      - parameter Error: an `Error` describing the reason for an unsuccessful request.
     */
     case failure(Error)
@@ -54,11 +56,12 @@ public enum ParsingError: Error {
 public enum NetworkJSONServiceError: Error {
     /**
      Specifies an error occured while sending the network request.
+     
      - parameter error: The error return from the `URLRequest`.
     */
     case networkError(error: Error)
     /**
-     Specifies that no data was returned by the `URLRequest`
+     Specifies that no data was returned by the `URLRequest`.
     */
     case noData
 }

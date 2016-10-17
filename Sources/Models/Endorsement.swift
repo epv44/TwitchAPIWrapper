@@ -8,6 +8,7 @@
 
 import Foundation
 
+///Model representing an Endorsement in the Twitch API.
 public struct Endorsement {
     var count: String?
     var userIds: [String]?

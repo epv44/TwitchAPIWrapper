@@ -1,0 +1,34 @@
+language: objective-c
+osx_image: xcode8
+
+env:
+   global:
+   - LANG=en_US.UTF-8
+
+   - PROJECT="TwitchAPIWrapper.xcodeproj"
+
+   - IOS_SCHEME="TwitchAPIWrapper iOS"
+
+   - IOS_SDK=iphonesimulator10.0
+
+   matrix:
+   - DESTINATION="OS=10.0,name=iPad Pro"      SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="NO"  POD_LINT="NO"
+   - DESTINATION="OS=10.0,name=iPhone 7"      SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
+
+script:
+- if [ $POD_LINT == "YES" ]; then
+      pod spec lint;
+  fi
+
+- if [ $BUILD_EXAMPLE == "YES" ]; then
+      xcodebuild clean build -project Example/TwitchAPIWrapper.xcodeproj -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" ONLY_ACTIVE_ARCH=NO | xcpretty -c;
+  fi
+
+- if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild test -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO | xcpretty -c;
+  else
+      xcodebuild clean build -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO | xcpretty -c;
+  fi
+
+  after_success:
+  - bash <(curl -s https://codecov.io/bash)

@@ -8,55 +8,102 @@
 
 import Foundation
 
+///Model representing a User from the Twitch API.
 public struct User {
     public let type: String?
     public let name: String?
     public let createdAt: String?
     public let updatedAt: String?
-    public let links: String?
+    public let links: [String]?
     public let logo: String?
     public let id: String?
     public let displayName: String?
     public let bio: String?
+    ///MARK: Below are ony available for https://api.twitch.tv/kraken/user with oauth token.
+    public let email: String?
+    public let partnered: String?
+    public let notifications: [String: Bool]?
 }
 
+///User extension containing failable initializer.
 public extension User {
+    /**
+     Create new `User` Model from a `JSONDictionaryType`.
+     
+     - parameter json: The `[String : Any]` dictionary returned from the network.
+    */
     init?(json: JSONDictionaryType) {
-        guard let parsedType = json["type"] as? String else {
-            return nil
+        print(json)
+        if let parsedType = json["type"] as? String {
+            type = parsedType
+        } else {
+            type = nil
         }
-        type = parsedType
-        guard let parsedName = json["name"] as? String else {
-           return nil
+        
+        if let parsedName = json["name"] as? String {
+           name = parsedName
+        } else {
+            name = nil
         }
-        name = parsedName
-        guard let parsedCreatedAt = json["created_at"] as? String else {
-            return nil
+        
+        if let parsedCreatedAt = json["created_at"] as? String {
+            createdAt = parsedCreatedAt
+        } else {
+            createdAt = nil
         }
-        createdAt = parsedCreatedAt
-        guard let parsedUpdatedAt = json["updated_at"] as? String else {
-            return nil
+        
+        if let parsedUpdatedAt = json["updated_at"] as? String {
+            updatedAt = parsedUpdatedAt
+        } else {
+            updatedAt = nil
         }
-        updatedAt = parsedUpdatedAt
-        guard let parsedLinks = json["_links"] as? String? else {
-            return nil
+        
+        if let parsedLinks = json["_links"] as? [String]? {
+            links = parsedLinks
+        } else {
+            links = nil
         }
-        links = parsedLinks
-        guard let parsedLogo = json["logo"] as? String else {
-            return nil
+        
+        if let parsedLogo = json["logo"] as? String {
+            logo = parsedLogo
+        } else {
+            logo = nil
         }
-        logo = parsedLogo
-        guard let parsedId = json["_id"] as? String else {
-            return nil
+        
+        if let parsedId = json["_id"] as? String {
+            id = parsedId
+        } else {
+            id = nil
         }
-        id = parsedId
-        guard let parsedDisplayName = json["display_name"] as? String else {
-            return nil
+        
+        if let parsedDisplayName = json["display_name"] as? String {
+            displayName = parsedDisplayName
+        } else {
+            displayName = nil
         }
-        displayName = parsedDisplayName
-        guard let parsedBio = json["bio"] as? String else {
-            return nil
+        
+        if let parsedBio = json["bio"] as? String {
+            bio = parsedBio
+        } else {
+            bio = nil
         }
-        bio = parsedBio
+        
+        if let parsedEmail = json["email"] as? String {
+            email = parsedEmail
+        } else {
+            email = nil
+        }
+        
+        if let parsedPartnered = json["partnered"] as? String {
+            partnered = parsedPartnered
+        } else {
+            partnered = nil
+        }
+        
+        if let parsedNotifications = json["notifications"] as? [String: Bool] {
+            notifications = parsedNotifications
+        } else {
+            notifications = nil
+        }
     }
 }

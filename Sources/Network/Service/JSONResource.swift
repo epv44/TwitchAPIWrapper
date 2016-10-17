@@ -7,11 +7,30 @@
 //
 
 import Foundation
+
+///Type for a network JSON resource in dictionary format: `[String: AnyObject]`.
 public typealias JSONDictionaryType = [String: AnyObject]
+
+///Type for a network JSON resource in Array format: `[AnyObject]`.
 public typealias JSONArrayType = [AnyObject]
 
+///An instance conforming to `JSONResource` represents a network resource that is consumed in JSON format.
 public protocol JSONResource: ResourceType {
+    /**
+     Constructs a new Model from a `JSONDictionaryType`.
+     
+     - parameter jsonDictionary: JSON blob from the network that conforms to `JSONDictionaryType`.
+     
+     - returns: A new model represented by the JSON blob.
+    */
     func model(from jsonDictionary: JSONDictionaryType) -> Model?
+    /**
+     Constructs a new Model from a `JSONArrayType`.
+     
+     - parameter jsonArray: JSON blob from the network that conforms to `JSONArrayType`.
+     
+     - returns: A new model represented by the JSON blob.
+    */
     func model(from jsonArray: JSONArrayType) -> Model?
 }
 

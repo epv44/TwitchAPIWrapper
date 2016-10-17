@@ -13,33 +13,39 @@ import UIKit
 ///Error for authentication requests.
 public enum AuthorizationError: Error {
     /**
-     Specifies that the url response from the server does not contain `queryItems`
+     Specifies that the url response from the server does not contain `queryItems`.
+     
      - parameter url: The url that does not contain query items.
     */
     case invalidURLResponse(url: URL)
     /**
      Specifies that the JSON response could not be properly parsed.
+     
      - parameter JSON: The JSON that could not be parsed.
     */
     case unableToParseJSON(json: String)
     /**
      Specifies that an unknown error has occured.
+     
      - parameter Error: the error that was thrown.
      */
     case unknownError(Error)
     /**
      Specifies that the parameters included in the url request are not properly defined.
+     
      - parameter desc: Description of what parameters must be defined.
      */
     case invalidQueryParameters(desc: String)
     /**
      Specifies that the authorization url is invalid.
+     
      - parameter desc: Description of what makes a valid authorization url.
      - parameter url: The provided, invalid, url.
     */
     case invalidAuthURL(desc: String, url: String)
     /**
      Specifies that the authorization code returned is invalid, or missing.
+     
      - parameter desc: Description of the missing code.
     */
     case noCode(desc: String)
@@ -70,10 +76,9 @@ public class TwitchAuthorizationManager {
     public var authToken: String? {
         get {
             if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
-                NSLog("\(result)")
                 return result["accessToken"] as? String
             } else {
-                NSLog("Bad rettrieval of access token")
+                NSLog("Bad retrieval of access token")
                 return nil
             }
         }
@@ -85,7 +90,7 @@ public class TwitchAuthorizationManager {
             if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
                 return result["scopes"] as? [String]
             } else {
-                NSLog("Bad rettrieval of the authorized scopes")
+                NSLog("Bad retrieval of the authorized scopes")
                 return nil
             }
         }
@@ -97,7 +102,7 @@ public class TwitchAuthorizationManager {
             if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
                 return result["refreshToken"] as? String
             } else {
-                NSLog("Bad rettrieval of refresh token")
+                NSLog("Bad retrieval of refresh token")
                 return nil
             }
         }
@@ -167,6 +172,7 @@ public class TwitchAuthorizationManager {
     
     /**
      Starts the login authorization flow with the Server.
+     
      - throws: `AuthorizationException`.
     */
     public func login() throws {
@@ -191,9 +197,11 @@ public class TwitchAuthorizationManager {
     
     /**
      Processes the callback url and recieves authorization token from the server.
+     
      - parameter url: The callback url.
     */
     public func processOauthResponse(with url: URL, completion: @escaping (_ result: Result<Credentials>) -> ()) {
+        let defaults = UserDefaults.standard
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         guard let queryItems = components?.queryItems else {
             defaults.set(false, forKey: userDefaultsKey)
@@ -213,12 +221,17 @@ public class TwitchAuthorizationManager {
             let postData = "client_id=\(clientID)&client_secret=\(clientSecret)&grant_type=authorization_code&redirect_uri=\(redirectURI)&code=\(receivedCode)&state=\(state)".data(using: .ascii)
             let authorizationResource = AuthorizationResource(data: postData!, url: path!)
             authorizationResource.processAuthorization(completion: { [weak self] (result) in
-                defaults.set(false, forKey: userDefaultsKey)
+                guard let strongSelf = self else {
+                    NSLog("Error: self does not exist")
+                    return
+                }
+                
+                defaults.set(false, forKey: strongSelf.userDefaultsKey)
                 switch result {
                 case let .failure(error):
                     completion(.failure(error))
                 case let .success(credentials):
-                    self?.credentials = credentials
+                    strongSelf.credentials = credentials
                     completion(.success(credentials))
                 }
             })
