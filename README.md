@@ -6,11 +6,11 @@ Very much a work in progress, however, this will be a generic API client with a 
 ## Current Progress
 * Created API skeleton
 * Implemented OAuth client
-* Created sample app skeleton 
+* Created sample app  
 
 ## TODO
 * Build out models/presenters
-* Improve example app
+* Improve sample app
 * Documentation
 * Test Coverage
 * Cocoapods/Carthage/Swift Package Manager Connections
@@ -62,17 +62,17 @@ import TwitchAPIWrapper
 This library has two main sections
 
 1. Authorization - Utilizing the Twitch OAuth protocol inside of your app
-2. Datasources - Utilizing the Twitch API to Swift Models based off of Twitch server side data
+2. DataSources - Utilizing the Twitch API to Swift Models based off of Twitch server side data
 
 #### Example
 
-The following example illustrates how to setup the OAuth components and utilize the Presenter Object (DataSource's) to retrieve models.
+The following example illustrates how to setup the OAuth components and utilize the Presenter Object (DataSources) to retrieve models.
 
 ##### Twitch OAuth
 Important: Prior to authorization ensure:
-1) Add a URL Type and specify the matching URL Scheme for Twitch.
-2) Set the proper clientID, redirectURI, scopes, and clientSecret as they are necessary for succesfull authentication.
-3) It is recommended not to leave any of the above in version control, as you can see from the sample app.
+1. Add a URL Type and specify the matching URL Scheme for Twitch.
+2. Set the proper clientID, redirectURI, scopes, and clientSecret as they are necessary for succesfull authentication.
+3. It is recommended not to leave any of the above in version control, as you can see from the sample app.
 
 ```Swift
 // Setup OAuth, this can be placed wherever you wish; however, as you can see in the example project it is placed inside of the App delegate so
@@ -148,9 +148,9 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
 }
 ```
 The ```TwitchAuthorizationManager``` is a singleton, utilize the shared instance to access the following properties returned from authentication with Twitch:
-1) Refresh Token: ```TwitchAuthorizationManager.sharedInstance.refreshToken```
-2) Authentication Token: ```TwitchAuthorizationManager.sharedInstance.authToken```
-3) Scopes: ```TwitchAuthorizationManager.sharedInstance.scopes```
+1. Refresh Token: ```TwitchAuthorizationManager.sharedInstance.refreshToken```
+2. Authentication Token: ```TwitchAuthorizationManager.sharedInstance.authToken```
+3. Scopes: ```TwitchAuthorizationManager.sharedInstance.scopes```
 
 
 
@@ -191,8 +191,8 @@ The included example project includes a more detailed implementation of all usab
 ## Currently Supported Models
 ### User
 Endpoints:
-1) GET /users/:user
-2) GET /user (requires Authorization)
+1. GET /users/:user
+2. GET /user (requires Authorization)
 
 
 ## Unit Tests
