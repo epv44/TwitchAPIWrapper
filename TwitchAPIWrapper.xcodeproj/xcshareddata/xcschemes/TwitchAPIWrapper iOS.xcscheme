@@ -26,9 +26,29 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      codeCoverageEnabled = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D45A0B861DA6F07B004F5056"
+               BuildableName = "TwitchAPIWrapperTestsiOS.xctest"
+               BlueprintName = "TwitchAPIWrapperTestsiOS"
+               ReferencedContainer = "container:TwitchAPIWrapper.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D45A0B5B1DA6E706004F5056"
+            BuildableName = "TwitchAPIWrapper.framework"
+            BlueprintName = "TwitchAPIWrapper iOS"
+            ReferencedContainer = "container:TwitchAPIWrapper.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
