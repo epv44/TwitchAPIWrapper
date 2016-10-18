@@ -9,6 +9,7 @@ env:
 
    - IOS_SCHEME="TwitchAPIWrapper iOS"
    - TEST_SCHEME="TwitchAPIWrapperTestsiOS"
+   - TEST_DESTINATION="iOS=10.0,name=iPhone 7"
 
    - IOS_SDK=iphonesimulator10.0
 
@@ -26,7 +27,7 @@ script:
   fi
 
 - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild test -project "$PROJECT" -scheme "$TEST_SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO | xcpretty -c;
+      xcodebuild test -project "$PROJECT" -scheme "$TEST_SCHEME" -sdk "$SDK" -destination "$TEST_DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO | xcpretty -c;
   else
       xcodebuild clean build -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO | xcpretty -c;
   fi
