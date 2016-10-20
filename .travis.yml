@@ -18,7 +18,8 @@ env:
    - DESTINATION="OS=10.0,name=iPhone 7"      SDK="$IOS_SDK" SCHEME="$IOS_SCHEME" RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
 
 before_install:
-  - carthage bootstrap
+  - brew update
+  - brew outdated carthage || brew upgrade carthage
 
 before_script:
   - carthage bootstrap
@@ -40,7 +41,7 @@ script:
 
 # Build for reporting test coverage
 - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild test -project TwitchAPIWrapper.xcodeproj -scheme TwitchAPIWrapper iOS -destination "$TEST_DESTINATION";
+      xcodebuild test -project "$PROJECT" -scheme "$IOS_SCHEME" -destination "$TEST_DESTINATION";
   fi
 
 after_success:

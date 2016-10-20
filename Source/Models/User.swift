@@ -19,7 +19,7 @@ public struct User {
     public let id: String?
     public let displayName: String?
     public let bio: String?
-    ///MARK: Below are ony available for https://api.twitch.tv/kraken/user with oauth token.
+    //MARK: Below are ony available for https://api.twitch.tv/kraken/user with oauth token.
     public let email: String?
     public let partnered: String?
     public let notifications: [String: Bool]?

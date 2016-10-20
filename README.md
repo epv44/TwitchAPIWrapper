@@ -5,7 +5,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/TwitchAPIWrapper.svg?style=flat)](http://cocoapods.org/pods/TwitchAPIWrapper)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthageLink]
 ## About
-The Twitch API Wrapper is an HTTP client for the Twitch API that includes Object mappings to the different Twitch endpoints that can be easily displayed utilizing the provided DataSources.  The wrapper also contains an OAuth client for Twitch allowing access to Twitch's secure endpoints as well as OAuth for your application.
+The Twitch API Wrapper is an HTTP Client for the Twitch API that includes Object mappings to the different Twitch endpoints that can be easily displayed utilizing the provided DataSources.  The library also contains an OAuth Client allowing access to Twitch's secure endpoints as well as OAuth for your application.
 
 ## Current Progress
 * Created Presenter Object DataSource for the User Model corresponding to the user endpoint in the Twitch API.
@@ -52,17 +52,17 @@ Read the [docs][docsLink]. Generated with [jazzy](https://github.com/realm/jazzy
 import TwitchAPIWrapper
 ```
 
-#### Design
+### Design
 This library has two main sections
 
 1. Authorization - Utilizing the Twitch OAuth protocol inside of your application.
 2. DataSources - Utilizing the provided Model Objects that correspond to Twitch API endpoints.
 
-#### Example
+### Example
 
 The following example illustrates how to setup the OAuth components and utilize the Presenter Object (DataSources) to retrieve models.
 
-##### Twitch OAuth
+#### Twitch OAuth
 Important: Prior to authorization ensure:
 
 1. Add a URL Type and specify the matching URL Scheme for Twitch.
@@ -149,8 +149,7 @@ The ```TwitchAuthorizationManager``` is a singleton, utilize the shared instance
 3. Scopes: ```TwitchAuthorizationManager.sharedInstance.scopes```
 
 
-
-##### Access Models
+#### Access Models
  
 ```Swift
 //Set the presenter object for the Model you want to display
