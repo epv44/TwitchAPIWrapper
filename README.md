@@ -5,21 +5,23 @@
 [![Platform](https://img.shields.io/cocoapods/p/TwitchAPIWrapper.svg?style=flat)](http://cocoapods.org/pods/TwitchAPIWrapper)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthageLink]
 ## About
-Very much a work in progress, however, this will be a generic API client with a dataSource wrapper allowing easy calls to the Twitch API.  There will be seperate dataSource objects corresponding with the JSON requests in the Twitch API and a presenter layer (utilizing the Delegate Design Pattern) that will allow users to hook in to the specific Objects they want.
+The Twitch API Wrapper is an HTTP client for the Twitch API that includes Object mappings to the different Twitch endpoints that can be easily displayed utilizing the provided DataSources.  The wrapper also contains an OAuth client for Twitch allowing access to Twitch's secure endpoints as well as OAuth for your application.
 
 ## Current Progress
-* Created API skeleton
-* Implemented OAuth client
-* Created sample app  
+* Created Presenter Object DataSource for the User Model corresponding to the user endpoint in the Twitch API.
+* Implemented OAuth client.
+* Created sample application.  
 
 ## TODO
-* Build out models/presenters
-* Improve sample app
-* Documentation
-* Test Coverage
-* Cocoapods/Carthage/Swift Package Manager Connections
-* Continuous integration
-* Code coverage
+* Build out models/presenters for other endpoints.
+* Improve sample app to show an example of connecting to all of the endpoints.
+* Documentation.
+* Test Coverage.
+* Cocoapods/Carthage/Swift Package Manager Connections.
+* Continuous integration.
+* Code coverage.
+* Build tvOS target and example project.
+* Build macOS target and example project.
 
 ## Requirements
 * Swift 3.0+
@@ -53,8 +55,8 @@ import TwitchAPIWrapper
 #### Design
 This library has two main sections
 
-1. Authorization - Utilizing the Twitch OAuth protocol inside of your app
-2. DataSources - Utilizing the Twitch API to Swift Models based off of Twitch server side data
+1. Authorization - Utilizing the Twitch OAuth protocol inside of your application.
+2. DataSources - Utilizing the provided Model Objects that correspond to Twitch API endpoints.
 
 #### Example
 
@@ -62,13 +64,14 @@ The following example illustrates how to setup the OAuth components and utilize 
 
 ##### Twitch OAuth
 Important: Prior to authorization ensure:
+
 1. Add a URL Type and specify the matching URL Scheme for Twitch.
-2. Set the proper clientID, redirectURI, scopes, and clientSecret as they are necessary for succesfull authentication.
-3. It is recommended not to leave any of the above in version control, as you can see from the sample app.
+2. Set the proper clientID, redirectURI, scopes, and clientSecret as they are necessary for successful authentication.
+3. It is recommended not to leave any of the above in version control, as you can see from the sample application.
 
 ```Swift
-// Setup OAuth, this can be placed wherever you wish; however, as you can see in the example project it is placed inside of the App delegate so
-// that authorization is done when the app is first loaded.
+// OAuth setup can be placed wherever you wish; however, as in the example project it is placed inside of the AppDelegate so
+// that authorization is done when the application is first loaded.
 TwitchAuthorizationManager.sharedInstance.clientID = configuration["clientID"] as? String
 TwitchAuthorizationManager.sharedInstance.redirectURI = configuration["redirectURI"] as? String
 TwitchAuthorizationManager.sharedInstance.scopes = configuration["scopes"] as? String
@@ -93,7 +96,7 @@ if !TwitchAuthorizationManager.sharedInstance.hasOAuthToken() {
     NSLog("OAuth Token exists, no need to authorize")
 }
 
-//Add the following inside of the app delegate:
+//Add the following function to the AppDelegate:
 func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
     if url.host == yourURLScheme {
         TwitchAuthorizationManager.sharedInstance.processOauthResponse(with: url,
@@ -130,7 +133,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpe
                     }
                     //case let .success(credentials)
                 case .success(_):
-                    //returns credential object; however, values are stored securly in keychain and can be accessed as:
+                    //returns credential object; however, values are stored securely in the Keychain and can be accessed as:
                     print(TwitchAuthorizationManager.sharedInstance.authToken)
                 }
             }
@@ -150,28 +153,29 @@ The ```TwitchAuthorizationManager``` is a singleton, utilize the shared instance
 ##### Access Models
  
 ```Swift
-//Set the presenter object for the  model you want to display
+//Set the presenter object for the Model you want to display
 fileprivate lazy var userPresenter: UserPresenter = {
     return UserPresenter(dataSource: self)
 }()
 
-//Call the presenter
+//Call the presenter's get method, in this case the user parameter is the name of the user you wish to retrieve
 userPresenter.get(user: "test_user1")
 
 //Extend the DataSource for the Model you want to display
 extension ViewController: UserPresenterDataSource {
+    //Use this function to display a loading state
     func startLoading() {
         NSLog("Started Loading")
     }
-    
+    //Use this funcion to remove the loading state
     func finishLoading() {
         NSLog("Finished Loading")
     }
-    
+    //This function returns the populated Model
     func set(user: User?) {
         print(user?.displayName)
     }
-    
+    //This function returns an error that occured preventing the Model from populating properly
     func handle(error: Error) {
         NSLog("Error")
     }
@@ -188,8 +192,9 @@ Endpoints:
 1. GET /users/:user
 2. GET /user (requires Authorization)
 
-Protocol: UserPresenterDataSource
-DataSource Class: UserPresenter
+DataSource Protocol: UserPresenterDataSource.
+
+DataSource Class: UserPresenter.
 
 ## Unit Tests
 There are unit tests included with this project which may also be helpful to review when trying to better understand the library.
