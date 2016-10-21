@@ -17,8 +17,9 @@ Development Kit for Twitch API, includes OAuth and models for endpoints
 
   s.ios.deployment_target = '10.0'
 
-  s.source_files = 'Source/*.swift'
-  
+  s.source_files = 'Source/**/*.swift'
+  s.dependency 'Gloss', "~> 1.0.0"
+  s.dependency 'Locksmith', "~> 3.0.0"
   # s.resource_bundles = {
   #   'EVSlidingTableViewCell' => ['EVSlidingTableViewCell/Classes/**/*.{xib}']
   # }
