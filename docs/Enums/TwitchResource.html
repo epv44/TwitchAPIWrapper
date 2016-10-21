@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>PresentationError Enum Reference</title>
+    <title>TwitchResource Enum Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/PresentationError" class="dashAnchor"></a>
-    <a title="PresentationError Enum Reference"></a>
+    <a name="//apple_ref/swift/Enum/TwitchResource" class="dashAnchor"></a>
+    <a title="TwitchResource Enum Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">TwitchAPIWrapper Docs</a> (96% documented)</p>
@@ -21,7 +21,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">TwitchAPIWrapper Reference</a>
         <img id="carat" src="../img/carat.png" />
-        PresentationError Enum Reference
+        TwitchResource Enum Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -114,14 +114,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>PresentationError</h1>
+            <h1>TwitchResource</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">PresentationError</span><span class="p">:</span> <span class="kt">Error</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TwitchResource</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                 </div>
               </div>
-            <p>Describes errors that occur in the presentation layer</p>
+            <p>Specifies the type of resource.</p>
 
           </section>
           <section class="section task-group-section">
@@ -130,9 +130,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO16TwitchAPIWrapper17PresentationError20noAuthorizationTokenFMS0_FT4descSS_S0_"></a>
-                    <a name="//apple_ref/swift/Element/noAuthorizationToken" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO16TwitchAPIWrapper17PresentationError20noAuthorizationTokenFMS0_FT4descSS_S0_">noAuthorizationToken</a>
+                    <a name="/s:FO16TwitchAPIWrapper14TwitchResource4userFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/user" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO16TwitchAPIWrapper14TwitchResource4userFMS0_S0_">user</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -140,36 +140,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies that the authorization token is missing.</p>
+                        <p>Represents a <code><a href="../Structs/User.html">User</a></code> as defined by the Twitch API.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">noAuthorizationToken</span><span class="p">(</span><span class="nv">desc</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">user</span> <span class="o">=</span> <span class="s">"User"</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>desc</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Describes error.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -181,9 +161,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FO16TwitchAPIWrapper17PresentationError10noClientIdFMS0_FT4descSS_S0_"></a>
-                    <a name="//apple_ref/swift/Element/noClientId" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FO16TwitchAPIWrapper17PresentationError10noClientIdFMS0_FT4descSS_S0_">noClientId</a>
+                    <a name="/s:FO16TwitchAPIWrapper14TwitchResource5emoteFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/emote" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO16TwitchAPIWrapper14TwitchResource5emoteFMS0_S0_">emote</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -191,36 +171,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies that the client-id is missing and must be specified.</p>
+                        <p>Represents a <code><a href="../Structs/Emote.html">Emote</a></code> as defined by the Twitch API.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">noClientId</span><span class="p">(</span><span class="nv">desc</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="n">emote</span> <span class="o">=</span> <span class="s">"Emote"</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>desc</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Describes error.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>

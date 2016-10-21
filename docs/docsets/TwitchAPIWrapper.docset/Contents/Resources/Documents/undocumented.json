@@ -1,94 +1,24 @@
 {
   "warnings": [
     {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 13,
-      "symbol": "User.type",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 14,
-      "symbol": "User.name",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 15,
-      "symbol": "User.createdAt",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 16,
-      "symbol": "User.updatedAt",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 17,
-      "symbol": "User.links",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 18,
-      "symbol": "User.logo",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 19,
-      "symbol": "User.id",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 20,
-      "symbol": "User.displayName",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 21,
-      "symbol": "User.bio",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 24,
-      "symbol": "User.partnered",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Models/User.swift",
-      "line": 25,
-      "symbol": "User.notifications",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Network/Service/JSONResource.swift",
+      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Source/Network/Service/JSONResource.swift",
       "line": 38,
       "symbol": "JSONResource.model(from:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Sources/Network/Service/JSONResource.swift",
+      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Source/Network/Service/JSONResource.swift",
       "line": 39,
       "symbol": "JSONResource.model(from:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/evennaro/Documents/iOSWorkspace/CustomCocoaPods/TwitchAPIWrapper/Source/Presenters/EmotePresenter.swift",
+      "line": 11,
+      "symbol": "EmotePresenter",
+      "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     }
   ],

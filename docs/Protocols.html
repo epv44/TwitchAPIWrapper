@@ -13,7 +13,7 @@
     <a title="Protocols  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">TwitchAPIWrapper Docs</a> (82% documented)</p>
+        <p><a href="index.html">TwitchAPIWrapper Docs</a> (96% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -29,6 +29,9 @@
           <li class="nav-group-name">
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/EmotePresenter.html">EmotePresenter</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Classes/TwitchAuthorizationManager.html">TwitchAuthorizationManager</a>
               </li>
@@ -55,6 +58,9 @@
               <li class="nav-group-task">
                 <a href="Enums/Result.html">Result</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Enums/TwitchResource.html">TwitchResource</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -67,7 +73,7 @@
                 <a href="Protocols.html#/s:P16TwitchAPIWrapper12ResourceType">ResourceType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/UserPresenterDataSource.html">UserPresenterDataSource</a>
+                <a href="Protocols/TwitchAPIDataSource.html">TwitchAPIDataSource</a>
               </li>
             </ul>
           </li>
@@ -76,6 +82,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Structs/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Emote.html">Emote</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs.html#/s:V16TwitchAPIWrapper11Endorsement">Endorsement</a>
@@ -145,38 +154,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P16TwitchAPIWrapper23UserPresenterDataSource"></a>
-                    <a name="//apple_ref/swift/Protocol/UserPresenterDataSource" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P16TwitchAPIWrapper23UserPresenterDataSource">UserPresenterDataSource</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An instance conformming to <code>UserPresenterDataSource</code> represents a class that utilizes a <code><a href="Structs/User.html">User</a></code>.</p>
-
-                        <a href="Protocols/UserPresenterDataSource.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">UserPresenterDataSource</span><span class="p">:</span> <span class="kd">class</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:P16TwitchAPIWrapper12JSONResource"></a>
                     <a name="//apple_ref/swift/Protocol/JSONResource" class="dashAnchor"></a>
                     <a class="token" href="#/s:P16TwitchAPIWrapper12JSONResource">JSONResource</a>
@@ -204,10 +181,42 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P16TwitchAPIWrapper19TwitchAPIDataSource"></a>
+                    <a name="//apple_ref/swift/Protocol/TwitchAPIDataSource" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P16TwitchAPIWrapper19TwitchAPIDataSource">TwitchAPIDataSource</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An instance conforming to &lsquo;TwitchAPIDataSource&rsquo; represents a class that loads a network resource.</p>
+
+                        <a href="Protocols/TwitchAPIDataSource.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">TwitchAPIDataSource</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/epv44/TwitchAPIWrapper" target="_blank" rel="external">Eric Vennaro</a>. All rights reserved. (Last updated: 2016-10-17)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/epv44/TwitchAPIWrapper" target="_blank" rel="external">Eric Vennaro</a>. All rights reserved. (Last updated: 2016-10-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

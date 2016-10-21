@@ -14,7 +14,7 @@
     <a title="NetworkJSONServiceError Enum Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">TwitchAPIWrapper Docs</a> (82% documented)</p>
+        <p><a href="../index.html">TwitchAPIWrapper Docs</a> (96% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -30,6 +30,9 @@
           <li class="nav-group-name">
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/EmotePresenter.html">EmotePresenter</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Classes/TwitchAuthorizationManager.html">TwitchAuthorizationManager</a>
               </li>
@@ -56,6 +59,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/Result.html">Result</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/TwitchResource.html">TwitchResource</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -68,7 +74,7 @@
                 <a href="../Protocols.html#/s:P16TwitchAPIWrapper12ResourceType">ResourceType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/UserPresenterDataSource.html">UserPresenterDataSource</a>
+                <a href="../Protocols/TwitchAPIDataSource.html">TwitchAPIDataSource</a>
               </li>
             </ul>
           </li>
@@ -77,6 +83,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Structs/Credentials.html">Credentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Emote.html">Emote</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Structs.html#/s:V16TwitchAPIWrapper11Endorsement">Endorsement</a>
@@ -131,7 +140,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Specifies an error occured while sending the network request.</p>
+                        <p>Specifies an error occurred while sending the network request.</p>
 
                       </div>
                       <div class="declaration">
@@ -198,10 +207,72 @@
                 </li>
               </ul>
             </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO16TwitchAPIWrapper23NetworkJSONServiceError20networkResponseErrorFMS0_FT8responseCSo15HTTPURLResponse_S0_"></a>
+                    <a name="//apple_ref/swift/Element/networkResponseError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO16TwitchAPIWrapper23NetworkJSONServiceError20networkResponseErrorFMS0_FT8responseCSo15HTTPURLResponse_S0_">networkResponseError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies that the network status code was invalid (not between 200 and 400).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">networkResponseError</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO16TwitchAPIWrapper23NetworkJSONServiceError20unknownErrorOccurredFMS0_FT4descSS_S0_"></a>
+                    <a name="//apple_ref/swift/Element/unknownErrorOccurred" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO16TwitchAPIWrapper23NetworkJSONServiceError20unknownErrorOccurredFMS0_FT4descSS_S0_">unknownErrorOccurred</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specifies that an unknown error has occurred.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="nf">unknownErrorOccurred</span><span class="p">(</span><span class="nv">desc</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2016 <a class="link" href="https://github.com/epv44/TwitchAPIWrapper" target="_blank" rel="external">Eric Vennaro</a>. All rights reserved. (Last updated: 2016-10-17)</p>
+          <p>&copy; 2016 <a class="link" href="https://github.com/epv44/TwitchAPIWrapper" target="_blank" rel="external">Eric Vennaro</a>. All rights reserved. (Last updated: 2016-10-21)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
