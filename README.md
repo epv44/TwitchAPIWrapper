@@ -6,11 +6,12 @@
 [![codecov](https://codecov.io/gh/epv44/TwitchAPIWrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/epv44/TwitchAPIWrapper)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthageLink]
 
-## About
+ ## About
 The Twitch API Wrapper is an HTTP Client for the Twitch API that includes Object mappings to the different Twitch endpoints that can be easily displayed utilizing the provided DataSources.  The library also contains an OAuth Client allowing access to Twitch's secure endpoints as well as OAuth for your application.
 
 ## Current Progress
-* Created Presenter Object DataSource for the User Model corresponding to the user endpoint in the Twitch API.
+* Created Presenter Object for the User Twitch Endpoint.
+* Created Presenter Object for the Emote Twitch Endpoint.
 * Implemented OAuth client.
 * Created sample application.  
 
@@ -24,6 +25,7 @@ The Twitch API Wrapper is an HTTP Client for the Twitch API that includes Object
 * Code coverage.
 * Build tvOS target and example project.
 * Build macOS target and example project.
+* Add Lense's for Models
 
 ## Requirements
 * Swift 3.0+
@@ -58,7 +60,7 @@ import TwitchAPIWrapper
 This library has two main sections
 
 1. Authorization - Utilizing the Twitch OAuth protocol inside of your application.
-2. DataSources - Utilizing the provided Model Objects that correspond to Twitch API endpoints.
+2. Presenter Objects - Present the provided Model Objects that correspond to Twitch API endpoints.
 
 ### Example
 
@@ -162,21 +164,24 @@ fileprivate lazy var userPresenter: UserPresenter = {
 //Call the presenter's get method, in this case the user parameter is the name of the user you wish to retrieve
 userPresenter.get(user: "test_user1")
 
-//Extend the DataSource for the Model you want to display
-extension ViewController: UserPresenterDataSource {
-    //Use this function to display a loading state
-    func startLoading() {
-        NSLog("Started Loading")
+//Extend the TwitchAPIDataSource
+extension UserViewController: TwitchAPIDataSource {
+    public func set<T>(resource: T) {
+        if let user = resource as? User {
+            print(user.displayName)
+        } else {
+            NSLog("Invalid Generic Resource")
+        }
     }
-    //Use this funcion to remove the loading state
-    func finishLoading() {
-        NSLog("Finished Loading")
+    
+    func startLoading(for resource: TwitchResource) {
+        NSLog("Started Loading: \(resource)")
     }
-    //This function returns the populated Model
-    func set(user: User?) {
-        print(user?.displayName)
+    
+    func finishLoading(for resource: TwitchResource) {
+        NSLog("Finished Loading: \(resource)")
     }
-    //This function returns an error that occured preventing the Model from populating properly
+    
     func handle(error: Error) {
         NSLog("Error")
     }
@@ -187,15 +192,17 @@ extension ViewController: UserPresenterDataSource {
 The included example project includes a more detailed implementation of all usable Models and a full OAuth setup.
 
 ## Currently Supported Models
-### User
+### User `UserPresenter`
 Endpoints:
 
 1. GET /users/:user
 2. GET /user (requires Authorization)
 
-DataSource Protocol: UserPresenterDataSource.
+### Emot `EmotePresenter`
 
-DataSource Class: UserPresenter.
+Endpoint:
+
+1. GET /users/:user/emotes (requires Authorization)
 
 ## Unit Tests
 There are unit tests included with this project which may also be helpful to review when trying to better understand the library.
