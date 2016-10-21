@@ -8,6 +8,7 @@
 
 import Foundation
 
+///A `EmotePresenter` presents an `Emote` from the network to the front end of the application.
 public class EmotePresenter: JSONConstructableRequest {
     var url: URL?
     var headers: [String: String]

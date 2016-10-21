@@ -8,7 +8,7 @@
 
 import Foundation
 
-///A user presenter presents a User from the network to the front end of the application.
+///A `UserPresenter` presents a `User` from the network to the front end of the application.
 public class UserPresenter: JSONConstructableRequest {
     var url: URL?
     var headers: [String: String]
@@ -18,7 +18,7 @@ public class UserPresenter: JSONConstructableRequest {
     /**
      Initialize a new `UserPresenter`.
      
-     - parameter dataSource: `DataSource` that contains methods updating the state of the front end.
+     - parameter dataSource: `DataSource` that contains methods for updating the state of the front end.
     */
     public init(dataSource: TwitchAPIDataSource) {
         self.dataSource = dataSource

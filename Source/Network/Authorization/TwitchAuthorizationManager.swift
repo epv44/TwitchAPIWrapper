@@ -165,15 +165,15 @@ public class TwitchAuthorizationManager {
     
     //MARK: - Public Functions
     
-    ///Returns a true if an valid authorization token exists.
+    ///Returns true if a valid authorization token exists.
     public func hasOAuthToken() -> Bool {
         return authToken != nil && !authToken!.isEmpty
     }
     
     /**
-     Starts the login authorization flow with the Server.
+     Starts the Twitch authorization flow with the Server.
      
-     - throws: `AuthorizationException`.
+     - throws `AuthorizationError`.
     */
     public func login() throws {
         //user defaults, what about refresh token i.e. when does token expire?
@@ -248,7 +248,7 @@ public class TwitchAuthorizationManager {
         try Locksmith.deleteDataForUserAccount(userAccount: userAccount)
     }
     
-    ///Can be called to ensure all settings are properly updated on authentication failure
+    ///Can be called to ensure all settings are properly updated on authentication failure.
     public func authFailed() {
         let defaults = UserDefaults.standard
         defaults.set(false, forKey: userDefaultsKey)

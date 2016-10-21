@@ -12,10 +12,10 @@ import Gloss
 ///Model representing an Emoticon
 public struct Emote: Decodable {
     ///The Emoticon's ID
-    let id: Int?
+    public let id: Int?
     
     ///The Emoticon's String code
-    let code: String?
+    public let code: String?
 }
 
 //MARK: - Initializers Extension

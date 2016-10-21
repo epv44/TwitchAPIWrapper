@@ -37,7 +37,7 @@ public struct User {
     ///The users Twitch bio
     public let bio: String?
     
-    //MARK: Below are ony available for https://api.twitch.tv/kraken/user with oauth token.
+    //MARK: Ony available for https://api.twitch.tv/kraken/user (requires authorization).
     ///The users email, requires Authentication
     public let email: String?
     

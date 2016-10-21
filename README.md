@@ -6,7 +6,7 @@
 [![codecov](https://codecov.io/gh/epv44/TwitchAPIWrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/epv44/TwitchAPIWrapper)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthageLink]
 
- ## About
+## About
 The Twitch API Wrapper is an HTTP Client for the Twitch API that includes Object mappings to the different Twitch endpoints that can be easily displayed utilizing the provided DataSources.  The library also contains an OAuth Client allowing access to Twitch's secure endpoints as well as OAuth for your application.
 
 ## Current Progress

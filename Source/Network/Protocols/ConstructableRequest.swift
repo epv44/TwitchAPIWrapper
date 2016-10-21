@@ -66,6 +66,8 @@ public enum NetworkJSONServiceError: Error {
     case noData
     /**
      Specifies that the network status code was invalid (not between 200 and 400).
+     
+     - parameter response: `HTTPURLResponse` returned from the URLResponse.
     */
     case networkResponseError(response: HTTPURLResponse)
     /** 

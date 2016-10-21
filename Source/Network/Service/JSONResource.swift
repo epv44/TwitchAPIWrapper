@@ -35,7 +35,21 @@ public protocol JSONResource: ResourceType {
 }
 
 extension JSONResource {
+    /**
+     Constructs a new Model from a `JSONDictionaryType`, override for individual resources.
+     
+     - parameter jsonDictionary: JSON blob from the network that conforms to `JSONDictionaryType`.
+     
+     - returns: nil.
+     */
     public func model(from jsonDictionary: JSONDictionaryType) -> Model? { return nil }
+    /**
+     Constructs a new Model from a `JSONArrayType`, override for individual resources.
+    
+     - parameter jsonArray: JSON blob from the network that conforms to `JSONArrayType`.
+     
+     - returns: nil.
+     */
     public func model(from jsonArray: JSONArrayType) -> Model? { return nil }
     
     func result(from data: Data) -> Result<Model> {

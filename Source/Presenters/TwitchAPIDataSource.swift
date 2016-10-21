@@ -54,8 +54,8 @@ public enum PresentationError: Error {
 
 ///Specifies the type of resource.
 public enum TwitchResource: String {
-    ///Represents a `User` as defined by the Twitch API.
+    ///Represents an `User` as defined by the Twitch API.
     case user = "User"
-    ///Represents a `Emote` as defined by the Twitch API.
+    ///Represents an `Emote` as defined by the Twitch API.
     case emote = "Emote"
 }
