@@ -26,7 +26,7 @@ public class EmotePresenter: JSONConstructableRequest {
         self.urlComponents?.scheme = Constants.network.userComponents.scheme
         self.urlComponents?.host = Constants.network.userComponents.host
         guard let clientId = TwitchAuthorizationManager.sharedInstance.clientID else {
-            NSLog("Must specify client_id to make rest request")
+            EVLog(text: "Must specify client_id to make rest request", line: #line, fileName: #file)
             headers = [:]
             return
         }
@@ -41,7 +41,6 @@ public class EmotePresenter: JSONConstructableRequest {
     public func getUsersEmoticons(for username: String) throws {
         urlComponents?.path = Constants.network.userComponents.usersPath + username + "/emotes"
         url = urlComponents?.url
-        NSLog("\(url)")
         guard let token = TwitchAuthorizationManager.sharedInstance.authToken else {
             throw PresentationError.noAuthorizationToken(desc: "Authorization token is missing ensure that you first authenticate (future versions of this sdk will auto-authenticate in this instance")
         }

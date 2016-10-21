@@ -78,7 +78,7 @@ public class TwitchAuthorizationManager {
             if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
                 return result["accessToken"] as? String
             } else {
-                NSLog("Bad retrieval of access token")
+                EVLog(text: "Bad retrieval of access token", line: #line, fileName: #file)
                 return nil
             }
         }
@@ -90,7 +90,7 @@ public class TwitchAuthorizationManager {
             if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
                 return result["scopes"] as? [String]
             } else {
-                NSLog("Bad retrieval of the authorized scopes")
+                EVLog(text: "Bad retrieval of scope", line: #line, fileName: #file)
                 return nil
             }
         }
@@ -102,7 +102,7 @@ public class TwitchAuthorizationManager {
             if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
                 return result["refreshToken"] as? String
             } else {
-                NSLog("Bad retrieval of refresh token")
+                EVLog(text: "Bad retrieval of refresh token", line: #line, fileName: #file)
                 return nil
             }
         }
@@ -116,40 +116,39 @@ public class TwitchAuthorizationManager {
             if let valueToSave = newValue {
                 do{
                     try Locksmith.updateData(data: ["accessToken" : valueToSave.accessToken!, "refreshToken" : valueToSave.refreshToken!, "scopes" : valueToSave.scope!], forUserAccount: userAccount)
-                    NSLog("saved scopes")
                 } catch LocksmithError.allocate {
-                    NSLog(LocksmithError.allocate.rawValue)
+                    EVLog(text: LocksmithError.allocate.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.authFailed {
-                    NSLog(LocksmithError.authFailed.rawValue)
+                    EVLog(text: LocksmithError.authFailed.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.decode {
-                    NSLog(LocksmithError.decode.rawValue)
+                    EVLog(text: LocksmithError.decode.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.duplicate {
-                    NSLog(LocksmithError.duplicate.rawValue)
+                    EVLog(text: LocksmithError.duplicate.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.interactionNotAllowed {
-                    NSLog(LocksmithError.interactionNotAllowed.rawValue)
+                    EVLog(text: LocksmithError.interactionNotAllowed.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.noError {
-                    NSLog(LocksmithError.noError.rawValue)
+                    EVLog(text: LocksmithError.noError.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.notAvailable {
-                    NSLog(LocksmithError.notAvailable.rawValue)
+                    EVLog(text: LocksmithError.notAvailable.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.notFound {
-                    NSLog(LocksmithError.notFound.rawValue)
+                    EVLog(text: LocksmithError.notFound.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.param {
-                    NSLog(LocksmithError.param.rawValue)
+                    EVLog(text: LocksmithError.param.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.requestNotSet {
-                    NSLog(LocksmithError.requestNotSet.rawValue)
+                    EVLog(text: LocksmithError.requestNotSet.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.typeNotFound {
-                    NSLog(LocksmithError.typeNotFound.rawValue)
+                    EVLog(text: LocksmithError.typeNotFound.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.unableToClear {
-                    NSLog(LocksmithError.unableToClear.rawValue)
+                    EVLog(text: LocksmithError.unableToClear.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.undefined {
-                    NSLog(LocksmithError.undefined.rawValue)
+                    EVLog(text: LocksmithError.undefined.rawValue, line: #line, fileName: #file)
                 } catch LocksmithError.unimplemented {
-                    NSLog(LocksmithError.unimplemented.rawValue)
+                    EVLog(text: LocksmithError.unimplemented.rawValue, line: #line, fileName: #file)
                 } catch {
-                    NSLog("Unknown error occured saving value to the keychain")
+                    EVLog(text: "Unknown error occured saving value to the keychain", line: #line, fileName: #file)
                 }
             } else {
-                NSLog("Bad value: \(newValue)")
+                EVLog(text: "Bad value: \(newValue)", line: #line, fileName: #file)
             }
         }
     }
@@ -185,13 +184,13 @@ public class TwitchAuthorizationManager {
             }
             let authPath = "https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=\(clientID)&redirect_uri=\(redirectURI)&scope=\(scopes)&state=\(state)"
             guard let authURL = URL(string: authPath) else {
-                NSLog("Invalid auth url: \(authPath)")
+                EVLog(text: "Invalid auth url: \(authPath)", line: #line, fileName: #file)
                 throw AuthorizationError.invalidAuthURL(desc: "Authorization url is invalid, please check your values for the Redirect URI, Client Id, and scopes", url: authPath)
             }
             UIApplication.shared.open(authURL, completionHandler: nil)
             defaults.set(true, forKey: userDefaultsKey)
         } else {
-            NSLog("Authorization token exits or authorization is in progress...no need to authorization again")
+            EVLog(text: "Authorization token exits or authorization is in progress...no need to authorization again", line: #line, fileName: #file)
         }
     }
     
@@ -221,7 +220,7 @@ public class TwitchAuthorizationManager {
             let authorizationResource = AuthorizationResource(data: postData!, url: path!)
             authorizationResource.processAuthorization(completion: { [weak self] (result) in
                 guard let strongSelf = self else {
-                    NSLog("Error: self does not exist")
+                    EVLog(text: "Error: self does not exist", line: #line, fileName: #file)
                     return
                 }
                 

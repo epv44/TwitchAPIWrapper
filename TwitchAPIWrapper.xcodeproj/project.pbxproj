@@ -33,6 +33,7 @@
 		D48F75CA1DBA8631003F8946 /* TwitchAPIEmoteResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F75C91DBA8631003F8946 /* TwitchAPIEmoteResourceTests.swift */; };
 		D48F75CC1DBA923C003F8946 /* EmotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F75CB1DBA923C003F8946 /* EmotePresenter.swift */; };
 		D48F75DA1DBAB106003F8946 /* TwitchAPIDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F75D91DBAB106003F8946 /* TwitchAPIDataSource.swift */; };
+		D48F75DF1DBAD06F003F8946 /* EVLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48F75DE1DBAD06F003F8946 /* EVLog.swift */; };
 		D4BA4C7D1DAFFF9A00844331 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA4C7C1DAFFF9A00844331 /* Credentials.swift */; };
 		D4BA4C7E1DAFFF9A00844331 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA4C7C1DAFFF9A00844331 /* Credentials.swift */; };
 		D4BA4CAA1DB1183600844331 /* AuthorizationResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA4CA91DB1183600844331 /* AuthorizationResource.swift */; };
@@ -83,6 +84,7 @@
 		D48F75C91DBA8631003F8946 /* TwitchAPIEmoteResourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchAPIEmoteResourceTests.swift; sourceTree = "<group>"; };
 		D48F75CB1DBA923C003F8946 /* EmotePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotePresenter.swift; sourceTree = "<group>"; };
 		D48F75D91DBAB106003F8946 /* TwitchAPIDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchAPIDataSource.swift; sourceTree = "<group>"; };
+		D48F75DE1DBAD06F003F8946 /* EVLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EVLog.swift; sourceTree = "<group>"; };
 		D4BA4C7C1DAFFF9A00844331 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		D4BA4CA91DB1183600844331 /* AuthorizationResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 				D45A0B711DA6E9E6004F5056 /* Info-tvOS.plist */,
 				D45A0B671DA6E7DA004F5056 /* Info-iOS.plist */,
 				D45A0BC11DA82947004F5056 /* Constants.swift */,
+				D48F75DE1DBAD06F003F8946 /* EVLog.swift */,
 				D45A0BC31DA83141004F5056 /* Presenters */,
 				D45A0BA01DA7F122004F5056 /* Resources */,
 				D45A0B941DA7EAFE004F5056 /* Network */,
@@ -444,6 +447,7 @@
 				D45A0C5B1DAD4E45004F5056 /* TwitchAuthorizationManager.swift in Sources */,
 				D4BA4CAA1DB1183600844331 /* AuthorizationResource.swift in Sources */,
 				D45A0BD71DA8745F004F5056 /* ConstructableRequest.swift in Sources */,
+				D48F75DF1DBAD06F003F8946 /* EVLog.swift in Sources */,
 				D45DA1941DBA7B0D00FAA098 /* EmoteResource.swift in Sources */,
 				D45DA1951DBA7B1700FAA098 /* Emote.swift in Sources */,
 				D45A0B9B1DA7EF67004F5056 /* Post.swift in Sources */,
@@ -498,6 +502,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				"OTHER_SWIFT_FLAGS[arch=*]" = "-D DEBUG";
 			};
 			name = Debug;
 		};

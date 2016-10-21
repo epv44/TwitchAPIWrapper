@@ -17,11 +17,11 @@ struct EmoteResource: NetworkJSONRequestType {
         if let emoticonSet = jsonDictionary["emoticon_sets"] as? [String: Any] {
             for (_, value) in emoticonSet {
                 guard let jsonArray = value as? JSONArrayType else {
-                    NSLog("error with json value: \(value)" )
+                    EVLog(text: "error with json value: \(value)", line: #line, fileName: #file)
                     continue
                 }
                 guard let emoteValues: [Emote] = model(from: jsonArray) else {
-                    NSLog("error with json from array")
+                    EVLog(text: "error with json from array", line: #line, fileName: #file)
                     continue
                 }
                 emotesArray.append(contentsOf: emoteValues)

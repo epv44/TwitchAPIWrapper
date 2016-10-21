@@ -26,7 +26,7 @@ public class UserPresenter: JSONConstructableRequest {
         self.urlComponents?.scheme = Constants.network.userComponents.scheme
         self.urlComponents?.host = Constants.network.userComponents.host
         guard let clientId = TwitchAuthorizationManager.sharedInstance.clientID else {
-            NSLog("Must specify client_id to make rest request")
+            EVLog(text: "Must specify client_id to make rest request", line: #line, fileName: #file)
             headers = [:]
             return
         }
