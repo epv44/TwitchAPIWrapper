@@ -20,11 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        if url.host == "evTwitchWrapper" {
+        if url.scheme == "evtwitchwrapper" {
             TwitchAuthorizationManager.sharedInstance.processOauthResponse(with: url,
                 completion: { (result) in
                     switch result {
                     case let .failure(error):
+                        //Optional, will ensure that authorization is recorded as a failure
+                        TwitchAuthorizationManager.sharedInstance.authFailed()
                         switch error {
                         case let AuthorizationError.invalidAuthURL(desc, url):
                             NSLog(desc + url)

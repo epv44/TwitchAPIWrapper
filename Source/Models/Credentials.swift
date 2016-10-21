@@ -10,7 +10,7 @@ import Foundation
 import Gloss
 
 ///A `Credential` is holds the fields returned from a succesfull authentication request.
-public struct Credentials {
+public struct Credentials: Decodable {
     ///Access token from the server.
     public let accessToken: String?
     

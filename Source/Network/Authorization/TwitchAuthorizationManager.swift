@@ -202,9 +202,9 @@ public class TwitchAuthorizationManager {
     */
     public func processOauthResponse(with url: URL, completion: @escaping (_ result: Result<Credentials>) -> ()) {
         let defaults = UserDefaults.standard
+        defaults.set(false, forKey: userDefaultsKey)
         let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         guard let queryItems = components?.queryItems else {
-            defaults.set(false, forKey: userDefaultsKey)
             completion(.failure(AuthorizationError.invalidURLResponse(url: url)))
             return
         }
@@ -215,7 +215,6 @@ public class TwitchAuthorizationManager {
             let path = URL(string: Constants.network.oauthTokenURL)
             guard let clientID = clientID, let redirectURI = redirectURI, let clientSecret = clientSecret, let state = state else {
                 completion(.failure(AuthorizationError.invalidQueryParameters(desc: "Must define values for the Client Id, Redirect URI,  and Client Secret")))
-                defaults.set(false, forKey: userDefaultsKey)
                 return
             }
             let postData = "client_id=\(clientID)&client_secret=\(clientSecret)&grant_type=authorization_code&redirect_uri=\(redirectURI)&code=\(receivedCode)&state=\(state)".data(using: .ascii)
@@ -226,7 +225,6 @@ public class TwitchAuthorizationManager {
                     return
                 }
                 
-                defaults.set(false, forKey: strongSelf.userDefaultsKey)
                 switch result {
                 case let .failure(error):
                     completion(.failure(error))
@@ -236,9 +234,24 @@ public class TwitchAuthorizationManager {
                 }
             })
         } else {
-            defaults.set(false, forKey: userDefaultsKey)
             completion(.failure(AuthorizationError.noCode(desc: "no code was present in the query items returned from the server")))
         }
+    }
+    
+    /**
+     Removes users credentials from the app forcing re-authentication with Twitch
+     
+     - throws: 'LocksmithError' see: https://github.com/matthewpalmer/Locksmith
+    */
+    public func logout() throws {
+        authFailed()
+        try Locksmith.deleteDataForUserAccount(userAccount: userAccount)
+    }
+    
+    ///Can be called to ensure all settings are properly updated on authentication failure
+    public func authFailed() {
+        let defaults = UserDefaults.standard
+        defaults.set(false, forKey: userDefaultsKey)
     }
 }
 

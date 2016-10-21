@@ -8,11 +8,11 @@
 
 import Foundation
 
-///Type for a network JSON resource in dictionary format: `[String: AnyObject]`.
-public typealias JSONDictionaryType = [String: AnyObject]
+///Type for a network JSON resource in dictionary format: `[String: Any]`.
+public typealias JSONDictionaryType = [String: Any]
 
 ///Type for a network JSON resource in Array format: `[AnyObject]`.
-public typealias JSONArrayType = [AnyObject]
+public typealias JSONArrayType = [Any]
 
 ///An instance conforming to `JSONResource` represents a network resource that is consumed in JSON format.
 public protocol JSONResource: ResourceType {

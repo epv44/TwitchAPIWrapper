@@ -1,25 +1,24 @@
 //
-//  UserPresenter.swift
+//  EmotePresenter.swift
 //  TwitchAPIWrapper
 //
-//  Created by Eric Vennaro on 10/7/16.
+//  Created by Eric Vennaro on 10/21/16.
 //
 //
 
 import Foundation
 
-///A user presenter presents a User from the network to the front end of the application.
-public class UserPresenter: JSONConstructableRequest {
+public class EmotePresenter: JSONConstructableRequest {
     var url: URL?
     var headers: [String: String]
     var urlComponents: URLComponents?
     private weak var dataSource: TwitchAPIDataSource?
     
     /**
-     Initialize a new `UserPresenter`.
+     Initialize a new `EmotePresenter`.
      
      - parameter dataSource: `DataSource` that contains methods updating the state of the front end.
-    */
+     */
     public init(dataSource: TwitchAPIDataSource) {
         self.dataSource = dataSource
         self.urlComponents = URLComponents()
@@ -34,13 +33,14 @@ public class UserPresenter: JSONConstructableRequest {
     }
     
     /**
-     Initialize a new User Resource from the network that corresponds to the current user.
+     Initialize a new list of Emote resources for a User from the network.
      
      - throws `PresentationError`.
      */
-    public func getCurrentUser() throws {
-        urlComponents?.path = "/kraken/user"
+    public func getUsersEmoticons(for username: String) throws {
+        urlComponents?.path = Constants.network.userComponents.usersPath + username + "/emotes"
         url = urlComponents?.url
+        NSLog("\(url)")
         guard let token = TwitchAuthorizationManager.sharedInstance.authToken else {
             throw PresentationError.noAuthorizationToken(desc: "Authorization token is missing ensure that you first authenticate (future versions of this sdk will auto-authenticate in this instance")
         }
@@ -48,27 +48,16 @@ public class UserPresenter: JSONConstructableRequest {
         requestResource()
     }
     
-    /**
-     Get the resource from network.
-     
-     - parameter path: Network path to the resource.
-    */
-    public func get(user path: String) {
-        urlComponents?.path = Constants.network.userComponents.usersPath + path
-        url = urlComponents?.url
-        requestResource()
-    }
-    
     private func requestResource() {
-        dataSource?.startLoading(for: .user)
-        let usersResource = UsersResource()
-        usersResource.send(request: buildRequest(),completion: { [weak self] (result) in
-            self?.dataSource?.finishLoading(for: .user)
+        dataSource?.startLoading(for: .emote)
+        let emoteResource = EmoteResource()
+        emoteResource.send(request: buildRequest(),completion: { [weak self] (result) in
+            self?.dataSource?.finishLoading(for: .emote)
             switch result {
             case let .failure(error):
                 self?.dataSource?.handle(error: error)
-            case let .success(user):
-                self?.dataSource?.set(resource: user)
+            case let .success(resource):
+                self?.dataSource?.set(resource: resource)
             }
         })
     }

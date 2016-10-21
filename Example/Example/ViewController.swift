@@ -7,47 +7,19 @@
 //
 
 import UIKit
-import TwitchAPIWrapper
 
 class ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
-    fileprivate let consumableEndpoints = ["User", "Post"]
-    fileprivate lazy var userPresenter: UserPresenter = {
-        return UserPresenter(dataSource: self)
-    }()
+    fileprivate let consumableEndpoints = ["User", "Emote"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //userPresenter.get(user: "test_user1")
-        do {
-            try userPresenter.getCurrentUser()
-        } catch {
-            NSLog("error")
-        }
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-}
-
-//MARK: UserPresenterDataSource
-extension ViewController: UserPresenterDataSource {
-    func startLoading() {
-        NSLog("Started Loading")
-    }
-    
-    func finishLoading() {
-        NSLog("Finished Loading")
-    }
-    
-    func set(user: User?) {
-        print(user?.displayName)
-    }
-    
-    func handle(error: Error) {
-        NSLog("Error")
     }
 }
 
@@ -59,7 +31,7 @@ extension ViewController: UITableViewDelegate {
         case 0:
             performSegue(withIdentifier: "UserSegue", sender: nil)
         case 1:
-            performSegue(withIdentifier: "UserSegue", sender: nil)
+            performSegue(withIdentifier: "EmoteSegue", sender: nil)
         default:
             NSLog("Invalid")
             break

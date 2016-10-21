@@ -10,18 +10,41 @@ import Foundation
 
 ///Model representing a User from the Twitch API.
 public struct User {
+    ///The users type
     public let type: String?
+    
+    ///The name of the user
     public let name: String?
+    
+    ///When the user account was created
     public let createdAt: String?
+    
+    ///When the user account was last updated
     public let updatedAt: String?
+    
+    ///Links associated with the user's account
     public let links: [String:String]?
+    
+    ///The users Twitch account associated image
     public let logo: String?
+    
+    ///The user's unique id
     public let id: Int?
+    
+    ///The users Twitch display name
     public let displayName: String?
+    
+    ///The users Twitch bio
     public let bio: String?
+    
     //MARK: Below are ony available for https://api.twitch.tv/kraken/user with oauth token.
+    ///The users email, requires Authentication
     public let email: String?
+    
+    ///The users partnership status, requires Authentication
     public let partnered: Bool?
+    
+    ///The users notification settings, requires Authentication
     public let notifications: [String: Bool]?
 }
 
@@ -33,7 +56,6 @@ public extension User {
      - parameter json: The `[String : Any]` dictionary returned from the network.
     */
     init?(json: JSONDictionaryType) {
-        print(json)
         if let parsedType = json["type"] as? String {
             type = parsedType
         } else {

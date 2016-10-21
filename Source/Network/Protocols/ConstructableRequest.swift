@@ -55,7 +55,7 @@ public enum ParsingError: Error {
 ///Error in the network layer.
 public enum NetworkJSONServiceError: Error {
     /**
-     Specifies an error occured while sending the network request.
+     Specifies an error occurred while sending the network request.
      
      - parameter error: The error return from the `URLRequest`.
     */
@@ -64,6 +64,16 @@ public enum NetworkJSONServiceError: Error {
      Specifies that no data was returned by the `URLRequest`.
     */
     case noData
+    /**
+     Specifies that the network status code was invalid (not between 200 and 400).
+    */
+    case networkResponseError(response: HTTPURLResponse)
+    /** 
+     Specifies that an unknown error has occurred.
+     
+     - parameter desc: Description of where the error occurred.
+     */
+    case unknownErrorOccurred(desc: String)
 }
 
 protocol ConstructableRequest: RestRequest {
@@ -83,6 +93,7 @@ extension JSONConstructableRequest {
             request.httpBody = data
         }
         request.httpMethod = method
+        
         return request as URLRequest
     }
 }
@@ -95,13 +106,19 @@ extension SendableJSONRequest {
             if let error = error {
                 completion(.failure(NetworkJSONServiceError.networkError(error: error)))
             }
-            
-            guard let data = data else {
-                completion(.failure(NetworkJSONServiceError.noData))
+            guard let urlResponse = response as? HTTPURLResponse else {
+                completion(.failure(NetworkJSONServiceError.unknownErrorOccurred(desc: "URLResponse was not a HTTPURLResponse")))
                 return
             }
-            
-            completion(self.result(from: data))
+            if 200..<400 ~= urlResponse.statusCode {
+                guard let data = data else {
+                    completion(.failure(NetworkJSONServiceError.noData))
+                    return
+                }
+                completion(self.result(from: data))
+            } else {
+                completion(.failure(NetworkJSONServiceError.networkResponseError(response: urlResponse)))
+            }
         })
         task.resume()
     }

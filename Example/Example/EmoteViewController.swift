@@ -1,25 +1,25 @@
 //
-//  UserViewController.swift
+//  EmoteViewController.swift
 //  Example
 //
-//  Created by Eric Vennaro on 10/17/16.
+//  Created by Eric Vennaro on 10/21/16.
 //  Copyright © 2016 Eric Vennaro. All rights reserved.
 //
 
 import UIKit
 import TwitchAPIWrapper
 
-class UserViewController: UIViewController {
+class EmoteViewController: UIViewController {
     
-    fileprivate lazy var userPresenter: UserPresenter = {
-        return UserPresenter(dataSource: self)
+    fileprivate lazy var emotePresenter: EmotePresenter = {
+        return EmotePresenter(dataSource: self)
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //userPresenter.get(user: "test_user1")
         do {
-            try userPresenter.getCurrentUser()
+            try emotePresenter.getUsersEmoticons(for: "test_user1")
         } catch {
             NSLog("error")
         }
@@ -31,15 +31,15 @@ class UserViewController: UIViewController {
 }
 
 //MARK: UserPresenterDataSource
-extension UserViewController: TwitchAPIDataSource {
+extension EmoteViewController: TwitchAPIDataSource {
     public func set<T>(resource: T) {
-        if let user = resource as? User {
-            print(user.displayName)
+        if let emotes = resource as? [Emote] {
+            print(emotes)
         } else {
             NSLog("Invalid Generic Resource")
         }
     }
-    
+
     func startLoading(for resource: TwitchResource) {
         NSLog("Started Loading: \(resource)")
     }
@@ -52,3 +52,4 @@ extension UserViewController: TwitchAPIDataSource {
         NSLog("Error")
     }
 }
+

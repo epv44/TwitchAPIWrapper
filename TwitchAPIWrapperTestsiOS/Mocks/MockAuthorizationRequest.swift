@@ -10,7 +10,7 @@ import Foundation
 
 @testable import TwitchAPIWrapper
 
-class mockAuthorizationRequest: JSONConstructableRequest, RestRequest {
+class MockAuthorizationRequest: JSONConstructableRequest, RestRequest {
     typealias Model = User
     var url: URL?
     
