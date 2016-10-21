@@ -3,7 +3,9 @@
 [![Version](https://img.shields.io/cocoapods/v/TwitchAPIWrapper.svg?style=flat)](http://cocoapods.org/pods/TwitchAPIWrapper)
 [![License](https://img.shields.io/cocoapods/l/TwitchAPIWrapper.svg?style=flat)](http://cocoapods.org/pods/TwitchAPIWrapper)
 [![Platform](https://img.shields.io/cocoapods/p/TwitchAPIWrapper.svg?style=flat)](http://cocoapods.org/pods/TwitchAPIWrapper)
+[![codecov](https://codecov.io/gh/epv44/TwitchAPIWrapper/branch/master/graph/badge.svg)](https://codecov.io/gh/epv44/TwitchAPIWrapper)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)][carthageLink]
+
 ## About
 The Twitch API Wrapper is an HTTP Client for the Twitch API that includes Object mappings to the different Twitch endpoints that can be easily displayed utilizing the provided DataSources.  The library also contains an OAuth Client allowing access to Twitch's secure endpoints as well as OAuth for your application.
 

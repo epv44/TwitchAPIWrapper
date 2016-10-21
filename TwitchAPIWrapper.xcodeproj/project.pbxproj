@@ -23,6 +23,11 @@
 		D45A0C5B1DAD4E45004F5056 /* TwitchAuthorizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0BEE1DAD2F11004F5056 /* TwitchAuthorizationManager.swift */; };
 		D45A0CC81DAD6133004F5056 /* TwitchAPIWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = D45A0CC71DAD6133004F5056 /* TwitchAPIWrapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D45A0CD01DAD7BE6004F5056 /* Locksmith.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A0CCF1DAD7BE6004F5056 /* Locksmith.framework */; };
+		D45DA1811DB910A800FAA098 /* mockAuthorizationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DA1801DB910A800FAA098 /* mockAuthorizationRequest.swift */; };
+		D45DA1841DB9122E00FAA098 /* TwitchAPIUserResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DA1831DB9122E00FAA098 /* TwitchAPIUserResourceTests.swift */; };
+		D45DA1871DB9184100FAA098 /* TwitchAPIAuthorizationResourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DA1861DB9184100FAA098 /* TwitchAPIAuthorizationResourceTests.swift */; };
+		D45DA18A1DB9415000FAA098 /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DA1891DB9415000FAA098 /* UserModelTests.swift */; };
+		D45DA18C1DB9438600FAA098 /* CredentialModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DA18B1DB9438600FAA098 /* CredentialModelTests.swift */; };
 		D4BA4C7D1DAFFF9A00844331 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA4C7C1DAFFF9A00844331 /* Credentials.swift */; };
 		D4BA4C7E1DAFFF9A00844331 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA4C7C1DAFFF9A00844331 /* Credentials.swift */; };
 		D4BA4CAA1DB1183600844331 /* AuthorizationResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA4CA91DB1183600844331 /* AuthorizationResource.swift */; };
@@ -63,6 +68,11 @@
 		D45A0BEE1DAD2F11004F5056 /* TwitchAuthorizationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchAuthorizationManager.swift; sourceTree = "<group>"; };
 		D45A0CC71DAD6133004F5056 /* TwitchAPIWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwitchAPIWrapper.h; sourceTree = "<group>"; };
 		D45A0CCF1DAD7BE6004F5056 /* Locksmith.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Locksmith.framework; path = Carthage/Build/iOS/Locksmith.framework; sourceTree = "<group>"; };
+		D45DA1801DB910A800FAA098 /* mockAuthorizationRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mockAuthorizationRequest.swift; sourceTree = "<group>"; };
+		D45DA1831DB9122E00FAA098 /* TwitchAPIUserResourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchAPIUserResourceTests.swift; sourceTree = "<group>"; };
+		D45DA1861DB9184100FAA098 /* TwitchAPIAuthorizationResourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitchAPIAuthorizationResourceTests.swift; sourceTree = "<group>"; };
+		D45DA1891DB9415000FAA098 /* UserModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelTests.swift; sourceTree = "<group>"; };
+		D45DA18B1DB9438600FAA098 /* CredentialModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialModelTests.swift; sourceTree = "<group>"; };
 		D4BA4C7C1DAFFF9A00844331 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		D4BA4CA91DB1183600844331 /* AuthorizationResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,6 +152,8 @@
 			isa = PBXGroup;
 			children = (
 				D45A0B891DA6F07B004F5056 /* TwitchAPIWrapperTestsiOS.swift */,
+				D45DA1881DB9412700FAA098 /* Model Tests */,
+				D45DA1851DB9140D00FAA098 /* Resource Tests */,
 				D45A0BE61DA8B701004F5056 /* Mocks */,
 				D45A0B8B1DA6F07B004F5056 /* Info.plist */,
 			);
@@ -209,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				D45A0BE41DA89C02004F5056 /* MockJSONRequest.swift */,
+				D45DA1801DB910A800FAA098 /* mockAuthorizationRequest.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -220,6 +233,24 @@
 				D45A0BEA1DAD2A3E004F5056 /* Gloss.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D45DA1851DB9140D00FAA098 /* Resource Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D45DA1831DB9122E00FAA098 /* TwitchAPIUserResourceTests.swift */,
+				D45DA1861DB9184100FAA098 /* TwitchAPIAuthorizationResourceTests.swift */,
+			);
+			path = "Resource Tests";
+			sourceTree = "<group>";
+		};
+		D45DA1881DB9412700FAA098 /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D45DA1891DB9415000FAA098 /* UserModelTests.swift */,
+				D45DA18B1DB9438600FAA098 /* CredentialModelTests.swift */,
+			);
+			path = "Model Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +455,11 @@
 			files = (
 				D45A0BE51DA89C02004F5056 /* MockJSONRequest.swift in Sources */,
 				D4BA4CB91DB166E200844331 /* TwitchAPIWrapperTestsiOS.swift in Sources */,
+				D45DA1811DB910A800FAA098 /* mockAuthorizationRequest.swift in Sources */,
+				D45DA1871DB9184100FAA098 /* TwitchAPIAuthorizationResourceTests.swift in Sources */,
+				D45DA18C1DB9438600FAA098 /* CredentialModelTests.swift in Sources */,
+				D45DA18A1DB9415000FAA098 /* UserModelTests.swift in Sources */,
+				D45DA1841DB9122E00FAA098 /* TwitchAPIUserResourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

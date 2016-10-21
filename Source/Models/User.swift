@@ -14,14 +14,14 @@ public struct User {
     public let name: String?
     public let createdAt: String?
     public let updatedAt: String?
-    public let links: [String]?
+    public let links: [String:String]?
     public let logo: String?
-    public let id: String?
+    public let id: Int?
     public let displayName: String?
     public let bio: String?
     //MARK: Below are ony available for https://api.twitch.tv/kraken/user with oauth token.
     public let email: String?
-    public let partnered: String?
+    public let partnered: Bool?
     public let notifications: [String: Bool]?
 }
 
@@ -58,7 +58,7 @@ public extension User {
             updatedAt = nil
         }
         
-        if let parsedLinks = json["_links"] as? [String]? {
+        if let parsedLinks = json["_links"] as? [String:String]? {
             links = parsedLinks
         } else {
             links = nil
@@ -70,7 +70,7 @@ public extension User {
             logo = nil
         }
         
-        if let parsedId = json["_id"] as? String {
+        if let parsedId = json["_id"] as? Int {
             id = parsedId
         } else {
             id = nil
@@ -94,7 +94,7 @@ public extension User {
             email = nil
         }
         
-        if let parsedPartnered = json["partnered"] as? String {
+        if let parsedPartnered = json["partnered"] as? Bool {
             partnered = parsedPartnered
         } else {
             partnered = nil

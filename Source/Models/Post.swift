@@ -10,7 +10,7 @@ import Foundation
 
 ///Model representing a post from the Twitch API.
 public struct Post {
-    var id: String?
+    var id: Int?
     var createdAt: String?
     var deleted: String?
     var emotes: [String]?
