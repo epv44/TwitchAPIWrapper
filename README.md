@@ -18,14 +18,13 @@ The Twitch API Wrapper is an HTTP Client for the Twitch API that includes Object
 ## TODO
 * Build out models/presenters for other endpoints.
 * Improve sample app to show an example of connecting to all of the endpoints.
-* Documentation.
 * Test Coverage.
-* Cocoapods/Carthage/Swift Package Manager Connections.
-* Continuous integration.
-* Code coverage.
+* Swift Package Manager Connections.
+* Carthage build in travis-ci.
+* Improve code coverage.
 * Build tvOS target and example project.
 * Build macOS target and example project.
-* Add Lense's for Models
+* Add Lenses for Models
 
 ## Requirements
 * Swift 3.0+
@@ -192,6 +191,7 @@ The included example project includes a more detailed implementation of all usab
 ## Currently Supported Models
 ### User 
 `UserPresenter`
+
 Endpoints:
 
 1. GET /users/:user
