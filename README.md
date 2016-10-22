@@ -48,8 +48,6 @@ github epv44/TwitchAPIWrapper
 ## Documentation
 Read the [docs][docsLink]. Generated with [jazzy](https://github.com/realm/jazzy)
 
-[docsLink]:
-
 ## Getting Started
 
 ```Swift
@@ -192,13 +190,15 @@ extension UserViewController: TwitchAPIDataSource {
 The included example project includes a more detailed implementation of all usable Models and a full OAuth setup.
 
 ## Currently Supported Models
-### User `UserPresenter`
+### User 
+`UserPresenter`
 Endpoints:
 
 1. GET /users/:user
 2. GET /user (requires Authorization)
 
-### Emot `EmotePresenter`
+### Emote 
+`EmotePresenter`
 
 Endpoint:
 
