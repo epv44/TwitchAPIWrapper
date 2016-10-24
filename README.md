@@ -223,4 +223,4 @@ EVSlidingTableViewCell is available under the [MIT License][mitLink]. See the LI
 [carthageLink]:https://github.com/Carthage/Carthage
 [blogLink]:http://www.ericvennaro.com
 [mitLink]:http://opensource.org/licenses/MIT
-[docsLink]:https://epv44.github.io/TwitchAPIWrapper/
+[docsLink]:https://epv44.github.io/docs/TwitchAPIWrapper/index.html

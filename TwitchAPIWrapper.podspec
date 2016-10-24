@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name              = 'TwitchAPIWrapper'
-  s.version           = '0.0.3'
+  s.version           = '0.0.4'
   s.homepage          = 'https://github.com/epv44/TwitchAPIWrapper'
   s.author            = { 'Eric Vennaro' => 'epv9@case.edu' }
   s.summary           = 'Develpment kit for working with the Twitch API for iOS'
@@ -14,7 +14,7 @@ Development Kit for Twitch API, includes OAuth and models for endpoints
   s.license           = { :type => 'MIT', :file => 'LICENSE' }
   s.author            = { 'Eric Vennaro' => 'epv9@case.edu' }
   s.source            = { :git => 'https://github.com/epv44/TwitchAPIWrapper.git', :tag => s.version.to_s }
-  s.documentation_url = 'https://epv44.github.io/TwitchAPIWrapper/'
+  s.documentation_url = 'https://epv44.github.io/docs/TwitchAPIWrapper/index.html'
 
   s.ios.deployment_target = '10.0'
 
