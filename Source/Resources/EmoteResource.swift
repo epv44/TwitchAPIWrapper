@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct EmoteResource: NetworkJSONRequestType {
+struct EmoteResource: SendableJSONRequest {
     typealias Model = [Emote]
     
     //MARK: - JSONResource From Dictionary
@@ -35,6 +35,6 @@ struct EmoteResource: NetworkJSONRequestType {
         guard let arrValue = jsonArray as? [JSONDictionaryType] else {
             return nil
         }
-        return arrValue.flatMap { Emote(json: $0) }
+        return nil //arrValue.flatMap { Emote(json: $0) }
     }
 }

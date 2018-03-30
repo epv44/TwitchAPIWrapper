@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import Gloss
+//import Gloss
 
 ///A `Credential` is holds the fields returned from a succesfull authentication request.
-public struct Credentials: Decodable {
+public struct Credentials {
     ///Access token from the server.
     public let accessToken: String?
     
@@ -21,18 +21,19 @@ public struct Credentials: Decodable {
     public let refreshToken: String?
 }
 
-//MARK: - Init Extension.
-extension Credentials {
-    /**
-     Constructs a new credential.
-     
-     - parameter json: The `[String : Any]` dictionary returned from the network.
-     
-     - returns: A new `Credential` instance.
-    */
-    public init?(json: JSON) {
-        self.accessToken = "access_token" <~~ json
-        self.scope = "scope" <~~ json
-        self.refreshToken = "refresh_token" <~~ json
-    }
-}
+////MARK: - Init Extension.
+//extension Credentials {
+//    /**
+//     Constructs a new credential.
+//     
+//     - parameter json: The `[String : Any]` dictionary returned from the network.
+//     
+//     - returns: A new `Credential` instance.
+//    */
+//    public init?(json: JSON) {
+//        self.accessToken = "access_token" <~~ json
+//        self.scope = "scope" <~~ json
+//        self.refreshToken = "refresh_token" <~~ json
+//    }
+//}
+

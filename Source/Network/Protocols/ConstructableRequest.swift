@@ -83,9 +83,6 @@ protocol ConstructableRequest: RestRequest {
 }
 
 protocol JSONConstructableRequest: ConstructableRequest {}
-protocol SendableJSONRequest: JSONResource {
-    associatedtype Model
-}
 
 extension JSONConstructableRequest {
     func buildRequest() -> URLRequest? {
@@ -99,6 +96,8 @@ extension JSONConstructableRequest {
         return request as URLRequest
     }
 }
+
+protocol SendableJSONRequest: JSONResource {}
 
 extension SendableJSONRequest {
     func send(request: URLRequest?, completion: @escaping (_ result: Result<Model>) -> ()) {

@@ -20,3 +20,13 @@ struct Constants {
         static let oauthTokenURL = baseURL + "/oauth2/token"
     }
 }
+
+enum TwitchEndpoints {
+    case leaderboard
+    
+    var path: String {
+        switch self {
+        case .leaderboard:  return "helix/bits/leaderboard"
+        }
+    }
+}

@@ -8,9 +8,7 @@
 
 import Foundation
 
-protocol NetworkJSONRequestType: SendableJSONRequest, JSONResource {}
-
-struct UsersResource: NetworkJSONRequestType {
+struct UsersResource: SendableJSONRequest {
     typealias Model = User
     
     //MARK: - JSONResource From Dictionary

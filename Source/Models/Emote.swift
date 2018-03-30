@@ -7,10 +7,10 @@
 //
 
 import Foundation
-import Gloss
+//import Gloss
 
 ///Model representing an Emoticon
-public struct Emote: Decodable {
+public struct Emote {
     ///The Emoticon's ID
     public let id: Int?
     
@@ -18,18 +18,19 @@ public struct Emote: Decodable {
     public let code: String?
 }
 
-//MARK: - Initializers Extension
-///Extension for initializers
-public extension Emote {
-    /**
-     Constructs a new Emote.
-     
-     - parameter json: The `[String : Any]` dictionary returned from the network.
-     
-     - returns: A new `Emote` instance.
-     */
-    init?(json: JSON) {
-        self.id = "id" <~~ json
-        self.code = "code" <~~ json
-    }
-}
+////MARK: - Initializers Extension
+/////Extension for initializers
+//public extension Emote {
+//    /**
+//     Constructs a new Emote.
+//     
+//     - parameter json: The `[String : Any]` dictionary returned from the network.
+//     
+//     - returns: A new `Emote` instance.
+//     */
+//    init?(json: JSON) {
+//        self.id = "id" <~~ json
+//        self.code = "code" <~~ json
+//    }
+//}
+
