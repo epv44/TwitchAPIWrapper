@@ -8,6 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		2E9A01BB206EF69800231B13 /* Leaderboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01BA206EF69800231B13 /* Leaderboard.swift */; };
+		2E9A01BE206F06DB00231B13 /* Leaderboard.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A01BD206F06DB00231B13 /* Leaderboard.json */; };
+		2E9A01C0206F075700231B13 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01BF206F075700231B13 /* Fixtures.swift */; };
+		2E9A01C3206F0A6F00231B13 /* LeaderboardModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01C2206F0A6F00231B13 /* LeaderboardModelTests.swift */; };
+		2E9A01C5206F130300231B13 /* Clip.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A01C4206F130200231B13 /* Clip.json */; };
+		2E9A01C9206F158500231B13 /* ClipModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01C8206F158500231B13 /* ClipModelTests.swift */; };
+		2E9A01CA206F24E800231B13 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01C6206F131E00231B13 /* Clip.swift */; };
+		2E9A01CC206F26D300231B13 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01CB206F26D300231B13 /* Game.swift */; };
+		2E9A01CE206F279B00231B13 /* Game.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A01CD206F279B00231B13 /* Game.json */; };
+		2E9A01D0206F281900231B13 /* GameModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01CF206F281900231B13 /* GameModelTests.swift */; };
+		2E9A01D2206F2AA500231B13 /* GameAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01D1206F2AA500231B13 /* GameAnalytics.swift */; };
+		2E9A01D4206F2B4100231B13 /* GameAnalytic.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A01D3206F2B4100231B13 /* GameAnalytic.json */; };
+		2E9A01D6206F2BD800231B13 /* GameAnalyticModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01D5206F2BD800231B13 /* GameAnalyticModelTests.swift */; };
+		2E9A01D8206F2CC000231B13 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01D7206F2CC000231B13 /* Stream.swift */; };
+		2E9A01DA206F2EAA00231B13 /* Stream.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A01D9206F2EAA00231B13 /* Stream.json */; };
+		2E9A01DC206F2EDE00231B13 /* StreamModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01DB206F2EDE00231B13 /* StreamModelTests.swift */; };
+		2E9A01DE206F310400231B13 /* StreamMetadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01DD206F310400231B13 /* StreamMetadata.swift */; };
+		2E9A01E0206F33D300231B13 /* StreamMetadata.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A01DF206F33D300231B13 /* StreamMetadata.json */; };
+		2E9A01E2206F349200231B13 /* StreamMetadataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01E1206F349200231B13 /* StreamMetadataModelTests.swift */; };
+		2E9A01E4206F399A00231B13 /* TwitchEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01E3206F399A00231B13 /* TwitchEndpoints.swift */; };
+		2E9A01E6206F3A6600231B13 /* UserNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01E5206F3A6600231B13 /* UserNew.swift */; };
+		2E9A01E8206F3C3000231B13 /* User.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A01E7206F3C3000231B13 /* User.json */; };
+		2E9A01EA206F3E6600231B13 /* UserFollow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01E9206F3E6600231B13 /* UserFollow.swift */; };
+		2E9A01EC206F3FF600231B13 /* UserFollow.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A01EB206F3FF600231B13 /* UserFollow.json */; };
+		2E9A01EE206F402300231B13 /* UserFollowModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01ED206F402300231B13 /* UserFollowModelTests.swift */; };
+		2E9A01F0206F429A00231B13 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01EF206F429A00231B13 /* Video.swift */; };
+		2E9A01F2206F43E400231B13 /* Video.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E9A01F1206F43E400231B13 /* Video.json */; };
+		2E9A01F4206F440500231B13 /* VideoModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9A01F3206F440500231B13 /* VideoModelTests.swift */; };
 		D45A0B8C1DA6F07B004F5056 /* TwitchAPIWrapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D45A0B5C1DA6E706004F5056 /* TwitchAPIWrapper.framework */; };
 		D45A0B9B1DA7EF67004F5056 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0B9A1DA7EF67004F5056 /* Post.swift */; };
 		D45A0B9D1DA7F08E004F5056 /* Endorsement.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45A0B9C1DA7F08E004F5056 /* Endorsement.swift */; };
@@ -54,6 +81,33 @@
 
 /* Begin PBXFileReference section */
 		2E9A01BA206EF69800231B13 /* Leaderboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
+		2E9A01BD206F06DB00231B13 /* Leaderboard.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Leaderboard.json; sourceTree = "<group>"; };
+		2E9A01BF206F075700231B13 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
+		2E9A01C2206F0A6F00231B13 /* LeaderboardModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardModelTests.swift; sourceTree = "<group>"; };
+		2E9A01C4206F130200231B13 /* Clip.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Clip.json; sourceTree = "<group>"; };
+		2E9A01C6206F131E00231B13 /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
+		2E9A01C8206F158500231B13 /* ClipModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClipModelTests.swift; sourceTree = "<group>"; };
+		2E9A01CB206F26D300231B13 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		2E9A01CD206F279B00231B13 /* Game.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Game.json; sourceTree = "<group>"; };
+		2E9A01CF206F281900231B13 /* GameModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModelTests.swift; sourceTree = "<group>"; };
+		2E9A01D1206F2AA500231B13 /* GameAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAnalytics.swift; sourceTree = "<group>"; };
+		2E9A01D3206F2B4100231B13 /* GameAnalytic.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GameAnalytic.json; sourceTree = "<group>"; };
+		2E9A01D5206F2BD800231B13 /* GameAnalyticModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAnalyticModelTests.swift; sourceTree = "<group>"; };
+		2E9A01D7206F2CC000231B13 /* Stream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
+		2E9A01D9206F2EAA00231B13 /* Stream.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stream.json; sourceTree = "<group>"; };
+		2E9A01DB206F2EDE00231B13 /* StreamModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamModelTests.swift; sourceTree = "<group>"; };
+		2E9A01DD206F310400231B13 /* StreamMetadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamMetadata.swift; sourceTree = "<group>"; };
+		2E9A01DF206F33D300231B13 /* StreamMetadata.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = StreamMetadata.json; sourceTree = "<group>"; };
+		2E9A01E1206F349200231B13 /* StreamMetadataModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamMetadataModelTests.swift; sourceTree = "<group>"; };
+		2E9A01E3206F399A00231B13 /* TwitchEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchEndpoints.swift; sourceTree = "<group>"; };
+		2E9A01E5206F3A6600231B13 /* UserNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNew.swift; sourceTree = "<group>"; };
+		2E9A01E7206F3C3000231B13 /* User.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = User.json; sourceTree = "<group>"; };
+		2E9A01E9206F3E6600231B13 /* UserFollow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollow.swift; sourceTree = "<group>"; };
+		2E9A01EB206F3FF600231B13 /* UserFollow.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserFollow.json; sourceTree = "<group>"; };
+		2E9A01ED206F402300231B13 /* UserFollowModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowModelTests.swift; sourceTree = "<group>"; };
+		2E9A01EF206F429A00231B13 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
+		2E9A01F1206F43E400231B13 /* Video.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Video.json; sourceTree = "<group>"; };
+		2E9A01F3206F440500231B13 /* VideoModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoModelTests.swift; sourceTree = "<group>"; };
 		D45A0B5C1DA6E706004F5056 /* TwitchAPIWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwitchAPIWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D45A0B671DA6E7DA004F5056 /* Info-iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
 		D45A0B6E1DA6E9E6004F5056 /* TwitchAPIWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwitchAPIWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +173,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E9A01BC206F06C300231B13 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				2E9A01C1206F09EA00231B13 /* FixtureData */,
+				2E9A01BF206F075700231B13 /* Fixtures.swift */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		2E9A01C1206F09EA00231B13 /* FixtureData */ = {
+			isa = PBXGroup;
+			children = (
+				2E9A01C4206F130200231B13 /* Clip.json */,
+				2E9A01CD206F279B00231B13 /* Game.json */,
+				2E9A01D3206F2B4100231B13 /* GameAnalytic.json */,
+				2E9A01BD206F06DB00231B13 /* Leaderboard.json */,
+				2E9A01D9206F2EAA00231B13 /* Stream.json */,
+				2E9A01DF206F33D300231B13 /* StreamMetadata.json */,
+				2E9A01E7206F3C3000231B13 /* User.json */,
+				2E9A01EB206F3FF600231B13 /* UserFollow.json */,
+				2E9A01F1206F43E400231B13 /* Video.json */,
+			);
+			path = FixtureData;
+			sourceTree = "<group>";
+		};
 		D41C204A1DB17735004239A7 /* Authorization */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +233,7 @@
 				D45A0B711DA6E9E6004F5056 /* Info-tvOS.plist */,
 				D45A0B671DA6E7DA004F5056 /* Info-iOS.plist */,
 				D45A0BC11DA82947004F5056 /* Constants.swift */,
+				2E9A01E3206F399A00231B13 /* TwitchEndpoints.swift */,
 				D48F75DE1DBAD06F003F8946 /* EVLog.swift */,
 				D45A0BC31DA83141004F5056 /* Presenters */,
 				D45A0BA01DA7F122004F5056 /* Resources */,
@@ -167,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				D45A0B891DA6F07B004F5056 /* TwitchAPIWrapperTestsiOS.swift */,
+				2E9A01BC206F06C300231B13 /* Fixtures */,
 				D45DA1881DB9412700FAA098 /* Model Tests */,
 				D45DA1851DB9140D00FAA098 /* Resource Tests */,
 				D45A0BE61DA8B701004F5056 /* Mocks */,
@@ -188,7 +269,15 @@
 		D45A0B991DA7EED8004F5056 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E9A01C6206F131E00231B13 /* Clip.swift */,
+				2E9A01CB206F26D300231B13 /* Game.swift */,
+				2E9A01D1206F2AA500231B13 /* GameAnalytics.swift */,
 				2E9A01BA206EF69800231B13 /* Leaderboard.swift */,
+				2E9A01D7206F2CC000231B13 /* Stream.swift */,
+				2E9A01DD206F310400231B13 /* StreamMetadata.swift */,
+				2E9A01E5206F3A6600231B13 /* UserNew.swift */,
+				2E9A01E9206F3E6600231B13 /* UserFollow.swift */,
+				2E9A01EF206F429A00231B13 /* Video.swift */,
 				D45A0B9A1DA7EF67004F5056 /* Post.swift */,
 				D45A0B9C1DA7F08E004F5056 /* Endorsement.swift */,
 				D45DA18F1DBA707D00FAA098 /* Emote.swift */,
@@ -268,7 +357,15 @@
 		D45DA1881DB9412700FAA098 /* Model Tests */ = {
 			isa = PBXGroup;
 			children = (
+				2E9A01C8206F158500231B13 /* ClipModelTests.swift */,
+				2E9A01C2206F0A6F00231B13 /* LeaderboardModelTests.swift */,
+				2E9A01CF206F281900231B13 /* GameModelTests.swift */,
+				2E9A01D5206F2BD800231B13 /* GameAnalyticModelTests.swift */,
+				2E9A01DB206F2EDE00231B13 /* StreamModelTests.swift */,
+				2E9A01E1206F349200231B13 /* StreamMetadataModelTests.swift */,
 				D45DA1891DB9415000FAA098 /* UserModelTests.swift */,
+				2E9A01ED206F402300231B13 /* UserFollowModelTests.swift */,
+				2E9A01F3206F440500231B13 /* VideoModelTests.swift */,
 				D45DA18B1DB9438600FAA098 /* CredentialModelTests.swift */,
 			);
 			path = "Model Tests";
@@ -417,6 +514,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9A01DA206F2EAA00231B13 /* Stream.json in Resources */,
+				2E9A01EC206F3FF600231B13 /* UserFollow.json in Resources */,
+				2E9A01F2206F43E400231B13 /* Video.json in Resources */,
+				2E9A01D4206F2B4100231B13 /* GameAnalytic.json in Resources */,
+				2E9A01BE206F06DB00231B13 /* Leaderboard.json in Resources */,
+				2E9A01E8206F3C3000231B13 /* User.json in Resources */,
+				2E9A01C5206F130300231B13 /* Clip.json in Resources */,
+				2E9A01E0206F33D300231B13 /* StreamMetadata.json in Resources */,
+				2E9A01CE206F279B00231B13 /* Game.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,23 +553,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				D45A0B9D1DA7F08E004F5056 /* Endorsement.swift in Sources */,
+				2E9A01CA206F24E800231B13 /* Clip.swift in Sources */,
 				D48F75CC1DBA923C003F8946 /* EmotePresenter.swift in Sources */,
 				D45A0C5B1DAD4E45004F5056 /* TwitchAuthorizationManager.swift in Sources */,
 				D4BA4CAA1DB1183600844331 /* AuthorizationResource.swift in Sources */,
 				D45A0BD71DA8745F004F5056 /* ConstructableRequest.swift in Sources */,
 				D48F75DF1DBAD06F003F8946 /* EVLog.swift in Sources */,
+				2E9A01E4206F399A00231B13 /* TwitchEndpoints.swift in Sources */,
 				D45DA1941DBA7B0D00FAA098 /* EmoteResource.swift in Sources */,
 				2E9A01BB206EF69800231B13 /* Leaderboard.swift in Sources */,
 				D45DA1951DBA7B1700FAA098 /* Emote.swift in Sources */,
 				D45A0B9B1DA7EF67004F5056 /* Post.swift in Sources */,
+				2E9A01DE206F310400231B13 /* StreamMetadata.swift in Sources */,
+				2E9A01D8206F2CC000231B13 /* Stream.swift in Sources */,
+				2E9A01CC206F26D300231B13 /* Game.swift in Sources */,
 				D45A0BC51DA83189004F5056 /* UserPresenter.swift in Sources */,
+				2E9A01F0206F429A00231B13 /* Video.swift in Sources */,
 				D4BA4C7D1DAFFF9A00844331 /* Credentials.swift in Sources */,
+				2E9A01D2206F2AA500231B13 /* GameAnalytics.swift in Sources */,
 				D45A0BDD1DA8817A004F5056 /* JSONResource.swift in Sources */,
 				D48F75DA1DBAB106003F8946 /* TwitchAPIDataSource.swift in Sources */,
 				D45A0B9F1DA7F0B6004F5056 /* User.swift in Sources */,
 				D45A0BC01DA828E1004F5056 /* UsersResource.swift in Sources */,
+				2E9A01E6206F3A6600231B13 /* UserNew.swift in Sources */,
 				D45A0BD51DA87315004F5056 /* RestRequest.swift in Sources */,
 				D45A0BC21DA82947004F5056 /* Constants.swift in Sources */,
+				2E9A01EA206F3E6600231B13 /* UserFollow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,15 +595,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9A01DC206F2EDE00231B13 /* StreamModelTests.swift in Sources */,
 				D45A0BE51DA89C02004F5056 /* MockJSONRequest.swift in Sources */,
 				D4BA4CB91DB166E200844331 /* TwitchAPIWrapperTestsiOS.swift in Sources */,
 				D48F75CA1DBA8631003F8946 /* TwitchAPIEmoteResourceTests.swift in Sources */,
+				2E9A01C9206F158500231B13 /* ClipModelTests.swift in Sources */,
+				2E9A01D6206F2BD800231B13 /* GameAnalyticModelTests.swift in Sources */,
+				2E9A01D0206F281900231B13 /* GameModelTests.swift in Sources */,
+				2E9A01C0206F075700231B13 /* Fixtures.swift in Sources */,
 				D45DA1811DB910A800FAA098 /* MockAuthorizationRequest.swift in Sources */,
 				D45DA1871DB9184100FAA098 /* TwitchAPIAuthorizationResourceTests.swift in Sources */,
+				2E9A01E2206F349200231B13 /* StreamMetadataModelTests.swift in Sources */,
 				D45DA18C1DB9438600FAA098 /* CredentialModelTests.swift in Sources */,
 				D45DA18E1DBA614400FAA098 /* MockJSONResource.swift in Sources */,
+				2E9A01EE206F402300231B13 /* UserFollowModelTests.swift in Sources */,
 				D45DA18A1DB9415000FAA098 /* UserModelTests.swift in Sources */,
 				D45DA1841DB9122E00FAA098 /* TwitchAPIUserResourceTests.swift in Sources */,
+				2E9A01C3206F0A6F00231B13 /* LeaderboardModelTests.swift in Sources */,
+				2E9A01F4206F440500231B13 /* VideoModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
