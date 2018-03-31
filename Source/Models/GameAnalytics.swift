@@ -16,8 +16,8 @@ class GameAnalyticsWrapper: Codable {
 }
 
 public class GameAnalytic: Codable {
-    let gameId: String
-    let url: URL
+    public let gameId: String
+    public let url: URL
     
     private enum CodingKeys: String, CodingKey {
         case gameId = "game_id"

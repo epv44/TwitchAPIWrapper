@@ -28,7 +28,7 @@ class StreamModelTests: XCTestCase {
             XCTAssertEqual(stream.startedAt, date)
             XCTAssertEqual(stream.thumbnailURL, URL(string: "https://static-cdn.jtvnw.net/previews-ttv/live_user_dansgaming-{width}x{height}.jpg"))
             XCTAssertEqual(stream.title, "[Punday Monday] Necromancer - Dan's First Character - Maps - !build")
-            XCTAssertEqual(stream.type, "live")
+            XCTAssertEqual(stream.type, StreamType.live)
             XCTAssertEqual(stream.userId, "26007351216")
             XCTAssertEqual(stream.viewCount, 5723)
             XCTAssertEqual(pagination.cursor, "eyJiIjp7Ik9mZnNldCI6MH0sImEiOnsiT2Zmc2V0Ijo0MH19")

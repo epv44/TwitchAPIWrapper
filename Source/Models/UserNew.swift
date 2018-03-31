@@ -7,6 +7,19 @@
 
 import Foundation
 
+public enum BroadcasterType: String, Codable {
+    case partner
+    case affiliate
+    case none = ""
+}
+
+public enum UserType: String, Codable {
+    case staff
+    case admin
+    case globalMod = "global_mod"
+    case none = ""
+}
+
 class UserWrapper: Codable {
     let users: [UserNew]
     
@@ -16,16 +29,16 @@ class UserWrapper: Codable {
 }
 
 public class UserNew: Codable {
-    let id: String
-    let login: String
-    let displayName: String
-    let type: String
-    let broadcasterType: String
-    let description: String
-    let profileImageURL: URL
-    let offlineImageURL: URL
-    let viewCount: Int
-    let email: String?
+    public let id: String
+    public let login: String
+    public let displayName: String
+    public let type: UserType
+    public let broadcasterType: BroadcasterType
+    public let description: String
+    public let profileImageURL: URL
+    public let offlineImageURL: URL
+    public let viewCount: Int
+    public let email: String?
     
     private enum CodingKeys: String, CodingKey {
         case id

@@ -8,9 +8,9 @@
 import Foundation
 
 public class Leaderboard: Codable {
-    let entries: [LeaderboardEntry]
-    let dateRange: DateRange
-    let total: Int
+    public let entries: [LeaderboardEntry]
+    public let dateRange: DateRange
+    public let total: Int
     
     private enum CodingKeys: String, CodingKey {
         case entries = "data"
@@ -26,8 +26,8 @@ public class Leaderboard: Codable {
 }
 
 public class DateRange: Codable {
-    let startedAt: Date
-    let endedAt: Date
+    public let startedAt: Date
+    public let endedAt: Date
     
     private enum CodingKeys: String, CodingKey {
         case startedAt = "started_at"
@@ -41,9 +41,9 @@ public class DateRange: Codable {
 }
 
 public class LeaderboardEntry: Codable {
-    let userId: String
-    let rank: Int
-    let score: Int
+    public let userId: String
+    public let rank: Int
+    public let score: Int
     
     private enum CodingKeys: String, CodingKey {
         case userId = "user_id"
@@ -55,36 +55,5 @@ public class LeaderboardEntry: Codable {
         self.userId = userId
         self.rank = rank
         self.score = score
-    }
-}
-
-extension JSONDecoder {
-    class func twitchAPIStandard() -> JSONDecoder {
-        let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(Date.twitchStandardDateFormatter)
-        
-        return decoder
-    }
-}
-
-extension JSONEncoder {
-    class func twitchAPIStandard() -> JSONEncoder {
-        let decoder = JSONEncoder()
-        decoder.dateEncodingStrategy = .formatted(Date.twitchStandardDateFormatter)
-        
-        return decoder
-    }
-}
-
-extension Date {
-    static var twitchStandardDateFormatter: DateFormatter {
-        struct Static {
-            static let instance: DateFormatter = {
-                let df = DateFormatter()
-                df.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-                return df
-            }()
-        }
-        return Static.instance
     }
 }

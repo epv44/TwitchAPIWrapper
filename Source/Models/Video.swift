@@ -7,6 +7,18 @@
 
 import Foundation
 
+public enum Viewable: String, Codable {
+    case `public`
+    case `private`
+}
+
+public enum VideoType: String, Codable {
+    case upload
+    case archive
+    case highlight
+    case all
+}
+
 class VideoWrapper: Codable {
     let videos: [Video]
     
@@ -24,10 +36,10 @@ public class Video: Codable {
     let publishedAt: Date
     let url: URL
     let thumbnailURL: URL
-    let viewable: String
+    let viewable: Viewable
     let viewCount: Int
     let language: String
-    let type: String
+    let type: VideoType
     let duration: String //should be a timestamp, or need some type of custom key
     
     private enum CodingKeys: String, CodingKey {

@@ -16,9 +16,9 @@ class GameWrapper: Codable {
 }
 
 public class Game: Codable {
-    let id: String
-    let name: String
-    let boxArtURL: URL
+    public let id: String
+    public let name: String
+    public let boxArtURL: URL
     
     private enum CodingKeys: String, CodingKey {
         case id

@@ -17,18 +17,34 @@ enum TwitchEndpoints {
     case userFollows
     case users
     case videos
+    case authentication
     
     var path: String {
         switch self {
         case .leaderboard:      return "helix/bits/leaderboard"
         case .clips:            return "helix/clips"
-        case .games:            return "/helix/games"
+        case .games:            return "helix/games"
         case .streams:          return "helix/streams"
         case .streamsMetadata:  return "helix/streams/metadata"
         case .topGames:         return "helix/games/top"
         case .userFollows:      return "helix/users/follows"
         case .users:            return "helix/users"
         case .videos:           return "helix/videos"
+        case .authentication:   return "oauth2/authorize"
         }
+    }
+    
+    var host: String {
+        switch self {
+        case .leaderboard, .clips, .games, .streams, .streamsMetadata, .topGames,
+             .userFollows, .users, .videos:
+            return "https://api.twitch.tv/"
+        case .authentication:
+            return "https://id.twitch.tv/"
+        }
+    }
+    
+    func construct() -> URL? {
+        return URL(string: self.host + self.path)
     }
 }

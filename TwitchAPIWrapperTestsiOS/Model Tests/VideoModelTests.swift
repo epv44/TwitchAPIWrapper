@@ -26,10 +26,10 @@ class VideoModelTests: XCTestCase {
             XCTAssertEqual(video.publishedAt, date)
             XCTAssertEqual(video.thumbnailURL, URL(string: "https://static-cdn.jtvnw.net/s3_vods/bebc8cba2926d1967418_chewiemelodies_27786761696_805342775/thumb/thumb0-%{width}x%{height}.jpg"))
             XCTAssertEqual(video.title, "-")
-            XCTAssertEqual(video.type, "archive")
+            XCTAssertEqual(video.type, VideoType.archive)
             XCTAssertEqual(video.url, URL(string: "https://www.twitch.tv/videos/234482848"))
             XCTAssertEqual(video.userId, "67955580")
-            XCTAssertEqual(video.viewable, "public")
+            XCTAssertEqual(video.viewable, Viewable.public)
             XCTAssertEqual(video.viewCount, 142)
         } catch {
             print(error)
