@@ -17,7 +17,7 @@ class UserModelTests: XCTestCase {
         do {
             let wrapper = try decoder.decode(UserWrapper.self, from: Fixtures.dataFromFixtureFile("Game"))
             let user = wrapper.users[0]
-            XCTAssertEqual(user.broadcasterType, "")
+            XCTAssertEqual(user.broadcasterType, BroadcasterType.none)
             XCTAssertEqual(user.description, "Just a gamer playing games and chatting. :)")
             XCTAssertEqual(user.displayName, "dallas")
             XCTAssertEqual(user.email, "login@provider.com")
@@ -25,7 +25,7 @@ class UserModelTests: XCTestCase {
             XCTAssertEqual(user.login, "dallas")
             XCTAssertEqual(user.offlineImageURL, URL(string: "https://static-cdn.jtvnw.net/jtv_user_pictures/dallas-channel_offline_image-1a2c906ee2c35f12-1920x1080.png"))
             XCTAssertEqual(user.profileImageURL, URL(string: "https://static-cdn.jtvnw.net/jtv_user_pictures/dallas-profile_image-1a2c906ee2c35f12-300x300.png"))
-            XCTAssertEqual(user.type, "staff")
+            XCTAssertEqual(user.type, UserType.staff)
             XCTAssertEqual(user.viewCount, 191836881)
         } catch {
             print(error)

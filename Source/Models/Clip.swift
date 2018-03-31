@@ -16,18 +16,18 @@ class ClipWrapper: Codable {
 }
 
 public class Clip: Codable {
-    let id: String
-    let url: URL
-    let embedURL: URL
-    let broadcasterId: String
-    let creatorId: String
-    let videoId: String
-    let gameId: String
-    let language: String
-    let title: String
-    let viewCount: Int
-    let createdAt: Date
-    let thumbnailURL: URL
+    public let id: String
+    public let url: URL
+    public let embedURL: URL
+    public let broadcasterId: String
+    public let creatorId: String
+    public let videoId: String
+    public let gameId: String
+    public let language: String
+    public let title: String
+    public let viewCount: Int
+    public let createdAt: Date
+    public let thumbnailURL: URL
     
     private enum CodingKeys: String, CodingKey {
         case id

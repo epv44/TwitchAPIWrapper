@@ -7,8 +7,9 @@
 // Note that the Twitch API never has tokens expire, so if a token exists it is valid indefinitely
 
 import Foundation
-//import Locksmith
+import Locksmith
 import UIKit
+import SafariServices
 
 ///Error for authentication requests.
 public enum AuthorizationError: Error {
@@ -75,39 +76,22 @@ public class TwitchAuthorizationManager {
     ///Authorization token **Read Only**.
     public var authToken: String? {
         get {
-//            if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
-//                return result["accessToken"] as? String
-//            } else {
-//                EVLog(text: "Bad retrieval of access token", line: #line, fileName: #file)
-//                return nil
-//            }
-            return nil
+            guard let result = Locksmith.loadDataForUserAccount(userAccount: userAccount)  else {
+                EVLog(text: "Bad retrieval of access token", line: #line, fileName: #file)
+                return nil
+            }
+            return result["accessToken"] as? String
         }
     }
     
     ///Scopes authorized from server **Read Only**.
     public var scope: [String]? {
         get {
-//            if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
-//                return result["scopes"] as? [String]
-//            } else {
-//                EVLog(text: "Bad retrieval of scope", line: #line, fileName: #file)
-//                return nil
-//            }
-            return nil
-        }
-    }
-    
-    ///Authorization refresh token **Read Only**.
-    public var refreshToken: String? {
-        get {
-//            if let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) {
-//                return result["refreshToken"] as? String
-//            } else {
-//                EVLog(text: "Bad retrieval of refresh token", line: #line, fileName: #file)
-//                return nil
-//            }
-            return nil
+            guard let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) else {
+                EVLog(text: "Bad retrieval of scope", line: #line, fileName: #file)
+                return nil
+            }
+            return result["scopes"] as? [String]
         }
     }
     
@@ -116,49 +100,50 @@ public class TwitchAuthorizationManager {
             return nil
         }
         set {
-//            if let valueToSave = newValue {
-//                do{
-//                    try Locksmith.updateData(data: ["accessToken" : valueToSave.accessToken!, "refreshToken" : valueToSave.refreshToken!, "scopes" : valueToSave.scope!], forUserAccount: userAccount)
-//                } catch LocksmithError.allocate {
-//                    EVLog(text: LocksmithError.allocate.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.authFailed {
-//                    EVLog(text: LocksmithError.authFailed.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.decode {
-//                    EVLog(text: LocksmithError.decode.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.duplicate {
-//                    EVLog(text: LocksmithError.duplicate.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.interactionNotAllowed {
-//                    EVLog(text: LocksmithError.interactionNotAllowed.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.noError {
-//                    EVLog(text: LocksmithError.noError.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.notAvailable {
-//                    EVLog(text: LocksmithError.notAvailable.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.notFound {
-//                    EVLog(text: LocksmithError.notFound.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.param {
-//                    EVLog(text: LocksmithError.param.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.requestNotSet {
-//                    EVLog(text: LocksmithError.requestNotSet.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.typeNotFound {
-//                    EVLog(text: LocksmithError.typeNotFound.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.unableToClear {
-//                    EVLog(text: LocksmithError.unableToClear.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.undefined {
-//                    EVLog(text: LocksmithError.undefined.rawValue, line: #line, fileName: #file)
-//                } catch LocksmithError.unimplemented {
-//                    EVLog(text: LocksmithError.unimplemented.rawValue, line: #line, fileName: #file)
-//                } catch {
-//                    EVLog(text: "Unknown error occured saving value to the keychain", line: #line, fileName: #file)
-//                }
-//            } else {
-//                EVLog(text: "Bad value: \(String(describing: newValue))", line: #line, fileName: #file)
-//            }
+            if let valueToSave = newValue {
+                do{
+                    try Locksmith.updateData(data: ["accessToken" : valueToSave.accessToken!, "scopes" : valueToSave.scope!], forUserAccount: userAccount)
+                } catch LocksmithError.allocate {
+                    EVLog(text: LocksmithError.allocate.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.authFailed {
+                    EVLog(text: LocksmithError.authFailed.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.decode {
+                    EVLog(text: LocksmithError.decode.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.duplicate {
+                    EVLog(text: LocksmithError.duplicate.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.interactionNotAllowed {
+                    EVLog(text: LocksmithError.interactionNotAllowed.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.noError {
+                    EVLog(text: LocksmithError.noError.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.notAvailable {
+                    EVLog(text: LocksmithError.notAvailable.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.notFound {
+                    EVLog(text: LocksmithError.notFound.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.param {
+                    EVLog(text: LocksmithError.param.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.requestNotSet {
+                    EVLog(text: LocksmithError.requestNotSet.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.typeNotFound {
+                    EVLog(text: LocksmithError.typeNotFound.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.unableToClear {
+                    EVLog(text: LocksmithError.unableToClear.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.undefined {
+                    EVLog(text: LocksmithError.undefined.rawValue, line: #line, fileName: #file)
+                } catch LocksmithError.unimplemented {
+                    EVLog(text: LocksmithError.unimplemented.rawValue, line: #line, fileName: #file)
+                } catch {
+                    EVLog(text: "Unknown error occured saving value to the keychain", line: #line, fileName: #file)
+                }
+            } else {
+                EVLog(text: "Bad value: \(String(describing: newValue))", line: #line, fileName: #file)
+            }
         }
     }
     
     private var state: String?
     private let userAccount = "twitch"
     private let userDefaultsKey = "loadingOauthToken"
+    private var authenticationSession: SFAuthenticationSession?
     
     //MARK: - Initializer
     
@@ -177,8 +162,8 @@ public class TwitchAuthorizationManager {
      
      - throws `AuthorizationError`.
     */
+    //log in and process right here, need to use query builder and verify new paths
     public func login() throws {
-        //user defaults, what about refresh token i.e. when does token expire?
         let defaults = UserDefaults.standard
         if !defaults.bool(forKey: userDefaultsKey) && authToken == nil {
             state = NSUUID().uuidString

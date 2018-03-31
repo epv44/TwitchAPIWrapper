@@ -8,8 +8,8 @@
 import Foundation
 
 public class StreamMetadataWrapper: Codable {
-    let streamsMetadata: [StreamMetadata]
-    let pagination: Paginate
+    public let streamsMetadata: [StreamMetadata]
+    public let pagination: Paginate
     
     private enum CodingKeys: String, CodingKey {
         case streamsMetadata = "data"
@@ -18,23 +18,23 @@ public class StreamMetadataWrapper: Codable {
 }
 
 public class Hero: Codable {
-    let type: String?
-    let `class`: String?
-    let name: String
-    let ability: String?
-    let role: String?
+    public let type: String?
+    public let `class`: String?
+    public let name: String
+    public let ability: String?
+    public let role: String?
 }
 
 public class BroadcasterMetadata: Codable {
-    let broadcaster: Hero
-    let opponent: Hero
+    public let broadcaster: Hero
+    public let opponent: Hero
 }
 
 public class StreamMetadata: Codable {
-    let userId: String
-    let gameId: String?
-    let overwatch: BroadcasterMetadata?
-    let hearthstone: BroadcasterMetadata?
+    public let userId: String
+    public let gameId: String?
+    public let overwatch: BroadcasterMetadata?
+    public let hearthstone: BroadcasterMetadata?
     
     private enum CodingKeys: String, CodingKey {
         case userId = "user_id"
