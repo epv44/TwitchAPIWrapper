@@ -16,21 +16,9 @@ public struct Credentials: Codable {
     ///Scopes that the user is authorized as granted by the server.
     public let scope: [String]?
     
-    ///Client id for the user
-    public let clientId: String
-    
-    ///Authorized user login
-    public let login: String
-    
-    ///Authorized user id
-    public let userId: String
-    
     private enum CodingKeys: String, CodingKey {
         case accessToken = "access_token"
         case scope
-        case clientId = "client_id"
-        case login
-        case userId = "user_id"
     }
 }
 

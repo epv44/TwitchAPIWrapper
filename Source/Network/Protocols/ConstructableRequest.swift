@@ -8,14 +8,6 @@
 
 import Foundation
 
-/**
- An instance conforming to the `ResourceType` protocol represents a resource with a specific type that the network response will be mapped to.
- */
-public protocol ResourceType {
-    ///The type of the item.
-    associatedtype Model
-}
-
 ///Result of a network request.
 public enum Result<T> {
     /**
@@ -94,33 +86,5 @@ extension JSONConstructableRequest {
         request.httpMethod = method
         
         return request as URLRequest
-    }
-}
-
-protocol SendableJSONRequest: JSONResource {}
-
-extension SendableJSONRequest {
-    func send(request: URLRequest?, completion: @escaping (_ result: Result<Model>) -> ()) {
-        let session = URLSession.shared
-        guard let request = request else { return }
-        let task = session.dataTask(with: request, completionHandler: { data, response, error in
-            if let error = error {
-                completion(.failure(NetworkJSONServiceError.networkError(error: error)))
-            }
-            guard let urlResponse = response as? HTTPURLResponse else {
-                completion(.failure(NetworkJSONServiceError.unknownErrorOccurred(desc: "URLResponse was not a HTTPURLResponse")))
-                return
-            }
-            if 200..<400 ~= urlResponse.statusCode {
-                guard let data = data else {
-                    completion(.failure(NetworkJSONServiceError.noData))
-                    return
-                }
-                completion(self.result(from: data))
-            } else {
-                completion(.failure(NetworkJSONServiceError.networkResponseError(response: urlResponse)))
-            }
-        })
-        task.resume()
     }
 }
