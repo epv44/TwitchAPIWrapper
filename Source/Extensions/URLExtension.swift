@@ -8,11 +8,10 @@
 import Foundation
 
 extension URL {
-    private func appending(queryItems: [URLQueryItem]) -> URL? {
+    func appending(queryItems: [URLQueryItem]) -> URL? {
         var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: false)
         let originalQueryItems = urlComponents?.queryItems ?? []
-        let uniqueQueryItems = originalQueryItems.filter { !queryItems.map({ $0.name }).contains($0.name) } + queryItems
-        urlComponents?.queryItems = uniqueQueryItems
+        urlComponents?.queryItems = originalQueryItems + queryItems
         
         return urlComponents?.url
     }

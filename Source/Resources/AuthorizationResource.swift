@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct AuthorizationResource: SendableJSONRequest, JSONResource, JSONConstructableRequest {
+struct AuthorizationResource: JSONConstructableRequest {
     typealias Model = Credentials
     let url: URL?
     let method: String = "POST"
@@ -17,16 +17,5 @@ struct AuthorizationResource: SendableJSONRequest, JSONResource, JSONConstructab
     init(data: Data, url: URL) {
         self.data = data
         self.url = url
-    }
-    
-    func processAuthorization(completion: @escaping (_ result: Result<Model>) -> ()) {
-        send(request: buildRequest(),completion: { (result) in
-            completion(result)
-        })
-    }
-    
-    //MARK: - JSONResource From Dictionary
-    func model(from jsonDictionary: JSONDictionaryType) -> Model? {
-        return nil //Credentials()
     }
 }

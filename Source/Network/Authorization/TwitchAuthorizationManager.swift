@@ -85,7 +85,7 @@ public class TwitchAuthorizationManager {
     }
     
     ///Scopes authorized from server **Read Only**.
-    public var scope: [String]? {
+    public var authorizedScopes: [String]? {
         get {
             guard let result = Locksmith.loadDataForUserAccount(userAccount: userAccount) else {
                 EVLog(text: "Bad retrieval of scope", line: #line, fileName: #file)
@@ -142,7 +142,7 @@ public class TwitchAuthorizationManager {
     
     private var state: String?
     private let userAccount = "twitch"
-    private let userDefaultsKey = "loadingOauthToken"
+    private let loadingAuthTokenKey = "loadingOauthToken"
     private var authenticationSession: SFAuthenticationSession?
     
     //MARK: - Initializer
@@ -165,64 +165,40 @@ public class TwitchAuthorizationManager {
     //log in and process right here, need to use query builder and verify new paths
     public func login() throws {
         let defaults = UserDefaults.standard
-        if !defaults.bool(forKey: userDefaultsKey) && authToken == nil {
+        if !defaults.bool(forKey: loadingAuthTokenKey) && authToken == nil {
             state = NSUUID().uuidString
             guard let clientID = clientID, let redirectURI = redirectURI, let scopes = scopes, let state = state else {
                 throw AuthorizationError.invalidQueryParameters(desc: "Must define values for the Client Id, Redirect URI, and scopes")
             }
-            let authPath = "https://api.twitch.tv/kraken/oauth2/authorize?response_type=code&client_id=\(clientID)&redirect_uri=\(redirectURI)&scope=\(scopes)&state=\(state)"
+            
+            let authPath = "\(String(describing: TwitchEndpoints.authentication.construct()))?response_type=code&client_id=\(clientID)&redirect_uri=\(redirectURI)&scope=\(scopes)&state=\(state)"
             guard let authURL = URL(string: authPath) else {
                 EVLog(text: "Invalid auth url: \(authPath)", line: #line, fileName: #file)
                 throw AuthorizationError.invalidAuthURL(desc: "Authorization url is invalid, please check your values for the Redirect URI, Client Id, and scopes", url: authPath)
             }
-            UIApplication.shared.open(authURL, completionHandler: nil)
-            defaults.set(true, forKey: userDefaultsKey)
+            defaults.set(true, forKey: loadingAuthTokenKey)
+            processAuthorization(for: authURL)
         } else {
             EVLog(text: "Authorization token exits or authorization is in progress...no need to authorization again", line: #line, fileName: #file)
         }
     }
     
-    /**
-     Processes the callback url and recieves authorization token from the server.
-     
-     - parameter url: The callback url.
-    */
-    public func processOauthResponse(with url: URL, completion: @escaping (_ result: Result<Credentials>) -> ()) {
-        let defaults = UserDefaults.standard
-        defaults.set(false, forKey: userDefaultsKey)
-        let components = URLComponents(url: url, resolvingAgainstBaseURL: false)
-        guard let queryItems = components?.queryItems else {
-            completion(.failure(AuthorizationError.invalidURLResponse(url: url)))
-            return
-        }
-        
-        let code: String? = queryItems.filter { $0.name.lowercased() == "code" }.first?.value
-        
-        if let receivedCode = code {
-            let path = URL(string: Constants.network.oauthTokenURL)
-            guard let clientID = clientID, let redirectURI = redirectURI, let clientSecret = clientSecret, let state = state else {
-                completion(.failure(AuthorizationError.invalidQueryParameters(desc: "Must define values for the Client Id, Redirect URI,  and Client Secret")))
+    private func processAuthorization(for url: URL) {
+        self.authenticationSession = SFAuthenticationSession(url: url, callbackURLScheme: nil, completionHandler: { (callback: URL?, error: Error?) in
+            guard error == nil, let successURL = callback else {
+                EVLog(text: "Error processing oauth request", line: #line, fileName: #file)
                 return
             }
-            let postData = "client_id=\(clientID)&client_secret=\(clientSecret)&grant_type=authorization_code&redirect_uri=\(redirectURI)&code=\(receivedCode)&state=\(state)".data(using: .ascii)
-            let authorizationResource = AuthorizationResource(data: postData!, url: path!)
-            authorizationResource.processAuthorization(completion: { [weak self] (result) in
-                guard let strongSelf = self else {
-                    EVLog(text: "Error: self does not exist", line: #line, fileName: #file)
-                    return
-                }
-                
-                switch result {
-                case let .failure(error):
-                    completion(.failure(error))
-                case let .success(credentials):
-                    strongSelf.credentials = credentials
-                    completion(.success(credentials))
-                }
-            })
-        } else {
-            completion(.failure(AuthorizationError.noCode(desc: "no code was present in the query items returned from the server")))
-        }
+            let defaults = UserDefaults.standard
+            defaults.set(false, forKey: self.loadingAuthTokenKey)
+            let components = URLComponents(url: successURL, resolvingAgainstBaseURL: false)
+            guard let queryItems = components?.queryItems else { return }
+            
+            let token = queryItems.filter { $0.name.lowercased() == "id_token" }.first?.value
+            let scope = queryItems.filter { $0.name.lowercased() == "scope" }.first?.value?.split(separator: " ").map { String($0) }
+            self.credentials = Credentials(accessToken: token, scope: scope)
+        })
+        authenticationSession?.start()
     }
     
     /**
@@ -232,13 +208,13 @@ public class TwitchAuthorizationManager {
     */
     public func logout() throws {
         authFailed()
-//        try Locksmith.deleteDataForUserAccount(userAccount: userAccount)
+        try Locksmith.deleteDataForUserAccount(userAccount: userAccount)
     }
     
     ///Can be called to ensure all settings are properly updated on authentication failure.
     public func authFailed() {
         let defaults = UserDefaults.standard
-        defaults.set(false, forKey: userDefaultsKey)
+        defaults.set(false, forKey: loadingAuthTokenKey)
     }
 }
 
