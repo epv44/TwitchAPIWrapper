@@ -16,7 +16,7 @@ class ClipRequestTests: XCTestCase {
     
     func testBuildClipRequest() {
         let request = ClipRequest()
-        XCTAssertEqual(request.url?.absoluteString, "https://api.twitch.tv/helix/clips")
+        XCTAssertEqual(request.url?.absoluteString, "https://api.twitch.tv/helix/clips?")
         XCTAssertEqual(request.method, "GET")
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, ["Client-ID": "1"])

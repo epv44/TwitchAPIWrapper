@@ -11,13 +11,13 @@ public struct GameAnalyticsRequest: JSONConstructableRequest {
     var url: URL?
     let headers: [String : String]
     
-    init(broadcasterId: String) {
-        self.url = TwitchEndpoints.topGames.construct()?.appending(queryItems: [URLQueryItem(name: "broadcaster_id", value: broadcasterId)])
-        guard let clientId = TwitchAuthorizationManager.sharedInstance.clientID else {
+    public init(gameId: String? = nil) {
+        self.url = TwitchEndpoints.gameAnalytics.construct()?.appending(queryItems: ["game_id": gameId].buildQueryItems())
+        guard let clientID = TwitchAuthorizationManager.sharedInstance.authToken else {
             EVLog(text: "Must specify client_id to make rest request", line: #line, fileName: #file)
             headers = [:]
             return
         }
-        self.headers = ["Authorization": clientId]
+        self.headers = ["Authorization": clientID]
     }
 }
