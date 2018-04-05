@@ -14,7 +14,7 @@ struct AuthorizationResource: JSONConstructableRequest {
     let method: String = "POST"
     let data: Data
     
-    init(data: Data, url: URL) {
+    public init(data: Data, url: URL) {
         self.data = data
         self.url = url
     }

@@ -18,12 +18,14 @@ enum TwitchEndpoints {
     case users
     case videos
     case authentication
+    case gameAnalytics
     
     var path: String {
         switch self {
         case .leaderboard:      return "helix/bits/leaderboard"
         case .clips:            return "helix/clips"
         case .games:            return "helix/games"
+        case .gameAnalytics:    return "helix/analytics/games"
         case .streams:          return "helix/streams"
         case .streamsMetadata:  return "helix/streams/metadata"
         case .topGames:         return "helix/games/top"
@@ -37,7 +39,7 @@ enum TwitchEndpoints {
     var host: String {
         switch self {
         case .leaderboard, .clips, .games, .streams, .streamsMetadata, .topGames,
-             .userFollows, .users, .videos:
+             .userFollows, .users, .videos, .gameAnalytics:
             return "https://api.twitch.tv/"
         case .authentication:
             return "https://id.twitch.tv/"

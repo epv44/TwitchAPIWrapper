@@ -7,12 +7,12 @@
 
 import Foundation
 
-public class StreamMetadataWrapper: Codable {
-    public let streamsMetadata: [StreamMetadata]
+public class StreamMetadata: Codable {
+    public let metadata: [TwitchMetadata]
     public let pagination: Paginate
     
     private enum CodingKeys: String, CodingKey {
-        case streamsMetadata = "data"
+        case metadata = "data"
         case pagination
     }
 }
@@ -30,7 +30,7 @@ public class BroadcasterMetadata: Codable {
     public let opponent: Hero
 }
 
-public class StreamMetadata: Codable {
+public class TwitchMetadata: Codable {
     public let userId: String
     public let gameId: String?
     public let overwatch: BroadcasterMetadata?

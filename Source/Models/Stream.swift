@@ -11,6 +11,7 @@ public enum StreamType: String, Codable {
     case live
     case vodcast
     case none = ""
+    case all
 }
 
 public class StreamWrapper: Codable {

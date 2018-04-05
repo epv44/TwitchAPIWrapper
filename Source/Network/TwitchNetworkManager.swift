@@ -1,5 +1,5 @@
 //
-//  NetworkManager.swift
+//  TwitchNetworkManager.swift
 //  TwitchAPIWrapper iOS
 //
 //  Created by Eric Vennaro on 4/2/18.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class NetworkManager {
+final class TwitchNetworkManager {
     let jsonDecoder = JSONDecoder.twitchAPIStandard()
     
     func send<T>(request: URLRequest?, withResponseBodyType responseBodyType: T.Type, completion: @escaping (_ result: Result<T>) -> ()) where T: Decodable {
