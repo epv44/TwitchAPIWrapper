@@ -10,7 +10,7 @@ import Foundation
 extension JSONDecoder {
     class func twitchAPIStandard() -> JSONDecoder {
         let decoder = JSONDecoder()
-        decoder.dateDecodingStrategy = .formatted(Date.twitchStandardDateFormatter)
+        decoder.dateDecodingStrategy = .iso8601
         
         return decoder
     }

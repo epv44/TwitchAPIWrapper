@@ -19,11 +19,11 @@ class UserFollowModelTests: XCTestCase {
             XCTAssertEqual(wrapper.total, 12345)
             XCTAssertEqual(wrapper.pagination.cursor, "eyJiIjpudWxsLCJhIjoiMTUwMzQ0MTc3NjQyNDQyMjAwMCJ9")
             
-            XCTAssertEqual(follow1.followedAt, Date.twitchStandardDateFormatter.date(from: "2017-08-22T22:55:24Z"))
+            XCTAssertEqual(follow1.followedAt, ISO8601DateFormatter().date(from: "2017-08-22T22:55:24Z"))
             XCTAssertEqual(follow1.fromId, "171003792")
             XCTAssertEqual(follow1.toId, "23161357")
             
-            XCTAssertEqual(follow2.followedAt, Date.twitchStandardDateFormatter.date(from: "2017-08-22T22:55:04Z"))
+            XCTAssertEqual(follow2.followedAt, ISO8601DateFormatter().date(from: "2017-08-22T22:55:04Z"))
             XCTAssertEqual(follow2.fromId, "113627897")
             XCTAssertEqual(follow2.toId, "23161357")
         } catch {

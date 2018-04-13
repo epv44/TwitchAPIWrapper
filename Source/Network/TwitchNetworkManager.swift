@@ -7,7 +7,11 @@
 
 import Foundation
 
-final class TwitchNetworkManager {
+protocol TwitchNetworkManagerService {
+    func send<T>(request: URLRequest?, withResponseBodyType responseBodyType: T.Type, completion: @escaping (_ result: Result<T>) -> ()) where T: Decodable
+}
+
+final class TwitchNetworkManager: TwitchNetworkManagerService {
     let jsonDecoder = JSONDecoder.twitchAPIStandard()
     
     func send<T>(request: URLRequest?, withResponseBodyType responseBodyType: T.Type, completion: @escaping (_ result: Result<T>) -> ()) where T: Decodable {

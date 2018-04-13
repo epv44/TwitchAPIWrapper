@@ -10,13 +10,13 @@ import Foundation
 
 protocol RestRequest {
     var url: URL? { get }
-    var method: String { get }
+    var method: HTTPMethod { get }
     var data: Data { get }
     var headers: [String: String] { get }
 }
 
 extension RestRequest {
-    var method: String { return "GET" }
+    var method: HTTPMethod { return .get }
     var data: Data { return Data() }
     var headers: [String:String] { return [:] }
 }

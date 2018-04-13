@@ -70,6 +70,10 @@ public enum NetworkJSONServiceError: Error {
     case unknownErrorOccurred(desc: String)
 }
 
+enum HTTPMethod: String {
+    case get, post, put
+}
+
 protocol ConstructableRequest: RestRequest {
     func buildRequest() -> URLRequest?
 }
@@ -80,10 +84,10 @@ extension JSONConstructableRequest {
     func buildRequest() -> URLRequest? {
         let request = NSMutableURLRequest(url: url!)
         request.allHTTPHeaderFields = headers
-        if method == "POST" {
+        if method == .post || method == .put {
             request.httpBody = data
         }
-        request.httpMethod = method
+        request.httpMethod = method.rawValue
         
         return request as URLRequest
     }

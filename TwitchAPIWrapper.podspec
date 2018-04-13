@@ -16,11 +16,10 @@ Development Kit for Twitch API, includes OAuth and models for endpoints
   s.source            = { :git => 'https://github.com/epv44/TwitchAPIWrapper.git', :tag => s.version.to_s }
   s.documentation_url = 'https://epv44.github.io/docs/TwitchAPIWrapper/index.html'
 
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '11.0'
 
   s.source_files = 'Source/**/*.swift'
-  s.dependency 'Gloss', "~> 1.0.0"
-  s.dependency 'Locksmith', "~> 3.0.0"
+  s.dependency 'Locksmith', "~> 4.0.0"
   # s.resource_bundles = {
   #   'EVSlidingTableViewCell' => ['EVSlidingTableViewCell/Classes/**/*.{xib}']
   # }

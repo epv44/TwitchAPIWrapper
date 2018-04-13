@@ -11,7 +11,7 @@ import Foundation
 struct AuthorizationResource: JSONConstructableRequest {
     typealias Model = Credentials
     let url: URL?
-    let method: String = "POST"
+    let method: HTTPMethod = .post
     let data: Data
     
     public init(data: Data, url: URL) {

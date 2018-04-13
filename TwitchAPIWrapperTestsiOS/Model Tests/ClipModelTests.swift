@@ -15,10 +15,10 @@ class ClipModelTests: XCTestCase {
         do {
             let clipWrapper = try decoder.decode(ClipWrapper.self, from: Fixtures.dataFromFixtureFile("Clip"))
             let clip = clipWrapper.clips[0]
-            let date = Date.twitchStandardDateFormatter.date(from: "2017-11-30T22:34:18Z")
+            let date = ISO8601DateFormatter().date(from: "2017-11-30T22:34:18Z")
             XCTAssertEqual(clip.id, "AwkwardHelplessSalamanderSwiftRage")
-            XCTAssertEqual(clip.url, URL(string: "https://clips.twitch.tv/AwkwardHelplessSalamanderSwiftRage"))
-            XCTAssertEqual(clip.embedURL, URL(string: "https://clips.twitch.tv/embed?clip=AwkwardHelplessSalamanderSwiftRage"))
+            XCTAssertEqual(clip.url.absoluteString, URL(string: "https://clips.twitch.tv/AwkwardHelplessSalamanderSwiftRage")?.absoluteString)
+            XCTAssertEqual(clip.embedURL.absoluteString, URL(string: "https://clips.twitch.tv/embed?clip=AwkwardHelplessSalamanderSwiftRage")?.absoluteString)
             XCTAssertEqual(clip.broadcasterId, "67955580")
             XCTAssertEqual(clip.creatorId, "53834192")
             XCTAssertEqual(clip.videoId, "205586603")

@@ -13,7 +13,7 @@ class UserRequestTests: XCTestCase {
     func testBuildUserRequest() {
         let request = UserRequest()
         XCTAssertEqual(request.url?.absoluteString, "https://api.twitch.tv/helix/users?")
-        XCTAssertEqual(request.method, "GET")
+        XCTAssertEqual(request.method, .get)
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, [:])
     }
@@ -21,7 +21,7 @@ class UserRequestTests: XCTestCase {
     func testBuildUserRequest_withEverything() {
         let request = UserRequest(id: ["1"], login: ["geazy"])
         XCTAssertEqual(request.url?.absoluteString, "https://api.twitch.tv/helix/users?id=1&login=geazy")
-        XCTAssertEqual(request.method, "GET")
+        XCTAssertEqual(request.method, .get)
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, [:])
     }

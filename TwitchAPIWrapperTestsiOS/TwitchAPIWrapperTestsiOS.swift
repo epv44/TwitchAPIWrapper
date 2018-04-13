@@ -18,10 +18,10 @@
 //        let request = mjr.buildRequest()
 //        let method = request?.httpMethod
 //        let url = request?.url?.absoluteString
-//        XCTAssertEqual(method, "GET")
+//        XCTAssertEqual(method, .get)
 //        XCTAssertEqual(url, "www.google.com")
 //    }
-//    
+//    (
 //    func testAuthConfigVars() {
 //        TwitchAuthorizationManager.sharedInstance.clientID = "id"
 //        TwitchAuthorizationManager.sharedInstance.clientSecret = "secret"

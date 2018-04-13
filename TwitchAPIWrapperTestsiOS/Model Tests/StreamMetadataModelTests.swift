@@ -13,10 +13,10 @@ class StreamMetadataModelTests: XCTestCase {
     func testBuildStreamMetadataModelFromJSON() {
         let decoder = JSONDecoder.twitchAPIStandard()
         do {
-            let wrapper = try decoder.decode(StreamMetadataWrapper.self, from: Fixtures.dataFromFixtureFile("Game"))
-            let streamMetadata1 = wrapper.streamsMetadata[0]
-            let streamMetadata2 = wrapper.streamsMetadata[1]
-            let streamMetadata3 = wrapper.streamsMetadata[2]
+            let wrapper = try decoder.decode(StreamMetadata.self, from: Fixtures.dataFromFixtureFile("Game"))
+            let streamMetadata1 = wrapper.metadata[0]
+            let streamMetadata2 = wrapper.metadata[1]
+            let streamMetadata3 = wrapper.metadata[2]
             let pagination = wrapper.pagination
 
             XCTAssertEqual(streamMetadata1.gameId, "488552")
