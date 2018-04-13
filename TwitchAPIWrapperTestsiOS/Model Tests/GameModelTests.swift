@@ -17,7 +17,7 @@ class GameModelTests: XCTestCase {
             let game = wrapper.games[0]
             XCTAssertEqual(game.id, "493057")
             XCTAssertEqual(game.name, "PLAYERUNKNOWN'S BATTLEGROUNDS")
-            XCTAssertEqual(game.boxArtURL, URL(string: "https://static-cdn.jtvnw.net/ttv-boxart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-{width}x{height}.jpg"))
+            XCTAssertEqual(game.boxArtURL.absoluteString, URL(string: "https://static-cdn.jtvnw.net/ttv-boxart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-{width}x{height}.jpg")?.absoluteString)
         } catch {
             print(error)
         }

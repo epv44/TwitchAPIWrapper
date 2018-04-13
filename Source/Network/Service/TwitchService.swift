@@ -8,13 +8,13 @@
 import Foundation
 
 final public class TwitchService {
-    private let networkManager: TwitchNetworkManager
+    private let networkManager: TwitchNetworkManagerService
     
     public init() {
         self.networkManager = TwitchNetworkManager()
     }
     
-    init(networkManager: TwitchNetworkManager = TwitchNetworkManager()) {
+    init(networkManager: TwitchNetworkManagerService = TwitchNetworkManager()) {
         self.networkManager = networkManager
     }
     
@@ -83,6 +83,15 @@ final public class TwitchService {
             switch result {
             case let .failure(error): completion(.failure(error))
             case let .success(wrapper): completion(.success(wrapper.users))
+            }
+        }
+    }
+    
+    public func updateUser(forRequest userRequest: UserUpdateRequest, completion: @escaping ((Result<User>) -> Void)) {
+        networkManager.send(request: userRequest.buildRequest(), withResponseBodyType: UserWrapper.self) { result in
+            switch result {
+            case let .failure(error): completion(.failure(error))
+            case let .success(wrapper): completion(.success(wrapper.users[0]))
             }
         }
     }

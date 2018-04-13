@@ -16,7 +16,7 @@ class StreamModelTests: XCTestCase {
             let wrapper = try decoder.decode(StreamWrapper.self, from: Fixtures.dataFromFixtureFile("Game"))
             let stream = wrapper.streams[0]
             let pagination = wrapper.pagination
-            let date = Date.twitchStandardDateFormatter.date(from: "2017-08-14T15:45:17Z")
+            let date = ISO8601DateFormatter().date(from: "2017-08-14T15:45:17Z")
             XCTAssertEqual(stream.communityIds, [
                 "848d95be-90b3-44a5-b143-6e373754c382",
                 "fd0eab99-832a-4d7e-8cc0-04d73deb2e54",
@@ -26,7 +26,7 @@ class StreamModelTests: XCTestCase {
             XCTAssertEqual(stream.id, "26007351216")
             XCTAssertEqual(stream.language, "en")
             XCTAssertEqual(stream.startedAt, date)
-            XCTAssertEqual(stream.thumbnailURL, URL(string: "https://static-cdn.jtvnw.net/previews-ttv/live_user_dansgaming-{width}x{height}.jpg"))
+            XCTAssertEqual(stream.thumbnailURL.absoluteString, URL(string: "https://static-cdn.jtvnw.net/previews-ttv/live_user_dansgaming-{width}x{height}.jpg")?.absoluteString)
             XCTAssertEqual(stream.title, "[Punday Monday] Necromancer - Dan's First Character - Maps - !build")
             XCTAssertEqual(stream.type, StreamType.live)
             XCTAssertEqual(stream.userId, "26007351216")

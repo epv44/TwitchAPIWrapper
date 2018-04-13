@@ -9,9 +9,9 @@ import Foundation
 
 extension JSONEncoder {
     class func twitchAPIStandard() -> JSONEncoder {
-        let decoder = JSONEncoder()
-        decoder.dateEncodingStrategy = .formatted(Date.twitchStandardDateFormatter)
+        let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
         
-        return decoder
+        return encoder
     }
 }
