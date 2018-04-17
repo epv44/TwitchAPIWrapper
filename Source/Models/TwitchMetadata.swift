@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class StreamMetadata: Codable {
+public struct StreamMetadata: Codable {
     public let metadata: [TwitchMetadata]
     public let pagination: Paginate
     
@@ -15,9 +15,14 @@ public class StreamMetadata: Codable {
         case metadata = "data"
         case pagination
     }
+    
+    init(metadata: [TwitchMetadata], pagination: Paginate) {
+        self.metadata = metadata
+        self.pagination = pagination
+    }
 }
 
-public class Hero: Codable {
+public struct Hero: Codable, Equatable {
     public let type: String?
     public let `class`: String?
     public let name: String
@@ -25,21 +30,14 @@ public class Hero: Codable {
     public let role: String?
 }
 
-public class BroadcasterMetadata: Codable {
+public struct BroadcasterMetadata: Codable, Equatable {
     public let broadcaster: Hero
     public let opponent: Hero
 }
 
-public class TwitchMetadata: Codable {
+public struct TwitchMetadata: Codable, Equatable {
     public let userId: String
     public let gameId: String?
     public let overwatch: BroadcasterMetadata?
     public let hearthstone: BroadcasterMetadata?
-    
-    private enum CodingKeys: String, CodingKey {
-        case userId = "user_id"
-        case gameId = "game_id"
-        case overwatch
-        case hearthstone
-    }
 }

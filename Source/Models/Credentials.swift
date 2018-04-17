@@ -15,10 +15,5 @@ public struct Credentials: Codable {
     
     ///Scopes that the user is authorized as granted by the server.
     public let scope: [String]?
-    
-    private enum CodingKeys: String, CodingKey {
-        case accessToken = "access_token"
-        case scope
-    }
 }
 

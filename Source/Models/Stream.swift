@@ -14,7 +14,7 @@ public enum StreamType: String, Codable {
     case all
 }
 
-public class StreamWrapper: Codable {
+public struct StreamWrapper: Codable, Equatable {
     public let streams: [Stream]
     public let pagination: Paginate
     
@@ -24,11 +24,11 @@ public class StreamWrapper: Codable {
     }
 }
 
-public class Paginate: Codable {
+public struct Paginate: Codable, Equatable {
     public let cursor: String
 }
 
-public class Stream: Codable {
+public struct Stream: Codable, Equatable {
     public let id: String
     public let userId: String
     public let gameId: String
@@ -39,17 +39,4 @@ public class Stream: Codable {
     public let startedAt: Date
     public let language: String
     public let thumbnailURL: URL
-    
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case userId = "user_id"
-        case gameId = "game_id"
-        case communityIds = "community_ids"
-        case type
-        case title
-        case viewCount = "view_count"
-        case startedAt = "started_at"
-        case language
-        case thumbnailURL = "thumbnail_url"
-    }
 }

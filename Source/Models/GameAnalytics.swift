@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GameAnalyticsWrapper: Codable {
+struct GameAnalyticsWrapper: Codable {
     let gameAnalytics: [GameAnalytic]
     
     private enum CodingKeys: String, CodingKey {
@@ -15,17 +15,7 @@ class GameAnalyticsWrapper: Codable {
     }
 }
 
-public class GameAnalytic: Codable {
+public struct GameAnalytic: Codable, Equatable {
     public let gameId: String
     public let url: URL
-    
-    private enum CodingKeys: String, CodingKey {
-        case gameId = "game_id"
-        case url = "URL"
-    }
-    
-    init(gameId: String, url: URL) {
-        self.gameId = gameId
-        self.url = url
-    }
 }

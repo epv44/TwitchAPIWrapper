@@ -20,7 +20,7 @@ public enum UserType: String, Codable {
     case none = ""
 }
 
-class UserWrapper: Codable {
+struct UserWrapper: Codable {
     let users: [User]
     
     private enum CodingKeys: String, CodingKey {
@@ -28,7 +28,7 @@ class UserWrapper: Codable {
     }
 }
 
-public class User: Codable {
+public struct User: Codable, Equatable {
     public let id: String
     public let login: String
     public let displayName: String
@@ -39,17 +39,5 @@ public class User: Codable {
     public let offlineImageURL: URL
     public let viewCount: Int
     public let email: String?
-    
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case login
-        case displayName = "display_name"
-        case type
-        case broadcasterType = "broadcaster_type"
-        case description
-        case profileImageURL = "profile_image_url"
-        case offlineImageURL = "offline_image_url"
-        case viewCount = "view_count"
-        case email = "email"
-    }
+
 }
