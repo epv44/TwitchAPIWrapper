@@ -7,7 +7,7 @@
 
 import Foundation
 
-class GameWrapper: Codable {
+struct GameWrapper: Codable {
     let games: [Game]
     
     private enum CodingKeys: String, CodingKey {
@@ -15,7 +15,7 @@ class GameWrapper: Codable {
     }
 }
 
-public class Game: Codable, Equatable {
+public struct Game: Codable, Equatable {
     public let id: String
     public let name: String
     public let boxArtURL: URL
@@ -24,15 +24,5 @@ public class Game: Codable, Equatable {
         case id
         case name
         case boxArtURL = "box_art_url"
-    }
-    
-    init(id: String, name: String, boxArtURL: URL) {
-        self.id = id
-        self.name = name
-        self.boxArtURL = boxArtURL
-    }
-    
-    public static func ==(lhs: Game, rhs: Game) -> Bool {
-        return (lhs.id, lhs.name, lhs.boxArtURL) == (rhs.id, rhs.name, rhs.boxArtURL)
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class EntitlementGrantUploadWrapper: Codable {
+struct EntitlementGrantUploadWrapper: Codable {
     let uploads: [EntitlementGrantUpload]
     
     private enum CodingKeys: String, CodingKey {
@@ -15,6 +15,6 @@ class EntitlementGrantUploadWrapper: Codable {
     }
 }
 
-public class EntitlementGrantUpload: Codable {
+public struct EntitlementGrantUpload: Codable, Equatable {
     let url: URL
 }

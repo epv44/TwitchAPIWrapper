@@ -11,7 +11,7 @@ extension JSONEncoder {
     class func twitchAPIStandard() -> JSONEncoder {
         let encoder = JSONEncoder()
         encoder.dateEncodingStrategy = .iso8601
-        
+        encoder.keyEncodingStrategy = .convertToSnakeCase
         return encoder
     }
 }

@@ -27,7 +27,7 @@ class VideoWrapper: Codable {
     }
 }
 
-public class Video: Codable {
+public struct Video: Codable, Equatable {
     let id: String
     let userId: String
     let title: String
@@ -41,20 +41,4 @@ public class Video: Codable {
     let language: String
     let type: VideoType
     let duration: String //should be a timestamp, or need some type of custom key
-    
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case userId = "user_id"
-        case title
-        case description
-        case createdAt = "created_at"
-        case publishedAt = "published_at"
-        case url
-        case thumbnailURL = "thumbnail_url"
-        case viewable
-        case viewCount = "view_count"
-        case language
-        case type
-        case duration
-    }
 }

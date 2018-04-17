@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class UserFollow: Codable {
+public struct UserFollow: Codable, Equatable {
     let total: Int
     let follows: [Follow]
     let pagination: Paginate
@@ -19,14 +19,8 @@ public class UserFollow: Codable {
     }
 }
 
-public class Follow: Codable {
+public struct Follow: Codable, Equatable {
     let fromId: String
     let toId: String
     let followedAt: Date
-    
-    private enum CodingKeys: String, CodingKey {
-        case fromId = "from_id"
-        case toId = "to_id"
-        case followedAt = "followed_at"
-    }
 }
