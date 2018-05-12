@@ -8,7 +8,7 @@
 import Foundation
 
 public struct GameRequest: JSONConstructableRequest {
-    var url: URL?
+    let url: URL?
     let headers: [String : String]
     
     public init(id: [String], name: [String]) {

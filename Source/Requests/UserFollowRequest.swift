@@ -11,7 +11,7 @@ public struct UserFollowRequest: JSONConstructableRequest {
     let url: URL?
     let headers: [String : String]
     
-    init(after: String? = nil, first: String? = nil, fromId: String? = nil, toId: String? = nil) {
+    public init(after: String? = nil, first: String? = nil, fromId: String? = nil, toId: String? = nil) {
         let queryParams = ["after":after as Any, "first":first as Any, "from_id":fromId as Any, "to_id":toId as Any].buildQueryItems()
         self.url = TwitchEndpoints.userFollows.construct()?.appending(queryItems: queryParams)
         guard let clientID = TwitchAuthorizationManager.sharedInstance.clientID else {

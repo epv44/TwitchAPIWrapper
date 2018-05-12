@@ -171,7 +171,8 @@ public class TwitchAuthorizationManager {
                 throw AuthorizationError.invalidQueryParameters(desc: "Must define values for the Client Id, Redirect URI, and scopes")
             }
             
-            let authPath = "\(String(describing: TwitchEndpoints.authentication.construct()))?response_type=code&client_id=\(clientID)&redirect_uri=\(redirectURI)&scope=\(scopes)&state=\(state)"
+            let authPath = "\(TwitchEndpoints.authentication.construct()?.absoluteString ?? "")?response_type=code&client_id=\(clientID)&redirect_uri=\(redirectURI)&scope=\(scopes)&state=\(state)"
+            print(authPath)
             guard let authURL = URL(string: authPath) else {
                 EVLog(text: "Invalid auth url: \(authPath)", line: #line, fileName: #file)
                 throw AuthorizationError.invalidAuthURL(desc: "Authorization url is invalid, please check your values for the Redirect URI, Client Id, and scopes", url: authPath)
@@ -187,6 +188,7 @@ public class TwitchAuthorizationManager {
         self.authenticationSession = SFAuthenticationSession(url: url, callbackURLScheme: nil, completionHandler: { (callback: URL?, error: Error?) in
             guard error == nil, let successURL = callback else {
                 EVLog(text: "Error processing oauth request", line: #line, fileName: #file)
+                self.authFailed()
                 return
             }
             let defaults = UserDefaults.standard

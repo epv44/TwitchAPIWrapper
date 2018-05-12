@@ -8,7 +8,7 @@
 import Foundation
 
 public struct StreamMetadataRequest: JSONConstructableRequest {
-    var url: URL?
+    let url: URL?
     let headers: [String : String]
     
     public init(after: String? = nil,

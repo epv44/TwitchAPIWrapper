@@ -1,0 +1,11 @@
+framework module TwitchAPIWrapper {
+  umbrella header "TwitchAPIWrapper.h"
+
+  export *
+  module * { export * }
+}
+
+module TwitchAPIWrapper.Swift {
+    header "TwitchAPIWrapper-Swift.h"
+    requires objc
+}

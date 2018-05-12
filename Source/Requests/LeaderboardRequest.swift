@@ -11,7 +11,7 @@ public struct LeaderboardRequest: JSONConstructableRequest {
     let url: URL?
     let headers: [String : String]
     
-    init(count: String? = nil, period: String? = nil, startedAt: String? = nil) {
+    public init(count: String? = nil, period: String? = nil, startedAt: String? = nil) {
         let queryItems = ["count": count as Any, "period": period as Any, "started_at": startedAt as Any].buildQueryItems()
         self.url = TwitchEndpoints.leaderboard.construct()?.appending(queryItems: queryItems)
 

@@ -11,7 +11,7 @@ public struct VideoRequest: JSONConstructableRequest {
     let url: URL?
     let headers: [String : String]
     
-    init(id: [String],
+    public init(id: [String],
          userId: String,
          gameId: String,
          after: String? = nil,
