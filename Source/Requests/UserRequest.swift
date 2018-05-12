@@ -12,10 +12,10 @@ public struct UserRequest: JSONConstructableRequest {
     let url: URL?
     let headers: [String : String]
     
-    init(id: [String]? = nil, login: [String]? = nil) {
+    public init(id: [String]? = nil, login: [String]? = nil) {
         self.url = TwitchEndpoints.users.construct()?.appending(queryItems: ["id":id as Any, "login":login as Any].buildQueryItems())
         guard let authToken = TwitchAuthorizationManager.sharedInstance.authToken else {
-            EVLog(text: "Must specify client_id to make rest request", line: #line, fileName: #file)
+            EVLog(text: "Must specify auth token to make rest request", line: #line, fileName: #file)
             headers = [:]
             return
         }

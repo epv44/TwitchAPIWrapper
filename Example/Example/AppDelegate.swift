@@ -15,54 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?)
+        -> Bool {
+            
         return true
     }
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        if url.scheme == "evtwitchwrapper" {
-            TwitchAuthorizationManager.sharedInstance.processOauthResponse(with: url,
-                completion: { (result) in
-                    switch result {
-                    case let .failure(error):
-                        //Optional, will ensure that authorization is recorded as a failure
-                        TwitchAuthorizationManager.sharedInstance.authFailed()
-                        switch error {
-                        case let AuthorizationError.invalidAuthURL(desc, url):
-                            NSLog(desc + url)
-                        case let AuthorizationError.invalidQueryParameters(desc):
-                            NSLog(desc)
-                        case let AuthorizationError.invalidURLResponse(url):
-                            NSLog("\(url)")
-                        case let AuthorizationError.noCode(desc):
-                            NSLog(desc)
-                        case let AuthorizationError.unableToParseJSON(json):
-                            NSLog(json)
-                        case let AuthorizationError.unknownError(error):
-                            NSLog(error.localizedDescription)
-                        case ParsingError.cannotParseJSONArray:
-                            NSLog("Error parsing JSON Array")
-                        case ParsingError.invalidJSONData:
-                            NSLog("Invalid JSON Data")
-                        case ParsingError.cannotParseJSONDictionary:
-                            NSLog("Error parsing JSON Dictionary")
-                        case ParsingError.unsupportedType:
-                            NSLog("Type you are trying to parse is currently unsupported")
-                        case let NetworkJSONServiceError.networkError(error):
-                            NSLog(error.localizedDescription)
-                        case NetworkJSONServiceError.noData:
-                            NSLog("No data returned")
-                        default:
-                            NSLog("Unknown error occurred")
-                        }
-                        //case let .success(credentials)
-                    case .success(_):
-                        //returns credential object; however, values are stored securly in keychain and can be accessed as:
-                        print(TwitchAuthorizationManager.sharedInstance.authToken)
-                    }
-                }
-            )
-        }
         return true
     }
 
@@ -83,11 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-
+        
     }
     
-    
-    // Mark: - Twitch Auth Setup
     override init() {
         super.init()
         var configuration: [String: AnyObject]

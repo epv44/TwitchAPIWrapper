@@ -12,10 +12,10 @@ public struct UserUpdateRequest: JSONConstructableRequest {
     let headers: [String : String]
     let method: HTTPMethod = .put
     
-    init(description: String) {
+    public init(description: String) {
         self.url = TwitchEndpoints.users.construct()?.appending(queryItems: ["description":description].buildQueryItems())
         guard let authToken = TwitchAuthorizationManager.sharedInstance.authToken else {
-            EVLog(text: "Must specify client_id to make rest request", line: #line, fileName: #file)
+            EVLog(text: "Must specify auth token to make rest request", line: #line, fileName: #file)
             headers = [:]
             return
         }

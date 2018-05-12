@@ -8,7 +8,7 @@
 import Foundation
 
 public struct GameAnalyticsRequest: JSONConstructableRequest {
-    var url: URL?
+    let url: URL?
     let headers: [String : String]
     
     public init(gameId: String? = nil) {

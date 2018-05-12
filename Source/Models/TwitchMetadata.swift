@@ -15,11 +15,6 @@ public struct StreamMetadata: Codable {
         case metadata = "data"
         case pagination
     }
-    
-    init(metadata: [TwitchMetadata], pagination: Paginate) {
-        self.metadata = metadata
-        self.pagination = pagination
-    }
 }
 
 public struct Hero: Codable, Equatable {
