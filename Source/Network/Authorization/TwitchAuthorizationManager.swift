@@ -171,7 +171,7 @@ public class TwitchAuthorizationManager {
                 throw AuthorizationError.invalidQueryParameters(desc: "Must define values for the Client Id, Redirect URI, and scopes")
             }
             
-            let authPath = "\(TwitchEndpoints.authentication.construct()?.absoluteString ?? "")?response_type=code&client_id=\(clientID)&redirect_uri=\(redirectURI)&scope=\(scopes)&state=\(state)"
+            let authPath = "\(TwitchEndpoints.authentication.construct()?.absoluteString ?? "")?response_type=&client_id=\(clientID)&redirect_uri=\(redirectURI)&scope=\(scopes)&state=\(state)"
             print(authPath)
             guard let authURL = URL(string: authPath) else {
                 EVLog(text: "Invalid auth url: \(authPath)", line: #line, fileName: #file)
