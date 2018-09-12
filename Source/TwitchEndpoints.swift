@@ -50,3 +50,4 @@ enum TwitchEndpoints {
         return URL(string: self.host + self.path)
     }
 }
+
