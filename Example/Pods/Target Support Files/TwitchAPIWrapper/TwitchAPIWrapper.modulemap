@@ -1,0 +1,6 @@
+framework module TwitchAPIWrapper {
+  umbrella header "TwitchAPIWrapper-umbrella.h"
+
+  export *
+  module * { export * }
+}
