@@ -1,0 +1,23 @@
+PODS:
+  - KeychainAccess (4.2.2)
+  - TwitchAPIWrapper (0.1.0):
+    - KeychainAccess (~> 4.2)
+
+DEPENDENCIES:
+  - TwitchAPIWrapper (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - KeychainAccess
+
+EXTERNAL SOURCES:
+  TwitchAPIWrapper:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
+  TwitchAPIWrapper: fa64ee74beb6ff60cfd381c0da98fd87e1d2a064
+
+PODFILE CHECKSUM: e019799dc139c9fe3ddfa30fe864077c564076b1
+
+COCOAPODS: 1.10.1
