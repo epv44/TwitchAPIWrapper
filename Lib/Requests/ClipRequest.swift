@@ -9,16 +9,18 @@ import Foundation
 
 public struct ClipRequest: JSONConstructableRequest {
     public let url: URL?
-    public let headers: [String : String]
     
-    public init(id: String? = nil) {
-        self.url = TwitchEndpoints.clips.construct()?.appending(queryItems: ["id": id].buildQueryItems())
-        guard let clientID = TwitchAuthorizationManager.sharedInstance.clientID else {
-            EVLog(text: "Must specify client_id to make rest request", line: #line, fileName: #file)
-            headers = [:]
-            return
+    public init(id: String?, gameID: String?, broadcasterID: String?) throws {
+        if id == nil && gameID == nil && broadcasterID == nil {
+            throw RequestValidationError.invalidInput(
+                "id, gameID, and broadcasterID cannot all be null, at least one is required")
         }
-        self.headers = ["Client-ID": clientID]
+        self.url = TwitchEndpoints.clips.construct()?.appending(
+            queryItems: [
+                "id": id,
+                "game_id": gameID,
+                "broadcaster_id": broadcasterID
+            ].buildQueryItems())
     }
 }
 

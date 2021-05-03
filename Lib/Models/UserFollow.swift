@@ -20,7 +20,11 @@ public struct UserFollow: Codable, Equatable {
 }
 
 public struct Follow: Codable, Equatable {
+    let followedAt: String
     let fromId: String
+    let fromLogin: String
+    let fromName: String
     let toId: String
-    let followedAt: Date
+    let toLogin: String
+    let toName: String
 }

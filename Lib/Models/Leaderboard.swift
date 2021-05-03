@@ -20,6 +20,8 @@ public struct DateRange: Codable, Equatable {
 
 public struct LeaderboardEntry: Codable, Equatable {
     public let userId: String
+    public let userLogin: String
+    public let userName: String
     public let rank: Int
     public let score: Int
 }

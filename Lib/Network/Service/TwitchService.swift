@@ -54,18 +54,21 @@ final public class TwitchService {
         }
     }
     
-    public func streams(forRequest streamRequest: StreamRequest, completion: @escaping ((Result<[Stream]>) -> Void)) {
-        networkManager.send(request: streamRequest.buildRequest(), withResponseBodyType: StreamWrapper.self) { result in
+    public func startCommercial(forRequest request: StartCommercialRequest, completion: @escaping ((Result<[CommercialResponse]>) -> Void)) {
+        networkManager.send(request: request.buildRequest(), withResponseBodyType: CommercialResponseWrapper.self) { result in
             switch result {
             case let .failure(error): completion(.failure(error))
-            case let .success(wrapper): completion(.success(wrapper.streams))
+            case let .success(value): completion(.success(value.commercial))
             }
         }
     }
     
-    public func streamMetadata(forRequest streamMetadataRequest: StreamMetadataRequest, completion: @escaping ((Result<StreamMetadata>) -> Void)) {
-        networkManager.send(request: streamMetadataRequest.buildRequest(), withResponseBodyType: StreamMetadata.self) { result in
-            completion(result)
+    public func streams(forRequest streamRequest: StreamRequest, completion: @escaping ((Result<StreamWrapper>) -> Void)) {
+        networkManager.send(request: streamRequest.buildRequest(), withResponseBodyType: StreamWrapper.self) { result in
+            switch result {
+            case let .failure(error): completion(.failure(error))
+            case let .success(wrapper): completion(.success(wrapper))
+            }
         }
     }
     

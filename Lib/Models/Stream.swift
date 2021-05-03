@@ -16,7 +16,7 @@ public enum StreamType: String, Codable {
 
 public struct StreamWrapper: Codable, Equatable {
     public let streams: [Stream]
-    public let pagination: Paginate
+    public let pagination: Paginate?
     
     private enum CodingKeys: String, CodingKey {
         case streams = "data"
@@ -25,18 +25,23 @@ public struct StreamWrapper: Codable, Equatable {
 }
 
 public struct Paginate: Codable, Equatable {
-    public let cursor: String
+    public let cursor: String?
 }
 
 public struct Stream: Codable, Equatable {
     public let id: String
     public let userId: String
+    public let userLogin: String
+    public let userName: String
     public let gameId: String
-    public let communityIds: [String]
+    public let gameName: String
     public let type: StreamType
     public let title: String
-    public let viewCount: Int
+    public let viewerCount: Int
     public let startedAt: Date
     public let language: String
-    public let thumbnailURL: URL
+    // Optional string due to url encoding issue from the twitch api
+    public let thumbnailUrl: String?
+    public let tagIds: [String]
+    public let isMature: Bool
 }

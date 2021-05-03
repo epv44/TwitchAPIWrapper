@@ -20,6 +20,71 @@ it, simply add the following line to your Podfile:
 pod 'TwitchAPIWrapper'
 ```
 
+## Available API Calls
+
+| API Method | Swift Request Object | Supported? |
+| ------------- | ------------- | :-------------: |
+| Start Commercial | | ✅ |
+| Get Extension Analytics | | ❌ |
+| Get Game Analytics | GameAnalyticsRequest | ✅ |
+| Get Bits Leaderboard | LeaderboardRequest | ✅ |
+| Get Cheermotes | | ❌  |
+| Get Extension Transactions | | ❌ |
+| Get Channel Information |  | ❌ |
+| Modify Channel Information |  | ❌ |
+| Get Channel Editors |  | ❌ |
+| Create Custom Rewards | | ❌ |
+| Delete Custom Reward | | ❌ |
+| Get Custom Reward | | ❌ |
+| Get Custom Reward | | ❌ |
+| Get Custom Reward Redemption | | ❌ |
+| Update Custom Reward | | ❌ |
+| Update Redemption Status | | ❌ |
+| Create Clip |  | ❌ |
+| Get Clips | ClipRequest | ✅ |
+| Get Code Status | | ❌ |
+| Get Drops Entitlements | | ❌ |
+| Redeem Code | | ❌ |
+| Create EventSub Subscription |  | ❌ |
+| Delete EventSub Subscription |  | ❌ |
+| Get EventSub Subscription | | ❌ |
+| Get Top Games | TopGameRequest | ✅ |
+| Get Games | GameRequest | ✅ |
+| Get Hype Train Events |  | ❌ |
+| Check AutoMod Status |  | ❌ |
+| Get Banned Events |  | ❌ |
+| Get Banned Users |  | ❌ |
+| Get Moderators |  | ❌ |
+| Get Moderator Events |  | ❌ |
+| Search Categories |  | ❌ |
+| Search Channels |  | ❌ |
+| Get Stream Key |  | ❌ |
+| Get Streams |  StreamRequest | ✅ |
+| Get Followed Streams |  | ✅ |
+| Create Stream Marker |  | ❌ |
+| Get Stream Markers |  | ❌ |
+| Get Broadcaster Subscriptions |  | ❌ |
+| Check User Subscription |  | ❌ |
+| Get All Stream Tags |  | ❌ |
+| Get Stream Tags |  | ❌ |
+| Replace Stream Tags|  | ❌ |
+| Get Channel Teams |  | ❌ |
+| Get Teams |  | ❌ |
+| Get Users | UserRequest  | ✅ |
+| Update User | UserUpdateRequest | ✅ |
+| Get User Follows | UserFollowRequest  | ✅ |
+| Create User Follows |  | ❌ |
+| Delete User Follows |  | ❌ |
+| Get User Block List |  | ❌ |
+| Block User |  | ❌ |
+| Unblock User |  | ❌ |
+| Get User Extensions |  | ❌ |
+| Get User Active Extensions |  | ❌ |
+| Update User Extension|  | ❌ |
+| Get Videos |  | ✅ |
+| Delete Videos |  | ❌ |
+| Get Webhook Subscriptions | | ❌ |
+
 ## Author
 
 epv44, epv9@case.edu

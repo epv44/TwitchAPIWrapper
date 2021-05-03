@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pad-xP-pv7">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="pad-xP-pv7">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -24,7 +24,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EVExample" id="Ixf-8K-m9U">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="375" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ixf-8K-m9U" id="L5X-P5-bZJ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -51,6 +51,7 @@
                         <outlet property="tableView" destination="0vR-HZ-wae" id="52Q-JH-eL9"/>
                         <segue destination="RPf-Y0-xaW" kind="show" identifier="EmoteSegue" id="RXD-bv-ZAt"/>
                         <segue destination="btY-d9-Gmg" kind="show" identifier="UserSegue" id="ljU-vZ-goS"/>
+                        <segue destination="H0i-uV-nLw" kind="show" identifier="GamesSegue" destinationCreationSelector="GamesSegue" id="lrh-bn-Uyk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -112,6 +113,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CLa-iR-w1E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1527" y="598"/>
+        </scene>
+        <!--Games View Controller-->
+        <scene sceneID="bY9-bd-4Wc">
+            <objects>
+                <viewController title="Games View Controller" id="H0i-uV-nLw" customClass="GameViewController" customModule="TwitchAPIWrapper_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sUZ-pf-C9V"/>
+                        <viewControllerLayoutGuide type="bottom" id="oTf-N9-xaR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eNG-4D-SP7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QVj-AD-9pW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nne-c6-zcd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1526" y="1295"/>
         </scene>
     </scenes>
     <resources>

@@ -8,9 +8,15 @@
 import Foundation
 import WebKit
 
-public final class TWAuthWebviewController: UIViewController {
+protocol TWAuthWebViewDelegate: AnyObject {
+    func completeAuthentication(_ vc: UIViewController, token: String, scopes: [String]) -> Void
+}
+
+final class TWAuthWebViewController: UIViewController {
     private let redirectURI: String
     private let authURL: URL
+    private let state: String
+    private weak var delegate: TWAuthWebViewDelegate?
     
     private var webView: WKWebView = {
         let webView = WKWebView()
@@ -18,17 +24,17 @@ public final class TWAuthWebviewController: UIViewController {
         return webView
     }()
     
-    public init(redirectURI: String, authURL: URL) {
+    public init(delegate: TWAuthWebViewDelegate?, redirectURI: String, authURL: URL, state: String) {
+        self.delegate = delegate
         self.redirectURI = redirectURI
         self.authURL = authURL
+        self.state = state
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
-    // MARK: Life Cycle Methods
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,8 +55,8 @@ public final class TWAuthWebviewController: UIViewController {
     }
 }
 
-// MARK: Web Kit Navigation Delegate
-extension TWAuthWebviewController: WKNavigationDelegate {
+//MARK: - Web Kit Navigation Delegate
+extension TWAuthWebViewController: WKNavigationDelegate {
     
     public func webView(_ webView: WKWebView, didReceiveServerRedirectForProvisionalNavigation navigation: WKNavigation!) {
         handleRedirect(url: webView.url)
@@ -58,20 +64,24 @@ extension TWAuthWebviewController: WKNavigationDelegate {
     
     public func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         if let response = navigationResponse.response as? HTTPURLResponse, 500 ..< 600 ~= response.statusCode {
-            print("Twitch - Status code was \(response.statusCode), but expected 2xx. Twitch might be temporarily down.")
+            EVLog(text: "Twitch - Status code was \(response.statusCode), but expected 2xx.", line: #line, fileName: #file)
             dismiss(animated: true, completion: nil)
         }
         decisionHandler(.allow)
     }
     
-    // MARK: Private helper Methods
-    
     private func handleRedirect(url: URL?) {
-        //TODO completion handler won't work use a delegate or just set the param as internal
-        if isCorrectRedirectURL(webView.url) {
+        if isCorrectRedirectURL(webView.url),
+           let fragment = getFragments(from: webView.url),
+           let token = fragment["access_token"],
+           let returnState = fragment["state"],
+           let scopesStr = fragment["scope"] {
+            if state == returnState {
+                delegate?.completeAuthentication(self, token: token, scopes: scopesStr.components(separatedBy: ":"))
+            } else {
+                EVLog(text: "Invalid state: sent: \(state), returned was: \(returnState)", line: #line, fileName: #file)
+            }
             dismiss(animated: true, completion: nil)
-        } else {
-            dismiss(animated: true, completion: (nil, NSError(domain: <#T##String#>, code: <#T##Int#>, userInfo: <#T##[String : Any]?#>)))
         }
     }
     
@@ -84,18 +94,18 @@ extension TWAuthWebviewController: WKNavigationDelegate {
         return substring == redirectURI
     }
     
-    //TODO use my abstract fragment logic, its better, basically use my error handling
-    private func extractFragment(_ param: String, from url: URL?) -> String? {
-        guard let urlString = url?.absoluteString, let comps = URLComponents(string: urlString), let fragment = comps.fragment else {
+    private func getFragments(from url: URL?) -> [String:String]? {
+        guard let urlString = url?.absoluteString,
+              let components = URLComponents(string: urlString),
+              let fragment = components.fragment else {
             return nil
         }
-        let dict = fragment.components(separatedBy: "&").map({
+        return fragment.components(separatedBy: "&").map({
             $0.components(separatedBy: "=")
         }).reduce(into: [String:String]()) { dict, pair in
             if pair.count == 2 {
                 dict[pair[0]] = pair[1]
             }
         }
-        return dict[param]
     }
 }

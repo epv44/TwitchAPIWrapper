@@ -18,11 +18,10 @@ struct GameWrapper: Codable {
 public struct Game: Codable, Equatable {
     public let id: String
     public let name: String
-    public let boxArtURL: URL
+    //Leaving as an optional string due to serialization issues with the twitch url
+    public let boxArtUrl: String?
     
-    private enum CodingKeys: String, CodingKey {
-        case id
-        case name
-        case boxArtURL = "box_art_url"
+    public static func == (lhs: Game, rhs: Game) -> Bool {
+        (lhs.id, lhs.name) == (rhs.id, rhs.name)
     }
 }

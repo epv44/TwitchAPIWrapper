@@ -18,7 +18,7 @@ struct ClipWrapper: Codable {
 public struct Clip: Codable, Equatable {
     public let id: String
     public let url: URL
-    public let embedURL: URL
+    public let embedUrl: URL
     public let broadcasterId: String
     public let creatorId: String
     public let videoId: String
@@ -27,7 +27,5 @@ public struct Clip: Codable, Equatable {
     public let title: String
     public let viewCount: Int
     public let createdAt: Date
-    public let thumbnailURL: URL
-    
-    
+    public let thumbnailUrl: URL 
 }
