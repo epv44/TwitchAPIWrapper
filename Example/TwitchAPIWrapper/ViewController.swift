@@ -12,14 +12,14 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
-    fileprivate let consumableEndpoints = ["User", "Emote"]
-    
+    fileprivate let consumableEndpoints = ["User", "Clips", "Games", "Debug - Logout"]
+    fileprivate let segueIdentifiers = ["UserSegue", "EmoteSegue", "GamesSegue"]
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var configuration: [String: AnyObject]
+        
         if let path = Bundle.main.path(forResource: "Environment", ofType: "plist") {
-            configuration = NSDictionary(contentsOfFile: path) as! [String : AnyObject]
+            let configuration = NSDictionary(contentsOfFile: path) as! [String : AnyObject]
             TwitchAuthorizationManager.sharedInstance.clientID = configuration["clientID"] as? String
             TwitchAuthorizationManager.sharedInstance.redirectURI = configuration["redirectURI"] as? String
             TwitchAuthorizationManager.sharedInstance.scopes = configuration["scopes"] as? String
@@ -46,7 +46,6 @@ class ViewController: UIViewController {
             }
         } else {
             NSLog("Error occured when initializing environment")
-            configuration = [String : AnyObject]()
         }
     }
 
@@ -60,14 +59,10 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDelegate {
     //This is not the best way to perform navigation - In a production app change this
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.row {
-        case 0:
-            performSegue(withIdentifier: "UserSegue", sender: nil)
-        case 1:
-            performSegue(withIdentifier: "EmoteSegue", sender: nil)
-        default:
-            NSLog("Invalid")
-            break
+        if consumableEndpoints[indexPath.row] == "Debug - Logout" {
+            try! TwitchAuthorizationManager.sharedInstance.logout()
+        } else {
+            performSegue(withIdentifier: segueIdentifiers[indexPath.row], sender: nil)
         }
     }
 }

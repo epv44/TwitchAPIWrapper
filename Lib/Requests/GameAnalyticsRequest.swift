@@ -9,15 +9,25 @@ import Foundation
 
 public struct GameAnalyticsRequest: JSONConstructableRequest {
     public let url: URL?
-    public let headers: [String : String]
     
-    public init(gameId: String? = nil) {
-        self.url = TwitchEndpoints.gameAnalytics.construct()?.appending(queryItems: ["game_id": gameId].buildQueryItems())
-        guard let authToken = TwitchAuthorizationManager.sharedInstance.authToken else {
-            EVLog(text: "Must specify client_id to make rest request", line: #line, fileName: #file)
-            headers = [:]
-            return
-        }
-        self.headers = ["Authorization": authToken]
+    public init(
+        gameID: String? = nil,
+        after: String? = nil,
+        endedAt: String? = nil,
+        first: String? = nil,
+        startedAt: String? = nil,
+        type: String? = nil
+    ) {
+        self.url = TwitchEndpoints.gameAnalytics.construct()?.appending(
+            queryItems: [
+                "game_id": gameID,
+                "after": after,
+                "endedAt": endedAt,
+                "first": first,
+                "startedAt": startedAt,
+                "type": type,
+            ].buildQueryItems())
     }
 }
+
+

@@ -12,10 +12,6 @@ protocol TwitchNetworkManagerService {
 }
 
 final class TwitchNetworkManager: TwitchNetworkManagerService {
-    func send<T, TT>(request: URLRequest?, withResponseBodyType responseBodyType: T.Type, completion: @escaping (Result<TT>) -> ()) where TT : Decodable {
-        print("called")
-    }
-    
     let jsonDecoder = JSONDecoder.twitchAPIStandard()
     
     func send<T>(request: URLRequest?, withResponseBodyType responseBodyType: T.Type, completion: @escaping (_ result: Result<T>) -> ()) where T: Decodable {
@@ -47,6 +43,7 @@ final class TwitchNetworkManager: TwitchNetworkManagerService {
             let result = try jsonDecoder.decode(type.self, from: data)
             return .success(result)
         } catch {
+            EVLog(text: "\(error)", line: #line, fileName: #file)
             return .failure(ParsingError.invalidJSONData)
         }
     }

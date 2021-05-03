@@ -99,11 +99,15 @@ public class TwitchAuthorizationManager {
         }
     }
     
+    ///View controller that will present the webview for authorization, the "app context"
     public var contextProvider: UIViewController?
     
-    private var credentials: Credentials? {
+    ///Credentials from the server, contains authorized scopes and the auth token this can be used to set the auth token without going through
+    ///the built in authorization flow
+    public var credentials: Credentials? {
         get {
-            return nil
+            guard let authToken = authToken, let scopes = authorizedScopes else { return nil }
+            return Credentials(accessToken: authToken, scope: scopes)
         }
         set {
             if let valueToSave = newValue {
@@ -135,8 +139,6 @@ public class TwitchAuthorizationManager {
         }
     }
     
-    // TODO: can I remove state? I think so???
-    private var state: String?
     private let userAccount = "twitch"
     private let loadingAuthTokenKey = "loadingOauthToken"
     private let keychain = Keychain(service: "com.vennaro.TwitchAPIWrapper")
@@ -161,52 +163,40 @@ public class TwitchAuthorizationManager {
      
      - throws `AuthorizationError`.
     */
-    //log in and process right here, need to use query builder and verify new paths
     public func login() throws {
         if authToken == nil {
-            state = NSUUID().uuidString
-            guard let clientID = clientID, let redirectURI = redirectURI, let scopes = scopes, let state = state else {
+            let state = NSUUID().uuidString
+            guard let clientID = clientID, let redirectURI = redirectURI, let scopes = scopes else {
                 throw AuthorizationError.invalidQueryParameters(desc: "Must define values for the Client Id, Redirect URI, and scopes")
             }
             
             let authPath = "\(TwitchEndpoints.authentication.construct()?.absoluteString ?? "")?response_type=token&client_id=\(clientID)&redirect_uri=\(redirectURI)&scope=\(scopes)&state=\(state)&force_verify=true"
-            print(authPath)
             guard let authURL = URL(string: authPath) else {
                 EVLog(text: "Invalid auth url: \(authPath)", line: #line, fileName: #file)
                 throw AuthorizationError.invalidAuthURL(desc: "Authorization url is invalid, please check your values for the Redirect URI, Client Id, and scopes", url: authPath)
             }
-            processAuthorization(for: authURL)
+            contextProvider?.present(TWAuthWebViewController(delegate: self, redirectURI: redirectURI, authURL: authURL, state: state), animated: true, completion: nil)
             
         } else {
-            EVLog(text: "Authorization token exits or authorization is in progress...no need to authorization again", line: #line, fileName: #file)
+            EVLog(text: "Authorization token exits no need to authorization again", line: #line, fileName: #file)
         }
-    }
-    
-    private func processAuthorization(for url: URL) {
-        contextProvider?.present(TWAuthWebviewController(redirectURI: redirectURI!, authURL: url), animated: true, completion: { (url: URL?, error: Error?) in
-            guard error == nil, let successURL = callback else {
-                EVLog(text: "Error processing oauth request: \(error.debugDescription)", line: #line, fileName: #file)
-                self.authFailed()
-                return
-            }
-            let components = URLComponents(url: successURL, resolvingAgainstBaseURL: false)
-            guard let queryItems = components?.queryItems else { return }
-            
-            let token = queryItems.filter { $0.name.lowercased() == "auth_token" }.first?.value
-            let scope = queryItems.filter { $0.name.lowercased() == "scope" }.first?.value?.split(separator: " ").map { String($0) }
-            // todo check state as part of credential verification
-            self.credentials = Credentials(accessToken: token, scope: scope)
-        })
     }
     
     /**
      Removes users credentials from the app forcing re-authentication with Twitch
      
-     - throws: 'LocksmithError' see: https://github.com/matthewpalmer/Locksmith
+     - throws: `Error` see: https://github.com/kishikawakatsumi/KeychainAccess
     */
     public func logout() throws {
         try keychain.remove(twitchAccessToken)
         try keychain.remove(twitchScopes)
+    }
+}
+
+//MARK: - TWAuthWebViewDelegate
+extension TwitchAuthorizationManager: TWAuthWebViewDelegate {
+    func completeAuthentication(_ vc: UIViewController, token: String, scopes: [String]) {
+        credentials = Credentials(accessToken: token, scope: scopes)
     }
 }
 

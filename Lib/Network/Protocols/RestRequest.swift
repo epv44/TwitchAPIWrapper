@@ -18,5 +18,12 @@ protocol RestRequest {
 extension RestRequest {
     var method: HTTPMethod { return .get }
     var data: Data { return Data() }
-    var headers: [String:String] { return [:] }
+    var headers: [String:String] {
+        guard let authToken = TwitchAuthorizationManager.sharedInstance.authToken,
+              let clientID = TwitchAuthorizationManager.sharedInstance.clientID else {
+            EVLog(text: "Must specify auth token and clientID to make rest request", line: #line, fileName: #file)
+            return [:]
+        }
+        return ["Authorization": "Bearer \(authToken)", "Client-Id": clientID]
+    }
 }

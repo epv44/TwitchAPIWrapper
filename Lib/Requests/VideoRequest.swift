@@ -9,21 +9,26 @@ import Foundation
 
 public struct VideoRequest: JSONConstructableRequest {
     public let url: URL?
-    public let headers: [String : String]
     
-    public init(id: [String],
-         userId: String,
-         gameId: String,
-         after: String? = nil,
-         before: String? = nil,
-         first: String? = nil,
-         language: [String]? = nil,
-         period: String? = nil,
-         sort: String? = nil,
-         type: String? = nil) {
+    public init(
+        id: [String]?,
+        userID: String?,
+        gameID: String?,
+        after: String? = nil,
+        before: String? = nil,
+        first: String? = nil,
+        language: [String]? = nil,
+        period: String? = nil,
+        sort: String? = nil,
+        type: String? = nil
+    ) throws {
+        if id == nil && userID == nil && gameID == nil {
+            throw RequestValidationError.invalidInput(
+                "id, gameID, and userID cannot all be null, at least one is required")
+        }
         let queryParams = ["id":id as Any,
-                           "user_id":userId as Any,
-                           "game_id":gameId as Any,
+                           "user_id":userID as Any,
+                           "game_id":gameID as Any,
                            "after":after as Any,
                            "before":before as Any,
                            "first":first as Any,
@@ -32,11 +37,5 @@ public struct VideoRequest: JSONConstructableRequest {
                            "sort":sort as Any,
                            "type":type as Any].buildQueryItems()
         self.url = TwitchEndpoints.videos.construct()?.appending(queryItems: queryParams)
-        guard let clientID = TwitchAuthorizationManager.sharedInstance.clientID else {
-            EVLog(text: "Must specify client_id to make rest request", line: #line, fileName: #file)
-            headers = [:]
-            return
-        }
-        self.headers = ["Client-ID": clientID]
     }
 }

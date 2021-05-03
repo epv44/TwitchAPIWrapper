@@ -35,9 +35,14 @@ public struct User: Codable, Equatable {
     public let type: UserType
     public let broadcasterType: BroadcasterType
     public let description: String
-    public let profileImageURL: URL
-    public let offlineImageURL: URL
+    @FailableDecodable
+    public private(set) var profileImageUrl: URL?
+    @FailableDecodable
+    public private(set) var offlineImageUrl: URL?
     public let viewCount: Int
     public let email: String?
-
+    
+    public static func == (lhs: User, rhs: User) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
