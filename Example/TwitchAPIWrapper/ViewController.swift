@@ -6,7 +6,6 @@
 //  Copyright © 2016 Eric Vennaro. All rights reserved.
 //
 
-import AuthenticationServices
 import TwitchAPIWrapper
 import UIKit
 
@@ -79,13 +78,4 @@ extension ViewController: UITableViewDataSource {
         return cell
     }
 }
-
-extension ViewController: ASWebAuthenticationPresentationContextProviding {
-    func presentationAnchor(for session: ASWebAuthenticationSession)
-    -> ASPresentationAnchor {
-//      let window = UIApplication.shared.windows.first { $0.isKeyWindow }
-      return self.view.window ?? ASPresentationAnchor()
-    }
-  }
-
 

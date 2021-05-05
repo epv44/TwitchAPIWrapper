@@ -8,8 +8,13 @@
 import Foundation
 
 enum TwitchEndpoints {
+    case analyticsExtension
     case authentication
+    case channelEditor
+    case channelInformation
     case clips
+    case cheermotes
+    case extensionTransactions
     case games
     case gameAnalytics
     case leaderboard
@@ -22,17 +27,22 @@ enum TwitchEndpoints {
     
     var path: String {
         switch self {
-        case .authentication:   return "oauth2/authorize"
-        case .clips:            return "helix/clips"
-        case .games:            return "helix/games"
-        case .gameAnalytics:    return "helix/analytics/games"
-        case .leaderboard:      return "helix/bits/leaderboard"
-        case .startCommercial:  return "helix/channels/commercial"
-        case .streams:          return "helix/streams"
-        case .topGames:         return "helix/games/top"
-        case .userFollows:      return "helix/users/follows"
-        case .users:            return "helix/users"
-        case .videos:           return "helix/videos"
+        case .analyticsExtension:       return "helix/analytics/extensions"
+        case .authentication:           return "oauth2/authorize"
+        case .channelEditor:            return "helix/channels/editors"
+        case .channelInformation:       return "helix/channels"
+        case .clips:                    return "helix/clips"
+        case .cheermotes:               return "helix/bits/cheermotes"
+        case .extensionTransactions:    return "helix/extensions/transactions"
+        case .games:                    return "helix/games"
+        case .gameAnalytics:            return "helix/analytics/games"
+        case .leaderboard:              return "helix/bits/leaderboard"
+        case .startCommercial:          return "helix/channels/commercial"
+        case .streams:                  return "helix/streams"
+        case .topGames:                 return "helix/games/top"
+        case .userFollows:              return "helix/users/follows"
+        case .users:                    return "helix/users"
+        case .videos:                   return "helix/videos"
         }
     }
     
@@ -47,7 +57,12 @@ enum TwitchEndpoints {
              .users,
              .videos,
              .gameAnalytics,
-             .startCommercial:
+             .startCommercial,
+             .analyticsExtension,
+             .cheermotes,
+             .extensionTransactions,
+             .channelInformation,
+             .channelEditor:
             return "https://api.twitch.tv/"
         case .authentication:
             return "https://id.twitch.tv/"

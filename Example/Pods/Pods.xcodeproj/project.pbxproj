@@ -23,6 +23,18 @@
 		2E34BC0C263F3EDB00C81949 /* RequestValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E34BC0B263F3EDB00C81949 /* RequestValidationError.swift */; };
 		2E88E5A1263F6E0200216743 /* CommercialResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5A0263F6E0200216743 /* CommercialResponse.swift */; };
 		2E88E5A3263F6F4000216743 /* StartCommercialRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5A2263F6F4000216743 /* StartCommercialRequest.swift */; };
+		2E88E5A5263F78EB00216743 /* ExtensionAnalyticsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5A4263F78EB00216743 /* ExtensionAnalyticsRequest.swift */; };
+		2E88E5A7263F7B0E00216743 /* ExtensionAnalytics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5A6263F7B0E00216743 /* ExtensionAnalytics.swift */; };
+		2E88E5A92641A13B00216743 /* CheermoteRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5A82641A13B00216743 /* CheermoteRequest.swift */; };
+		2E88E5AB2641B34E00216743 /* Cheermote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5AA2641B34E00216743 /* Cheermote.swift */; };
+		2E88E5AD2641D3B400216743 /* ExtensionTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5AC2641D3B400216743 /* ExtensionTransactions.swift */; };
+		2E88E5AF2641D41800216743 /* ExtensionTransactionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5AE2641D41800216743 /* ExtensionTransactionsRequest.swift */; };
+		2E88E5B12641DC8F00216743 /* ChannelInformationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5B02641DC8F00216743 /* ChannelInformationRequest.swift */; };
+		2E88E5B32641DD7F00216743 /* ChannelInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5B22641DD7F00216743 /* ChannelInformation.swift */; };
+		2E88E5B52641E07500216743 /* ModifyChannelInformationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5B42641E07500216743 /* ModifyChannelInformationRequest.swift */; };
+		2E88E5B72641E58600216743 /* ChannelEditorsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5B62641E58600216743 /* ChannelEditorsRequest.swift */; };
+		2E88E5B92641E68D00216743 /* EmptyPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5B82641E68D00216743 /* EmptyPostResponse.swift */; };
+		2E88E5BB2641E6C900216743 /* ChannelEditors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5BA2641E6C900216743 /* ChannelEditors.swift */; };
 		2E9FD1FC26366376001BAC99 /* TWAuthWebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD1FB26366376001BAC99 /* TWAuthWebviewController.swift */; };
 		38A77585A26499A0DEBA3AEB8556B4DE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653967E56947B3BF26408DE30BAE650 /* Game.swift */; };
 		3B181C555E298856E2D5339C0120FE21 /* ConstructableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85495C73DBEE851E3D73AE3EA1EF8BBD /* ConstructableRequest.swift */; };
@@ -113,6 +125,18 @@
 		2E34BC0B263F3EDB00C81949 /* RequestValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestValidationError.swift; sourceTree = "<group>"; };
 		2E88E5A0263F6E0200216743 /* CommercialResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialResponse.swift; sourceTree = "<group>"; };
 		2E88E5A2263F6F4000216743 /* StartCommercialRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCommercialRequest.swift; sourceTree = "<group>"; };
+		2E88E5A4263F78EB00216743 /* ExtensionAnalyticsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAnalyticsRequest.swift; sourceTree = "<group>"; };
+		2E88E5A6263F7B0E00216743 /* ExtensionAnalytics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAnalytics.swift; sourceTree = "<group>"; };
+		2E88E5A82641A13B00216743 /* CheermoteRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheermoteRequest.swift; sourceTree = "<group>"; };
+		2E88E5AA2641B34E00216743 /* Cheermote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cheermote.swift; sourceTree = "<group>"; };
+		2E88E5AC2641D3B400216743 /* ExtensionTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTransactions.swift; sourceTree = "<group>"; };
+		2E88E5AE2641D41800216743 /* ExtensionTransactionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTransactionsRequest.swift; sourceTree = "<group>"; };
+		2E88E5B02641DC8F00216743 /* ChannelInformationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInformationRequest.swift; sourceTree = "<group>"; };
+		2E88E5B22641DD7F00216743 /* ChannelInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInformation.swift; sourceTree = "<group>"; };
+		2E88E5B42641E07500216743 /* ModifyChannelInformationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyChannelInformationRequest.swift; sourceTree = "<group>"; };
+		2E88E5B62641E58600216743 /* ChannelEditorsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelEditorsRequest.swift; sourceTree = "<group>"; };
+		2E88E5B82641E68D00216743 /* EmptyPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPostResponse.swift; sourceTree = "<group>"; };
+		2E88E5BA2641E6C900216743 /* ChannelEditors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelEditors.swift; sourceTree = "<group>"; };
 		2E9FD1FB26366376001BAC99 /* TWAuthWebviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWAuthWebviewController.swift; sourceTree = "<group>"; };
 		39482C17CF21BBC9696EC464C0D2FE9C /* Pods-TwitchAPIWrapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwitchAPIWrapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4138A99593A12F0730E76028249A78CC /* GameRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameRequest.swift; sourceTree = "<group>"; };
@@ -276,18 +300,24 @@
 			isa = PBXGroup;
 			children = (
 				4935FA72172D24A8071C9242B28F84C1 /* AuthorizationResource.swift */,
+				2E88E5B62641E58600216743 /* ChannelEditorsRequest.swift */,
+				2E88E5B02641DC8F00216743 /* ChannelInformationRequest.swift */,
+				2E88E5A82641A13B00216743 /* CheermoteRequest.swift */,
 				765057C34B025F6827FF8A3621EF87EB /* ClipRequest.swift */,
+				2E88E5A4263F78EB00216743 /* ExtensionAnalyticsRequest.swift */,
+				2E88E5AE2641D41800216743 /* ExtensionTransactionsRequest.swift */,
 				2BFB61DE499D66ADA64055555BF47312 /* GameAnalyticsRequest.swift */,
 				4138A99593A12F0730E76028249A78CC /* GameRequest.swift */,
 				1B9FA204ACB54E45B8CBF82B74642117 /* LeaderboardRequest.swift */,
+				2E88E5B42641E07500216743 /* ModifyChannelInformationRequest.swift */,
+				2E34BC0B263F3EDB00C81949 /* RequestValidationError.swift */,
+				2E88E5A2263F6F4000216743 /* StartCommercialRequest.swift */,
 				E5DC5B0CABFB6C7C60C555DCE3A2EC1D /* StreamRequest.swift */,
 				01E7296B33208D57BF98DC9404555D14 /* TopGameRequest.swift */,
 				EA7B1304F40DE3E0C5C4EC7D179E9209 /* UserFollowRequest.swift */,
 				093E8F259E3CC0241DF9ACDFE951B568 /* UserRequest.swift */,
 				7DE6D4B076A51EBD6E03C9E6F3A17B45 /* UserUpdateRequest.swift */,
 				1FFF4323D1132EB3A378621F1705CD78 /* VideoRequest.swift */,
-				2E88E5A2263F6F4000216743 /* StartCommercialRequest.swift */,
-				2E34BC0B263F3EDB00C81949 /* RequestValidationError.swift */,
 			);
 			name = Requests;
 			path = Lib/Requests;
@@ -420,9 +450,15 @@
 		D7AD85CBE6B2FF61E5035843E00D99E4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2E88E5BA2641E6C900216743 /* ChannelEditors.swift */,
+				2E88E5B22641DD7F00216743 /* ChannelInformation.swift */,
+				2E88E5AA2641B34E00216743 /* Cheermote.swift */,
 				BF5415BB4ECAC463EFA6770C1BB07970 /* Clip.swift */,
 				2E88E5A0263F6E0200216743 /* CommercialResponse.swift */,
 				8482ECBABC03DCA1E46DD2900F0AACC7 /* Credentials.swift */,
+				2E88E5B82641E68D00216743 /* EmptyPostResponse.swift */,
+				2E88E5A6263F7B0E00216743 /* ExtensionAnalytics.swift */,
+				2E88E5AC2641D3B400216743 /* ExtensionTransactions.swift */,
 				1653967E56947B3BF26408DE30BAE650 /* Game.swift */,
 				CBA5845C0D9CF11D06C1AD82B69E13E3 /* GameAnalytics.swift */,
 				8D765041880A0BDFA0B7C3FC1E621388 /* Leaderboard.swift */,
@@ -669,27 +705,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E88E5B52641E07500216743 /* ModifyChannelInformationRequest.swift in Sources */,
 				52A13BC6DF44491A7B0F8CC8F562288A /* AuthorizationResource.swift in Sources */,
+				2E88E5B72641E58600216743 /* ChannelEditorsRequest.swift in Sources */,
 				0EAA13159E3BF9E9144734F548105B8D /* Clip.swift in Sources */,
 				61E4DA6CE17A5285CE300AF1811B5B00 /* ClipRequest.swift in Sources */,
 				2E88E5A1263F6E0200216743 /* CommercialResponse.swift in Sources */,
+				2E88E5A92641A13B00216743 /* CheermoteRequest.swift in Sources */,
 				AC7E649D58E69642BA59A56E5E761A71 /* Constants.swift in Sources */,
 				3B181C555E298856E2D5339C0120FE21 /* ConstructableRequest.swift in Sources */,
 				A0A20C83E52E88E366C9083B04BFF37D /* Credentials.swift in Sources */,
 				71240F5671BAE51279AF238C14597457 /* DictionaryExtension.swift in Sources */,
 				06D3B7424093BFD339AFF56EF3019E98 /* EVLog.swift in Sources */,
+				2E88E5AB2641B34E00216743 /* Cheermote.swift in Sources */,
 				38A77585A26499A0DEBA3AEB8556B4DE /* Game.swift in Sources */,
 				03E074B39FA840ABE5E2269F33E2C5BE /* GameAnalytics.swift in Sources */,
 				F9E4743E3B26C03CDFBA4A17B31B9DC7 /* GameAnalyticsRequest.swift in Sources */,
+				2E88E5B32641DD7F00216743 /* ChannelInformation.swift in Sources */,
 				66AB34E022471EBA28D46649CF0669D8 /* GameRequest.swift in Sources */,
+				2E88E5A5263F78EB00216743 /* ExtensionAnalyticsRequest.swift in Sources */,
 				2E34BC0A263F399600C81949 /* FailableDecodable.swift in Sources */,
 				CD01076B8C6E4B515EDB845809D53110 /* JSONDecoderExtension.swift in Sources */,
+				2E88E5A7263F7B0E00216743 /* ExtensionAnalytics.swift in Sources */,
 				01584B58DC4119BB321751F233DA73C3 /* JSONEncoderExtension.swift in Sources */,
+				2E88E5AF2641D41800216743 /* ExtensionTransactionsRequest.swift in Sources */,
 				B2386E2EE645C0818CA7CF279BFAA6EE /* Leaderboard.swift in Sources */,
 				AFC627F0DF2B8ED54CBE6C674D737C83 /* LeaderboardRequest.swift in Sources */,
 				D37742502F40EF2B298247F0F91B0AD3 /* RestRequest.swift in Sources */,
 				B432D1E385C68CED318C288B661266FD /* Stream.swift in Sources */,
+				2E88E5BB2641E6C900216743 /* ChannelEditors.swift in Sources */,
 				2E88E5A3263F6F4000216743 /* StartCommercialRequest.swift in Sources */,
+				2E88E5B12641DC8F00216743 /* ChannelInformationRequest.swift in Sources */,
 				885AC513657533A20499364F2F37CFD8 /* StreamRequest.swift in Sources */,
 				6A304327D1F0D1B46BB51BB868A09F1E /* TopGameRequest.swift in Sources */,
 				26E8DAB8C91910C9F6746137D7192A52 /* TwitchAPIWrapper-dummy.m in Sources */,
@@ -699,6 +745,7 @@
 				736B1F187A728D758ADA7C23E10AE988 /* TwitchNetworkManager.swift in Sources */,
 				8CCD901015B03D2A615BF87DB108CA9A /* TwitchService.swift in Sources */,
 				BDA2899DED35350CBEB40D434B9BC0F8 /* URLExtension.swift in Sources */,
+				2E88E5B92641E68D00216743 /* EmptyPostResponse.swift in Sources */,
 				E46579CDB0B4493B6BC82C0DFF34CD93 /* User.swift in Sources */,
 				22C9E75CC1E9EE5EFDE19FE32F2AB3AA /* UserFollow.swift in Sources */,
 				16ADD58E9E3A98DE10C47E99E6206D9B /* UserFollowRequest.swift in Sources */,
@@ -706,6 +753,7 @@
 				D9D282E6535FD7BE2CBCDACB68CB70EE /* UserUpdateRequest.swift in Sources */,
 				832621BD119DEAAFF13F9F3B575FB790 /* Video.swift in Sources */,
 				2E9FD1FC26366376001BAC99 /* TWAuthWebviewController.swift in Sources */,
+				2E88E5AD2641D3B400216743 /* ExtensionTransactions.swift in Sources */,
 				685400054549544B8F4F923412229134 /* VideoRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -24,9 +24,9 @@ public struct MutedSegment: Codable, Equatable {
     let offset: String
 }
 
-class VideoWrapper: Codable {
-    let videos: [Video]
-    let pagination: Paginate
+public struct VideoResponse: Codable {
+    public let videos: [Video]
+    public let pagination: Paginate
     
     private enum CodingKeys: String, CodingKey {
         case videos = "data"
@@ -35,21 +35,21 @@ class VideoWrapper: Codable {
 }
 
 public struct Video: Codable, Equatable {
-    let id: String
-    let streamId: String
-    let userId: String
-    let userLogin: String
-    let userName: String
-    let title: String
-    let description: String
-    let createdAt: Date
-    let publishedAt: Date
-    let url: URL
-    let thumbnailUrl: String
-    let viewable: Viewable
-    let viewCount: Int
-    let language: String
-    let type: VideoType
-    let duration: String
-    let mutedSegments: [MutedSegment]?
+    public let id: String
+    public let streamId: String
+    public let userId: String
+    public let userLogin: String
+    public let userName: String
+    public let title: String
+    public let description: String
+    public let createdAt: Date
+    public let publishedAt: Date
+    public let url: URL
+    public let thumbnailUrl: String
+    public let viewable: Viewable
+    public let viewCount: Int
+    public let language: String
+    public let type: VideoType
+    public let duration: String
+    public let mutedSegments: [MutedSegment]?
 }

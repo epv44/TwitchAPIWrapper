@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Get  leaderboard request, see https://dev.twitch.tv/docs/api/reference/#get-leaderboard for details
 public struct LeaderboardRequest: JSONConstructableRequest {
     public let url: URL?
     

@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct GameWrapper: Codable {
-    let games: [Game]
+public struct GameResponse: Codable {
+    public let games: [Game]
     
     private enum CodingKeys: String, CodingKey {
         case games = "data"

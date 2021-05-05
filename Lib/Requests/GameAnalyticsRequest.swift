@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Get game analytics request see https://dev.twitch.tv/docs/api/reference/#get-game-analytics for details
 public struct GameAnalyticsRequest: JSONConstructableRequest {
     public let url: URL?
     

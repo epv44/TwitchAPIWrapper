@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct ClipWrapper: Codable {
-    let clips: [Clip]
+public struct ClipResponse: Codable {
+    public let clips: [Clip]
 
     private enum CodingKeys: String, CodingKey {
         case clips = "data"

@@ -16,10 +16,10 @@ class UserViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let userRequest = UserRequest(id: nil, login: ["evennaro1"])
-        twitchService.users(forRequest: userRequest) { result in
+        twitchService.gen(forRequest: userRequest) { (result: Result<UserResponse>) in
             switch result {
             case .success(let r):
-                print(r)
+            print(r.users[0])
             case .failure(let error):
                 print(error)
             }

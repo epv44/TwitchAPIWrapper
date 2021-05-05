@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Get clips request see https://dev.twitch.tv/docs/api/reference/#get-clips for details
 public struct ClipRequest: JSONConstructableRequest {
     public let url: URL?
     

@@ -20,8 +20,8 @@ public enum UserType: String, Codable {
     case none = ""
 }
 
-struct UserWrapper: Codable {
-    let users: [User]
+public struct UserResponse: Codable {
+    public let users: [User]
     
     private enum CodingKeys: String, CodingKey {
         case users = "data"

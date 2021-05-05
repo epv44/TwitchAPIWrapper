@@ -22,17 +22,17 @@ pod 'TwitchAPIWrapper'
 
 ## Available API Calls
 
-| API Method | Swift Request Object | Supported? |
+| Twitch API Method | Swift Request Object | Supported? |
 | ------------- | ------------- | :-------------: |
-| Start Commercial | | ✅ |
-| Get Extension Analytics | | ❌ |
+| Start Commercial | CommercialRequest | ✅ |
+| Get Extension Analytics | StartCommercialRequest | ✅ |
 | Get Game Analytics | GameAnalyticsRequest | ✅ |
 | Get Bits Leaderboard | LeaderboardRequest | ✅ |
-| Get Cheermotes | | ❌  |
-| Get Extension Transactions | | ❌ |
-| Get Channel Information |  | ❌ |
-| Modify Channel Information |  | ❌ |
-| Get Channel Editors |  | ❌ |
+| Get Cheermotes |CheermoteRequest | ✅ |
+| Get Extension Transactions | ExtensionTransactionsRequest | ✅ |
+| Get Channel Information | ChannelInformationRequest | ✅ |
+| Modify Channel Information | ModifyChannelInformationRequest  | ✅ |
+| Get Channel Editors | ChannelEditorsRequest | ✅ |
 | Create Custom Rewards | | ❌ |
 | Delete Custom Reward | | ❌ |
 | Get Custom Reward | | ❌ |

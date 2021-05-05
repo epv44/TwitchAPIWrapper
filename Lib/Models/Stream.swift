@@ -14,7 +14,7 @@ public enum StreamType: String, Codable {
     case all
 }
 
-public struct StreamWrapper: Codable, Equatable {
+public struct StreamResponse: Codable, Equatable {
     public let streams: [Stream]
     public let pagination: Paginate?
     

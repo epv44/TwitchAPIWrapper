@@ -18,8 +18,8 @@ class GameViewController: UIViewController {
 //            gameID: "493057",
 //            endedAt: "2018-03-01T00:00:00Z",
 //            startedAt: "2018-01-01T00:00:00Z")
-        let request = try! StartCommercialRequest(broadcasterID: "41245072", length: 60)
-        twitchService.startCommercial(forRequest: request) { result in
+        let request = ChannelEditorRequest(broadcasterID: "141981764")
+        twitchService.gen(forRequest: request) { (result: Result<ChannelEditorResponse>) in
             switch result {
             case .success(let r):
                 print(r)
