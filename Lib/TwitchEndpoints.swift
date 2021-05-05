@@ -12,8 +12,9 @@ enum TwitchEndpoints {
     case authentication
     case channelEditor
     case channelInformation
-    case clips
     case cheermotes
+    case clips
+    case customAwards
     case extensionTransactions
     case games
     case gameAnalytics
@@ -31,8 +32,9 @@ enum TwitchEndpoints {
         case .authentication:           return "oauth2/authorize"
         case .channelEditor:            return "helix/channels/editors"
         case .channelInformation:       return "helix/channels"
-        case .clips:                    return "helix/clips"
         case .cheermotes:               return "helix/bits/cheermotes"
+        case .clips:                    return "helix/clips"
+        case .customAwards:             return "helix/channel_points/custom_rewards"
         case .extensionTransactions:    return "helix/extensions/transactions"
         case .games:                    return "helix/games"
         case .gameAnalytics:            return "helix/analytics/games"
@@ -62,7 +64,8 @@ enum TwitchEndpoints {
              .cheermotes,
              .extensionTransactions,
              .channelInformation,
-             .channelEditor:
+             .channelEditor,
+             .customAwards:
             return "https://api.twitch.tv/"
         case .authentication:
             return "https://id.twitch.tv/"
