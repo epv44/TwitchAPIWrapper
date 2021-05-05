@@ -35,6 +35,8 @@
 		2E88E5B72641E58600216743 /* ChannelEditorsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5B62641E58600216743 /* ChannelEditorsRequest.swift */; };
 		2E88E5B92641E68D00216743 /* EmptyPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5B82641E68D00216743 /* EmptyPostResponse.swift */; };
 		2E88E5BB2641E6C900216743 /* ChannelEditors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5BA2641E6C900216743 /* ChannelEditors.swift */; };
+		2E88E5BD2642449F00216743 /* CustomAward.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5BC2642449F00216743 /* CustomAward.swift */; };
+		2E88E5BF2642489600216743 /* CreateCustomAwardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5BE2642489600216743 /* CreateCustomAwardRequest.swift */; };
 		2E9FD1FC26366376001BAC99 /* TWAuthWebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD1FB26366376001BAC99 /* TWAuthWebviewController.swift */; };
 		38A77585A26499A0DEBA3AEB8556B4DE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653967E56947B3BF26408DE30BAE650 /* Game.swift */; };
 		3B181C555E298856E2D5339C0120FE21 /* ConstructableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85495C73DBEE851E3D73AE3EA1EF8BBD /* ConstructableRequest.swift */; };
@@ -137,6 +139,8 @@
 		2E88E5B62641E58600216743 /* ChannelEditorsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelEditorsRequest.swift; sourceTree = "<group>"; };
 		2E88E5B82641E68D00216743 /* EmptyPostResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyPostResponse.swift; sourceTree = "<group>"; };
 		2E88E5BA2641E6C900216743 /* ChannelEditors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelEditors.swift; sourceTree = "<group>"; };
+		2E88E5BC2642449F00216743 /* CustomAward.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAward.swift; sourceTree = "<group>"; };
+		2E88E5BE2642489600216743 /* CreateCustomAwardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCustomAwardRequest.swift; sourceTree = "<group>"; };
 		2E9FD1FB26366376001BAC99 /* TWAuthWebviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWAuthWebviewController.swift; sourceTree = "<group>"; };
 		39482C17CF21BBC9696EC464C0D2FE9C /* Pods-TwitchAPIWrapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwitchAPIWrapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4138A99593A12F0730E76028249A78CC /* GameRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameRequest.swift; sourceTree = "<group>"; };
@@ -304,6 +308,7 @@
 				2E88E5B02641DC8F00216743 /* ChannelInformationRequest.swift */,
 				2E88E5A82641A13B00216743 /* CheermoteRequest.swift */,
 				765057C34B025F6827FF8A3621EF87EB /* ClipRequest.swift */,
+				2E88E5BE2642489600216743 /* CreateCustomAwardRequest.swift */,
 				2E88E5A4263F78EB00216743 /* ExtensionAnalyticsRequest.swift */,
 				2E88E5AE2641D41800216743 /* ExtensionTransactionsRequest.swift */,
 				2BFB61DE499D66ADA64055555BF47312 /* GameAnalyticsRequest.swift */,
@@ -456,6 +461,7 @@
 				BF5415BB4ECAC463EFA6770C1BB07970 /* Clip.swift */,
 				2E88E5A0263F6E0200216743 /* CommercialResponse.swift */,
 				8482ECBABC03DCA1E46DD2900F0AACC7 /* Credentials.swift */,
+				2E88E5BC2642449F00216743 /* CustomAward.swift */,
 				2E88E5B82641E68D00216743 /* EmptyPostResponse.swift */,
 				2E88E5A6263F7B0E00216743 /* ExtensionAnalytics.swift */,
 				2E88E5AC2641D3B400216743 /* ExtensionTransactions.swift */,
@@ -722,6 +728,7 @@
 				03E074B39FA840ABE5E2269F33E2C5BE /* GameAnalytics.swift in Sources */,
 				F9E4743E3B26C03CDFBA4A17B31B9DC7 /* GameAnalyticsRequest.swift in Sources */,
 				2E88E5B32641DD7F00216743 /* ChannelInformation.swift in Sources */,
+				2E88E5BD2642449F00216743 /* CustomAward.swift in Sources */,
 				66AB34E022471EBA28D46649CF0669D8 /* GameRequest.swift in Sources */,
 				2E88E5A5263F78EB00216743 /* ExtensionAnalyticsRequest.swift in Sources */,
 				2E34BC0A263F399600C81949 /* FailableDecodable.swift in Sources */,
@@ -740,6 +747,7 @@
 				6A304327D1F0D1B46BB51BB868A09F1E /* TopGameRequest.swift in Sources */,
 				26E8DAB8C91910C9F6746137D7192A52 /* TwitchAPIWrapper-dummy.m in Sources */,
 				F64D4BCB69B5CD12B3D311AA3BF21B67 /* TwitchAuthorizationManager.swift in Sources */,
+				2E88E5BF2642489600216743 /* CreateCustomAwardRequest.swift in Sources */,
 				3C6C3EE60BB8B95E2328B3E5BB76A6F4 /* TwitchEndpoints.swift in Sources */,
 				2E34BC0C263F3EDB00C81949 /* RequestValidationError.swift in Sources */,
 				736B1F187A728D758ADA7C23E10AE988 /* TwitchNetworkManager.swift in Sources */,

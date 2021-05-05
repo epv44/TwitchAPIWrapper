@@ -33,7 +33,7 @@ pod 'TwitchAPIWrapper'
 | Get Channel Information | ChannelInformationRequest | ✅ |
 | Modify Channel Information | ModifyChannelInformationRequest  | ✅ |
 | Get Channel Editors | ChannelEditorsRequest | ✅ |
-| Create Custom Rewards | | ❌ |
+| Create Custom Rewards | CreateCustomAwardRequest  | ✅ |
 | Delete Custom Reward | | ❌ |
 | Get Custom Reward | | ❌ |
 | Get Custom Reward | | ❌ |
