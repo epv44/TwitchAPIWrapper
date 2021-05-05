@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Get videos request see https://dev.twitch.tv/docs/api/reference/#get-videos for details
 public struct VideoRequest: JSONConstructableRequest {
     public let url: URL?
     

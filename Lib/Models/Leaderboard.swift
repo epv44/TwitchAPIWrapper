@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct Leaderboard: Codable, Equatable {
+public struct LeaderboardResponse: Codable, Equatable {
     public let entries: [LeaderboardEntry]
     public let dateRange: DateRange
     public let total: Int

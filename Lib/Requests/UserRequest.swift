@@ -8,6 +8,7 @@
 
 import Foundation
 
+///Get users request https://dev.twitch.tv/docs/api/reference/#get-users for details
 public struct UserRequest: JSONConstructableRequest {
     public let url: URL?
     

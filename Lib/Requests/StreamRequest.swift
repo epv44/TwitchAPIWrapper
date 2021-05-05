@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Get streams request https://dev.twitch.tv/docs/api/reference/#get-streams for details
 public struct StreamRequest: JSONConstructableRequest {
     public let url: URL?
     

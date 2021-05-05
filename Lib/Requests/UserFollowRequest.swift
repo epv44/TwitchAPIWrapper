@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Get user follows request see https://dev.twitch.tv/docs/api/reference/#update-user for details
 public struct UserFollowRequest: JSONConstructableRequest {
     public let url: URL?
     

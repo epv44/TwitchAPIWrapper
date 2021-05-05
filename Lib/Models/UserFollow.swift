@@ -7,10 +7,10 @@
 
 import Foundation
 
-public struct UserFollow: Codable, Equatable {
-    let total: Int
-    let follows: [Follow]
-    let pagination: Paginate
+public struct UserFollowResponse: Codable, Equatable {
+    public let total: Int
+    public let follows: [Follow]
+    public let pagination: Paginate
     
     private enum CodingKeys: String, CodingKey {
         case total
@@ -20,11 +20,11 @@ public struct UserFollow: Codable, Equatable {
 }
 
 public struct Follow: Codable, Equatable {
-    let followedAt: String
-    let fromId: String
-    let fromLogin: String
-    let fromName: String
-    let toId: String
-    let toLogin: String
-    let toName: String
+    public let followedAt: String
+    public let fromId: String
+    public let fromLogin: String
+    public let fromName: String
+    public let toId: String
+    public let toLogin: String
+    public let toName: String
 }

@@ -7,15 +7,15 @@
 
 import Foundation
 
-public struct CommercialResponseWrapper: Codable {
-    let commercial: [CommercialResponse]
+public struct CommercialResponse: Codable {
+    public let commercial: [Commercial]
 
     private enum CodingKeys: String, CodingKey {
         case commercial = "data"
     }
 }
 
-public struct CommercialResponse: Codable, Equatable {
+public struct Commercial: Codable, Equatable {
     public let length: Int
     public let message: String
     public let retryAfter: Int

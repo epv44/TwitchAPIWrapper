@@ -71,20 +71,20 @@ public enum NetworkJSONServiceError: Error {
 }
 
 public enum HTTPMethod: String {
-    case get, post, put
+    case get, post, put, patch
 }
 
-protocol ConstructableRequest: RestRequest {
+public protocol ConstructableRequest: RestRequest {
     func buildRequest() -> URLRequest?
 }
 
-protocol JSONConstructableRequest: ConstructableRequest {}
+public protocol JSONConstructableRequest: ConstructableRequest {}
 
 extension JSONConstructableRequest {
     public func buildRequest() -> URLRequest? {
         let request = NSMutableURLRequest(url: url!)
         request.allHTTPHeaderFields = headers
-        if method == .post || method == .put {
+        if method == .post || method == .put || method == .patch {
             request.httpBody = data
         }
         request.httpMethod = method.rawValue

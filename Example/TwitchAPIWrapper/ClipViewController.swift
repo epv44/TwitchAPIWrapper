@@ -15,10 +15,10 @@ class ClipViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let request = try! ClipRequest(id: "AwkwardHelplessSalamanderSwiftRage", gameID: nil, broadcasterID: nil)
-        twitchService.clips(forRequest: request) { result in
+        twitchService.gen(forRequest: request) { (result: Result<ClipResponse>) in
             switch result {
             case .success(let r):
-                print(r)
+                print(r.clips)
             case .failure(let error):
                 print(error)
             }

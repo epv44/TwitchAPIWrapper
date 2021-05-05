@@ -8,8 +8,8 @@
 
 import Foundation
 
+
 struct AuthorizationResource: JSONConstructableRequest {
-    typealias Model = Credentials
     let url: URL?
     let method: HTTPMethod = .post
     let data: Data

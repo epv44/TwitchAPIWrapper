@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Get games request see https://dev.twitch.tv/docs/api/reference/#get-games for details
 public struct GameRequest: JSONConstructableRequest {
     public let url: URL?
     
