@@ -45,6 +45,10 @@
 		2E88E5CD2647583700216743 /* DropsEntitlementRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5CC2647583700216743 /* DropsEntitlementRequest.swift */; };
 		2E88E5CF264759D700216743 /* Entitlement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5CE264759D700216743 /* Entitlement.swift */; };
 		2E88E5D1264CDA5600216743 /* RedeemCodeRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5D0264CDA5600216743 /* RedeemCodeRequest.swift */; };
+		2E88E5D5264CE45A00216743 /* UpdateEventSubscriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5D4264CE45A00216743 /* UpdateEventSubscriptionRequest.swift */; };
+		2E88E5D7264CE7B700216743 /* EventSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5D6264CE7B700216743 /* EventSubscription.swift */; };
+		2E88E5D9264E364300216743 /* DeleteEventSubSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5D8264E364300216743 /* DeleteEventSubSubscription.swift */; };
+		2E88E5DB264E37E000216743 /* GetEventSubSubscriptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E88E5DA264E37E000216743 /* GetEventSubSubscriptionRequest.swift */; };
 		2E9FD1FC26366376001BAC99 /* TWAuthWebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD1FB26366376001BAC99 /* TWAuthWebviewController.swift */; };
 		38A77585A26499A0DEBA3AEB8556B4DE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653967E56947B3BF26408DE30BAE650 /* Game.swift */; };
 		3B181C555E298856E2D5339C0120FE21 /* ConstructableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85495C73DBEE851E3D73AE3EA1EF8BBD /* ConstructableRequest.swift */; };
@@ -157,6 +161,10 @@
 		2E88E5CC2647583700216743 /* DropsEntitlementRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropsEntitlementRequest.swift; sourceTree = "<group>"; };
 		2E88E5CE264759D700216743 /* Entitlement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entitlement.swift; sourceTree = "<group>"; };
 		2E88E5D0264CDA5600216743 /* RedeemCodeRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedeemCodeRequest.swift; sourceTree = "<group>"; };
+		2E88E5D4264CE45A00216743 /* UpdateEventSubscriptionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEventSubscriptionRequest.swift; sourceTree = "<group>"; };
+		2E88E5D6264CE7B700216743 /* EventSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSubscription.swift; sourceTree = "<group>"; };
+		2E88E5D8264E364300216743 /* DeleteEventSubSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteEventSubSubscription.swift; sourceTree = "<group>"; };
+		2E88E5DA264E37E000216743 /* GetEventSubSubscriptionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEventSubSubscriptionRequest.swift; sourceTree = "<group>"; };
 		2E9FD1FB26366376001BAC99 /* TWAuthWebviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWAuthWebviewController.swift; sourceTree = "<group>"; };
 		39482C17CF21BBC9696EC464C0D2FE9C /* Pods-TwitchAPIWrapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwitchAPIWrapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4138A99593A12F0730E76028249A78CC /* GameRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameRequest.swift; sourceTree = "<group>"; };
@@ -327,11 +335,13 @@
 				2E88E5C82647559000216743 /* CodeStatusRequest.swift */,
 				2E88E5BE2642489600216743 /* CustomRewardRequest.swift */,
 				2E88E5C226463B9100216743 /* CustomRewardRedemptionRequest.swift */,
+				2E88E5D8264E364300216743 /* DeleteEventSubSubscription.swift */,
 				2E88E5CC2647583700216743 /* DropsEntitlementRequest.swift */,
 				2E88E5A4263F78EB00216743 /* ExtensionAnalyticsRequest.swift */,
 				2E88E5AE2641D41800216743 /* ExtensionTransactionsRequest.swift */,
 				2BFB61DE499D66ADA64055555BF47312 /* GameAnalyticsRequest.swift */,
 				4138A99593A12F0730E76028249A78CC /* GameRequest.swift */,
+				2E88E5DA264E37E000216743 /* GetEventSubSubscriptionRequest.swift */,
 				1B9FA204ACB54E45B8CBF82B74642117 /* LeaderboardRequest.swift */,
 				2E88E5B42641E07500216743 /* ModifyChannelInformationRequest.swift */,
 				2E88E5D0264CDA5600216743 /* RedeemCodeRequest.swift */,
@@ -339,6 +349,7 @@
 				2E88E5A2263F6F4000216743 /* StartCommercialRequest.swift */,
 				E5DC5B0CABFB6C7C60C555DCE3A2EC1D /* StreamRequest.swift */,
 				01E7296B33208D57BF98DC9404555D14 /* TopGameRequest.swift */,
+				2E88E5D4264CE45A00216743 /* UpdateEventSubscriptionRequest.swift */,
 				EA7B1304F40DE3E0C5C4EC7D179E9209 /* UserFollowRequest.swift */,
 				093E8F259E3CC0241DF9ACDFE951B568 /* UserRequest.swift */,
 				7DE6D4B076A51EBD6E03C9E6F3A17B45 /* UserUpdateRequest.swift */,
@@ -487,6 +498,7 @@
 				2E88E5C026463B6F00216743 /* CustomRewardRedemption.swift */,
 				2E88E5B82641E68D00216743 /* EmptyPostResponse.swift */,
 				2E88E5CE264759D700216743 /* Entitlement.swift */,
+				2E88E5D6264CE7B700216743 /* EventSubscription.swift */,
 				2E88E5A6263F7B0E00216743 /* ExtensionAnalytics.swift */,
 				2E88E5AC2641D3B400216743 /* ExtensionTransactions.swift */,
 				1653967E56947B3BF26408DE30BAE650 /* Game.swift */,
@@ -744,6 +756,7 @@
 				2E88E5A92641A13B00216743 /* CheermoteRequest.swift in Sources */,
 				AC7E649D58E69642BA59A56E5E761A71 /* Constants.swift in Sources */,
 				3B181C555E298856E2D5339C0120FE21 /* ConstructableRequest.swift in Sources */,
+				2E88E5DB264E37E000216743 /* GetEventSubSubscriptionRequest.swift in Sources */,
 				A0A20C83E52E88E366C9083B04BFF37D /* Credentials.swift in Sources */,
 				71240F5671BAE51279AF238C14597457 /* DictionaryExtension.swift in Sources */,
 				06D3B7424093BFD339AFF56EF3019E98 /* EVLog.swift in Sources */,
@@ -759,12 +772,15 @@
 				CD01076B8C6E4B515EDB845809D53110 /* JSONDecoderExtension.swift in Sources */,
 				2E88E5A7263F7B0E00216743 /* ExtensionAnalytics.swift in Sources */,
 				01584B58DC4119BB321751F233DA73C3 /* JSONEncoderExtension.swift in Sources */,
+				2E88E5D5264CE45A00216743 /* UpdateEventSubscriptionRequest.swift in Sources */,
 				2E88E5AF2641D41800216743 /* ExtensionTransactionsRequest.swift in Sources */,
 				B2386E2EE645C0818CA7CF279BFAA6EE /* Leaderboard.swift in Sources */,
 				AFC627F0DF2B8ED54CBE6C674D737C83 /* LeaderboardRequest.swift in Sources */,
 				D37742502F40EF2B298247F0F91B0AD3 /* RestRequest.swift in Sources */,
+				2E88E5D7264CE7B700216743 /* EventSubscription.swift in Sources */,
 				B432D1E385C68CED318C288B661266FD /* Stream.swift in Sources */,
 				2E88E5BB2641E6C900216743 /* ChannelEditors.swift in Sources */,
+				2E88E5D9264E364300216743 /* DeleteEventSubSubscription.swift in Sources */,
 				2E88E5CF264759D700216743 /* Entitlement.swift in Sources */,
 				2E88E5A3263F6F4000216743 /* StartCommercialRequest.swift in Sources */,
 				2E88E5B12641DC8F00216743 /* ChannelInformationRequest.swift in Sources */,

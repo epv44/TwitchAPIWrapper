@@ -44,9 +44,9 @@ pod 'TwitchAPIWrapper'
 | Get Code Status | CodeStatusRequest | CodeStatusResponse | ✅ |
 | Get Drops Entitlements | DropEntitlementsRequest | EntitlementResponse | ✅ |
 | Redeem Code | RedeemCodeRequest | CodeStatusResponse | ✅ |
-| Create EventSub Subscription |  | ❌ |
-| Delete EventSub Subscription |  | ❌ |
-| Get EventSub Subscription | | ❌ |
+| Create EventSub Subscription | EventSubscriptionRequest |  EventSubscriptionResponse | ✅ |
+| Delete EventSub Subscription | DeleteEventSubSubscriptionRequest | EmptyPostResponse | ✅ |
+| Get EventSub Subscription | GetEventSubSubscriptionRequest | EventSubscriptionResponse | ✅ |
 | Get Top Games | TopGameRequest | ✅ |
 | Get Games | GameRequest | ✅ |
 | Get Hype Train Events |  | ❌ |

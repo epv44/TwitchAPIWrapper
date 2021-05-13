@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Foundation
-
 public struct ExtensionAnalyticsResponse: Codable {
     public let extensionAnalytics: [ExtensionAnalytics]
     public let pagination: Paginate

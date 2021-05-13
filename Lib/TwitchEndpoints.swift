@@ -18,6 +18,7 @@ enum TwitchEndpoints {
     case customRewards
     case customRewardRedemption
     case dropsEntitlements
+    case eventSubscription
     case extensionTransactions
     case games
     case gameAnalytics
@@ -43,6 +44,7 @@ enum TwitchEndpoints {
         case .customRewardRedemption:   return "helix/channel_points/custom_rewards/redemptions"
         case .dropsEntitlements:        return "helix/entitlements/drops"
         case .extensionTransactions:    return "helix/extensions/transactions"
+        case .eventSubscription:        return "helix/eventsub/subscriptions"
         case .games:                    return "helix/games"
         case .gameAnalytics:            return "helix/analytics/games"
         case .leaderboard:              return "helix/bits/leaderboard"
@@ -77,7 +79,8 @@ enum TwitchEndpoints {
              .customRewardRedemption,
              .codeStatus,
              .dropsEntitlements,
-             .redeemCode:
+             .redeemCode,
+             .eventSubscription:
             return "https://api.twitch.tv/"
         case .authentication:
             return "https://id.twitch.tv/"
