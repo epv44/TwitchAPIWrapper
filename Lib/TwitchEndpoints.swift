@@ -14,11 +14,15 @@ enum TwitchEndpoints {
     case channelInformation
     case cheermotes
     case clips
-    case customAwards
+    case codeStatus
+    case customRewards
+    case customRewardRedemption
+    case dropsEntitlements
     case extensionTransactions
     case games
     case gameAnalytics
     case leaderboard
+    case redeemCode
     case startCommercial
     case streams
     case topGames
@@ -34,12 +38,16 @@ enum TwitchEndpoints {
         case .channelInformation:       return "helix/channels"
         case .cheermotes:               return "helix/bits/cheermotes"
         case .clips:                    return "helix/clips"
-        case .customAwards:             return "helix/channel_points/custom_rewards"
+        case .codeStatus:               return "helix/entitlements/codes"
+        case .customRewards:            return "helix/channel_points/custom_rewards"
+        case .customRewardRedemption:   return "helix/channel_points/custom_rewards/redemptions"
+        case .dropsEntitlements:        return "helix/entitlements/drops"
         case .extensionTransactions:    return "helix/extensions/transactions"
         case .games:                    return "helix/games"
         case .gameAnalytics:            return "helix/analytics/games"
         case .leaderboard:              return "helix/bits/leaderboard"
         case .startCommercial:          return "helix/channels/commercial"
+        case .redeemCode:               return "helix/entitlements/codes"
         case .streams:                  return "helix/streams"
         case .topGames:                 return "helix/games/top"
         case .userFollows:              return "helix/users/follows"
@@ -65,7 +73,11 @@ enum TwitchEndpoints {
              .extensionTransactions,
              .channelInformation,
              .channelEditor,
-             .customAwards:
+             .customRewards,
+             .customRewardRedemption,
+             .codeStatus,
+             .dropsEntitlements,
+             .redeemCode:
             return "https://api.twitch.tv/"
         case .authentication:
             return "https://id.twitch.tv/"
