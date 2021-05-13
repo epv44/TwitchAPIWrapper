@@ -71,7 +71,7 @@ public enum NetworkJSONServiceError: Error {
 }
 
 public enum HTTPMethod: String {
-    case get, post, put, patch
+    case get, post, put, patch, delete
 }
 
 public protocol ConstructableRequest: RestRequest {

@@ -1,5 +1,5 @@
 //
-//  CustomAward.swift
+//  CustomReward.swift
 //  TwitchAPIWrapper
 //
 //  Created by Eric Vennaro on 5/4/21.
@@ -29,7 +29,7 @@ public struct CustomAwardResponse: Codable {
     }
 }
 
-public struct CustomAward: Codable, Equatable {
+public struct CustomReward: Codable, Equatable {
     public let broadcasterName: String
     public let broadcasterLogin: String
     public let broadcasterId: String
@@ -47,4 +47,7 @@ public struct CustomAward: Codable, Equatable {
     public let shouldRedemptionsSkipRequestQueue: Bool
     public let redemptionsRedeemedCurrentStream: Int?
     public let cooldownExpiresAt: String?
+    public let maxPerStreamSetting: MaxPerStreamSetting
+    public let maxPerUserPerStreamSetting: MaxPerUserPerStreamSetting
+    public let globalCooldownSetting: GlobalCooldownSetting
 }

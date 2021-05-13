@@ -22,29 +22,28 @@ pod 'TwitchAPIWrapper'
 
 ## Available API Calls
 
-| Twitch API Method | Swift Request Object | Supported? |
-| ------------- | ------------- | :-------------: |
-| Start Commercial | CommercialRequest | ✅ |
-| Get Extension Analytics | StartCommercialRequest | ✅ |
-| Get Game Analytics | GameAnalyticsRequest | ✅ |
-| Get Bits Leaderboard | LeaderboardRequest | ✅ |
-| Get Cheermotes |CheermoteRequest | ✅ |
+| Twitch API Method | Swift Request Object | Swift Result Object | Supported? |
+| ------------- | ------------- | ------------- | :-------------: |
+| Start Commercial | CommercialRequest | | ✅ |
+| Get Extension Analytics | StartCommercialRequest | | ✅ |
+| Get Game Analytics | GameAnalyticsRequest | | ✅ |
+| Get Bits Leaderboard | LeaderboardRequest | | ✅ |
+| Get Cheermotes | CheermoteRequest | | ✅ |
 | Get Extension Transactions | ExtensionTransactionsRequest | ✅ |
 | Get Channel Information | ChannelInformationRequest | ✅ |
 | Modify Channel Information | ModifyChannelInformationRequest  | ✅ |
 | Get Channel Editors | ChannelEditorsRequest | ✅ |
-| Create Custom Rewards | CreateCustomAwardRequest  | ✅ |
-| Delete Custom Reward | | ❌ |
-| Get Custom Reward | | ❌ |
-| Get Custom Reward | | ❌ |
-| Get Custom Reward Redemption | | ❌ |
-| Update Custom Reward | | ❌ |
-| Update Redemption Status | | ❌ |
-| Create Clip |  | ❌ |
-| Get Clips | ClipRequest | ✅ |
-| Get Code Status | | ❌ |
-| Get Drops Entitlements | | ❌ |
-| Redeem Code | | ❌ |
+| Create Custom Rewards | CustomRewardRequest  | CustomRewardResponse| ✅ |
+| Delete Custom Reward | CustomRewardRequest  | EmptyPostResponse | ✅ |
+| Get Custom Reward | CustomRewardRequest | CustomRewardResponse | ✅ |
+| Get Custom Reward Redemption | CustomRewardRedemptionRequest | CustomRewardResponse | ✅ |
+| Update Custom Reward | CustomRewardRequest | CustomRewardResponse | ✅ |
+| Update Redemption Status | CustomRewardRedemptionRequest | CustomRewardResponse | ✅ |
+| Create Clip | ClipRequest | CreateClipResponse | ✅ |
+| Get Clips | ClipRequest | ClipResponse | ✅ |
+| Get Code Status | CodeStatusRequest | CodeStatusResponse | ✅ |
+| Get Drops Entitlements | DropEntitlementsRequest | EntitlementResponse | ✅ |
+| Redeem Code | RedeemCodeRequest | CodeStatusResponse | ✅ |
 | Create EventSub Subscription |  | ❌ |
 | Delete EventSub Subscription |  | ❌ |
 | Get EventSub Subscription | | ❌ |
