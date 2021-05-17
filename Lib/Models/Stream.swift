@@ -43,5 +43,5 @@ public struct Stream: Codable, Equatable {
     // Optional string due to url encoding issue from the twitch api
     public let thumbnailUrl: String?
     public let tagIds: [String]
-    public let isMature: Bool
+    public let isMature: Bool?
 }

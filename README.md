@@ -49,20 +49,21 @@ pod 'TwitchAPIWrapper'
 | Get EventSub Subscription | GetEventSubSubscriptionRequest | EventSubscriptionResponse | ✅ |
 | Get Top Games | TopGameRequest | ✅ |
 | Get Games | GameRequest | ✅ |
-| Get Hype Train Events |  | ❌ |
-| Check AutoMod Status |  | ❌ |
-| Get Banned Events |  | ❌ |
-| Get Banned Users |  | ❌ |
-| Get Moderators |  | ❌ |
-| Get Moderator Events |  | ❌ |
-| Search Categories |  | ❌ |
-| Search Channels |  | ❌ |
-| Get Stream Key |  | ❌ |
-| Get Streams |  StreamRequest | ✅ |
-| Get Followed Streams |  | ✅ |
-| Create Stream Marker |  | ❌ |
-| Get Stream Markers |  | ❌ |
-| Get Broadcaster Subscriptions |  | ❌ |
+| Get Hype Train Events | GetHypeTrainEventRequest | HypeTrainEventResponse  | ✅ |
+| Check AutoMod Status | CheckAutoModStatusRequest | CheckAutoModeStatusResponse  | ✅ |
+| Manage Held AutoMod Messages | ManageHeldAutoModStatusRequest | EmptyPostResponse | ✅ |
+| Get Banned Events | GetBannedEventsRequest | BannedEventsResponse  | ✅ |
+| Get Banned Users | GetBannedUsersRequest | BannedUsersResponse | ✅ |
+| Get Moderators | GetModeratorsRequest | ModeratorsResponse | ✅ |
+| Get Moderator Events | GetModeratorEventsRequest | ModeratorEventsResponse | ✅ |
+| Search Categories | SearchCategoriesRequest | GamesResponse | ✅ |
+| Search Channels | SearchChannelsRequest | SearchChannelResponse | ✅ |
+| Get Stream Key | GetStreamKeyRequest | StreamKeyResponse | ✅ |
+| Get Streams | StreamRequest | StreamResponse | ✅ |
+| Get Followed Streams | FollowedStreamRequest | StreamResponse | ✅ |
+| Create Stream Marker | CreateStreamMarkerRequest | CreateStreamMarkerResponse | ✅ |
+| Get Stream Markers | GetStreamMarkerRequest | StreamMarkerResponse | ✅ |
+| Get Broadcaster Subscriptions | BroadcasterSubscriptionRequest | BroadcasterSubscriptionResponse  | ✅ |
 | Check User Subscription |  | ❌ |
 | Get All Stream Tags |  | ❌ |
 | Get Stream Tags |  | ❌ |
