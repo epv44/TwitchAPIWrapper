@@ -64,12 +64,12 @@ pod 'TwitchAPIWrapper'
 | Create Stream Marker | CreateStreamMarkerRequest | CreateStreamMarkerResponse | ✅ |
 | Get Stream Markers | GetStreamMarkerRequest | StreamMarkerResponse | ✅ |
 | Get Broadcaster Subscriptions | BroadcasterSubscriptionRequest | BroadcasterSubscriptionResponse  | ✅ |
-| Check User Subscription |  | ❌ |
-| Get All Stream Tags |  | ❌ |
-| Get Stream Tags |  | ❌ |
-| Replace Stream Tags|  | ❌ |
-| Get Channel Teams |  | ❌ |
-| Get Teams |  | ❌ |
+| Check User Subscription | CheckUserSubscriptionRequest | UserSubscriptionResponse  | ✅ |
+| Get All Stream Tags | AllStreamTagRequest | StreamTagResponse | ✅ |
+| Get Stream Tags | StreamTagRequest | StreamTagResponse | ✅ |
+| Replace Stream Tags | ReplaceStreamTagRequest | EmptyPostResponse | ✅ |
+| Get Channel Teams | ChannelTeamsRequest | ChannelTeamResponse | ✅ |
+| Get Teams | TeamRequest | TeamResponse  | ✅ |
 | Get Users | UserRequest  | ✅ |
 | Update User | UserUpdateRequest | ✅ |
 | Get User Follows | UserFollowRequest  | ✅ |

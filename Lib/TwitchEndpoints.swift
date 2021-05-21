@@ -8,13 +8,16 @@
 import Foundation
 
 enum TwitchEndpoints {
+    case allStreamTags
     case analyticsExtension
     case authentication
     case broadcasterSubscriptions
     case channelEditor
     case channelInformation
+    case channelTeams
     case cheermotes
     case checkAutoModStatus
+    case checkUserSubscription
     case clips
     case codeStatus
     case createStreamMarker
@@ -40,6 +43,8 @@ enum TwitchEndpoints {
     case streams
     case streamKey
     case streamMarkers
+    case streamTags
+    case teams
     case topGames
     case userFollows
     case users
@@ -47,6 +52,7 @@ enum TwitchEndpoints {
     
     var path: String {
         switch self {
+        case .allStreamTags:            return "helix/tags/streams"
         case .analyticsExtension:       return "helix/analytics/extensions"
         case .authentication:           return "oauth2/authorize"
         case .broadcasterSubscriptions: return "/helix/subscriptions"
@@ -54,6 +60,7 @@ enum TwitchEndpoints {
         case .channelInformation:       return "helix/channels"
         case .cheermotes:               return "helix/bits/cheermotes"
         case .checkAutoModStatus:       return "helix/moderation/enforcements/status"
+        case .checkUserSubscription:    return "helix/subscriptions/user"
         case .clips:                    return "helix/clips"
         case .codeStatus:               return "helix/entitlements/codes"
         case .createStreamMarker:       return "helix/streams/markers"
@@ -67,6 +74,7 @@ enum TwitchEndpoints {
         case .gameAnalytics:            return "helix/analytics/games"
         case .getBannedEvents:          return "helix/moderation/banned/events"
         case .getBannedUsers:           return "helix/moderation/banned"
+        case .channelTeams:             return "helix/teams/channel"
         case .getModerators:            return "helix/moderation/moderators"
         case .getModeratorEvents:       return "helix/moderation/moderators/events"
         case .hypeTrainEvents:          return "helix/hypetrain/events"
@@ -78,7 +86,9 @@ enum TwitchEndpoints {
         case .searchChannels:           return "helix/search/channels"
         case .streams:                  return "helix/streams"
         case .streamKey:                return "helix/streams/key"
+        case .streamTags:               return "helix/streams/tags"
         case .streamMarkers:            return "helix/streams/markers"
+        case .teams:                    return "helix/teams"
         case .topGames:                 return "helix/games/top"
         case .userFollows:              return "helix/users/follows"
         case .users:                    return "helix/users"
@@ -122,7 +132,12 @@ enum TwitchEndpoints {
              .createStreamMarker,
              .streamKey,
              .streamMarkers,
-             .broadcasterSubscriptions:
+             .broadcasterSubscriptions,
+             .checkUserSubscription,
+             .allStreamTags,
+             .streamTags,
+             .channelTeams,
+             .teams:
             return "https://api.twitch.tv/"
         case .authentication:
             return "https://id.twitch.tv/"
