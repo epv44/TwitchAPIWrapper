@@ -46,6 +46,9 @@ enum TwitchEndpoints {
     case streamTags
     case teams
     case topGames
+    case userBlocks
+    case userActiveExtensions
+    case userExtensions
     case userFollows
     case users
     case videos
@@ -91,6 +94,9 @@ enum TwitchEndpoints {
         case .teams:                    return "helix/teams"
         case .topGames:                 return "helix/games/top"
         case .userFollows:              return "helix/users/follows"
+        case .userBlocks:               return "users/blocks"
+        case .userExtensions:           return "users/extensions/list"
+        case .userActiveExtensions:     return "users/extensions"
         case .users:                    return "helix/users"
         case .videos:                   return "helix/videos"
         }
@@ -137,7 +143,10 @@ enum TwitchEndpoints {
              .allStreamTags,
              .streamTags,
              .channelTeams,
-             .teams:
+             .teams,
+             .userBlocks,
+             .userExtensions,
+             .userActiveExtensions:
             return "https://api.twitch.tv/"
         case .authentication:
             return "https://id.twitch.tv/"
