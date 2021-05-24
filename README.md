@@ -73,13 +73,13 @@ pod 'TwitchAPIWrapper'
 | Get Users | UserRequest  | ✅ |
 | Update User | UserUpdateRequest | ✅ |
 | Get User Follows | UserFollowRequest  | ✅ |
-| Create User Follows |  | ❌ |
-| Delete User Follows |  | ❌ |
-| Get User Block List |  | ❌ |
-| Block User |  | ❌ |
-| Unblock User |  | ❌ |
-| Get User Extensions |  | ❌ |
-| Get User Active Extensions |  | ❌ |
+| Create User Follows | ModifyUserFollowRequest | EmptyPostResponse | ✅ |
+| Delete User Follows | ModifyUserFollowRequest | EmptyPostResponse | ✅ |
+| Get User Block List | UserBlockListRequest | UserBlocklistResponse | ✅ |
+| Block User | BlockUserRequest | EmptyPostRequest | ✅ |
+| Unblock User | UnblockUserRequest | EmptyPostRequest | ✅ |
+| Get User Extensions | UserExtensionRequest | UserExtensionResponse | ✅ |
+| Get User Active Extensions | UserActiveExtensionsRequest | UserActiveExtensionResponse | ✅ |
 | Update User Extension|  | ❌ |
 | Get Videos |  | ✅ |
 | Delete Videos |  | ❌ |

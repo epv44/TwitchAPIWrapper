@@ -84,6 +84,15 @@
 		2E91AD6E2657752B0058BF70 /* ChannelTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD6D2657752B0058BF70 /* ChannelTeam.swift */; };
 		2E91AD70265776E40058BF70 /* TeamRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD6F265776E40058BF70 /* TeamRequest.swift */; };
 		2E91AD72265777BE0058BF70 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD71265777BE0058BF70 /* Team.swift */; };
+		2E91AD74265B46FA0058BF70 /* ModifyUserFollowRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD73265B46FA0058BF70 /* ModifyUserFollowRequest.swift */; };
+		2E91AD76265B498D0058BF70 /* UserBlockListRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD75265B498D0058BF70 /* UserBlockListRequest.swift */; };
+		2E91AD78265B4A310058BF70 /* UserBlocklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD77265B4A310058BF70 /* UserBlocklist.swift */; };
+		2E91AD7A265B4BB30058BF70 /* BlockUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD79265B4BB30058BF70 /* BlockUserRequest.swift */; };
+		2E91AD7C265B4DDE0058BF70 /* UnblockUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD7B265B4DDE0058BF70 /* UnblockUserRequest.swift */; };
+		2E91AD7E265B4E9A0058BF70 /* UserExtensionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD7D265B4E9A0058BF70 /* UserExtensionRequest.swift */; };
+		2E91AD80265B4EF50058BF70 /* UserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD7F265B4EF50058BF70 /* UserExtension.swift */; };
+		2E91AD82265B50510058BF70 /* UserActiveExtensionsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD81265B50510058BF70 /* UserActiveExtensionsRequest.swift */; };
+		2E91AD84265B50FA0058BF70 /* UserActiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD83265B50FA0058BF70 /* UserActiveExtension.swift */; };
 		2E9FD1FC26366376001BAC99 /* TWAuthWebviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD1FB26366376001BAC99 /* TWAuthWebviewController.swift */; };
 		38A77585A26499A0DEBA3AEB8556B4DE /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1653967E56947B3BF26408DE30BAE650 /* Game.swift */; };
 		3B181C555E298856E2D5339C0120FE21 /* ConstructableRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85495C73DBEE851E3D73AE3EA1EF8BBD /* ConstructableRequest.swift */; };
@@ -235,6 +244,15 @@
 		2E91AD6D2657752B0058BF70 /* ChannelTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelTeam.swift; sourceTree = "<group>"; };
 		2E91AD6F265776E40058BF70 /* TeamRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRequest.swift; sourceTree = "<group>"; };
 		2E91AD71265777BE0058BF70 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		2E91AD73265B46FA0058BF70 /* ModifyUserFollowRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyUserFollowRequest.swift; sourceTree = "<group>"; };
+		2E91AD75265B498D0058BF70 /* UserBlockListRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBlockListRequest.swift; sourceTree = "<group>"; };
+		2E91AD77265B4A310058BF70 /* UserBlocklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBlocklist.swift; sourceTree = "<group>"; };
+		2E91AD79265B4BB30058BF70 /* BlockUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockUserRequest.swift; sourceTree = "<group>"; };
+		2E91AD7B265B4DDE0058BF70 /* UnblockUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UnblockUserRequest.swift; path = ../Requests/UnblockUserRequest.swift; sourceTree = "<group>"; };
+		2E91AD7D265B4E9A0058BF70 /* UserExtensionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtensionRequest.swift; sourceTree = "<group>"; };
+		2E91AD7F265B4EF50058BF70 /* UserExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserExtension.swift; sourceTree = "<group>"; };
+		2E91AD81265B50510058BF70 /* UserActiveExtensionsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActiveExtensionsRequest.swift; sourceTree = "<group>"; };
+		2E91AD83265B50FA0058BF70 /* UserActiveExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActiveExtension.swift; sourceTree = "<group>"; };
 		2E9FD1FB26366376001BAC99 /* TWAuthWebviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TWAuthWebviewController.swift; sourceTree = "<group>"; };
 		39482C17CF21BBC9696EC464C0D2FE9C /* Pods-TwitchAPIWrapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwitchAPIWrapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4138A99593A12F0730E76028249A78CC /* GameRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameRequest.swift; sourceTree = "<group>"; };
@@ -399,6 +417,7 @@
 			children = (
 				2E91AD6326576BAF0058BF70 /* AllStreamTagRequest.swift */,
 				4935FA72172D24A8071C9242B28F84C1 /* AuthorizationResource.swift */,
+				2E91AD79265B4BB30058BF70 /* BlockUserRequest.swift */,
 				2E88E5B62641E58600216743 /* ChannelEditorsRequest.swift */,
 				2E88E5B02641DC8F00216743 /* ChannelInformationRequest.swift */,
 				2E91AD6B265774730058BF70 /* ChannelTeamsRequest.swift */,
@@ -408,6 +427,7 @@
 				765057C34B025F6827FF8A3621EF87EB /* ClipRequest.swift */,
 				2E88E5C82647559000216743 /* CodeStatusRequest.swift */,
 				2E88E602265212D500216743 /* CreateStreamMarkerRequest.swift */,
+				2E91AD73265B46FA0058BF70 /* ModifyUserFollowRequest.swift */,
 				2E88E5BE2642489600216743 /* CustomRewardRequest.swift */,
 				2E88E5C226463B9100216743 /* CustomRewardRedemptionRequest.swift */,
 				2E88E5D8264E364300216743 /* DeleteEventSubSubscription.swift */,
@@ -440,6 +460,9 @@
 				2E91AD6F265776E40058BF70 /* TeamRequest.swift */,
 				01E7296B33208D57BF98DC9404555D14 /* TopGameRequest.swift */,
 				2E88E5D4264CE45A00216743 /* UpdateEventSubscriptionRequest.swift */,
+				2E91AD81265B50510058BF70 /* UserActiveExtensionsRequest.swift */,
+				2E91AD75265B498D0058BF70 /* UserBlockListRequest.swift */,
+				2E91AD7D265B4E9A0058BF70 /* UserExtensionRequest.swift */,
 				EA7B1304F40DE3E0C5C4EC7D179E9209 /* UserFollowRequest.swift */,
 				093E8F259E3CC0241DF9ACDFE951B568 /* UserRequest.swift */,
 				7DE6D4B076A51EBD6E03C9E6F3A17B45 /* UserUpdateRequest.swift */,
@@ -609,7 +632,11 @@
 				2E88E6082652155C00216743 /* StreamMarker.swift */,
 				2E91AD6526576EC30058BF70 /* StreamTag.swift */,
 				2E91AD71265777BE0058BF70 /* Team.swift */,
+				2E91AD7B265B4DDE0058BF70 /* UnblockUserRequest.swift */,
 				77EC14B8C24593D102DF516112F463D5 /* User.swift */,
+				2E91AD83265B50FA0058BF70 /* UserActiveExtension.swift */,
+				2E91AD77265B4A310058BF70 /* UserBlocklist.swift */,
+				2E91AD7F265B4EF50058BF70 /* UserExtension.swift */,
 				52A9C8FDABFA6DA0F69E77052443486D /* UserFollow.swift */,
 				2E88E6102653747500216743 /* UserSubscription.swift */,
 				FFC6E595BC948F2EE5929D18297A00BC /* Video.swift */,
@@ -856,11 +883,13 @@
 				52A13BC6DF44491A7B0F8CC8F562288A /* AuthorizationResource.swift in Sources */,
 				2E88E5B72641E58600216743 /* ChannelEditorsRequest.swift in Sources */,
 				0EAA13159E3BF9E9144734F548105B8D /* Clip.swift in Sources */,
+				2E91AD7E265B4E9A0058BF70 /* UserExtensionRequest.swift in Sources */,
 				61E4DA6CE17A5285CE300AF1811B5B00 /* ClipRequest.swift in Sources */,
 				2E88E5A1263F6E0200216743 /* Commercial.swift in Sources */,
 				2E88E5E52651D8BC00216743 /* ManageHeldAutoModMessageRequest.swift in Sources */,
 				2E88E5A92641A13B00216743 /* CheermoteRequest.swift in Sources */,
 				AC7E649D58E69642BA59A56E5E761A71 /* Constants.swift in Sources */,
+				2E91AD7C265B4DDE0058BF70 /* UnblockUserRequest.swift in Sources */,
 				2E88E5F726520B5B00216743 /* SearchCategoriesRequest.swift in Sources */,
 				3B181C555E298856E2D5339C0120FE21 /* ConstructableRequest.swift in Sources */,
 				2E88E5DB264E37E000216743 /* GetEventSubSubscriptionRequest.swift in Sources */,
@@ -880,12 +909,14 @@
 				2E91AD6626576EC30058BF70 /* StreamTag.swift in Sources */,
 				03E074B39FA840ABE5E2269F33E2C5BE /* GameAnalytics.swift in Sources */,
 				2E91AD6A265772260058BF70 /* ReplaceStreamTagRequest.swift in Sources */,
+				2E91AD78265B4A310058BF70 /* UserBlocklist.swift in Sources */,
 				F9E4743E3B26C03CDFBA4A17B31B9DC7 /* GameAnalyticsRequest.swift in Sources */,
 				2E88E5B32641DD7F00216743 /* ChannelInformation.swift in Sources */,
 				2E88E5BD2642449F00216743 /* CustomReward.swift in Sources */,
 				66AB34E022471EBA28D46649CF0669D8 /* GameRequest.swift in Sources */,
 				2E88E60B2652179200216743 /* GetBroadcastSubscriptionsRequest.swift in Sources */,
 				2E88E5A5263F78EB00216743 /* ExtensionAnalyticsRequest.swift in Sources */,
+				2E91AD84265B50FA0058BF70 /* UserActiveExtension.swift in Sources */,
 				2E88E5F32651E53700216743 /* ModeratorResponse.swift in Sources */,
 				2E88E5E32651D6F500216743 /* CheckAutoModStatus.swift in Sources */,
 				2E34BC0A263F399600C81949 /* FailableDecodable.swift in Sources */,
@@ -901,6 +932,7 @@
 				AFC627F0DF2B8ED54CBE6C674D737C83 /* LeaderboardRequest.swift in Sources */,
 				D37742502F40EF2B298247F0F91B0AD3 /* RestRequest.swift in Sources */,
 				2E88E5D7264CE7B700216743 /* EventSubscription.swift in Sources */,
+				2E91AD82265B50510058BF70 /* UserActiveExtensionsRequest.swift in Sources */,
 				B432D1E385C68CED318C288B661266FD /* Stream.swift in Sources */,
 				2E88E5BB2641E6C900216743 /* ChannelEditors.swift in Sources */,
 				2E88E5D9264E364300216743 /* DeleteEventSubSubscription.swift in Sources */,
@@ -912,6 +944,7 @@
 				6A304327D1F0D1B46BB51BB868A09F1E /* TopGameRequest.swift in Sources */,
 				2E88E5F52651E66300216743 /* GetModeratorEventsRequest.swift in Sources */,
 				2E88E5C92647559000216743 /* CodeStatusRequest.swift in Sources */,
+				2E91AD76265B498D0058BF70 /* UserBlockListRequest.swift in Sources */,
 				26E8DAB8C91910C9F6746137D7192A52 /* TwitchAPIWrapper-dummy.m in Sources */,
 				2E88E607265214E100216743 /* GetStreamMarkersRequest.swift in Sources */,
 				2E88E5CB2647566C00216743 /* CodeStatus.swift in Sources */,
@@ -924,6 +957,7 @@
 				2E34BC0C263F3EDB00C81949 /* RequestValidationError.swift in Sources */,
 				2E88E5FD26520F7B00216743 /* GetStreamKeyRequest.swift in Sources */,
 				736B1F187A728D758ADA7C23E10AE988 /* TwitchNetworkManager.swift in Sources */,
+				2E91AD80265B4EF50058BF70 /* UserExtension.swift in Sources */,
 				8CCD901015B03D2A615BF87DB108CA9A /* TwitchService.swift in Sources */,
 				BDA2899DED35350CBEB40D434B9BC0F8 /* URLExtension.swift in Sources */,
 				2E88E5B92641E68D00216743 /* EmptyPostResponse.swift in Sources */,
@@ -934,11 +968,13 @@
 				2E88E5C72647544D00216743 /* CreateClip.swift in Sources */,
 				2E91AD6E2657752B0058BF70 /* ChannelTeam.swift in Sources */,
 				E46579CDB0B4493B6BC82C0DFF34CD93 /* User.swift in Sources */,
+				2E91AD7A265B4BB30058BF70 /* BlockUserRequest.swift in Sources */,
 				2E91AD68265770200058BF70 /* StreamTagRequest.swift in Sources */,
 				22C9E75CC1E9EE5EFDE19FE32F2AB3AA /* UserFollow.swift in Sources */,
 				2E91AD6426576BAF0058BF70 /* AllStreamTagRequest.swift in Sources */,
 				2E88E6012652109F00216743 /* FollowedStreamsRequest.swift in Sources */,
 				16ADD58E9E3A98DE10C47E99E6206D9B /* UserFollowRequest.swift in Sources */,
+				2E91AD74265B46FA0058BF70 /* ModifyUserFollowRequest.swift in Sources */,
 				2E91AD70265776E40058BF70 /* TeamRequest.swift in Sources */,
 				2E88E603265212D500216743 /* CreateStreamMarkerRequest.swift in Sources */,
 				2E88E5D1264CDA5600216743 /* RedeemCodeRequest.swift in Sources */,
