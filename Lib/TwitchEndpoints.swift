@@ -52,6 +52,7 @@ enum TwitchEndpoints {
     case userFollows
     case users
     case videos
+    case webhookSubscriptions
     
     var path: String {
         switch self {
@@ -99,6 +100,7 @@ enum TwitchEndpoints {
         case .userActiveExtensions:     return "users/extensions"
         case .users:                    return "helix/users"
         case .videos:                   return "helix/videos"
+        case .webhookSubscriptions:     return "webhooks/subscriptions"
         }
     }
     
@@ -146,7 +148,8 @@ enum TwitchEndpoints {
              .teams,
              .userBlocks,
              .userExtensions,
-             .userActiveExtensions:
+             .userActiveExtensions,
+             .webhookSubscriptions:
             return "https://api.twitch.tv/"
         case .authentication:
             return "https://id.twitch.tv/"
