@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2E34BC0E263F489900C81949 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E34BC0D263F489900C81949 /* GameViewController.swift */; };
+		2E91AD90265E09F10058BF70 /* XCAssertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD8F265E09F10058BF70 /* XCAssertUtils.swift */; };
+		2E91AD94265E0A8E0058BF70 /* GetVideoResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */; };
 		2E9FD0A6261FF85E001BAC99 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD0A5261FF85E001BAC99 /* UserViewController.swift */; };
 		2E9FD0AA261FF86E001BAC99 /* ClipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD0A9261FF86E001BAC99 /* ClipViewController.swift */; };
 		2E9FD1D82627E12B001BAC99 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FD1D62627E12B001BAC99 /* Environment.plist */; };
@@ -16,7 +18,7 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* VideoRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* VideoRequestTests.swift */; };
 		B9CE9AB7B03B07AB086663E9 /* Pods_TwitchAPIWrapper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E63CB6DBAAE4D8497CD1AC /* Pods_TwitchAPIWrapper_Example.framework */; };
 		E81E1F5F3B891A4F685D00BA /* Pods_TwitchAPIWrapper_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C9544016D674436EF5FE05 /* Pods_TwitchAPIWrapper_Tests.framework */; };
 /* End PBXBuildFile section */
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		2620FEBC22D18AF6A8B9A910 /* Pods-TwitchAPIWrapper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchAPIWrapper_Example.release.xcconfig"; path = "Target Support Files/Pods-TwitchAPIWrapper_Example/Pods-TwitchAPIWrapper_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2E34BC0D263F489900C81949 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2E91AD8F265E09F10058BF70 /* XCAssertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCAssertUtils.swift; sourceTree = "<group>"; };
+		2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVideoResponseTests.swift; sourceTree = "<group>"; };
 		2E9FD0A5261FF85E001BAC99 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		2E9FD0A9261FF86E001BAC99 /* ClipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipViewController.swift; sourceTree = "<group>"; };
 		2E9FD1D62627E12B001BAC99 /* Environment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
@@ -48,7 +52,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* TwitchAPIWrapper_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchAPIWrapper_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* VideoRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRequestTests.swift; sourceTree = "<group>"; };
 		69C9544016D674436EF5FE05 /* Pods_TwitchAPIWrapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchAPIWrapper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F44EBA0CE77D26A7F6A9BE2 /* Pods-TwitchAPIWrapper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchAPIWrapper_Tests.release.xcconfig"; path = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9391E8128D97EA230ACFCA3D /* TwitchAPIWrapper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TwitchAPIWrapper.podspec; path = ../TwitchAPIWrapper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -78,6 +82,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E91AD91265E0A350058BF70 /* Request Tests */ = {
+			isa = PBXGroup;
+			children = (
+				607FACEB1AFB9204008FA782 /* VideoRequestTests.swift */,
+			);
+			path = "Request Tests";
+			sourceTree = "<group>";
+		};
+		2E91AD92265E0A750058BF70 /* Response Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */,
+			);
+			path = "Response Tests";
+			sourceTree = "<group>";
+		};
 		58F587E758C4068A0C4D692D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +160,10 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				2E91AD92265E0A750058BF70 /* Response Tests */,
+				2E91AD91265E0A350058BF70 /* Request Tests */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
+				2E91AD8F265E09F10058BF70 /* XCAssertUtils.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -360,7 +382,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				2E91AD90265E09F10058BF70 /* XCAssertUtils.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* VideoRequestTests.swift in Sources */,
+				2E91AD94265E0A8E0058BF70 /* GetVideoResponseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,8 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 PATH=$(bash -l -c 'echo $PATH')
 
-jazzy
+jazzy -x -workspace,Example/TwitchAPIWrapper.xcworkspace,-scheme,TwitchAPIWrapper-Example
 
 #remove old docs
 rm -rf ~/Documents/GithubPages/epv44.github.io/docs/TwitchAPIWrapper

@@ -14,6 +14,11 @@ public struct Credentials: Codable {
     public let accessToken: String?
     
     ///Scopes that the user is authorized as granted by the server.
-    public let scope: [String]?
+    public let scopes: [String]?
+    
+    public init(accessToken: String, scopes: [String]) {
+        self.accessToken = accessToken
+        self.scopes = scopes
+    }
 }
 
