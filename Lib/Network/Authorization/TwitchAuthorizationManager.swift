@@ -107,12 +107,12 @@ public class TwitchAuthorizationManager {
     public var credentials: Credentials? {
         get {
             guard let authToken = authToken, let scopes = authorizedScopes else { return nil }
-            return Credentials(accessToken: authToken, scope: scopes)
+            return Credentials(accessToken: authToken, scopes: scopes)
         }
         set {
             if let valueToSave = newValue {
                 guard let accessToken = valueToSave.accessToken,
-                      let scopes = valueToSave.scope else {
+                      let scopes = valueToSave.scopes else {
                     EVLog(text: "Error occured saving value to the keychain, credentials object is incomplete", line: #line, fileName: #file)
                     return
                 }
@@ -196,7 +196,7 @@ public class TwitchAuthorizationManager {
 //MARK: - TWAuthWebViewDelegate
 extension TwitchAuthorizationManager: TWAuthWebViewDelegate {
     func completeAuthentication(_ vc: UIViewController, token: String, scopes: [String]) {
-        credentials = Credentials(accessToken: token, scope: scopes)
+        credentials = Credentials(accessToken: token, scopes: scopes)
     }
 }
 

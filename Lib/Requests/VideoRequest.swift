@@ -9,8 +9,11 @@ import Foundation
 
 ///Get videos request see https://dev.twitch.tv/docs/api/reference/#get-videos for details
 public struct VideoRequest: JSONConstructableRequest {
+    ///URL for the request
     public let url: URL?
     
+    ///Initialize a `VideoRequest` with the included parameters
+    /// - throws `RequestValidationError`.
     public init(
         id: [String]?,
         userID: String?,

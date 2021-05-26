@@ -16,7 +16,7 @@
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "12.1"
+    "ios": "13"
   },
   "swift_versions": "5.0",
   "source_files": "Lib/**/*",
@@ -25,5 +25,12 @@
       "~> 4.2"
     ]
   },
+  "testspecs": [
+    {
+      "name": "Tests",
+      "test_type": "unit",
+      "source_files": "Tests/**/*"
+    }
+  ],
   "swift_version": "5.0"
 }
