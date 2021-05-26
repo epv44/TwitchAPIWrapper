@@ -80,10 +80,10 @@ pod 'TwitchAPIWrapper'
 | Unblock User | UnblockUserRequest | EmptyPostRequest | ✅ |
 | Get User Extensions | UserExtensionRequest | UserExtensionResponse | ✅ |
 | Get User Active Extensions | UserActiveExtensionsRequest | UserActiveExtensionResponse | ✅ |
-| Update User Extension|  | ❌ |
-| Get Videos |  | ✅ |
-| Delete Videos |  | ❌ |
-| Get Webhook Subscriptions | | ❌ |
+| Update User Extension| UpdateUserExtensionsRequest | UserActiveExtensionResponse | ✅ |
+| Get Videos | GetVideoRequest | GetVideoResponse | ✅ |
+| Delete Videos | DeleteVideoRequest | EmptyPostResponse | ✅ |
+| Get Webhook Subscriptions | WebhookSubscriptionsRequest | WebhookSubscriptionsResponse | ✅ |
 
 ## Author
 
