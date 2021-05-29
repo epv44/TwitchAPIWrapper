@@ -1,5 +1,13 @@
+//
+//  VideoRequestTests.swift
+//  TwitchAPIWrapper_Tests
+//
+//  Created by Eric Vennaro on 5/28/21.
+//  Copyright © 2021 CocoaPods. All rights reserved.
+//
+
 import XCTest
-import TwitchAPIWrapper
+@testable import TwitchAPIWrapper
 
 class VideoRequestTests: XCTestCase {
     
@@ -13,7 +21,7 @@ class VideoRequestTests: XCTestCase {
         super.tearDown()
     }
     
-    func testBuildVideoRequest_withRequiredParams() {
+    func testBuildVideoRequest_withRequiredParams_shouldSucceed() {
         let request = try! VideoRequest(id: ["1"], userID: "abc123", gameID: "tfm")
         XCTAssertEqual(request.url?.host, "api.twitch.tv")
         XCTAssertEqual(request.url?.path, "/helix/videos")
@@ -24,7 +32,7 @@ class VideoRequestTests: XCTestCase {
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }
     
-    func testBuildVideoRequest_withEverything() {
+    func testBuildVideoRequest_withEverything_shouldSucceed() {
         let request = try! VideoRequest(id: ["1"], userID: "abc123", gameID: "tfm", after: "10-23-92", before: "march", first: "7", language: ["en"], period: "april", sort: "no", type: "all")
         XCTAssertEqual(
             request.url!.absoluteString,

@@ -32,6 +32,7 @@
 		2C512575116A7831721A5FA4ED0DD31D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F2A4033200FFD45E2AB4C3B6DFD380 /* Constants.swift */; };
 		2CE40EBC984B4B2F5169F4662D30CD68 /* ChannelTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7879F98D0EAE2A5EE08FFA3B9BAD2F8 /* ChannelTeam.swift */; };
 		2E16B6CCECBFB2789E8406ED493B6F2D /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = D306A77649D2F6FA06F82AEB7E9B17B9 /* Credentials.swift */; };
+		2E91ADA6266212DC0058BF70 /* DeleteVideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91ADA5266212DC0058BF70 /* DeleteVideoResponse.swift */; };
 		2EF4A998608F5A2521EC3B5087B55065 /* AllStreamTagRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32483B257BC8EA710D6D9CD04E172483 /* AllStreamTagRequest.swift */; };
 		31481325DA9473F083DFD604CD6B7594 /* UserActiveExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2FC10E1C7377C93AF82B2A8C345BA0 /* UserActiveExtension.swift */; };
 		33E5A73A16AB2CE10393A6295EE652F9 /* GetBannedUsersRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D551A8D9900C02D6B090E8F201365F98 /* GetBannedUsersRequest.swift */; };
@@ -167,7 +168,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00CF533E0D28F1B1C400107DF32DEE98 /* Pods_TwitchAPIWrapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TwitchAPIWrapper_Tests.framework; path = "Pods-TwitchAPIWrapper_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00CF533E0D28F1B1C400107DF32DEE98 /* Pods_TwitchAPIWrapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchAPIWrapper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0459DC1EB144BC0472944769289FFFF1 /* ExtensionTransactions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionTransactions.swift; sourceTree = "<group>"; };
 		046E7DA410225E4FE42C5940432ADBE7 /* CheckAutoModStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CheckAutoModStatus.swift; sourceTree = "<group>"; };
 		06861FB239466DE14E7B48E9B46B7E1A /* BroadcasterSubscriptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BroadcasterSubscriptions.swift; sourceTree = "<group>"; };
@@ -177,7 +178,7 @@
 		0FA8004859A8BF965A8909B1A690CB87 /* Pods-TwitchAPIWrapper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwitchAPIWrapper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		102764E75956A8848BC9691383C3E031 /* KeychainAccess.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KeychainAccess.debug.xcconfig; sourceTree = "<group>"; };
 		12685D35F73AE03F8A3218777DE57CB3 /* ArrayExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
-		1594E9A7CD050F02C86C408D6A3CBFD4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		1594E9A7CD050F02C86C408D6A3CBFD4 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		15A289F8146BD926B224291F2E812711 /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Stream.swift; sourceTree = "<group>"; };
 		16E9188D421A4890318C63F9559A4F82 /* Pods-TwitchAPIWrapper_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TwitchAPIWrapper_Example-frameworks.sh"; sourceTree = "<group>"; };
 		17B549964FE0E630E132A83607496C78 /* CustomRewardRedemption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomRewardRedemption.swift; sourceTree = "<group>"; };
@@ -197,6 +198,7 @@
 		28DD3E5117D8C49AA1D332BB19ECABFF /* ReplaceStreamTagRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceStreamTagRequest.swift; sourceTree = "<group>"; };
 		2CFF5048A7B4F75B21DF55D5945DBCB7 /* Pods-TwitchAPIWrapper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TwitchAPIWrapper_Example.modulemap"; sourceTree = "<group>"; };
 		2DD9C251DDEA53541DA9FC05C0963A7C /* BannedUsers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BannedUsers.swift; sourceTree = "<group>"; };
+		2E91ADA5266212DC0058BF70 /* DeleteVideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVideoResponse.swift; sourceTree = "<group>"; };
 		32483B257BC8EA710D6D9CD04E172483 /* AllStreamTagRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AllStreamTagRequest.swift; sourceTree = "<group>"; };
 		329AFEF24C002D8A2028B5BE069E6C36 /* BannedEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BannedEvent.swift; sourceTree = "<group>"; };
 		330449D341701F761AABFE009CCC5794 /* DropsEntitlementRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DropsEntitlementRequest.swift; sourceTree = "<group>"; };
@@ -205,12 +207,12 @@
 		39482C17CF21BBC9696EC464C0D2FE9C /* Pods-TwitchAPIWrapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwitchAPIWrapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		3B7B953532360FF9E3F8265891A0657C /* TwitchAPIWrapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TwitchAPIWrapper-umbrella.h"; sourceTree = "<group>"; };
 		44769A4687CF6EA6B1B4EC8F41218911 /* DictionaryExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
-		45092ABAFC99F0AC089A2134D0AF67CC /* TwitchAPIWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TwitchAPIWrapper.framework; path = TwitchAPIWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45092ABAFC99F0AC089A2134D0AF67CC /* TwitchAPIWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwitchAPIWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		460531601930AC6AEBE92400BC05243D /* ChannelEditors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChannelEditors.swift; sourceTree = "<group>"; };
 		46580914D99037500C975EC9519A1EC3 /* FailableDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailableDecodable.swift; path = Lib/FailableDecodable.swift; sourceTree = "<group>"; };
 		46BAECE0204B5AA63C7B7F0DC013E90E /* URLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		498B2936E018A06ABC8F358A6F94E3B8 /* HypeTrainEvent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HypeTrainEvent.swift; sourceTree = "<group>"; };
-		4A0EBE010E80033A79F8FDC4581D4D86 /* Pods_TwitchAPIWrapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TwitchAPIWrapper_Example.framework; path = "Pods-TwitchAPIWrapper_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A0EBE010E80033A79F8FDC4581D4D86 /* Pods_TwitchAPIWrapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchAPIWrapper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BE07918AB9FEE98C6ECAA1A505052A1 /* UserUpdateRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserUpdateRequest.swift; sourceTree = "<group>"; };
 		53E17627AAF3A810605A7BC2DFAFD6C1 /* ChannelTeamsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChannelTeamsRequest.swift; sourceTree = "<group>"; };
 		5C0622D02DB387D60B0009A449D4E771 /* ConstructableRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConstructableRequest.swift; sourceTree = "<group>"; };
@@ -251,9 +253,9 @@
 		9B8E46128C0E61136AF4DD752EC53E3C /* EmptyPostResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyPostResponse.swift; sourceTree = "<group>"; };
 		9B93A1976015C86241B711DF430A7E8D /* StreamRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StreamRequest.swift; sourceTree = "<group>"; };
 		9D274C6F553F07C8193D8BDB267C8E6D /* ModifyChannelInformationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModifyChannelInformationRequest.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E611F5D572A36097772675507AF093D /* TwitchAPIWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TwitchAPIWrapper.debug.xcconfig; sourceTree = "<group>"; };
-		9E789C972D6A884238AED1F2F4CEEA16 /* TwitchAPIWrapper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TwitchAPIWrapper.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E789C972D6A884238AED1F2F4CEEA16 /* TwitchAPIWrapper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TwitchAPIWrapper.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1AFE72AECFFA10F265D22055A2F35B7 /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
 		A5D0C783D8D193369BA06F8C707EB681 /* Video.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		A82FCA8D4946C8FDE613330274D0C9AE /* Pods-TwitchAPIWrapper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TwitchAPIWrapper_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -306,7 +308,7 @@
 		E3C9B3750923931A8102995B13A3C8D0 /* StreamTagRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StreamTagRequest.swift; sourceTree = "<group>"; };
 		E4F180AD7B6A3D3795E46205E81A092D /* TwitchService.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TwitchService.swift; sourceTree = "<group>"; };
 		E62EF3DF023C08771D359501D689E7E5 /* ModeratorEvents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModeratorEvents.swift; sourceTree = "<group>"; };
-		E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainAccess.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9537137C2F7EFE3C160C28A6CC363E9 /* StartCommercialRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StartCommercialRequest.swift; sourceTree = "<group>"; };
 		EADA451432F68336CBA0782592F4880F /* Pods-TwitchAPIWrapper_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TwitchAPIWrapper_Example-Info.plist"; sourceTree = "<group>"; };
 		EC62CFEA356949BBE65F2DF04447A8A1 /* UpdateUserExtensionsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UpdateUserExtensionsRequest.swift; sourceTree = "<group>"; };
@@ -314,7 +316,7 @@
 		EF811D67316F74D818F6ECAD1C003537 /* UserFollowRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserFollowRequest.swift; sourceTree = "<group>"; };
 		EFDA65E6397CC6DABDDF7D260F14EBAD /* AuthorizationResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AuthorizationResource.swift; sourceTree = "<group>"; };
 		F4F128BE48C5AB59CB4990326D87F2D4 /* GetModeratorsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetModeratorsRequest.swift; sourceTree = "<group>"; };
-		F6E3C591B3F471470F71DF81CC735846 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		F6E3C591B3F471470F71DF81CC735846 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F7CC1EABA7CB8D4CA257FFE88E2ECF2E /* WebhookSubscriptionsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebhookSubscriptionsRequest.swift; sourceTree = "<group>"; };
 		F81429D30891B2263A763959E25A8734 /* TwitchAPIWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TwitchAPIWrapper-dummy.m"; sourceTree = "<group>"; };
 		FAE0EB4C9DBACEDF3BF95FFEB7E5A93D /* CreateStreamMarker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreateStreamMarker.swift; sourceTree = "<group>"; };
@@ -523,7 +525,6 @@
 				B3EDC7F5AB062228320A8F30E874DBF5 /* Keychain.swift */,
 				7139A0FCEFAB916F2769918041C0A2D4 /* Support Files */,
 			);
-			name = KeychainAccess;
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
@@ -546,6 +547,7 @@
 				D306A77649D2F6FA06F82AEB7E9B17B9 /* Credentials.swift */,
 				38F2337E7820346327D57A6C0D3C6A3E /* CustomReward.swift */,
 				17B549964FE0E630E132A83607496C78 /* CustomRewardRedemption.swift */,
+				2E91ADA5266212DC0058BF70 /* DeleteVideoResponse.swift */,
 				9B8E46128C0E61136AF4DD752EC53E3C /* EmptyPostResponse.swift */,
 				0D291F4058B5809F54F2F5876D9D972F /* Entitlement.swift */,
 				7C65D240F3042BD22CC8DB337A800C49 /* EventSubscription.swift */,
@@ -600,7 +602,6 @@
 				5C0622D02DB387D60B0009A449D4E771 /* ConstructableRequest.swift */,
 				8FFAC01F48D9A6DA84BBE68E0984F6B7 /* RestRequest.swift */,
 			);
-			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -621,7 +622,6 @@
 			children = (
 				E4F180AD7B6A3D3795E46205E81A092D /* TwitchService.swift */,
 			);
-			name = Service;
 			path = Service;
 			sourceTree = "<group>";
 		};
@@ -669,7 +669,6 @@
 				CF50EE95C2AECF34F7590381452B0AD6 /* TWAuthWebviewController.swift */,
 				C44BFD1D9410B485C91A6D7C1AB212F5 /* TwitchAuthorizationManager.swift */,
 			);
-			name = Authorization;
 			path = Authorization;
 			sourceTree = "<group>";
 		};
@@ -977,6 +976,7 @@
 				F654CB7A30A1CE0C48C19BCE46741F4C /* SearchChannelsRequest.swift in Sources */,
 				2363C6259AAAFCB6A9A9515DA526B92F /* StartCommercialRequest.swift in Sources */,
 				C33C751E14B53AA42191C5632B1B7944 /* Stream.swift in Sources */,
+				2E91ADA6266212DC0058BF70 /* DeleteVideoResponse.swift in Sources */,
 				6505CDB14BB0440570D3E7D2CFBA96F8 /* StreamKey.swift in Sources */,
 				0B8A528A464DCF14408F5053C645BA0E /* StreamMarker.swift in Sources */,
 				340F74251F785D2E1EC9A71BD6C2BF03 /* StreamRequest.swift in Sources */,
@@ -1431,8 +1431,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

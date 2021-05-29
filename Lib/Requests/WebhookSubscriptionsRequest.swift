@@ -11,7 +11,7 @@ import Foundation
 public struct WebhookSubscriptionsRequest: JSONConstructableRequest {
     public let url: URL?
     
-    public init(after: String?, first: String?) {
+    public init(after: String? = nil, first: String? = nil) {
         self.url = TwitchEndpoints.webhookSubscriptions.construct()?.appending(
             queryItems: ["after": after, "first": first].buildQueryItems())
     }

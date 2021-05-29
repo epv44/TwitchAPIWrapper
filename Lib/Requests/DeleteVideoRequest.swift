@@ -13,8 +13,8 @@ public struct DeleteVideoRequest: JSONConstructableRequest {
     public let method: HTTPMethod = .delete
     
     public init(ids: [String]) throws {
-        if ids.count > 5 {
-            throw RequestValidationError.invalidInput("Limit is 5 ids")
+        if ids.count > 5 || ids.isEmpty {
+            throw RequestValidationError.invalidInput("Must contain at least 1 id, with a limit of 5")
         }
         self.url = TwitchEndpoints.videos.construct()?.appending(queryItems: ids.constructQueryItems(withKey: "id"))
         

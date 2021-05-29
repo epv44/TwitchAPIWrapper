@@ -9,6 +9,9 @@ import Foundation
 
 extension URL {
     func appending(queryItems: [URLQueryItem]) -> URL? {
+        if queryItems.isEmpty {
+            return self
+        }
         var urlComponents = URLComponents(url: self, resolvingAgainstBaseURL: false)
         let originalQueryItems = urlComponents?.queryItems ?? []
         urlComponents?.queryItems = originalQueryItems + queryItems

@@ -82,7 +82,7 @@ pod 'TwitchAPIWrapper'
 | Get User Active Extensions | UserActiveExtensionsRequest | UserActiveExtensionResponse | ✅ |
 | Update User Extension| UpdateUserExtensionsRequest | UserActiveExtensionResponse | ✅ |
 | Get Videos | GetVideoRequest | GetVideoResponse | ✅ |
-| Delete Videos | DeleteVideoRequest | EmptyPostResponse | ✅ |
+| Delete Videos | DeleteVideoRequest | DeleteVideoResponse | ✅ |
 | Get Webhook Subscriptions | WebhookSubscriptionsRequest | WebhookSubscriptionsResponse | ✅ |
 
 ## Author
