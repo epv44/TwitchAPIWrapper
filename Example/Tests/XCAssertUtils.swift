@@ -15,8 +15,8 @@ func XCTAssertEqual(
   line: UInt = #line // the line the function is called from
 ) {
     XCTAssertEqual(
-        URLComponents(string: actualURL)!.queryItems!.sorted(by: { $0.name < $1.name }),
-        URLComponents(string: expectedURL)!.queryItems!.sorted(by: { $0.name < $1.name } ),
+        URLComponents(string: actualURL)?.queryItems?.sorted(by: { $0.name < $1.name }),
+        URLComponents(string: expectedURL)?.queryItems?.sorted(by: { $0.name < $1.name } ),
         file: file,
         line: line)
 }
