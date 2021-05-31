@@ -11,7 +11,7 @@ import XCTest
 
 class GetVideoResponseTests: XCTestCase {
     
-    func testBuildVideoModelFromJSON() throws {
+    func testBuildModel_shouldSucceed() throws {
         let decoder = JSONDecoder.twitchAPIStandard()
         
         let wrapper = try decoder.decode(VideoResponse.self, from: Fixtures.dataFromFixtureFile("Video"))
