@@ -11,7 +11,7 @@ import XCTest
 
 class WebhookSubscriptionsResponseTest: XCTestCase {
 
-    func testBuildModelFromDecoder() throws {
+    func testBuildModel_shouldSucceed() throws {
         let decoder = JSONDecoder.twitchAPIStandard()
         
         let wrapper = try! decoder.decode(WebhookSubscriptionResponse.self, from: Fixtures.dataFromFixtureFile("WebhookSubscription"))

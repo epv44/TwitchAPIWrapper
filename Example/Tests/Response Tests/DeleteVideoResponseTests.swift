@@ -11,7 +11,7 @@ import XCTest
 
 class DeleteVideoResponseTests: XCTestCase {
 
-    func testBuildModel() throws {
+    func testBuildModel_shouldSucceed() throws {
         let decoder = JSONDecoder.twitchAPIStandard()
         
         let wrapper = try decoder.decode(DeleteVideoResponse.self, from: Fixtures.dataFromFixtureFile("DeleteVideo"))

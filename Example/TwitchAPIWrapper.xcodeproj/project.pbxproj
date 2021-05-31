@@ -18,6 +18,9 @@
 		2E91ADA22662092D0058BF70 /* DeleteVideoRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91ADA12662092D0058BF70 /* DeleteVideoRequestTests.swift */; };
 		2E91ADA4266211B40058BF70 /* DeleteVideoResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91ADA3266211B40058BF70 /* DeleteVideoResponseTests.swift */; };
 		2E91ADA8266213380058BF70 /* DeleteVideo.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E91ADA7266213380058BF70 /* DeleteVideo.json */; };
+		2E91ADAA266495490058BF70 /* UpdateUserExtensionRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91ADA9266495490058BF70 /* UpdateUserExtensionRequestTests.swift */; };
+		2E91ADAC266496450058BF70 /* UserActiveExtensions.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E91ADAB266496450058BF70 /* UserActiveExtensions.json */; };
+		2E91ADAE266496720058BF70 /* UserActiveExtensionResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91ADAD266496720058BF70 /* UserActiveExtensionResponseTests.swift */; };
 		2E9FD0A6261FF85E001BAC99 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD0A5261FF85E001BAC99 /* UserViewController.swift */; };
 		2E9FD0AA261FF86E001BAC99 /* ClipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD0A9261FF86E001BAC99 /* ClipViewController.swift */; };
 		2E9FD1D82627E12B001BAC99 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FD1D62627E12B001BAC99 /* Environment.plist */; };
@@ -54,6 +57,9 @@
 		2E91ADA12662092D0058BF70 /* DeleteVideoRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVideoRequestTests.swift; sourceTree = "<group>"; };
 		2E91ADA3266211B40058BF70 /* DeleteVideoResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteVideoResponseTests.swift; sourceTree = "<group>"; };
 		2E91ADA7266213380058BF70 /* DeleteVideo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DeleteVideo.json; sourceTree = "<group>"; };
+		2E91ADA9266495490058BF70 /* UpdateUserExtensionRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserExtensionRequestTests.swift; sourceTree = "<group>"; };
+		2E91ADAB266496450058BF70 /* UserActiveExtensions.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserActiveExtensions.json; sourceTree = "<group>"; };
+		2E91ADAD266496720058BF70 /* UserActiveExtensionResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserActiveExtensionResponseTests.swift; sourceTree = "<group>"; };
 		2E9FD0A5261FF85E001BAC99 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		2E9FD0A9261FF86E001BAC99 /* ClipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipViewController.swift; sourceTree = "<group>"; };
 		2E9FD1D62627E12B001BAC99 /* Environment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
@@ -104,6 +110,7 @@
 				2E91ADA12662092D0058BF70 /* DeleteVideoRequestTests.swift */,
 				607FACEB1AFB9204008FA782 /* VideoRequestTests.swift */,
 				2E91AD9B2661FF880058BF70 /* WebhookSubscriptionsRequestTests.swift */,
+				2E91ADA9266495490058BF70 /* UpdateUserExtensionRequestTests.swift */,
 			);
 			path = "Request Tests";
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 			children = (
 				2E91ADA3266211B40058BF70 /* DeleteVideoResponseTests.swift */,
 				2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */,
+				2E91ADAD266496720058BF70 /* UserActiveExtensionResponseTests.swift */,
 				2E91AD9D266203490058BF70 /* WebhookSubscriptionsResponseTests.swift */,
 			);
 			path = "Response Tests";
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				2E91ADA7266213380058BF70 /* DeleteVideo.json */,
+				2E91ADAB266496450058BF70 /* UserActiveExtensions.json */,
 				2E91AD992661FAA90058BF70 /* Video.json */,
 				2E91AD9F266203E50058BF70 /* WebhookSubscription.json */,
 			);
@@ -335,6 +344,7 @@
 			files = (
 				2E91ADA8266213380058BF70 /* DeleteVideo.json in Resources */,
 				2E91ADA0266203E50058BF70 /* WebhookSubscription.json in Resources */,
+				2E91ADAC266496450058BF70 /* UserActiveExtensions.json in Resources */,
 				2E91AD9A2661FAA90058BF70 /* Video.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,7 +438,9 @@
 				2E91AD90265E09F10058BF70 /* XCAssertUtils.swift in Sources */,
 				2E91AD9E266203490058BF70 /* WebhookSubscriptionsResponseTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* VideoRequestTests.swift in Sources */,
+				2E91ADAA266495490058BF70 /* UpdateUserExtensionRequestTests.swift in Sources */,
 				2E91AD9C2661FF880058BF70 /* WebhookSubscriptionsRequestTests.swift in Sources */,
+				2E91ADAE266496720058BF70 /* UserActiveExtensionResponseTests.swift in Sources */,
 				2E91AD94265E0A8E0058BF70 /* GetVideoResponseTests.swift in Sources */,
 				2E91ADA4266211B40058BF70 /* DeleteVideoResponseTests.swift in Sources */,
 				2E91AD972661FA0C0058BF70 /* Fixtures.swift in Sources */,
