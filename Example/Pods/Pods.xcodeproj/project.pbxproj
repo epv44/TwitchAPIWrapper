@@ -11,7 +11,7 @@
 		02ABFBA3502141BCAB0F79D1801708B7 /* RestRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFAC01F48D9A6DA84BBE68E0984F6B7 /* RestRequest.swift */; };
 		0441B3E976E5F55E22731AECFF0DBA88 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3EDC7F5AB062228320A8F30E874DBF5 /* Keychain.swift */; };
 		05E1AD6BE135E6A7CC13DB2052E18910 /* UserExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7953A7345E2483FC46FD190E81F6EF7A /* UserExtension.swift */; };
-		05F5EE60EEBA6CFAB14A388484BBDD76 /* EmptyPostResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E46128C0E61136AF4DD752EC53E3C /* EmptyPostResponse.swift */; };
+		05F5EE60EEBA6CFAB14A388484BBDD76 /* EmptyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E46128C0E61136AF4DD752EC53E3C /* EmptyResponse.swift */; };
 		06874E193B1EB293CF45A890483DB86F /* ChannelInformationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75024AEB22C7F7CE06703A9ADC93E71B /* ChannelInformationRequest.swift */; };
 		07860A2A067242880C6132448F43C6BB /* TwitchEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = D626A5E4D163FA963C75E8CCD846EEBF /* TwitchEndpoints.swift */; };
 		0927BA66737FA519C3C4CD27FA80FB4D /* CodeStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2D9BAE02115B7E43284E9547834D9C1 /* CodeStatus.swift */; };
@@ -250,7 +250,7 @@
 		99B54CA004246B976AEF1DFEEA9B7BF0 /* CustomRewardRedemptionRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CustomRewardRedemptionRequest.swift; sourceTree = "<group>"; };
 		9B4857C9E1BDEA57465274EF7FB8D8FE /* LeaderboardRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LeaderboardRequest.swift; sourceTree = "<group>"; };
 		9B8AB253278884DCC35EF927A7D3484C /* ModeratorResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModeratorResponse.swift; sourceTree = "<group>"; };
-		9B8E46128C0E61136AF4DD752EC53E3C /* EmptyPostResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyPostResponse.swift; sourceTree = "<group>"; };
+		9B8E46128C0E61136AF4DD752EC53E3C /* EmptyResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EmptyResponse.swift; sourceTree = "<group>"; };
 		9B93A1976015C86241B711DF430A7E8D /* StreamRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StreamRequest.swift; sourceTree = "<group>"; };
 		9D274C6F553F07C8193D8BDB267C8E6D /* ModifyChannelInformationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModifyChannelInformationRequest.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -548,7 +548,7 @@
 				38F2337E7820346327D57A6C0D3C6A3E /* CustomReward.swift */,
 				17B549964FE0E630E132A83607496C78 /* CustomRewardRedemption.swift */,
 				2E91ADA5266212DC0058BF70 /* DeleteVideoResponse.swift */,
-				9B8E46128C0E61136AF4DD752EC53E3C /* EmptyPostResponse.swift */,
+				9B8E46128C0E61136AF4DD752EC53E3C /* EmptyResponse.swift */,
 				0D291F4058B5809F54F2F5876D9D972F /* Entitlement.swift */,
 				7C65D240F3042BD22CC8DB337A800C49 /* EventSubscription.swift */,
 				ADF10F16415B017D850ADC0642F56B2A /* ExtensionAnalytics.swift */,
@@ -934,7 +934,7 @@
 				B695083570DC9BF274362245C82AC36A /* DeleteVideoRequest.swift in Sources */,
 				34D51B7A645BA450ADAC2DE63C279FDD /* DictionaryExtension.swift in Sources */,
 				4338CAD9E82C40227A9DFB6F6F321B80 /* DropsEntitlementRequest.swift in Sources */,
-				05F5EE60EEBA6CFAB14A388484BBDD76 /* EmptyPostResponse.swift in Sources */,
+				05F5EE60EEBA6CFAB14A388484BBDD76 /* EmptyResponse.swift in Sources */,
 				704F06685B00F4050E36A1D9151F2BBD /* Entitlement.swift in Sources */,
 				87276D028FDF770A5628E294B3D8F86E /* EventSubscription.swift in Sources */,
 				AAABC1AA84B9A0EBB1000626EE2D817E /* EVLog.swift in Sources */,

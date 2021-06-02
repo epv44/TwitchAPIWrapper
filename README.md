@@ -34,7 +34,7 @@ pod 'TwitchAPIWrapper'
 | Modify Channel Information | ModifyChannelInformationRequest  | ✅ |
 | Get Channel Editors | ChannelEditorsRequest | ✅ |
 | Create Custom Rewards | CustomRewardRequest  | CustomRewardResponse| ✅ |
-| Delete Custom Reward | CustomRewardRequest  | EmptyPostResponse | ✅ |
+| Delete Custom Reward | CustomRewardRequest  | EmptyResponse | ✅ |
 | Get Custom Reward | CustomRewardRequest | CustomRewardResponse | ✅ |
 | Get Custom Reward Redemption | CustomRewardRedemptionRequest | CustomRewardResponse | ✅ |
 | Update Custom Reward | CustomRewardRequest | CustomRewardResponse | ✅ |
@@ -45,13 +45,13 @@ pod 'TwitchAPIWrapper'
 | Get Drops Entitlements | DropEntitlementsRequest | EntitlementResponse | ✅ |
 | Redeem Code | RedeemCodeRequest | CodeStatusResponse | ✅ |
 | Create EventSub Subscription | EventSubscriptionRequest |  EventSubscriptionResponse | ✅ |
-| Delete EventSub Subscription | DeleteEventSubSubscriptionRequest | EmptyPostResponse | ✅ |
+| Delete EventSub Subscription | DeleteEventSubSubscriptionRequest | EmptyResponse | ✅ |
 | Get EventSub Subscription | GetEventSubSubscriptionRequest | EventSubscriptionResponse | ✅ |
 | Get Top Games | TopGameRequest | ✅ |
 | Get Games | GameRequest | ✅ |
 | Get Hype Train Events | GetHypeTrainEventRequest | HypeTrainEventResponse  | ✅ |
 | Check AutoMod Status | CheckAutoModStatusRequest | CheckAutoModeStatusResponse  | ✅ |
-| Manage Held AutoMod Messages | ManageHeldAutoModStatusRequest | EmptyPostResponse | ✅ |
+| Manage Held AutoMod Messages | ManageHeldAutoModStatusRequest | EmptyResponse | ✅ |
 | Get Banned Events | GetBannedEventsRequest | BannedEventsResponse  | ✅ |
 | Get Banned Users | GetBannedUsersRequest | BannedUsersResponse | ✅ |
 | Get Moderators | GetModeratorsRequest | ModeratorsResponse | ✅ |
@@ -67,17 +67,17 @@ pod 'TwitchAPIWrapper'
 | Check User Subscription | CheckUserSubscriptionRequest | UserSubscriptionResponse  | ✅ |
 | Get All Stream Tags | AllStreamTagRequest | StreamTagResponse | ✅ |
 | Get Stream Tags | StreamTagRequest | StreamTagResponse | ✅ |
-| Replace Stream Tags | ReplaceStreamTagRequest | EmptyPostResponse | ✅ |
+| Replace Stream Tags | ReplaceStreamTagRequest | EmptyResponse | ✅ |
 | Get Channel Teams | ChannelTeamsRequest | ChannelTeamResponse | ✅ |
 | Get Teams | TeamRequest | TeamResponse  | ✅ |
 | Get Users | UserRequest  | ✅ |
 | Update User | UserUpdateRequest | ✅ |
 | Get User Follows | UserFollowRequest  | ✅ |
-| Create User Follows | ModifyUserFollowRequest | EmptyPostResponse | ✅ |
-| Delete User Follows | ModifyUserFollowRequest | EmptyPostResponse | ✅ |
+| Create User Follows | ModifyUserFollowRequest | EmptyResponse | ✅ |
+| Delete User Follows | ModifyUserFollowRequest | EmptyResponse | ✅ |
 | Get User Block List | UserBlockListRequest | UserBlocklistResponse | ✅ |
-| Block User | BlockUserRequest | EmptyPostRequest | ✅ |
-| Unblock User | UnblockUserRequest | EmptyPostRequest | ✅ |
+| Block User | BlockUserRequest | EmptyRequest | ✅ |
+| Unblock User | UnblockUserRequest | EmptyRequest | ✅ |
 | Get User Extensions | UserExtensionRequest | UserExtensionResponse | ✅ |
 | Get User Active Extensions | UserActiveExtensionsRequest | UserActiveExtensionResponse | ✅ |
 | Update User Extension| UpdateUserExtensionsRequest | UserActiveExtensionResponse | ✅ |

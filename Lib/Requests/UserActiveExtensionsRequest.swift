@@ -12,6 +12,6 @@ public struct UserActiveExtensionsRequest: JSONConstructableRequest {
     public let url: URL?
     
     public init(userID: String? = nil) {
-        self.url = TwitchEndpoints.userExtensions.construct()?.appending(queryItems: ["user_id": userID].buildQueryItems())
+        self.url = TwitchEndpoints.userActiveExtensions.construct()?.appending(queryItems: ["user_id": userID].buildQueryItems())
     }
 }
