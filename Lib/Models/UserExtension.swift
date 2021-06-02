@@ -7,6 +7,7 @@
 
 import Foundation
 
+///Response object for UserExtensions see: https://dev.twitch.tv/docs/api/reference/#get-user-extensions
 public struct UserExtensionResponse: Codable {
     public let extensions: [Extension]
 
@@ -15,6 +16,7 @@ public struct UserExtensionResponse: Codable {
     }
 }
 
+///Valid options for the user extension type see: https://dev.twitch.tv/docs/api/reference/#get-user-extensions
 public enum ExtensionType: String, Codable {
     case component
     case mobile
@@ -22,6 +24,7 @@ public enum ExtensionType: String, Codable {
     case overlay
 }
 
+///Extension object that is part of the extension response see: https://dev.twitch.tv/docs/api/reference/#get-user-extensions
 public struct Extension: Codable, Equatable {
     public let id: String
     public let version: String
