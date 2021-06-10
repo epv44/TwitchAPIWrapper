@@ -43,7 +43,8 @@
 		2E69D3362671AB85000F99E8 /* CreateStreamMarkerResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D3352671AB85000F99E8 /* CreateStreamMarkerResponseTests.swift */; };
 		2E69D3382671ABBA000F99E8 /* CreateStreamMarker.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E69D3372671ABBA000F99E8 /* CreateStreamMarker.json */; };
 		2E69D33A2671ACE7000F99E8 /* FollowedStreamRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D3392671ACE7000F99E8 /* FollowedStreamRequestTests.swift */; };
-		2E69D33C2671AD91000F99E8 /* FollowedStreamsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D33B2671AD91000F99E8 /* FollowedStreamsResponseTests.swift */; };
+		2E69D33C2671AD91000F99E8 /* StreamsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D33B2671AD91000F99E8 /* StreamsResponseTests.swift */; };
+		2E69D33E2671ADF2000F99E8 /* Stream.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E69D33D2671ADF1000F99E8 /* Stream.json */; };
 		2E91AD90265E09F10058BF70 /* XCAssertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD8F265E09F10058BF70 /* XCAssertUtils.swift */; };
 		2E91AD94265E0A8E0058BF70 /* GetVideoResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */; };
 		2E91AD972661FA0C0058BF70 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD962661FA0C0058BF70 /* Fixtures.swift */; };
@@ -125,7 +126,8 @@
 		2E69D3352671AB85000F99E8 /* CreateStreamMarkerResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStreamMarkerResponseTests.swift; sourceTree = "<group>"; };
 		2E69D3372671ABBA000F99E8 /* CreateStreamMarker.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreateStreamMarker.json; sourceTree = "<group>"; };
 		2E69D3392671ACE7000F99E8 /* FollowedStreamRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FollowedStreamRequestTests.swift; path = "../../../Tests/Request Tests/FollowedStreamRequestTests.swift"; sourceTree = "<group>"; };
-		2E69D33B2671AD91000F99E8 /* FollowedStreamsResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedStreamsResponseTests.swift; sourceTree = "<group>"; };
+		2E69D33B2671AD91000F99E8 /* StreamsResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamsResponseTests.swift; sourceTree = "<group>"; };
+		2E69D33D2671ADF1000F99E8 /* Stream.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stream.json; sourceTree = "<group>"; };
 		2E91AD8F265E09F10058BF70 /* XCAssertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCAssertUtils.swift; sourceTree = "<group>"; };
 		2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVideoResponseTests.swift; sourceTree = "<group>"; };
 		2E91AD962661FA0C0058BF70 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
@@ -226,7 +228,7 @@
 				2E69D3132671967F000F99E8 /* ChannelResponseTests.swift */,
 				2E69D3352671AB85000F99E8 /* CreateStreamMarkerResponseTests.swift */,
 				2E91ADA3266211B40058BF70 /* DeleteVideoResponseTests.swift */,
-				2E69D33B2671AD91000F99E8 /* FollowedStreamsResponseTests.swift */,
+				2E69D33B2671AD91000F99E8 /* StreamsResponseTests.swift */,
 				2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */,
 				2E69D2F926717BB2000F99E8 /* GetUserBlocklistResponseTests.swift */,
 				2E69D3312671A8F4000F99E8 /* StreamMarkerResponseTests.swift */,
@@ -261,6 +263,7 @@
 				2E91ADBB2667307E0058BF70 /* EmptyResponse.json */,
 				2E69D32F2671A8D7000F99E8 /* StreamMarkers.json */,
 				2E69D31926719D8D000F99E8 /* StreamTags.json */,
+				2E69D33D2671ADF1000F99E8 /* Stream.json */,
 				2E69D30D267193A5000F99E8 /* Teams.json */,
 				2E69D3052671886B000F99E8 /* UpdateUser.json */,
 				2E91ADAB266496450058BF70 /* UserActiveExtensions.json */,
@@ -474,6 +477,7 @@
 				2E69D3242671A212000F99E8 /* UserSubscriptionError.json in Resources */,
 				2E91ADBC2667307E0058BF70 /* EmptyResponse.json in Resources */,
 				2E91ADA8266213380058BF70 /* DeleteVideo.json in Resources */,
+				2E69D33E2671ADF2000F99E8 /* Stream.json in Resources */,
 				2E69D31A26719D8D000F99E8 /* StreamTags.json in Resources */,
 				2E69D316267196AB000F99E8 /* Channel.json in Resources */,
 				2E91ADA0266203E50058BF70 /* WebhookSubscription.json in Resources */,
@@ -603,7 +607,7 @@
 				2E69D2FA26717BB2000F99E8 /* GetUserBlocklistResponseTests.swift in Sources */,
 				2E69D32E2671A72A000F99E8 /* GetStreamMarkersRequestTests.swift in Sources */,
 				2E69D3362671AB85000F99E8 /* CreateStreamMarkerResponseTests.swift in Sources */,
-				2E69D33C2671AD91000F99E8 /* FollowedStreamsResponseTests.swift in Sources */,
+				2E69D33C2671AD91000F99E8 /* StreamsResponseTests.swift in Sources */,
 				2E91ADB0266727780058BF70 /* UserActiveExtensionsRequestTests.swift in Sources */,
 				2E91ADB4266729AC0058BF70 /* UserExtensionsResponseTests.swift in Sources */,
 				2E69D31E26719FEC000F99E8 /* AllStreamTagRequestTests.swift in Sources */,
