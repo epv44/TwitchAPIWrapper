@@ -23,8 +23,6 @@ class VideoRequestTests: XCTestCase {
     
     func testBuildVideoRequest_withRequiredParams_shouldSucceed() {
         let request = try! VideoRequest(id: ["1"], userID: "abc123", gameID: "tfm")
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/helix/videos")
         XCTAssertEqual(
             request.url!.absoluteString,
             expectedURL: "https://api.twitch.tv/helix/videos?id=1&game_id=tfm&user_id=abc123")

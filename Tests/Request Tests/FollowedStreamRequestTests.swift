@@ -1,5 +1,5 @@
 //
-//  GetTeamsRequestTests.swift
+//  FollowedStreamRequestTests.swift
 //  TwitchAPIWrapper_Tests
 //
 //  Created by Eric Vennaro on 6/9/21.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import TwitchAPIWrapper
 
-class GetTeamsRequestTests: XCTestCase {
+class FollowedStreamRequestTests: XCTestCase {
 
     override func setUpWithError() throws {
         TwitchAuthorizationManager.sharedInstance.clientID = "1"
@@ -17,20 +17,20 @@ class GetTeamsRequestTests: XCTestCase {
         super.setUp()
     }
 
-    func testBuildRequest_withRequiredParam_shouldSucceed() {
-        let request = TeamRequest()
+    func testBuildRequest_withRequiredParams_shouldSucceed() {
+        let request = FollowedStreamsRequest(userID: "1")
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/helix/teams")
+            expectedURL: "https://api.twitch.tv/helix/streams/followed?user_id=1")
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }
     
     func testBuildRequest_withOptionalParams_shouldSucceed() {
-        let request = TeamRequest(name: "steve", id: "1")
+        let request = FollowedStreamsRequest(userID: "1", after: "2", first: "3")
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/helix/teams?name=steve&id=1")
+            expectedURL: "https://api.twitch.tv/helix/streams/followed?user_id=1&after=2&first=3")
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }

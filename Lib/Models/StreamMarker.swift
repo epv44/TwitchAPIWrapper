@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Response object see: https://dev.twitch.tv/docs/api/reference/#get-stream-markers
 public struct StreamMarkerResponse: Codable {
     public let streamMarkers: [StreamMarker]
     public let pagination: Paginate
@@ -17,6 +18,7 @@ public struct StreamMarkerResponse: Codable {
     }
 }
 
+/// Marker as part of the `StreamMarkerResponse` from the server: https://dev.twitch.tv/docs/api/reference/#get-stream-markers
 public struct Marker: Codable, Equatable {
     public let id: String
     public let createdAt: Date
@@ -33,11 +35,13 @@ public struct Marker: Codable, Equatable {
     }
 }
 
+/// Video object as part of the `StreamMarkerResponse` from the server: https://dev.twitch.tv/docs/api/reference/#get-stream-markers
 public struct StreamVideo: Codable, Equatable {
     public let videoId: String
     public let markers: [Marker]
 }
 
+/// StreamMarker as part of the`StreamMarkerResponse` from the server: https://dev.twitch.tv/docs/api/reference/#get-stream-markers
 public struct StreamMarker: Codable, Equatable {
     public let userId: String
     public let userName: String

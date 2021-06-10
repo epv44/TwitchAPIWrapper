@@ -17,12 +17,10 @@ public struct AllStreamTagRequest: JSONConstructableRequest {
         tagIDs: [String]? = nil
     ) {
         var queryItems = [
-            "after": after as Any,
-            "first": first as Any].buildQueryItems()
-        if let nonNullIds = tagIDs {
-            for id in nonNullIds {
-                queryItems.append(URLQueryItem(name: "tag_id", value: id))
-            }
+            "after": after,
+            "first": first].buildQueryItems()
+        if let ids = tagIDs?.constructQueryItems(withKey: "tag_id") {
+            queryItems.append(contentsOf: ids)
         }
         
         self.url = TwitchEndpoints.allStreamTags.construct()?.appending(queryItems: queryItems)

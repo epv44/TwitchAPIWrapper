@@ -9,14 +9,18 @@
 import XCTest
 
 func XCTAssertEqual(
-  _ actualURL: String, // the string under test
-  expectedURL: String, // the reference string
+  _ actual: String, // the string under test
+  expectedURL expected: String, // the reference string
   file: StaticString = #file, // the file the function is called from
   line: UInt = #line // the line the function is called from
 ) {
+    let actualURL = URLComponents(string: actual)
+    let expectedURL = URLComponents(string: expected)
+    XCTAssertEqual(actualURL?.url?.host, expectedURL?.url?.host)
+    XCTAssertEqual(actualURL?.url?.path, expectedURL?.url?.path)
     XCTAssertEqual(
-        URLComponents(string: actualURL)?.queryItems?.sorted(by: { $0.name < $1.name }),
-        URLComponents(string: expectedURL)?.queryItems?.sorted(by: { $0.name < $1.name } ),
+        actualURL?.queryItems?.sorted(by: { $0.name < $1.name }),
+        expectedURL?.queryItems?.sorted(by: { $0.name < $1.name } ),
         file: file,
         line: line)
 }

@@ -1,15 +1,15 @@
 //
-//  UserActiveExtensionsRequestTests.swift
+//  ChannelTeamRequestTests.swift
 //  TwitchAPIWrapper_Tests
 //
-//  Created by Eric Vennaro on 6/1/21.
+//  Created by Eric Vennaro on 6/9/21.
 //  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
 import XCTest
 @testable import TwitchAPIWrapper
 
-class UserActiveExtensionsRequestTests: XCTestCase {
+class ChannelTeamRequestTests: XCTestCase {
 
     override func setUpWithError() throws {
         TwitchAuthorizationManager.sharedInstance.clientID = "1"
@@ -18,12 +18,11 @@ class UserActiveExtensionsRequestTests: XCTestCase {
     }
 
     func testBuildRequest_withRequiredParams_shouldSucceed() {
-        let request = UserActiveExtensionsRequest(userID: "124")
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/helix/users/extensions")
+        let request = ChannelTeamsRequest(broadcasterID: "1")
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/helix/users/extensions?user_id=124")
+            expectedURL: "https://api.twitch.tv/helix/teams/channel?broadcaster_id=1")
+        XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }
 }

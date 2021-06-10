@@ -31,7 +31,7 @@ class UserActiveExtensionResponseTests: XCTestCase {
         XCTAssertEqual(data.overlay["1"]?.active, true)
         XCTAssertEqual(data.overlay["1"]?.id, "zfh2irvx2jb4s60f02jq0ajm8vwgka")
         XCTAssertEqual(data.overlay["1"]?.version, "1.0.19")
-        XCTAssertEqual(data.overlay["1"]?.name, "StreamLabs")
+        XCTAssertEqual(data.overlay["1"]?.name, "Streamlabs")
         
         XCTAssertEqual(data.component["1"]?.active, true)
         XCTAssertEqual(data.component["1"]?.id, "lqnf3zxk0rv0g7gq92mtmnirjz2cjj")

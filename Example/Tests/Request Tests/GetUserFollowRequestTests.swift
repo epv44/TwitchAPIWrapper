@@ -20,33 +20,27 @@ class GetUserFollowRequestTests: XCTestCase {
 
     func testBuildRequest_withRequiredParam_shouldSucceed() {
         let request = try! UserFollowRequest(after: nil, first: nil, fromID: "1", toID: nil)
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/helix/users/follows")
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/users/follows?from_id=1")
+            expectedURL: "https://api.twitch.tv/helix/users/follows?from_id=1")
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }
     
     func testBuildRequest_withOtherRequiredParam_shouldSucceed() {
         let request = try! UserFollowRequest(after: nil, first: nil, fromID: nil, toID: "2")
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/helix/users/follows")
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/users/follows?to_id=2")
+            expectedURL: "https://api.twitch.tv/helix/users/follows?to_id=2")
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }
     
     func testBuildRequest_withAllParams_shouldSucceed() {
         let request = try! UserFollowRequest(after: "a", first: "f", fromID: "1", toID: "2")
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/helix/users/follows")
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/users/follows?from_id=1&to_id=2&after=a&first=f")
+            expectedURL: "https://api.twitch.tv/helix/users/follows?from_id=1&to_id=2&after=a&first=f")
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }

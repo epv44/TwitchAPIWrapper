@@ -17,12 +17,14 @@ public struct GetBroadcastSubscriptionsRequest: JSONConstructableRequest {
         after: String? = nil,
         first: String? = nil
     ) {
-        self.url = TwitchEndpoints.broadcasterSubscriptions.construct()?.appending(
-            queryItems: [
-                "broadcaster_id": broadcasterID,
-                "user_id": userIDs as Any,
-                "after": after as Any,
-                "first": first as Any
-            ].buildQueryItems())
+        var queryItems = [
+            "broadcaster_id": broadcasterID,
+            "after": after,
+            "first": first
+        ].buildQueryItems()
+        if let ids = userIDs?.constructQueryItems(withKey: "user_id") {
+            queryItems.append(contentsOf: ids)
+        }
+        self.url = TwitchEndpoints.broadcasterSubscriptions.construct()?.appending(queryItems: queryItems)
     }
 }

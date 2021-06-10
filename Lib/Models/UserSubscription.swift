@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Response object for API request: https://dev.twitch.tv/docs/api/reference/#check-user-subscription
 public struct UserSubscriptionResponse: Codable, Equatable {
     public let subscribed: [UserSubscription]?
     public let error: String?
@@ -21,6 +22,7 @@ public struct UserSubscriptionResponse: Codable, Equatable {
     }
 }
 
+/// User subscription portion of the response object from https://dev.twitch.tv/docs/api/reference/#check-user-subscription
 public struct UserSubscription: Codable, Equatable {
     public let broadcasterId: String
     public let broadcasterName: String
