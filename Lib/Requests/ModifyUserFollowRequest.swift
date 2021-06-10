@@ -18,12 +18,17 @@ public struct ModifyUserFollowRequest: JSONConstructableRequest {
         if ![.post, .delete].contains(httpMethod) {
             throw RequestValidationError.invalidInput("Ony post and delete are valid http methods")
         }
-        self.url = TwitchEndpoints.userFollows.construct()
-        self.method = httpMethod
         var body = ["from_id": fromID, "to_id": toID]
         if let a = allowNotifications {
             body["allow_notifications"] = a ? "true" : "false"
         }
-        self.data = try JSONSerialization.data(withJSONObject: body, options: [])
+        if httpMethod == .delete {
+            self.url = TwitchEndpoints.userFollows.construct()?.appending(queryItems: body.buildQueryItems())
+            self.data = Data()
+        } else {
+            self.url = TwitchEndpoints.userFollows.construct()
+            self.data = try JSONSerialization.data(withJSONObject: body, options: [])
+        }
+        self.method = httpMethod
     }
 }

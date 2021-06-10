@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		2E34BC0E263F489900C81949 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E34BC0D263F489900C81949 /* GameViewController.swift */; };
+		2E69D2F626717998000F99E8 /* UserBlocklistRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D2F526717998000F99E8 /* UserBlocklistRequestTests.swift */; };
+		2E69D2F826717B90000F99E8 /* UserBlocklist.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E69D2F726717B90000F99E8 /* UserBlocklist.json */; };
+		2E69D2FA26717BB2000F99E8 /* GetUserBlocklistResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D2F926717BB2000F99E8 /* GetUserBlocklistResponseTests.swift */; };
+		2E69D2FC26717CD6000F99E8 /* ModifyUserFollowsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D2FB26717CD6000F99E8 /* ModifyUserFollowsRequestTests.swift */; };
+		2E69D2FE26718166000F99E8 /* GetUserFollowRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D2FD26718166000F99E8 /* GetUserFollowRequestTests.swift */; };
+		2E69D30026718527000F99E8 /* UserFollows.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E69D2FF26718527000F99E8 /* UserFollows.json */; };
+		2E69D30226718554000F99E8 /* UserFollowsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D30126718554000F99E8 /* UserFollowsResponseTests.swift */; };
+		2E69D3042671874E000F99E8 /* UpdateUserRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D3032671874E000F99E8 /* UpdateUserRequestTests.swift */; };
+		2E69D3062671886B000F99E8 /* UpdateUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E69D3052671886B000F99E8 /* UpdateUser.json */; };
+		2E69D30826718893000F99E8 /* UserResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D30726718893000F99E8 /* UserResponseTests.swift */; };
+		2E69D30A26718BE1000F99E8 /* GetUserRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D30926718BE1000F99E8 /* GetUserRequestTests.swift */; };
+		2E69D30C26718FD2000F99E8 /* GetTeamsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D30B26718FD2000F99E8 /* GetTeamsRequestTests.swift */; };
 		2E91AD90265E09F10058BF70 /* XCAssertUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD8F265E09F10058BF70 /* XCAssertUtils.swift */; };
 		2E91AD94265E0A8E0058BF70 /* GetVideoResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */; };
 		2E91AD972661FA0C0058BF70 /* Fixtures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91AD962661FA0C0058BF70 /* Fixtures.swift */; };
@@ -54,6 +66,18 @@
 /* Begin PBXFileReference section */
 		2620FEBC22D18AF6A8B9A910 /* Pods-TwitchAPIWrapper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchAPIWrapper_Example.release.xcconfig"; path = "Target Support Files/Pods-TwitchAPIWrapper_Example/Pods-TwitchAPIWrapper_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2E34BC0D263F489900C81949 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2E69D2F526717998000F99E8 /* UserBlocklistRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBlocklistRequestTests.swift; sourceTree = "<group>"; };
+		2E69D2F726717B90000F99E8 /* UserBlocklist.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserBlocklist.json; sourceTree = "<group>"; };
+		2E69D2F926717BB2000F99E8 /* GetUserBlocklistResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserBlocklistResponseTests.swift; sourceTree = "<group>"; };
+		2E69D2FB26717CD6000F99E8 /* ModifyUserFollowsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyUserFollowsRequestTests.swift; sourceTree = "<group>"; };
+		2E69D2FD26718166000F99E8 /* GetUserFollowRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserFollowRequestTests.swift; sourceTree = "<group>"; };
+		2E69D2FF26718527000F99E8 /* UserFollows.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UserFollows.json; sourceTree = "<group>"; };
+		2E69D30126718554000F99E8 /* UserFollowsResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowsResponseTests.swift; sourceTree = "<group>"; };
+		2E69D3032671874E000F99E8 /* UpdateUserRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserRequestTests.swift; sourceTree = "<group>"; };
+		2E69D3052671886B000F99E8 /* UpdateUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UpdateUser.json; sourceTree = "<group>"; };
+		2E69D30726718893000F99E8 /* UserResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserResponseTests.swift; sourceTree = "<group>"; };
+		2E69D30926718BE1000F99E8 /* GetUserRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserRequestTests.swift; sourceTree = "<group>"; };
+		2E69D30B26718FD2000F99E8 /* GetTeamsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTeamsRequestTests.swift; sourceTree = "<group>"; };
 		2E91AD8F265E09F10058BF70 /* XCAssertUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCAssertUtils.swift; sourceTree = "<group>"; };
 		2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetVideoResponseTests.swift; sourceTree = "<group>"; };
 		2E91AD962661FA0C0058BF70 /* Fixtures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fixtures.swift; sourceTree = "<group>"; };
@@ -123,12 +147,18 @@
 			children = (
 				2E91ADBD2667337C0058BF70 /* BlockUserRequestTests.swift */,
 				2E91ADA12662092D0058BF70 /* DeleteVideoRequestTests.swift */,
-				607FACEB1AFB9204008FA782 /* VideoRequestTests.swift */,
-				2E91AD9B2661FF880058BF70 /* WebhookSubscriptionsRequestTests.swift */,
+				2E69D30B26718FD2000F99E8 /* GetTeamsRequestTests.swift */,
+				2E69D2FD26718166000F99E8 /* GetUserFollowRequestTests.swift */,
+				2E69D30926718BE1000F99E8 /* GetUserRequestTests.swift */,
+				2E69D2FB26717CD6000F99E8 /* ModifyUserFollowsRequestTests.swift */,
 				2E91ADB726672F130058BF70 /* UnblockUserRequestTests.swift */,
+				2E69D3032671874E000F99E8 /* UpdateUserRequestTests.swift */,
 				2E91ADA9266495490058BF70 /* UpdateUserExtensionRequestTests.swift */,
 				2E91ADAF266727780058BF70 /* UserActiveExtensionsRequestTests.swift */,
+				2E69D2F526717998000F99E8 /* UserBlocklistRequestTests.swift */,
 				2E91ADB1266728B90058BF70 /* UserExtensionRequestTests.swift */,
+				607FACEB1AFB9204008FA782 /* VideoRequestTests.swift */,
+				2E91AD9B2661FF880058BF70 /* WebhookSubscriptionsRequestTests.swift */,
 			);
 			path = "Request Tests";
 			sourceTree = "<group>";
@@ -139,7 +169,10 @@
 				2E91ADA3266211B40058BF70 /* DeleteVideoResponseTests.swift */,
 				2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */,
 				2E91ADAD266496720058BF70 /* UserActiveExtensionResponseTests.swift */,
+				2E69D2F926717BB2000F99E8 /* GetUserBlocklistResponseTests.swift */,
 				2E91ADB3266729AC0058BF70 /* UserExtensionsResponseTests.swift */,
+				2E69D30126718554000F99E8 /* UserFollowsResponseTests.swift */,
+				2E69D30726718893000F99E8 /* UserResponseTests.swift */,
 				2E91AD9D266203490058BF70 /* WebhookSubscriptionsResponseTests.swift */,
 			);
 			path = "Response Tests";
@@ -159,8 +192,11 @@
 			children = (
 				2E91ADA7266213380058BF70 /* DeleteVideo.json */,
 				2E91ADBB2667307E0058BF70 /* EmptyResponse.json */,
+				2E69D3052671886B000F99E8 /* UpdateUser.json */,
 				2E91ADAB266496450058BF70 /* UserActiveExtensions.json */,
+				2E69D2F726717B90000F99E8 /* UserBlocklist.json */,
 				2E91ADB526672A1B0058BF70 /* UserExtensions.json */,
+				2E69D2FF26718527000F99E8 /* UserFollows.json */,
 				2E91AD992661FAA90058BF70 /* Video.json */,
 				2E91AD9F266203E50058BF70 /* WebhookSubscription.json */,
 			);
@@ -366,7 +402,10 @@
 				2E91ADBC2667307E0058BF70 /* EmptyResponse.json in Resources */,
 				2E91ADA8266213380058BF70 /* DeleteVideo.json in Resources */,
 				2E91ADA0266203E50058BF70 /* WebhookSubscription.json in Resources */,
+				2E69D2F826717B90000F99E8 /* UserBlocklist.json in Resources */,
 				2E91ADAC266496450058BF70 /* UserActiveExtensions.json in Resources */,
+				2E69D30026718527000F99E8 /* UserFollows.json in Resources */,
+				2E69D3062671886B000F99E8 /* UpdateUser.json in Resources */,
 				2E91AD9A2661FAA90058BF70 /* Video.json in Resources */,
 				2E91ADB626672A1B0058BF70 /* UserExtensions.json in Resources */,
 			);
@@ -458,20 +497,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E69D30826718893000F99E8 /* UserResponseTests.swift in Sources */,
 				2E91AD90265E09F10058BF70 /* XCAssertUtils.swift in Sources */,
 				2E91ADB826672F130058BF70 /* UnblockUserRequestTests.swift in Sources */,
+				2E69D30C26718FD2000F99E8 /* GetTeamsRequestTests.swift in Sources */,
+				2E69D2FC26717CD6000F99E8 /* ModifyUserFollowsRequestTests.swift in Sources */,
 				2E91AD9E266203490058BF70 /* WebhookSubscriptionsResponseTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* VideoRequestTests.swift in Sources */,
 				2E91ADBE2667337C0058BF70 /* BlockUserRequestTests.swift in Sources */,
 				2E91ADAA266495490058BF70 /* UpdateUserExtensionRequestTests.swift in Sources */,
 				2E91AD9C2661FF880058BF70 /* WebhookSubscriptionsRequestTests.swift in Sources */,
+				2E69D30226718554000F99E8 /* UserFollowsResponseTests.swift in Sources */,
 				2E91ADAE266496720058BF70 /* UserActiveExtensionResponseTests.swift in Sources */,
 				2E91ADB2266728B90058BF70 /* UserExtensionRequestTests.swift in Sources */,
+				2E69D2FA26717BB2000F99E8 /* GetUserBlocklistResponseTests.swift in Sources */,
 				2E91ADB0266727780058BF70 /* UserActiveExtensionsRequestTests.swift in Sources */,
 				2E91ADB4266729AC0058BF70 /* UserExtensionsResponseTests.swift in Sources */,
 				2E91AD94265E0A8E0058BF70 /* GetVideoResponseTests.swift in Sources */,
+				2E69D2F626717998000F99E8 /* UserBlocklistRequestTests.swift in Sources */,
 				2E91ADA4266211B40058BF70 /* DeleteVideoResponseTests.swift in Sources */,
 				2E91AD972661FA0C0058BF70 /* Fixtures.swift in Sources */,
+				2E69D3042671874E000F99E8 /* UpdateUserRequestTests.swift in Sources */,
+				2E69D2FE26718166000F99E8 /* GetUserFollowRequestTests.swift in Sources */,
+				2E69D30A26718BE1000F99E8 /* GetUserRequestTests.swift in Sources */,
 				2E91ADA22662092D0058BF70 /* DeleteVideoRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

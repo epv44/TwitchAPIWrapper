@@ -15,7 +15,7 @@ public struct UserBlockListRequest: JSONConstructableRequest {
         broadcasterID: String,
         first: String? = nil,
         after: String? = nil
-    ) throws {
+    ) {
         self.url = TwitchEndpoints.userBlocks.construct()?.appending(
             queryItems: [
                 "broadcaster_id": broadcasterID,
