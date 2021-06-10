@@ -1,15 +1,15 @@
 //
-//  DeleteVideoRequestTests.swift
+//  UpdateUserRequestTests.swift
 //  TwitchAPIWrapper_Tests
 //
-//  Created by Eric Vennaro on 5/28/21.
+//  Created by Eric Vennaro on 6/9/21.
 //  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
 import XCTest
 @testable import TwitchAPIWrapper
 
-class DeleteVideoRequestTests: XCTestCase {
+class UpdateUserRequestTests: XCTestCase {
 
     override func setUpWithError() throws {
         TwitchAuthorizationManager.sharedInstance.clientID = "1"
@@ -18,19 +18,13 @@ class DeleteVideoRequestTests: XCTestCase {
     }
 
     func testBuildRequest_withRequiredParams_shouldSucceed() {
-        let request = try! DeleteVideoRequest(ids: ["1", "2"])
+        let request = UserUpdateRequest(description: "thing")
         XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/helix/videos")
+        XCTAssertEqual(request.url?.path, "/helix/users")
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/helix/videos?id=1&id=2")
+            expectedURL: "https://api.twitch.tv/helix/users?description=thing")
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
-    }
-    
-    func testBuildRequest_withoutIds_shouldFail() {
-        XCTAssertThrowsError(try DeleteVideoRequest(ids: []), "") { error in
-            XCTAssertEqual(error.localizedDescription, "The operation couldn’t be completed. (TwitchAPIWrapper.RequestValidationError error 0.)")
-        }
     }
 }

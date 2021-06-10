@@ -41,6 +41,7 @@ public struct User: Codable, Equatable {
     public private(set) var offlineImageUrl: URL?
     public let viewCount: Int
     public let email: String?
+    public let createdAt: String
     
     public static func == (lhs: User, rhs: User) -> Bool {
         return lhs.id == rhs.id
