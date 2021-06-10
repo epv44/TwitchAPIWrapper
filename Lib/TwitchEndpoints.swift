@@ -59,7 +59,7 @@ enum TwitchEndpoints {
         case .allStreamTags:            return "helix/tags/streams"
         case .analyticsExtension:       return "helix/analytics/extensions"
         case .authentication:           return "oauth2/authorize"
-        case .broadcasterSubscriptions: return "/helix/subscriptions"
+        case .broadcasterSubscriptions: return "helix/subscriptions"
         case .channelEditor:            return "helix/channels/editors"
         case .channelInformation:       return "helix/channels"
         case .cheermotes:               return "helix/bits/cheermotes"
@@ -95,12 +95,12 @@ enum TwitchEndpoints {
         case .teams:                    return "helix/teams"
         case .topGames:                 return "helix/games/top"
         case .userFollows:              return "helix/users/follows"
-        case .userBlocks:               return "users/blocks"
-        case .userExtensions:           return "users/extensions/list"
-        case .userActiveExtensions:     return "users/extensions"
+        case .userBlocks:               return "helix/users/blocks"
+        case .userExtensions:           return "helix/users/extensions/list"
+        case .userActiveExtensions:     return "helix/users/extensions"
         case .users:                    return "helix/users"
         case .videos:                   return "helix/videos"
-        case .webhookSubscriptions:     return "webhooks/subscriptions"
+        case .webhookSubscriptions:     return "helix/webhooks/subscriptions"
         }
     }
     

@@ -1,15 +1,15 @@
 //
-//  UserActiveExtensionsRequestTests.swift
+//  ReplaceStreamTagsRequestTests.swift
 //  TwitchAPIWrapper_Tests
 //
-//  Created by Eric Vennaro on 6/1/21.
+//  Created by Eric Vennaro on 6/9/21.
 //  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
 import XCTest
 @testable import TwitchAPIWrapper
 
-class UserActiveExtensionsRequestTests: XCTestCase {
+class ReplaceStreamTagsRequestTests: XCTestCase {
 
     override func setUpWithError() throws {
         TwitchAuthorizationManager.sharedInstance.clientID = "1"
@@ -17,13 +17,13 @@ class UserActiveExtensionsRequestTests: XCTestCase {
         super.setUp()
     }
 
-    func testBuildRequest_withRequiredParams_shouldSucceed() {
-        let request = UserActiveExtensionsRequest(userID: "124")
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/helix/users/extensions")
+    func testBuildRequest_withRequiredParams_shouldSucceed() throws {
+        let request = try ReplaceStreamTagRequest(broadcasterID: "1", tagIDs: ["1", "2"])
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/helix/users/extensions?user_id=124")
+            expectedURL: "https://api.twitch.tv/helix/streams/tags?broadcaster_id=1")
+        let d = try JSONSerialization.jsonObject(with: request.data, options: .allowFragments) as! [String:[String]]
+        XCTAssertEqual(d["tag_ids"], ["1", "2"])
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }
 }

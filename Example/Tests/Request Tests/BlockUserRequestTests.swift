@@ -19,8 +19,6 @@ class BlockUserRequestTests: XCTestCase {
 
     func testBuildRequest_withRequiredParams_shouldSucceed() {
         let request = BlockUserRequest(targetUserID: "123")
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/users/blocks")
         XCTAssertEqual(
             request.url!.absoluteString,
             expectedURL: "https://api.twitch.tv/helix/users/blocks?target_user_id=123")
@@ -29,8 +27,6 @@ class BlockUserRequestTests: XCTestCase {
     
     func testBuildRequest_withAllParams_shouldSucceed() {
         let request = BlockUserRequest(targetUserID: "124", sourceContext: "tb", reason: "d")
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/users/blocks")
         XCTAssertEqual(
             request.url!.absoluteString,
             expectedURL: "https://api.twitch.tv/helix/users/blocks?reason=d&source_context=tb&target_user_id=124")

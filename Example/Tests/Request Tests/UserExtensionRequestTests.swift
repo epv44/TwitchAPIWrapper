@@ -19,8 +19,6 @@ class UserExtensionRequestTests: XCTestCase {
 
     func testBuildRequest_withRequiredParams_shouldSucceed() {
         let request = UserExtensionRequest()
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/users/extensions/list")
         XCTAssertEqual(
             request.url!.absoluteString,
             expectedURL: "https://api.twitch.tv/helix/users/extensions/list")

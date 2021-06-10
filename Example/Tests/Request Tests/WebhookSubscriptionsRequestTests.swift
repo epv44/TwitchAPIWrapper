@@ -19,8 +19,6 @@ class WebhookSubscriptionsRequestTests: XCTestCase {
 
     func testBuildRequest_withRequiredParams_shouldSucceed() {
         let request = WebhookSubscriptionsRequest()
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/webhooks/subscriptions")
         XCTAssertEqual(
             request.url!.absoluteString,
             expectedURL: "https://api.twitch.tv/helix/webhooks/subscriptions")
@@ -30,8 +28,6 @@ class WebhookSubscriptionsRequestTests: XCTestCase {
     
     func testBuildRequest_withAllParams_shouldSucceed() {
         let request = WebhookSubscriptionsRequest(after: "aft", first: "fir")
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/webhooks/subscriptions")
         XCTAssertEqual(
             request.url!.absoluteString,
             expectedURL: "https://api.twitch.tv/helix/webhooks/subscriptions?after=aft&first=fir")

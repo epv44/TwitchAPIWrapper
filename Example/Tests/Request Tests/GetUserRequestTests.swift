@@ -19,8 +19,6 @@ class GetUserRequestTests: XCTestCase {
 
     func testBuildRequest_withRequiredParams_shouldSucceed() {
         let request = UserRequest()
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/helix/users")
         XCTAssertEqual(
             request.url!.absoluteString,
             expectedURL: "https://api.twitch.tv/helix/users")
@@ -30,8 +28,6 @@ class GetUserRequestTests: XCTestCase {
     
     func testBuildRequest_withOptionalParams_shouldSucceed() {
         let request = UserRequest(id: ["1", "2"], login: ["3", "4"])
-        XCTAssertEqual(request.url?.host, "api.twitch.tv")
-        XCTAssertEqual(request.url?.path, "/helix/users")
         XCTAssertEqual(
             request.url!.absoluteString,
             expectedURL: "https://api.twitch.tv/helix/users?id=1&id=2&login=3&login=4")

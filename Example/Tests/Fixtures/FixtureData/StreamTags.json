@@ -1,0 +1,27 @@
+{
+  "data": [
+    {
+      "tag_id": "6ea6bca4-4712-4ab9-a906-e3336a9d8039",
+      "is_auto": true,
+      "localization_names": {
+        "bg-bg": "английски",
+        "cs-cz": "Angličtina",
+        "da-dk": "Engelsk",
+        "de-de": "Englisch",
+        "el-gr": "Αγγλικά",
+        "en-us": "English",
+      },
+      "localization_descriptions": {
+        "bg-bg": "За потоци с използване на английски",
+        "cs-cz": "Pro vysílání obsahující angličtinu.",
+        "da-dk": "Til streams, hvori der indgår engelsk",
+        "de-de": "Für Streams auf Englisch.",
+        "el-gr": "Για μεταδόσεις που περιλαμβάνουν τη χρήση Αγγλικών",
+        "en-us": "For streams featuring the use of English",
+      }
+    }
+  ],
+  "pagination": {
+      "cursor": "eyJiI..."
+  }
+}
