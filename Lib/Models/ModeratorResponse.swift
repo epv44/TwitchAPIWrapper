@@ -20,5 +20,5 @@ public struct ModeratorResponse: Codable {
 public struct Moderator: Codable, Equatable {
     public let userId: String
     public let userLogin: String
-    public let userName: Date
+    public let userName: String
 }

@@ -15,22 +15,21 @@ public struct StreamRequest: JSONConstructableRequest {
         after: String? = nil,
         before: String? = nil,
         first: String? = nil,
-        gameId: [String]? = nil,
-        language: [String]? = nil,
-        userId: [String]? = nil,
-        userLogin: [String]? = nil,
-        tagId: String? = nil
+        gameIDs: [String]? = nil,
+        languages: [String]? = nil,
+        userIDs: [String]? = nil,
+        userLogins: [String]? = nil,
+        tagID: String? = nil
     ) {
-        let queryParams = [
-            "after": after as Any,
-            "before": before as Any,
-            "first": first as Any,
-            "game_id": gameId as Any,
-            "language": language as Any,
-            "user_id": userId as Any,
-            "user_login": userLogin as Any,
-            "tag_id": tagId as Any].buildQueryItems()
-        
+        var queryParams = [
+            "after": after,
+            "before": before,
+            "first": first,
+            "tag_id": tagID].buildQueryItems()
+        queryParams.append(contentsOf: userIDs?.constructQueryItems(withKey: "user_id") ?? [])
+        queryParams.append(contentsOf: gameIDs?.constructQueryItems(withKey: "game_id") ?? [] )
+        queryParams.append(contentsOf: languages?.constructQueryItems(withKey: "language") ?? [])
+        queryParams.append(contentsOf: userLogins?.constructQueryItems(withKey: "user_login") ?? [])
         self.url = TwitchEndpoints.streams.construct()?.appending(queryItems: queryParams)
     }
 }

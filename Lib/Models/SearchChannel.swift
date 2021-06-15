@@ -22,6 +22,7 @@ public struct SearchChannel: Codable, Equatable {
     public let broadcasterLogin: String
     public let displayName: String
     public let gameId: String
+    public let gameName: String
     public let id: String
     public let isLive: Bool
     public let tagIds: [String]

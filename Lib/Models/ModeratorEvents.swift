@@ -31,6 +31,6 @@ public struct ModeratorEvent: Codable, Equatable {
     public let id: String
     public let eventType: String
     public let eventTimestamp: Date
-    public let version: Date
-    public let eventData: [ModeratorEventData]
+    public let version: String
+    public let eventData: ModeratorEventData
 }
