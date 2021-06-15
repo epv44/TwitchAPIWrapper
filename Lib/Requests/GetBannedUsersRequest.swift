@@ -18,18 +18,12 @@ public struct GetBannedUsersRequest: JSONConstructableRequest {
         first: String? = nil,
         before: String? = nil
     ) {
-        var queryItems = [URLQueryItem]()
-        if let nonNullIds = userIDs {
-            for id in nonNullIds {
-                queryItems.append(URLQueryItem(name: "user_id", value: id))
-            }
-        }
-        
+        var queryItems = userIDs?.constructQueryItems(withKey: "user_id") ?? [URLQueryItem]()
         queryItems.append(contentsOf: [
                             "broadcaster_id": broadcasterID,
                             "after": after,
                             "first": first,
                             "before": before].buildQueryItems())
-        self.url = TwitchEndpoints.getBannedEvents.construct()?.appending(queryItems: queryItems)
+        self.url = TwitchEndpoints.getBannedUsers.construct()?.appending(queryItems: queryItems)
     }
 }

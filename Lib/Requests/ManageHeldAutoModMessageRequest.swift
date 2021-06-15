@@ -14,7 +14,7 @@ public struct ManageHeldAutoModStatusRequest: JSONConstructableRequest {
     public let data: Data
     
     public init(userID: String, msgID: String, action: String) throws {
-        self.url = TwitchEndpoints.checkAutoModStatus.construct()
+        self.url = TwitchEndpoints.manageHeldAutoModMessage.construct()
         let body = [
                 "msg_id": msgID,
                 "action": action,

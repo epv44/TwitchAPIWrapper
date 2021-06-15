@@ -17,13 +17,7 @@ public struct GetModeratorEventsRequest: JSONConstructableRequest {
         after: String? = nil,
         first: String? = nil
     ) {
-        var queryItems = [URLQueryItem]()
-        if let nonNullIds = userIDs {
-            for id in nonNullIds {
-                queryItems.append(URLQueryItem(name: "user_id", value: id))
-            }
-        }
-        
+        var queryItems = userIDs?.constructQueryItems(withKey: "user_id") ?? [URLQueryItem]()
         queryItems.append(contentsOf: ["broadcaster_id": broadcasterID, "after": after, "first": first].buildQueryItems())
         self.url = TwitchEndpoints.getModeratorEvents.construct()?.appending(queryItems: queryItems)
     }

@@ -84,6 +84,13 @@ pod 'TwitchAPIWrapper'
 | Get Videos | GetVideoRequest | GetVideoResponse | ✅ |
 | Delete Videos | DeleteVideoRequest | DeleteVideoResponse | ✅ |
 | Get Webhook Subscriptions | WebhookSubscriptionsRequest | WebhookSubscriptionsResponse | ✅ |
+| End Prediction | EndPredictionRequest | EndPredictionResponse | Not Supported |
+| Create Prediction | CreatePredictionRequest | CreatePredictionResponse | Not Supported |
+| Get Predictions | GetPredictionRequest | GetPredictionResponse | Not Supported |
+| End Poll | EndPollRequest | EndPollResponse | NotSupported |
+| Create Poll | CreatePollRequest | CreatePollResponse | NotSupported |
+| Get Polls | GetPollRequest | GetPollResponse | NotSupported |
+
 
 ## Author
 
