@@ -11,7 +11,7 @@ import Foundation
 public struct CheermoteRequest: JSONConstructableRequest {
     public let url: URL?
     
-    public init(broadcasterID: String? = nil) throws {
+    public init(broadcasterID: String? = nil) {
         self.url = TwitchEndpoints.cheermotes.construct()?.appending(
             queryItems: ["broadcaster_id": broadcasterID].buildQueryItems())
     }

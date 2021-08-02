@@ -22,7 +22,7 @@ class SearchCategoriesRequestTests: XCTestCase {
         let request = SearchCategoriesRequest(query: "uri encoded")
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/helix/search/categories?query=1")
+            expectedURL: "https://api.twitch.tv/helix/search/categories?query=uri%20encoded")
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }
@@ -31,7 +31,7 @@ class SearchCategoriesRequestTests: XCTestCase {
         let request = SearchCategoriesRequest(query: "uri encoded", first: "1", after: "2")
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/helix/search/categories?query=1&first=1&after=2")
+            expectedURL: "https://api.twitch.tv/helix/search/categories?query=uri%20encoded&first=1&after=2")
         XCTAssertEqual(request.data, Data())
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }

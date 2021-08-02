@@ -92,6 +92,36 @@
 		2E9FD0A6261FF85E001BAC99 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD0A5261FF85E001BAC99 /* UserViewController.swift */; };
 		2E9FD0AA261FF86E001BAC99 /* ClipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD0A9261FF86E001BAC99 /* ClipViewController.swift */; };
 		2E9FD1D82627E12B001BAC99 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FD1D62627E12B001BAC99 /* Environment.plist */; };
+		2EF2B1D026B7457D00116310 /* StartCommercialResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1CF26B7457D00116310 /* StartCommercialResponseTests.swift */; };
+		2EF2B1D226B7467700116310 /* Commercial.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B1D126B7467700116310 /* Commercial.json */; };
+		2EF2B1D426B7474500116310 /* CommercialRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1D326B7474500116310 /* CommercialRequestTests.swift */; };
+		2EF2B1D626B7485D00116310 /* ExtensionAnalyticsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1D526B7485D00116310 /* ExtensionAnalyticsRequestTests.swift */; };
+		2EF2B1D826B749CC00116310 /* ExtensionAnalytics.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B1D726B749CC00116310 /* ExtensionAnalytics.json */; };
+		2EF2B1DA26B74A1300116310 /* ExtensionAnalyticsResponseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1D926B74A1300116310 /* ExtensionAnalyticsResponseTest.swift */; };
+		2EF2B1DC26B74D8100116310 /* GameAnalyticsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1DB26B74D8100116310 /* GameAnalyticsResponseTests.swift */; };
+		2EF2B1DE26B74F4B00116310 /* GameAnalytics.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B1DD26B74F4B00116310 /* GameAnalytics.json */; };
+		2EF2B1E026B750E500116310 /* GameAnalyticsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1DF26B750E500116310 /* GameAnalyticsRequestTests.swift */; };
+		2EF2B1E226B7525600116310 /* BitsLeaderboard.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B1E126B7525600116310 /* BitsLeaderboard.json */; };
+		2EF2B1E426B7527800116310 /* BitsLeaderboardResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1E326B7527800116310 /* BitsLeaderboardResponseTests.swift */; };
+		2EF2B1E626B7550C00116310 /* BitsLeaderboardRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1E526B7550C00116310 /* BitsLeaderboardRequestTests.swift */; };
+		2EF2B1E826B7557F00116310 /* Cheermotes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B1E726B7557F00116310 /* Cheermotes.json */; };
+		2EF2B1EA26B755AB00116310 /* CheermoteResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1E926B755AB00116310 /* CheermoteResponseTests.swift */; };
+		2EF2B1EC26B7598000116310 /* CheermoteRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1EB26B7598000116310 /* CheermoteRequestTests.swift */; };
+		2EF2B1EE26B75B0700116310 /* ExtensionTransaction.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B1ED26B75B0700116310 /* ExtensionTransaction.json */; };
+		2EF2B1F026B75B2C00116310 /* ExtensionTransactionResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1EF26B75B2C00116310 /* ExtensionTransactionResponseTests.swift */; };
+		2EF2B1F226B75FA700116310 /* ExtensionTransactionRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1F126B75FA700116310 /* ExtensionTransactionRequestTests.swift */; };
+		2EF2B1F426B7614B00116310 /* ChannelInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B1F326B7614B00116310 /* ChannelInfo.json */; };
+		2EF2B1F626B7617000116310 /* ChannelInfoResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1F526B7617000116310 /* ChannelInfoResponseTests.swift */; };
+		2EF2B1F826B762AE00116310 /* ChannelInfoRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1F726B762AE00116310 /* ChannelInfoRequestTests.swift */; };
+		2EF2B1FA26B7637900116310 /* ModifyChannelInformationRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1F926B7637900116310 /* ModifyChannelInformationRequestTests.swift */; };
+		2EF2B1FC26B7647900116310 /* ChannelEditors.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B1FB26B7647900116310 /* ChannelEditors.json */; };
+		2EF2B1FE26B764BD00116310 /* ChannelEditorsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1FD26B764BD00116310 /* ChannelEditorsResponseTests.swift */; };
+		2EF2B20026B765EF00116310 /* ChannelEditorRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1FF26B765EF00116310 /* ChannelEditorRequestTests.swift */; };
+		2EF2B20226B7666D00116310 /* CustomReward.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B20126B7666D00116310 /* CustomReward.json */; };
+		2EF2B20426B7668F00116310 /* CustomRewardResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B20326B7668F00116310 /* CustomRewardResponseTests.swift */; };
+		2EF2B20626B76B2000116310 /* CustomRewardsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B20526B76B2000116310 /* CustomRewardsRequestTests.swift */; };
+		2EF2B20826B7707C00116310 /* RewardRedemption.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B20726B7707C00116310 /* RewardRedemption.json */; };
+		2EF2B20A26B770B000116310 /* GetCustomRewardRedemptionRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B20926B770B000116310 /* GetCustomRewardRedemptionRequest.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -200,6 +230,36 @@
 		2E9FD0A9261FF86E001BAC99 /* ClipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipViewController.swift; sourceTree = "<group>"; };
 		2E9FD1D62627E12B001BAC99 /* Environment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
 		2E9FD1D72627E12B001BAC99 /* Example.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
+		2EF2B1CF26B7457D00116310 /* StartCommercialResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCommercialResponseTests.swift; sourceTree = "<group>"; };
+		2EF2B1D126B7467700116310 /* Commercial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Commercial.json; sourceTree = "<group>"; };
+		2EF2B1D326B7474500116310 /* CommercialRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialRequestTests.swift; sourceTree = "<group>"; };
+		2EF2B1D526B7485D00116310 /* ExtensionAnalyticsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAnalyticsRequestTests.swift; sourceTree = "<group>"; };
+		2EF2B1D726B749CC00116310 /* ExtensionAnalytics.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExtensionAnalytics.json; sourceTree = "<group>"; };
+		2EF2B1D926B74A1300116310 /* ExtensionAnalyticsResponseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAnalyticsResponseTest.swift; sourceTree = "<group>"; };
+		2EF2B1DB26B74D8100116310 /* GameAnalyticsResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAnalyticsResponseTests.swift; sourceTree = "<group>"; };
+		2EF2B1DD26B74F4B00116310 /* GameAnalytics.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = GameAnalytics.json; sourceTree = "<group>"; };
+		2EF2B1DF26B750E500116310 /* GameAnalyticsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAnalyticsRequestTests.swift; sourceTree = "<group>"; };
+		2EF2B1E126B7525600116310 /* BitsLeaderboard.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = BitsLeaderboard.json; sourceTree = "<group>"; };
+		2EF2B1E326B7527800116310 /* BitsLeaderboardResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitsLeaderboardResponseTests.swift; sourceTree = "<group>"; };
+		2EF2B1E526B7550C00116310 /* BitsLeaderboardRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitsLeaderboardRequestTests.swift; sourceTree = "<group>"; };
+		2EF2B1E726B7557F00116310 /* Cheermotes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Cheermotes.json; sourceTree = "<group>"; };
+		2EF2B1E926B755AB00116310 /* CheermoteResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheermoteResponseTests.swift; sourceTree = "<group>"; };
+		2EF2B1EB26B7598000116310 /* CheermoteRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheermoteRequestTests.swift; sourceTree = "<group>"; };
+		2EF2B1ED26B75B0700116310 /* ExtensionTransaction.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ExtensionTransaction.json; sourceTree = "<group>"; };
+		2EF2B1EF26B75B2C00116310 /* ExtensionTransactionResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTransactionResponseTests.swift; sourceTree = "<group>"; };
+		2EF2B1F126B75FA700116310 /* ExtensionTransactionRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionTransactionRequestTests.swift; sourceTree = "<group>"; };
+		2EF2B1F326B7614B00116310 /* ChannelInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ChannelInfo.json; sourceTree = "<group>"; };
+		2EF2B1F526B7617000116310 /* ChannelInfoResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInfoResponseTests.swift; sourceTree = "<group>"; };
+		2EF2B1F726B762AE00116310 /* ChannelInfoRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelInfoRequestTests.swift; sourceTree = "<group>"; };
+		2EF2B1F926B7637900116310 /* ModifyChannelInformationRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyChannelInformationRequestTests.swift; sourceTree = "<group>"; };
+		2EF2B1FB26B7647900116310 /* ChannelEditors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ChannelEditors.json; sourceTree = "<group>"; };
+		2EF2B1FD26B764BD00116310 /* ChannelEditorsResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelEditorsResponseTests.swift; sourceTree = "<group>"; };
+		2EF2B1FF26B765EF00116310 /* ChannelEditorRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelEditorRequestTests.swift; sourceTree = "<group>"; };
+		2EF2B20126B7666D00116310 /* CustomReward.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CustomReward.json; sourceTree = "<group>"; };
+		2EF2B20326B7668F00116310 /* CustomRewardResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRewardResponseTests.swift; sourceTree = "<group>"; };
+		2EF2B20526B76B2000116310 /* CustomRewardsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRewardsRequestTests.swift; sourceTree = "<group>"; };
+		2EF2B20726B7707C00116310 /* RewardRedemption.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = RewardRedemption.json; sourceTree = "<group>"; };
+		2EF2B20926B770B000116310 /* GetCustomRewardRedemptionRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCustomRewardRedemptionRequest.swift; sourceTree = "<group>"; };
 		47E87CE22BF5EE831B50ABEC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TwitchAPIWrapper_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitchAPIWrapper_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -244,14 +304,23 @@
 			isa = PBXGroup;
 			children = (
 				2E69D31D26719FEC000F99E8 /* AllStreamTagRequestTests.swift */,
+				2EF2B1E526B7550C00116310 /* BitsLeaderboardRequestTests.swift */,
 				2E91ADBD2667337C0058BF70 /* BlockUserRequestTests.swift */,
 				2E69D3272671A3EC000F99E8 /* BroadcasterSubscriptionRequestTests.swift */,
+				2EF2B1FF26B765EF00116310 /* ChannelEditorRequestTests.swift */,
+				2EF2B1F726B762AE00116310 /* ChannelInfoRequestTests.swift */,
 				2E69D3112671960E000F99E8 /* ChannelTeamRequestTests.swift */,
 				2E69D36D26786E06000F99E8 /* CheckAutoModStatusRequestTests.swift */,
 				2E69D31F2671A178000F99E8 /* CheckUserSubscriptionRequestTests.swift */,
+				2EF2B1EB26B7598000116310 /* CheermoteRequestTests.swift */,
+				2EF2B1D326B7474500116310 /* CommercialRequestTests.swift */,
+				2EF2B20526B76B2000116310 /* CustomRewardsRequestTests.swift */,
 				2E69D3332671AAD0000F99E8 /* CreateStreamMarkerRequestTests.swift */,
 				2E91ADA12662092D0058BF70 /* DeleteVideoRequestTests.swift */,
+				2EF2B1D526B7485D00116310 /* ExtensionAnalyticsRequestTests.swift */,
+				2EF2B1F126B75FA700116310 /* ExtensionTransactionRequestTests.swift */,
 				2E69D3392671ACE7000F99E8 /* FollowedStreamRequestTests.swift */,
+				2EF2B1DF26B750E500116310 /* GameAnalyticsRequestTests.swift */,
 				2E69D365267869F2000F99E8 /* GetBannedEventsRequestTests.swift */,
 				2E69D35F267867D9000F99E8 /* GetBannedUsersRequestTests.swift */,
 				2E69D3592678649B000F99E8 /* GetModeratorsTests.swift */,
@@ -262,6 +331,7 @@
 				2E69D2FD26718166000F99E8 /* GetUserFollowRequestTests.swift */,
 				2E69D30926718BE1000F99E8 /* GetUserRequestTests.swift */,
 				2E69D36B26786C8D000F99E8 /* ManageHeldAutoModMessagesRequestTests.swift */,
+				2EF2B1F926B7637900116310 /* ModifyChannelInformationRequestTests.swift */,
 				2E69D2FB26717CD6000F99E8 /* ModifyUserFollowsRequestTests.swift */,
 				2E69D34D26785BDD000F99E8 /* SearchCategoriesRequestTests.swift */,
 				2E69D34726785744000F99E8 /* SearchChannelRequestTests.swift */,
@@ -283,11 +353,20 @@
 			isa = PBXGroup;
 			children = (
 				2E69D36926786ACB000F99E8 /* BannedEventsResponseTests.swift */,
+				2EF2B1E326B7527800116310 /* BitsLeaderboardResponseTests.swift */,
 				2E69D32B2671A578000F99E8 /* BroadcasterSubscriptionsResponseTests.swift */,
+				2EF2B1FD26B764BD00116310 /* ChannelEditorsResponseTests.swift */,
+				2EF2B1F526B7617000116310 /* ChannelInfoResponseTests.swift */,
 				2E69D3132671967F000F99E8 /* ChannelResponseTests.swift */,
+				2EF2B1E926B755AB00116310 /* CheermoteResponseTests.swift */,
 				2E69D3352671AB85000F99E8 /* CreateStreamMarkerResponseTests.swift */,
+				2EF2B20326B7668F00116310 /* CustomRewardResponseTests.swift */,
 				2E91ADA3266211B40058BF70 /* DeleteVideoResponseTests.swift */,
+				2EF2B1D926B74A1300116310 /* ExtensionAnalyticsResponseTest.swift */,
+				2EF2B1EF26B75B2C00116310 /* ExtensionTransactionResponseTests.swift */,
+				2EF2B1DB26B74D8100116310 /* GameAnalyticsResponseTests.swift */,
 				2E69D36326786917000F99E8 /* GetBannedUserResponseTests.swift */,
+				2EF2B20926B770B000116310 /* GetCustomRewardRedemptionRequest.swift */,
 				2E69D35126785D23000F99E8 /* GetGamesResponseTests.swift */,
 				2E69D35D267866CA000F99E8 /* GetModeratorsResponseTests.swift */,
 				2E69D3572678629A000F99E8 /* GetModeratorEventsTests.swift */,
@@ -295,6 +374,7 @@
 				2E91AD93265E0A8E0058BF70 /* GetVideoResponseTests.swift */,
 				2E69D2F926717BB2000F99E8 /* GetUserBlocklistResponseTests.swift */,
 				2E69D34B26785869000F99E8 /* SearchChannelResponseTests.swift */,
+				2EF2B1CF26B7457D00116310 /* StartCommercialResponseTests.swift */,
 				2E69D33B2671AD91000F99E8 /* StreamsResponseTests.swift */,
 				2E69D3312671A8F4000F99E8 /* StreamMarkerResponseTests.swift */,
 				2E69D31B26719DB4000F99E8 /* StreamTagResponseTests.swift */,
@@ -323,13 +403,23 @@
 			children = (
 				2E69D36726786AAF000F99E8 /* BannedEvents.json */,
 				2E69D361267868E8000F99E8 /* BannedUser.json */,
+				2EF2B1E126B7525600116310 /* BitsLeaderboard.json */,
 				2E69D3292671A555000F99E8 /* BroadcasterSubscriptions.json */,
 				2E69D315267196AB000F99E8 /* Channel.json */,
+				2EF2B1FB26B7647900116310 /* ChannelEditors.json */,
+				2EF2B1F326B7614B00116310 /* ChannelInfo.json */,
+				2EF2B1E726B7557F00116310 /* Cheermotes.json */,
+				2EF2B1D126B7467700116310 /* Commercial.json */,
 				2E69D3372671ABBA000F99E8 /* CreateStreamMarker.json */,
+				2EF2B20126B7666D00116310 /* CustomReward.json */,
 				2E91ADA7266213380058BF70 /* DeleteVideo.json */,
 				2E91ADBB2667307E0058BF70 /* EmptyResponse.json */,
+				2EF2B1D726B749CC00116310 /* ExtensionAnalytics.json */,
+				2EF2B1ED26B75B0700116310 /* ExtensionTransaction.json */,
+				2EF2B1DD26B74F4B00116310 /* GameAnalytics.json */,
 				2E69D3552678626A000F99E8 /* ModeratorEvents.json */,
 				2E69D35B267866A7000F99E8 /* Moderators.json */,
+				2EF2B20726B7707C00116310 /* RewardRedemption.json */,
 				2E69D34F26785CA9000F99E8 /* SearchCategories.json */,
 				2E69D34926785839000F99E8 /* SearchChannel.json */,
 				2E69D34526785676000F99E8 /* StreamKey.json */,
@@ -552,24 +642,34 @@
 				2E69D33E2671ADF2000F99E8 /* Stream.json in Resources */,
 				2E69D31A26719D8D000F99E8 /* StreamTags.json in Resources */,
 				2E69D316267196AB000F99E8 /* Channel.json in Resources */,
+				2EF2B1EE26B75B0700116310 /* ExtensionTransaction.json in Resources */,
 				2E91ADA0266203E50058BF70 /* WebhookSubscription.json in Resources */,
 				2E69D35026785CA9000F99E8 /* SearchCategories.json in Resources */,
+				2EF2B1D826B749CC00116310 /* ExtensionAnalytics.json in Resources */,
 				2E69D36826786AAF000F99E8 /* BannedEvents.json in Resources */,
+				2EF2B1FC26B7647900116310 /* ChannelEditors.json in Resources */,
 				2E69D2F826717B90000F99E8 /* UserBlocklist.json in Resources */,
 				2E69D362267868E8000F99E8 /* BannedUser.json in Resources */,
 				2E91ADAC266496450058BF70 /* UserActiveExtensions.json in Resources */,
 				2E69D3222671A1FE000F99E8 /* UserSubscription.json in Resources */,
 				2E69D30026718527000F99E8 /* UserFollows.json in Resources */,
+				2EF2B20226B7666D00116310 /* CustomReward.json in Resources */,
+				2EF2B1E226B7525600116310 /* BitsLeaderboard.json in Resources */,
 				2E69D3062671886B000F99E8 /* UpdateUser.json in Resources */,
 				2E69D3302671A8D7000F99E8 /* StreamMarkers.json in Resources */,
 				2E69D34A26785839000F99E8 /* SearchChannel.json in Resources */,
 				2E91AD9A2661FAA90058BF70 /* Video.json in Resources */,
 				2E69D34626785676000F99E8 /* StreamKey.json in Resources */,
+				2EF2B1DE26B74F4B00116310 /* GameAnalytics.json in Resources */,
+				2EF2B20826B7707C00116310 /* RewardRedemption.json in Resources */,
 				2E69D35C267866A7000F99E8 /* Moderators.json in Resources */,
 				2E69D3382671ABBA000F99E8 /* CreateStreamMarker.json in Resources */,
 				2E69D30E267193A5000F99E8 /* Teams.json in Resources */,
 				2E69D3562678626A000F99E8 /* ModeratorEvents.json in Resources */,
+				2EF2B1D226B7467700116310 /* Commercial.json in Resources */,
 				2E91ADB626672A1B0058BF70 /* UserExtensions.json in Resources */,
+				2EF2B1E826B7557F00116310 /* Cheermotes.json in Resources */,
+				2EF2B1F426B7614B00116310 /* ChannelInfo.json in Resources */,
 				2E69D32A2671A555000F99E8 /* BroadcasterSubscriptions.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -660,9 +760,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EF2B1D626B7485D00116310 /* ExtensionAnalyticsRequestTests.swift in Sources */,
 				2E69D30826718893000F99E8 /* UserResponseTests.swift in Sources */,
 				2E69D3402678496F000F99E8 /* StreamRequestTests.swift in Sources */,
 				2E91AD90265E09F10058BF70 /* XCAssertUtils.swift in Sources */,
+				2EF2B20026B765EF00116310 /* ChannelEditorRequestTests.swift in Sources */,
 				2E69D344267855FF000F99E8 /* GetStreamKeyResponseTests.swift in Sources */,
 				2E69D3582678629A000F99E8 /* GetModeratorEventsTests.swift in Sources */,
 				2E91ADB826672F130058BF70 /* UnblockUserRequestTests.swift in Sources */,
@@ -673,12 +775,18 @@
 				2E69D31826719B2B000F99E8 /* ReplaceStreamTagsRequestTests.swift in Sources */,
 				2E69D31C26719DB4000F99E8 /* StreamTagResponseTests.swift in Sources */,
 				2E69D3282671A3EC000F99E8 /* BroadcasterSubscriptionRequestTests.swift in Sources */,
+				2EF2B1F226B75FA700116310 /* ExtensionTransactionRequestTests.swift in Sources */,
 				2E69D3342671AAD0000F99E8 /* CreateStreamMarkerRequestTests.swift in Sources */,
 				2E69D2FC26717CD6000F99E8 /* ModifyUserFollowsRequestTests.swift in Sources */,
+				2EF2B1E626B7550C00116310 /* BitsLeaderboardRequestTests.swift in Sources */,
 				2E69D3322671A8F4000F99E8 /* StreamMarkerResponseTests.swift in Sources */,
 				2E91AD9E266203490058BF70 /* WebhookSubscriptionsResponseTests.swift in Sources */,
+				2EF2B1FE26B764BD00116310 /* ChannelEditorsResponseTests.swift in Sources */,
+				2EF2B1EA26B755AB00116310 /* CheermoteResponseTests.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* VideoRequestTests.swift in Sources */,
+				2EF2B1D426B7474500116310 /* CommercialRequestTests.swift in Sources */,
 				2E91ADBE2667337C0058BF70 /* BlockUserRequestTests.swift in Sources */,
+				2EF2B1FA26B7637900116310 /* ModifyChannelInformationRequestTests.swift in Sources */,
 				2E91ADAA266495490058BF70 /* UpdateUserExtensionRequestTests.swift in Sources */,
 				2E69D35E267866CA000F99E8 /* GetModeratorsResponseTests.swift in Sources */,
 				2E69D3202671A178000F99E8 /* CheckUserSubscriptionRequestTests.swift in Sources */,
@@ -687,9 +795,14 @@
 				2E69D3542678606C000F99E8 /* GetModeratorEventsRequestTests.swift in Sources */,
 				2E91AD9C2661FF880058BF70 /* WebhookSubscriptionsRequestTests.swift in Sources */,
 				2E69D35A2678649B000F99E8 /* GetModeratorsTests.swift in Sources */,
+				2EF2B1E026B750E500116310 /* GameAnalyticsRequestTests.swift in Sources */,
+				2EF2B1F026B75B2C00116310 /* ExtensionTransactionResponseTests.swift in Sources */,
+				2EF2B1E426B7527800116310 /* BitsLeaderboardResponseTests.swift in Sources */,
 				2E69D3142671967F000F99E8 /* ChannelResponseTests.swift in Sources */,
+				2EF2B20626B76B2000116310 /* CustomRewardsRequestTests.swift in Sources */,
 				2E69D30226718554000F99E8 /* UserFollowsResponseTests.swift in Sources */,
 				2E91ADAE266496720058BF70 /* UserActiveExtensionResponseTests.swift in Sources */,
+				2EF2B1F826B762AE00116310 /* ChannelInfoRequestTests.swift in Sources */,
 				2E91ADB2266728B90058BF70 /* UserExtensionRequestTests.swift in Sources */,
 				2E69D2FA26717BB2000F99E8 /* GetUserBlocklistResponseTests.swift in Sources */,
 				2E69D32E2671A72A000F99E8 /* GetStreamMarkersRequestTests.swift in Sources */,
@@ -699,7 +812,10 @@
 				2E69D360267867D9000F99E8 /* GetBannedUsersRequestTests.swift in Sources */,
 				2E69D34826785744000F99E8 /* SearchChannelRequestTests.swift in Sources */,
 				2E69D34226785583000F99E8 /* GetStreamKeyRequestTests.swift in Sources */,
+				2EF2B20426B7668F00116310 /* CustomRewardResponseTests.swift in Sources */,
 				2E91ADB0266727780058BF70 /* UserActiveExtensionsRequestTests.swift in Sources */,
+				2EF2B1EC26B7598000116310 /* CheermoteRequestTests.swift in Sources */,
+				2EF2B1DC26B74D8100116310 /* GameAnalyticsResponseTests.swift in Sources */,
 				2E69D36E26786E06000F99E8 /* CheckAutoModStatusRequestTests.swift in Sources */,
 				2E91ADB4266729AC0058BF70 /* UserExtensionsResponseTests.swift in Sources */,
 				2E69D36426786917000F99E8 /* GetBannedUserResponseTests.swift in Sources */,
@@ -710,12 +826,16 @@
 				2E69D34E26785BDD000F99E8 /* SearchCategoriesRequestTests.swift in Sources */,
 				2E69D32C2671A578000F99E8 /* BroadcasterSubscriptionsResponseTests.swift in Sources */,
 				2E91ADA4266211B40058BF70 /* DeleteVideoResponseTests.swift in Sources */,
+				2EF2B1F626B7617000116310 /* ChannelInfoResponseTests.swift in Sources */,
 				2E91AD972661FA0C0058BF70 /* Fixtures.swift in Sources */,
 				2E69D3042671874E000F99E8 /* UpdateUserRequestTests.swift in Sources */,
 				2E69D366267869F2000F99E8 /* GetBannedEventsRequestTests.swift in Sources */,
 				2E69D2FE26718166000F99E8 /* GetUserFollowRequestTests.swift in Sources */,
+				2EF2B20A26B770B000116310 /* GetCustomRewardRedemptionRequest.swift in Sources */,
 				2E69D30A26718BE1000F99E8 /* GetUserRequestTests.swift in Sources */,
+				2EF2B1D026B7457D00116310 /* StartCommercialResponseTests.swift in Sources */,
 				2E69D310267193D8000F99E8 /* TeamsResponseTests.swift in Sources */,
+				2EF2B1DA26B74A1300116310 /* ExtensionAnalyticsResponseTest.swift in Sources */,
 				2E91ADA22662092D0058BF70 /* DeleteVideoRequestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

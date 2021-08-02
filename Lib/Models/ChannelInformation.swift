@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Response object containing data from the channel information request: https://dev.twitch.tv/docs/api/reference/#get-channel-information
 public struct ChannelInformationResponse: Codable {
     public let channels: [ChannelInformation]
 
@@ -15,11 +16,14 @@ public struct ChannelInformationResponse: Codable {
     }
 }
 
+/// Object representing channel information from the server: https://dev.twitch.tv/docs/api/reference/#get-channel-information
 public struct ChannelInformation: Codable, Equatable {
     public let broadcasterId: String
     public let broadcasterName: String
     public let broadcasterLanguage: String
+    public let broadcasterLogin: String
     public let gameId: String
     public let gameName: String
     public let title: String
+    public let delay: Int
 }
