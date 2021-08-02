@@ -22,7 +22,7 @@ public struct GlobalCooldownSetting: Codable, Equatable {
 }
 
 public struct CustomAwardResponse: Codable {
-    public let customAwards: [Commercial]
+    public let customAwards: [CustomReward]
 
     private enum CodingKeys: String, CodingKey {
         case customAwards = "data"

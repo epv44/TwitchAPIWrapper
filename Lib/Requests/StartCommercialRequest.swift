@@ -12,7 +12,7 @@ public struct StartCommercialRequest: JSONConstructableRequest {
     public let method: HTTPMethod = .post
     public let data: Data
     
-    public init(broadcasterID: String, length: Int) throws {
+    public init(broadcasterID: String, length: String) throws {
         self.data = try JSONSerialization.data(withJSONObject: ["broadcaster_id": broadcasterID, "length": length], options: [])
         self.url = TwitchEndpoints.startCommercial.construct()
     }

@@ -13,17 +13,19 @@ public struct ExtensionTransactionsRequest: JSONConstructableRequest {
     
     public init(
         extensionID: String,
-        id: String? = nil,
+        ids: [String]? = nil,
         after: String? = nil,
         first: String? = nil
     ) {
-        self.url = TwitchEndpoints.analyticsExtension.construct()?.appending(
-            queryItems: [
-                "extension_id": extensionID,
-                "id": id,
-                "after": after,
-                "first": first
-            ].buildQueryItems())
+        var queryItems = [
+            "extension_id": extensionID,
+            "after": after,
+            "first": first
+        ].buildQueryItems()
+        if let userIds = ids {
+            queryItems.append(contentsOf: userIds.constructQueryItems(withKey: "id"))
+        }
+        self.url = TwitchEndpoints.extensionTransactions.construct()?.appending(queryItems: queryItems)
     }
 }
 

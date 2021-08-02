@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Response object of available cheermotes: https://dev.twitch.tv/docs/api/reference/#get-cheermotes
 public struct CheermoteResponse: Codable {
     public let responses: [CheermoteResponseData]
     
@@ -15,6 +16,7 @@ public struct CheermoteResponse: Codable {
     }
 }
 
+/// Represents a cheermote type, matches server: https://dev.twitch.tv/docs/api/reference/#get-cheermotes
 public enum CheermoteType: String, Codable {
     case globalFirstParty = "global_first_party"
     case globalThirdParty = "global_third_party"
@@ -23,6 +25,7 @@ public enum CheermoteType: String, Codable {
     case sponsored = "sponsored"
 }
 
+/// Individual cheermote object from: https://dev.twitch.tv/docs/api/reference/#get-cheermotes
 public struct Cheermote: Codable, Equatable {
     public let minBits: Int
     public let id: String
@@ -32,6 +35,7 @@ public struct Cheermote: Codable, Equatable {
     public let showInBitsCard: Bool
 }
 
+/// Individual cheermote data object, contains the cheermote and associated data: https://dev.twitch.tv/docs/api/reference/#get-cheermotes
 public struct CheermoteResponseData: Codable, Equatable {
     public let prefix: String
     public let tiers: [Cheermote]

@@ -1,15 +1,15 @@
 //
-//  SearchChannelRequestTests.swift
+//  CommercialRequestTests.swift
 //  TwitchAPIWrapper_Tests
 //
-//  Created by Eric Vennaro on 6/14/21.
+//  Created by Eric Vennaro on 8/1/21.
 //  Copyright © 2021 CocoaPods. All rights reserved.
 //
 
 import XCTest
 @testable import TwitchAPIWrapper
 
-class SearchChannelRequestTests: XCTestCase {
+class CommercialRequestTests: XCTestCase {
 
     override func setUpWithError() throws {
         TwitchAuthorizationManager.sharedInstance.clientID = "1"
@@ -17,13 +17,13 @@ class SearchChannelRequestTests: XCTestCase {
         super.setUp()
     }
 
-    func testBuildDeleteRequest_withRequiredParams_shouldSucceed() {
-        let request = SearchChannelsRequest(query: "abc 124")
+    func testBuildRequest_withRequiredParams_shouldSucceed() throws {
+        let request = try StartCommercialRequest(broadcasterID: "123", length: "1")
         XCTAssertEqual(
             request.url!.absoluteString,
-            expectedURL: "https://api.twitch.tv/helix/search/channels?query=abc%20124")
-        XCTAssertEqual(request.data, Data())
+            expectedURL: "https://api.twitch.tv/helix/channels/commercial")
+        let d = try JSONSerialization.jsonObject(with: request.data, options: .allowFragments) as! [String:String]
+        XCTAssertEqual(d, ["broadcaster_id": "123", "length": "1"])
         XCTAssertEqual(request.headers, ["Client-Id": "1", "Authorization": "Bearer XXX"])
     }
-    
 }

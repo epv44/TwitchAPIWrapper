@@ -18,7 +18,7 @@ public struct ExtensionAnalyticsRequest: JSONConstructableRequest {
         first: String? = nil,
         startedAt: String? = nil,
         type: String? = nil
-    ) throws {
+    ) {
         self.url = TwitchEndpoints.analyticsExtension.construct()?.appending(
             queryItems: [
                 "after": after,

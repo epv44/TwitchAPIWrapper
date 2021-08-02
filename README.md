@@ -24,15 +24,15 @@ pod 'TwitchAPIWrapper'
 
 | Twitch API Method | Swift Request Object | Swift Result Object | Supported? |
 | ------------- | ------------- | ------------- | :-------------: |
-| Start Commercial | CommercialRequest | | ✅ |
-| Get Extension Analytics | StartCommercialRequest | | ✅ |
-| Get Game Analytics | GameAnalyticsRequest | | ✅ |
-| Get Bits Leaderboard | LeaderboardRequest | | ✅ |
-| Get Cheermotes | CheermoteRequest | | ✅ |
-| Get Extension Transactions | ExtensionTransactionsRequest | ✅ |
-| Get Channel Information | ChannelInformationRequest | ✅ |
-| Modify Channel Information | ModifyChannelInformationRequest  | ✅ |
-| Get Channel Editors | ChannelEditorsRequest | ✅ |
+| Start Commercial | CommercialRequest | CommercialResponse | ✅ |
+| Get Extension Analytics | ExtensionAnalyticsRequest | ExtensionAnalyticsResponse | ✅ |
+| Get Game Analytics | GameAnalyticsRequest | GameAnalyticsResponse | ✅ |
+| Get Bits Leaderboard | LeaderboardRequest | LeaderboardResponse  | ✅ |
+| Get Cheermotes | CheermoteRequest | CheermoteResponse | ✅ |
+| Get Extension Transactions | ExtensionTransactionsRequest | ExtensionTransactionsResponse | ✅ |
+| Get Channel Information | ChannelInformationRequest | ChannelInformationResponse | ✅ |
+| Modify Channel Information | ModifyChannelInformationRequest | EmptyResponse | ✅ |
+| Get Channel Editors | ChannelEditorsRequest | ChannelEditorResponse | ✅ |
 | Create Custom Rewards | CustomRewardRequest  | CustomRewardResponse| ✅ |
 | Delete Custom Reward | CustomRewardRequest  | EmptyResponse | ✅ |
 | Get Custom Reward | CustomRewardRequest | CustomRewardResponse | ✅ |

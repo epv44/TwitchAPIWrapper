@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Response object for channel editor request: https://dev.twitch.tv/docs/api/reference/#get-channel-editors
 public struct ChannelEditorResponse: Codable {
     public let channelsEditors: [ChannelEditor]
 
@@ -15,6 +16,7 @@ public struct ChannelEditorResponse: Codable {
     }
 }
 
+/// Individual data pertaining to the  `ChannelEditorResponseObject` populated from https://dev.twitch.tv/docs/api/reference/#get-channel-editors
 public struct ChannelEditor: Codable, Equatable {
     public let userId: String
     public let userName: String
