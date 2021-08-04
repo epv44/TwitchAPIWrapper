@@ -12,7 +12,9 @@ public struct CodeStatusRequest: JSONConstructableRequest {
     public let url: URL?
     
     public init(codes: [String], userID: String) throws {
+        var queryItems = codes.constructQueryItems(withKey: "code")
+        queryItems.append(contentsOf: ["user_id": userID].buildQueryItems())
         self.url = TwitchEndpoints.codeStatus.construct()?.appending(
-            queryItems: ["codes": codes, "user_id": userID].buildQueryItems())
+            queryItems: queryItems)
     }
 }

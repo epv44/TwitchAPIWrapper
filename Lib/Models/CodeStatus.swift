@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Code status response: https://dev.twitch.tv/docs/api/reference/#get-code-status
 public struct CodeStatusResponse: Codable {
     public let codeStatuses: [CodeStatus]
 
@@ -15,7 +16,8 @@ public struct CodeStatusResponse: Codable {
     }
 }
 
-public enum CodeSuccessStatus: String {
+/// Code status options mirroring: https://dev.twitch.tv/docs/api/reference/#get-code-status
+public enum CodeSuccessStatus: String, Codable {
     case successfullyRedeemed = "SUCCESSFULLY_REDEEMED"
     case alreadyClaimed = "ALREADY_CLAIMED"
     case expired = "EXPIRED"
@@ -27,7 +29,8 @@ public enum CodeSuccessStatus: String {
     case internalError = "INTERNAL_ERROR"
 }
 
+/// Code status object returned from the server as part of the `CodeStatusResponse` https://dev.twitch.tv/docs/api/reference/#get-code-status
 public struct CodeStatus: Codable, Equatable {
     public let code: String
-    public let status: String
+    public let status: CodeSuccessStatus
 }

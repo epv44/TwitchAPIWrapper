@@ -38,6 +38,7 @@ public struct HypeTrainEventData: Codable, Equatable {
     public let goal: Int
     public let total: Int
     public let lastContribution: HypeTrainEventContribution
+    public let topContributions: [HypeTrainEventContribution]
 }
 
 
@@ -47,8 +48,4 @@ public struct HypeTrainEvent: Codable, Equatable {
     public let eventTimestamp: Date
     public let version: String
     public let eventData: HypeTrainEventData
-    public let topContributions: [HypeTrainEventContribution]
-    public let level: Int
-    public let startedAt: Date
-    public let total: Int
 }

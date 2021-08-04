@@ -1,5 +1,5 @@
 //
-//  GetCustomRewardRedemptionRequest.swift
+//  GetCustomRewardRedemptionResponseTests.swift
 //  TwitchAPIWrapper_Tests
 //
 //  Created by Eric Vennaro on 8/1/21.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import TwitchAPIWrapper
 
-class GetCustomRewardRedemptionRequest: XCTestCase {
+class GetCustomRewardRedemptionResponseTests: XCTestCase {
 
     func testBuildModel_shouldSucceed() throws {
         let decoder = JSONDecoder.twitchAPIStandard()

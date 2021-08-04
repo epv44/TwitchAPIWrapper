@@ -43,12 +43,13 @@ pod 'TwitchAPIWrapper'
 | Get Clips | ClipRequest | ClipResponse | ✅ |
 | Get Code Status | CodeStatusRequest | CodeStatusResponse | ✅ |
 | Get Drops Entitlements | DropEntitlementsRequest | EntitlementResponse | ✅ |
+| Update Drops Entitlements | UpdateDropsEntitlementsRequest | UpdateEntitlementResponse| ✅ |
 | Redeem Code | RedeemCodeRequest | CodeStatusResponse | ✅ |
 | Create EventSub Subscription | EventSubscriptionRequest |  EventSubscriptionResponse | ✅ |
 | Delete EventSub Subscription | DeleteEventSubSubscriptionRequest | EmptyResponse | ✅ |
 | Get EventSub Subscription | GetEventSubSubscriptionRequest | EventSubscriptionResponse | ✅ |
-| Get Top Games | TopGameRequest | ✅ |
-| Get Games | GameRequest | ✅ |
+| Get Top Games | TopGameRequest | GetGamesResponse | ✅ |
+| Get Games | GameRequest | GetGamesResponse | ✅ |
 | Get Hype Train Events | GetHypeTrainEventRequest | HypeTrainEventResponse  | ✅ |
 | Check AutoMod Status | CheckAutoModStatusRequest | CheckAutoModeStatusResponse  | ✅ |
 | Manage Held AutoMod Messages | ManageHeldAutoModStatusRequest | EmptyResponse | ✅ |
@@ -84,13 +85,24 @@ pod 'TwitchAPIWrapper'
 | Get Videos | GetVideoRequest | GetVideoResponse | ✅ |
 | Delete Videos | DeleteVideoRequest | DeleteVideoResponse | ✅ |
 | Get Webhook Subscriptions | WebhookSubscriptionsRequest | WebhookSubscriptionsResponse | ✅ |
-| End Prediction | EndPredictionRequest | EndPredictionResponse | Not Supported |
-| Create Prediction | CreatePredictionRequest | CreatePredictionResponse | Not Supported |
-| Get Predictions | GetPredictionRequest | GetPredictionResponse | Not Supported |
-| End Poll | EndPollRequest | EndPollResponse | NotSupported |
-| Create Poll | CreatePollRequest | CreatePollResponse | NotSupported |
-| Get Polls | GetPollRequest | GetPollResponse | NotSupported |
-
+| End Prediction | EndPredictionRequest | EndPredictionResponse | ❌ |
+| Create Prediction | CreatePredictionRequest | CreatePredictionResponse | ❌ |
+| Get Predictions | GetPredictionRequest | GetPredictionResponse | ❌ |
+| End Poll | EndPollRequest | EndPollResponse | ❌ |
+| Create Poll | CreatePollRequest | CreatePollResponse | ❌ |
+| Get Polls | GetPollRequest | GetPollResponse | ❌ |
+| Get Extension Configuration | N/A | N/A | ❌ |
+| Set Extension Configuration Segment | N/A | N/A | ❌ |
+| Set Extension Required Configuration | N/A | N/A | ❌ |
+| Send Extension PubSub Message | N/A | N/A | ❌ |
+| Get Live Channels | N/A | N/A | ❌ |
+| Get Extensions Secrets | N/A | N/A | ❌ |
+| Create Extensions Secrets | N/A | N/A | ❌ |
+| Send Extension Chat Message | N/A | N/A | ❌ |
+| Get Extensions | N/A | N/A | ❌ |
+| Get Released Extensions | N/A | N/A | ❌ |
+| Get Extension Bits Products | N/A | N/A | ❌ |
+| Update Extension Bits Product | N/A | N/A | ❌ |
 
 ## Author
 
