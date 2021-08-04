@@ -146,7 +146,7 @@
 		2EF2B23C26BA047300116310 /* GetHypeTrainEventsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B23B26BA047300116310 /* GetHypeTrainEventsRequestTests.swift */; };
 		2EF2B23E26BA04FF00116310 /* AutoModStatus.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B23D26BA04FE00116310 /* AutoModStatus.json */; };
 		2EF2B24026BA069C00116310 /* AutoModStatusResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B23F26BA069C00116310 /* AutoModStatusResponseTests.swift */; };
-		2EF2B24326BB1D6100116310 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FD1D62627E12B001BAC99 /* Environment.plist */; };
+		2EF2B24426BB480D00116310 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FD1D62627E12B001BAC99 /* Environment.plist */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -253,7 +253,7 @@
 		2E91ADBD2667337C0058BF70 /* BlockUserRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockUserRequestTests.swift; sourceTree = "<group>"; };
 		2E9FD0A5261FF85E001BAC99 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		2E9FD0A9261FF86E001BAC99 /* ClipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipViewController.swift; sourceTree = "<group>"; };
-		2E9FD1D62627E12B001BAC99 /* Environment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Environment.plist; sourceTree = "<group>"; };
+		2E9FD1D62627E12B001BAC99 /* Environment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Environment.plist; path = ../TwitchAPIWrapper_Example/Environment.plist; sourceTree = "<group>"; };
 		2E9FD1D72627E12B001BAC99 /* Example.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
 		2EF2B1CF26B7457D00116310 /* StartCommercialResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCommercialResponseTests.swift; sourceTree = "<group>"; };
 		2EF2B1D126B7467700116310 /* Commercial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Commercial.json; sourceTree = "<group>"; };
@@ -620,6 +620,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TwitchAPIWrapper_Example" */;
 			buildPhases = (
+				2EF2B24626BB4E5200116310 /* ShellScript */,
 				9C7032338169FD1341B0A753 /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
@@ -700,7 +701,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2EF2B24326BB1D6100116310 /* Environment.plist in Resources */,
+				2EF2B24426BB480D00116310 /* Environment.plist in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -760,6 +761,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2EF2B24626BB4E5200116310 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nCONFIG_FILE_BASE_NAME=\"Environment\"\nCONFIG_FILE_NAME=${CONFIG_FILE_BASE_NAME}.plist\n\nCONFIG_FILE_PATH=$SRCROOT/$PRODUCT_NAME/$CONFIG_FILE_NAME\nif [ -f \"$CONFIG_FILE_PATH\" ]; then\n  echo \"$CONFIG_FILE_PATH exists.\"\nelse\n  echo \"$CONFIG_FILE_PATH does not exist, creating sample\"\n  touch \"${SAMPLE_CONFIG_FILE_PATH}\"\nfi\n";
+		};
 		739B4F62B045CD728D382EB4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
