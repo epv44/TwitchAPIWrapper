@@ -91,7 +91,6 @@
 		2E91ADBE2667337C0058BF70 /* BlockUserRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91ADBD2667337C0058BF70 /* BlockUserRequestTests.swift */; };
 		2E9FD0A6261FF85E001BAC99 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD0A5261FF85E001BAC99 /* UserViewController.swift */; };
 		2E9FD0AA261FF86E001BAC99 /* ClipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD0A9261FF86E001BAC99 /* ClipViewController.swift */; };
-		2E9FD1D82627E12B001BAC99 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FD1D62627E12B001BAC99 /* Environment.plist */; };
 		2EF2B1D026B7457D00116310 /* StartCommercialResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1CF26B7457D00116310 /* StartCommercialResponseTests.swift */; };
 		2EF2B1D226B7467700116310 /* Commercial.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B1D126B7467700116310 /* Commercial.json */; };
 		2EF2B1D426B7474500116310 /* CommercialRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1D326B7474500116310 /* CommercialRequestTests.swift */; };
@@ -147,6 +146,7 @@
 		2EF2B23C26BA047300116310 /* GetHypeTrainEventsRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B23B26BA047300116310 /* GetHypeTrainEventsRequestTests.swift */; };
 		2EF2B23E26BA04FF00116310 /* AutoModStatus.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B23D26BA04FE00116310 /* AutoModStatus.json */; };
 		2EF2B24026BA069C00116310 /* AutoModStatusResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B23F26BA069C00116310 /* AutoModStatusResponseTests.swift */; };
+		2EF2B24326BB1D6100116310 /* Environment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E9FD1D62627E12B001BAC99 /* Environment.plist */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -700,7 +700,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E9FD1D82627E12B001BAC99 /* Environment.plist in Resources */,
+				2EF2B24326BB1D6100116310 /* Environment.plist in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
