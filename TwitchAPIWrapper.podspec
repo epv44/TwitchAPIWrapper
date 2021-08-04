@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TwitchAPIWrapper'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = 'An API wrapper for the Twitch API including Authentication.'
   s.description      = <<-DESC
   The Twitch API Wrapper is an HTTP Client for the Twitch API that includes Object mappings to the different Twitch endpoints that can be easily displayed utilizing the provided DataSources. The library also contains an OAuth Client allowing access to Twitch's secure endpoints as well as OAuth for your application.
