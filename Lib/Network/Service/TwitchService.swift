@@ -15,6 +15,7 @@ import Foundation
 final public class TwitchService {
     private let networkManager: TwitchNetworkManagerService
     
+    /// Initialize a new `TwitchService`
     public init() {
         self.networkManager = TwitchNetworkManager()
     }
