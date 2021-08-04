@@ -3,10 +3,10 @@ name: TwitchAPIWrapper Codecov
 on:
   push:
     branches:
-      - [master, refactor]
+      [master, refactor]
   pull_request:
     branches:
-      - [master, refactor]
+      [master, refactor]
 
 jobs:
   build:
