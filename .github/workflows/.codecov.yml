@@ -1,0 +1,20 @@
+name: TwitchAPIWrapper Codecov
+
+on:
+  push:
+    branches:
+      - [master, refactor]
+  pull_request:
+    branches:
+      - [master, refactor]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+      - name: Test
+        uses: actions/checkout@v1
+      - name: Build and Test
+        run:  xcodebuild test -project Example/TwitchAPIWrapper.xcodeproj -scheme TwitchAPIWrapper-Example -destination 'platform=iOS Simulator,name=iPhone 11,OS=14.3' build test
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1.2.1
