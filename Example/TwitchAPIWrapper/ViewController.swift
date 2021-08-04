@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         if let path = Bundle.main.path(forResource: "Environment", ofType: "plist") {
             let configuration = NSDictionary(contentsOfFile: path) as! [String : AnyObject]
             TwitchAuthorizationManager.sharedInstance.clientID = configuration["clientID"] as? String

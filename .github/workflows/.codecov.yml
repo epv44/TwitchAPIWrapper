@@ -12,8 +12,6 @@ jobs:
   build:
     runs-on: macOS-latest
     steps:
-      - name: Create Env File
-        run: touch Example/TwitchAPIWrapper/Environment.plist
       - name: Test
         uses: actions/checkout@v1
       - name: Build and Test
