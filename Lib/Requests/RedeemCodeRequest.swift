@@ -7,15 +7,14 @@
 
 import Foundation
 
+///Post request to redeem a code:  https://dev.twitch.tv/docs/api/reference/#redeem-code
 public struct RedeemCodeRequest: JSONConstructableRequest {
     public let url: URL?
     public let method: HTTPMethod = .post
     
     public init(userID: String, codes: [String]) {
         var queryParams = [URLQueryItem(name: "user_id", value: userID)]
-        for code in codes {
-            queryParams.append(URLQueryItem(name: "code", value: code))
-        }
+        queryParams.append(contentsOf: codes.constructQueryItems(withKey: "code"))
         self.url = TwitchEndpoints.redeemCode.construct()?.appending(queryItems: queryParams)
     }
 }

@@ -7,9 +7,9 @@
 
 import Foundation
 
+///General event subscription response for get, create, and delete requests: https://dev.twitch.tv/docs/api/reference/#create-eventsub-subscription
 public struct EventSubscriptionResponse: Codable {
     public let events: [EventSubscription]
-    public let limit: Int
     public let total: Int
     public let totalCost: Int
     public let maxTotalCost: Int
@@ -17,7 +17,6 @@ public struct EventSubscriptionResponse: Codable {
     
     private enum CodingKeys: String, CodingKey {
         case events = "data"
-        case limit
         case total
         case totalCost
         case maxTotalCost
@@ -25,6 +24,7 @@ public struct EventSubscriptionResponse: Codable {
     }
 }
 
+/// Event data returned as part of the `EventSubscription` request: https://dev.twitch.tv/docs/api/reference/#create-eventsub-subscription
 public struct EventSubscription: Codable, Equatable {
     public let id: String
     public let status: String

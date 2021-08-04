@@ -23,16 +23,19 @@ public struct CustomRewardRedemptionRequest: JSONConstructableRequest {
         after: String? = nil,
         first: String? = nil
     ) throws {
+        var queryItems = [
+            "broadcaster_id": broadcasterID,
+            "reward_id": rewardID,
+            "id": id,
+            "sort": sort,
+            "after": after,
+            "first": first,
+        ]
+        if (httpMethod == .get) {
+            queryItems["status"] = status
+        }
         self.url = TwitchEndpoints.customRewardRedemption.construct()?.appending(
-            queryItems: [
-                "broadcaster_id": broadcasterID,
-                "reward_id": rewardID,
-                "id": id,
-                "status": status,
-                "sort": sort,
-                "after": after,
-                "first": first,
-            ].buildQueryItems())
+            queryItems: queryItems.buildQueryItems())
         self.method = httpMethod
         if (httpMethod == .post || httpMethod == .patch) {
             let body: [String:String] = [

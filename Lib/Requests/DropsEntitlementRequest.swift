@@ -16,7 +16,8 @@ public struct DropsEntitlementRequest: JSONConstructableRequest {
         userID: String? = nil,
         gameID: String? = nil,
         after: String? = nil,
-        first: String? = nil
+        first: String? = nil,
+        fulfillmentStatus: String? = nil
     ) {
     self.url = TwitchEndpoints.dropsEntitlements.construct()?.appending(
             queryItems: [
@@ -24,7 +25,8 @@ public struct DropsEntitlementRequest: JSONConstructableRequest {
                 "user_id": userID,
                 "game_id": gameID,
                 "after": after,
-                "first": first
+                "first": first,
+                "fulfillment_status": fulfillmentStatus
             ].buildQueryItems())
     }
 }

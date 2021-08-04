@@ -14,7 +14,7 @@ class ClipViewController: UIViewController {
     private let twitchService = TwitchService()
     override func viewDidLoad() {
         super.viewDidLoad()
-        let request = try! ClipRequest(httpMethod: .get, id: "AwkwardHelplessSalamanderSwiftRage", gameID: nil, broadcasterID: nil)
+        let request = try! ClipRequest(httpMethod: .get, ids: ["AwkwardHelplessSalamanderSwiftRage"], gameID: nil, broadcasterID: nil)
         twitchService.gen(forRequest: request) { (result: Result<ClipResponse>) in
             switch result {
             case .success(let r):

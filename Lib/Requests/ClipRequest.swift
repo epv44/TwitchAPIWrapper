@@ -15,12 +15,12 @@ public struct ClipRequest: JSONConstructableRequest {
     
     public init(
         httpMethod: HTTPMethod,
-        id: String?,
+        ids: [String]?,
         gameID: String?,
         broadcasterID: String?,
         hasDelay: String? = nil
     ) throws {
-        if id == nil && gameID == nil && broadcasterID == nil {
+        if ids == nil && gameID == nil && broadcasterID == nil {
             throw RequestValidationError.invalidInput(
                 "id, gameID, and broadcasterID cannot all be null, at least one is required")
         }
@@ -28,13 +28,16 @@ public struct ClipRequest: JSONConstructableRequest {
             throw RequestValidationError.invalidInput("For a post request you must have a broadcasterID")
         }
         self.method = httpMethod
+        var queryItems =  [
+            "game_id": gameID,
+            "broadcaster_id": broadcasterID,
+            "has_delay": hasDelay
+        ].buildQueryItems()
+        if let userIDs = ids {
+            queryItems.append(contentsOf: userIDs.constructQueryItems(withKey: "id"))
+        }
         self.url = TwitchEndpoints.clips.construct()?.appending(
-            queryItems: [
-                "id": id,
-                "game_id": gameID,
-                "broadcaster_id": broadcasterID,
-                "has_delay": hasDelay
-            ].buildQueryItems())
+            queryItems: queryItems)
     }
 }
 

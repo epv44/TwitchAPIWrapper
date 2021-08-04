@@ -12,8 +12,8 @@ public struct GetEventSubSubscriptionRequest: JSONConstructableRequest {
     public let url: URL?
     
     public init(
-        status: String?,
-        type: String?
+        status: String? = nil,
+        type: String? = nil
     ) {
         self.url = TwitchEndpoints.eventSubscription.construct()?.appending(
             queryItems: [
