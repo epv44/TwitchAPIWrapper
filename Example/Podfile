@@ -1,13 +1,9 @@
 use_frameworks!
-
-platform :ios, '12.1'
-
 target 'TwitchAPIWrapper_Example' do
+  platform :ios, '14.0'
   pod 'TwitchAPIWrapper', :path => '../'
 
   target 'TwitchAPIWrapper_Tests' do
     inherit! :search_paths
-
-    
   end
 end

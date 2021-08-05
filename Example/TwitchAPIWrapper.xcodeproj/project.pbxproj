@@ -42,7 +42,6 @@
 		2E69D3342671AAD0000F99E8 /* CreateStreamMarkerRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D3332671AAD0000F99E8 /* CreateStreamMarkerRequestTests.swift */; };
 		2E69D3362671AB85000F99E8 /* CreateStreamMarkerResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D3352671AB85000F99E8 /* CreateStreamMarkerResponseTests.swift */; };
 		2E69D3382671ABBA000F99E8 /* CreateStreamMarker.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E69D3372671ABBA000F99E8 /* CreateStreamMarker.json */; };
-		2E69D33A2671ACE7000F99E8 /* FollowedStreamRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D3392671ACE7000F99E8 /* FollowedStreamRequestTests.swift */; };
 		2E69D33C2671AD91000F99E8 /* StreamsResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D33B2671AD91000F99E8 /* StreamsResponseTests.swift */; };
 		2E69D33E2671ADF2000F99E8 /* Stream.json in Resources */ = {isa = PBXBuildFile; fileRef = 2E69D33D2671ADF1000F99E8 /* Stream.json */; };
 		2E69D3402678496F000F99E8 /* StreamRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E69D33F2678496F000F99E8 /* StreamRequestTests.swift */; };
@@ -91,6 +90,7 @@
 		2E91ADBE2667337C0058BF70 /* BlockUserRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E91ADBD2667337C0058BF70 /* BlockUserRequestTests.swift */; };
 		2E9FD0A6261FF85E001BAC99 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD0A5261FF85E001BAC99 /* UserViewController.swift */; };
 		2E9FD0AA261FF86E001BAC99 /* ClipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E9FD0A9261FF86E001BAC99 /* ClipViewController.swift */; };
+		2EAB573326BBA4950064080F /* FollowedStreamRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EAB573226BBA4950064080F /* FollowedStreamRequestTests.swift */; };
 		2EF2B1D026B7457D00116310 /* StartCommercialResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1CF26B7457D00116310 /* StartCommercialResponseTests.swift */; };
 		2EF2B1D226B7467700116310 /* Commercial.json in Resources */ = {isa = PBXBuildFile; fileRef = 2EF2B1D126B7467700116310 /* Commercial.json */; };
 		2EF2B1D426B7474500116310 /* CommercialRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF2B1D326B7474500116310 /* CommercialRequestTests.swift */; };
@@ -154,7 +154,7 @@
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* VideoRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* VideoRequestTests.swift */; };
 		B9CE9AB7B03B07AB086663E9 /* Pods_TwitchAPIWrapper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E63CB6DBAAE4D8497CD1AC /* Pods_TwitchAPIWrapper_Example.framework */; };
-		E81E1F5F3B891A4F685D00BA /* Pods_TwitchAPIWrapper_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69C9544016D674436EF5FE05 /* Pods_TwitchAPIWrapper_Tests.framework */; };
+		C9E882C7BA59D85FC92F74C0 /* Pods_TwitchAPIWrapper_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8999D3A38C4803D87958FD5 /* Pods_TwitchAPIWrapper_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -204,7 +204,6 @@
 		2E69D3332671AAD0000F99E8 /* CreateStreamMarkerRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStreamMarkerRequestTests.swift; sourceTree = "<group>"; };
 		2E69D3352671AB85000F99E8 /* CreateStreamMarkerResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStreamMarkerResponseTests.swift; sourceTree = "<group>"; };
 		2E69D3372671ABBA000F99E8 /* CreateStreamMarker.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CreateStreamMarker.json; sourceTree = "<group>"; };
-		2E69D3392671ACE7000F99E8 /* FollowedStreamRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FollowedStreamRequestTests.swift; path = "../../../Tests/Request Tests/FollowedStreamRequestTests.swift"; sourceTree = "<group>"; };
 		2E69D33B2671AD91000F99E8 /* StreamsResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamsResponseTests.swift; sourceTree = "<group>"; };
 		2E69D33D2671ADF1000F99E8 /* Stream.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Stream.json; sourceTree = "<group>"; };
 		2E69D33F2678496F000F99E8 /* StreamRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamRequestTests.swift; sourceTree = "<group>"; };
@@ -255,6 +254,7 @@
 		2E9FD0A9261FF86E001BAC99 /* ClipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClipViewController.swift; sourceTree = "<group>"; };
 		2E9FD1D62627E12B001BAC99 /* Environment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Environment.plist; path = ../TwitchAPIWrapper_Example/Environment.plist; sourceTree = "<group>"; };
 		2E9FD1D72627E12B001BAC99 /* Example.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = Example.entitlements; sourceTree = "<group>"; };
+		2EAB573226BBA4950064080F /* FollowedStreamRequestTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowedStreamRequestTests.swift; sourceTree = "<group>"; };
 		2EF2B1CF26B7457D00116310 /* StartCommercialResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCommercialResponseTests.swift; sourceTree = "<group>"; };
 		2EF2B1D126B7467700116310 /* Commercial.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Commercial.json; sourceTree = "<group>"; };
 		2EF2B1D326B7474500116310 /* CommercialRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommercialRequestTests.swift; sourceTree = "<group>"; };
@@ -310,7 +310,9 @@
 		2EF2B23B26BA047300116310 /* GetHypeTrainEventsRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHypeTrainEventsRequestTests.swift; sourceTree = "<group>"; };
 		2EF2B23D26BA04FE00116310 /* AutoModStatus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AutoModStatus.json; sourceTree = "<group>"; };
 		2EF2B23F26BA069C00116310 /* AutoModStatusResponseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoModStatusResponseTests.swift; sourceTree = "<group>"; };
+		40DAF285DED539CF6C5468E8 /* Pods-TwitchAPIWrapper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchAPIWrapper_Tests.release.xcconfig"; path = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		47E87CE22BF5EE831B50ABEC /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4CE58BF05C2EC11278EBD4FA /* Pods-TwitchAPIWrapper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchAPIWrapper_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* TwitchAPIWrapper_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitchAPIWrapper_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -321,13 +323,11 @@
 		607FACE51AFB9204008FA782 /* TwitchAPIWrapper_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwitchAPIWrapper_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* VideoRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRequestTests.swift; sourceTree = "<group>"; };
-		69C9544016D674436EF5FE05 /* Pods_TwitchAPIWrapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchAPIWrapper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F44EBA0CE77D26A7F6A9BE2 /* Pods-TwitchAPIWrapper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchAPIWrapper_Tests.release.xcconfig"; path = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		9391E8128D97EA230ACFCA3D /* TwitchAPIWrapper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = TwitchAPIWrapper.podspec; path = ../TwitchAPIWrapper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9520778B27EDACE7ACEC8FE8 /* Pods-TwitchAPIWrapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchAPIWrapper_Example.debug.xcconfig"; path = "Target Support Files/Pods-TwitchAPIWrapper_Example/Pods-TwitchAPIWrapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		AEA0B669A3D9F2BF4E7EF213 /* Pods-TwitchAPIWrapper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwitchAPIWrapper_Tests.debug.xcconfig"; path = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CED0CE4B7A1F13D3A3B90750 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E7E63CB6DBAAE4D8497CD1AC /* Pods_TwitchAPIWrapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchAPIWrapper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8999D3A38C4803D87958FD5 /* Pods_TwitchAPIWrapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchAPIWrapper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -343,7 +343,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E81E1F5F3B891A4F685D00BA /* Pods_TwitchAPIWrapper_Tests.framework in Frameworks */,
+				C9E882C7BA59D85FC92F74C0 /* Pods_TwitchAPIWrapper_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +374,7 @@
 				2EF2B22126B9C47200116310 /* EntitlementRequestTests.swift */,
 				2EF2B1D526B7485D00116310 /* ExtensionAnalyticsRequestTests.swift */,
 				2EF2B1F126B75FA700116310 /* ExtensionTransactionRequestTests.swift */,
-				2E69D3392671ACE7000F99E8 /* FollowedStreamRequestTests.swift */,
+				2EAB573226BBA4950064080F /* FollowedStreamRequestTests.swift */,
 				2EF2B1DF26B750E500116310 /* GameAnalyticsRequestTests.swift */,
 				2E69D365267869F2000F99E8 /* GetBannedEventsRequestTests.swift */,
 				2E69D35F267867D9000F99E8 /* GetBannedUsersRequestTests.swift */,
@@ -520,8 +520,8 @@
 			children = (
 				9520778B27EDACE7ACEC8FE8 /* Pods-TwitchAPIWrapper_Example.debug.xcconfig */,
 				2620FEBC22D18AF6A8B9A910 /* Pods-TwitchAPIWrapper_Example.release.xcconfig */,
-				AEA0B669A3D9F2BF4E7EF213 /* Pods-TwitchAPIWrapper_Tests.debug.xcconfig */,
-				6F44EBA0CE77D26A7F6A9BE2 /* Pods-TwitchAPIWrapper_Tests.release.xcconfig */,
+				4CE58BF05C2EC11278EBD4FA /* Pods-TwitchAPIWrapper_Tests.debug.xcconfig */,
+				40DAF285DED539CF6C5468E8 /* Pods-TwitchAPIWrapper_Tests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -608,7 +608,7 @@
 			isa = PBXGroup;
 			children = (
 				E7E63CB6DBAAE4D8497CD1AC /* Pods_TwitchAPIWrapper_Example.framework */,
-				69C9544016D674436EF5FE05 /* Pods_TwitchAPIWrapper_Tests.framework */,
+				F8999D3A38C4803D87958FD5 /* Pods_TwitchAPIWrapper_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -620,8 +620,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TwitchAPIWrapper_Example" */;
 			buildPhases = (
-				2EF2B24626BB4E5200116310 /* ShellScript */,
 				9C7032338169FD1341B0A753 /* [CP] Check Pods Manifest.lock */,
+				2EF2B24626BB4E5200116310 /* ShellScript */,
 				607FACCC1AFB9204008FA782 /* Sources */,
 				607FACCD1AFB9204008FA782 /* Frameworks */,
 				607FACCE1AFB9204008FA782 /* Resources */,
@@ -640,7 +640,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 607FACF21AFB9204008FA782 /* Build configuration list for PBXNativeTarget "TwitchAPIWrapper_Tests" */;
 			buildPhases = (
-				739B4F62B045CD728D382EB4 /* [CP] Check Pods Manifest.lock */,
+				9F85643F4DC7761367CEC188 /* [CP] Check Pods Manifest.lock */,
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
@@ -778,28 +778,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nCONFIG_FILE_BASE_NAME=\"Environment\"\nCONFIG_FILE_NAME=${CONFIG_FILE_BASE_NAME}.plist\nCONFIG_DIR_PATH=$SRCROOT/$PRODUCT_NAME/\nCONFIG_FILE_PATH=$CONFIG_DIR_PATH/$CONFIG_FILE_NAME\nif [ -f \"$CONFIG_FILE_PATH\" ]; then\n  echo \"$CONFIG_FILE_PATH exists.\"\nelse\n  echo \"$CONFIG_FILE_PATH does not exist, creating sample\"\n  if [ ! -d \"$CONFIG_DIR_PATH\" ]; then\n    mkdir \"$CONFIG_DIR_PATH\"\n  fi\n  cat > \"${CONFIG_FILE_PATH}\" <<EOF\n  <?xml version=\"1.0\" encoding=\"UTF-8\"?>\n  <!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">\n  <plist version=\"1.0\">\n  <dict></dict>\n  </plist>\nEOF\nfi\n";
 		};
-		739B4F62B045CD728D382EB4 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-TwitchAPIWrapper_Tests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9C7032338169FD1341B0A753 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -816,6 +794,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-TwitchAPIWrapper_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F85643F4DC7761367CEC188 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TwitchAPIWrapper_Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -899,7 +899,6 @@
 				2EF2B22C26B9DFE000116310 /* RedeemCodeRequestTests.swift in Sources */,
 				2E69D35E267866CA000F99E8 /* GetModeratorsResponseTests.swift in Sources */,
 				2E69D3202671A178000F99E8 /* CheckUserSubscriptionRequestTests.swift in Sources */,
-				2E69D33A2671ACE7000F99E8 /* FollowedStreamRequestTests.swift in Sources */,
 				2E69D36A26786ACB000F99E8 /* BannedEventsResponseTests.swift in Sources */,
 				2E69D3542678606C000F99E8 /* GetModeratorEventsRequestTests.swift in Sources */,
 				2E91AD9C2661FF880058BF70 /* WebhookSubscriptionsRequestTests.swift in Sources */,
@@ -918,6 +917,7 @@
 				2E69D32E2671A72A000F99E8 /* GetStreamMarkersRequestTests.swift in Sources */,
 				2E69D36C26786C8D000F99E8 /* ManageHeldAutoModMessagesRequestTests.swift in Sources */,
 				2E69D3362671AB85000F99E8 /* CreateStreamMarkerResponseTests.swift in Sources */,
+				2EAB573326BBA4950064080F /* FollowedStreamRequestTests.swift in Sources */,
 				2E69D33C2671AD91000F99E8 /* StreamsResponseTests.swift in Sources */,
 				2E69D360267867D9000F99E8 /* GetBannedUsersRequestTests.swift in Sources */,
 				2E69D34826785744000F99E8 /* SearchChannelRequestTests.swift in Sources */,
@@ -1102,6 +1102,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PQ553ZXC6M;
 				INFOPLIST_FILE = TwitchAPIWrapper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1118,6 +1119,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PQ553ZXC6M;
 				INFOPLIST_FILE = TwitchAPIWrapper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1129,7 +1131,7 @@
 		};
 		607FACF31AFB9204008FA782 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEA0B669A3D9F2BF4E7EF213 /* Pods-TwitchAPIWrapper_Tests.debug.xcconfig */;
+			baseConfigurationReference = 4CE58BF05C2EC11278EBD4FA /* Pods-TwitchAPIWrapper_Tests.debug.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
@@ -1151,7 +1153,7 @@
 		};
 		607FACF41AFB9204008FA782 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F44EBA0CE77D26A7F6A9BE2 /* Pods-TwitchAPIWrapper_Tests.release.xcconfig */;
+			baseConfigurationReference = 40DAF285DED539CF6C5468E8 /* Pods-TwitchAPIWrapper_Tests.release.xcconfig */;
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PLATFORM_DIR)/Developer/Library/Frameworks",

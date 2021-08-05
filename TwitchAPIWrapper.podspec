@@ -19,13 +19,13 @@ Pod::Spec.new do |s|
   s.author           = { 'epv44' => 'epv9@case.edu' }
   s.source           = { :git => 'https://github.com/epv44/TwitchAPIWrapper.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '13'
+  s.ios.deployment_target = '14.0'
   s.swift_version = '5.0'
   s.source_files = 'Lib/**/*'
   
-  s.test_spec 'Tests' do |test_spec|
-      test_spec.source_files = 'Tests/**/*'
-      # test_spec.dependency 'XCTest' # This dependency will only be linked with your tests.
-  end
+#  s.test_spec 'Tests' do |test_spec|
+#      test_spec.source_files = 'Tests/**/*'
+#      test_spec.dependency 'XCTest' # This dependency will only be linked with your tests.
+#  end
   s.dependency 'KeychainAccess', '~> 4.2'
 end
