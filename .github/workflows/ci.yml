@@ -15,12 +15,13 @@ on:
       - 'Example/**/*.*'
   pull_request:
     branches:
-      - main
+      [master]
     paths:
       - '.github/workflows/ci.yml'
       - 'Sources/**/*.*'
       - 'Tests/**/*.*'
       - 'Example/**/*.*'
+
 env:
   PROJECT: TwitchAPIWrapper.xcodeproj
   SCHEME: TwitchAPIWrapper
@@ -34,7 +35,7 @@ env:
 jobs:
   env-details:
     name: Environment details
-    runs-on: macOS-11
+    runs-on: macOS-latest
     steps:
       - name: xcode version
         run: xcodebuild -version -sdk
@@ -45,7 +46,7 @@ jobs:
           xcrun simctl list
   test-example:
     name: Example Project Test
-    runs-on: macOS-11
+    runs-on: macOS-latest
     steps:
       - name: git checkout
         uses: actions/checkout@v2

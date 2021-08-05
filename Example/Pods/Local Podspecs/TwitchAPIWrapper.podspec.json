@@ -19,7 +19,7 @@
     "ios": "14.0"
   },
   "swift_versions": "5.0",
-  "source_files": "Lib/**/*",
+  "source_files": "Sources/TwitchAPIWrapper/**/*",
   "dependencies": {
     "KeychainAccess": [
       "~> 4.2"
