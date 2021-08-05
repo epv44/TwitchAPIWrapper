@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,7 +35,6 @@
 		2BEB5368E7CCFFE828B9CBC0FB9ABF95 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36D4BFB8280CB74E929A74583438972 /* Video.swift */; };
 		2CFC5222C38A7DE9F55595E9D4C547A0 /* BlockUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FBD51FB1016ACA42B799A026BFCFA97 /* BlockUserRequest.swift */; };
 		2DB7F51C5A0A8E43B819F181CAC145AE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC6B4275EF0B16B4AAE722E77A31D0D6 /* Foundation.framework */; };
-		2E589C8A26BC70D90022E69A /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 2E589C8926BC70D90022E69A /* KeychainAccess */; };
 		2EF190E6FDC21EDE9DCFA1D3DAF56301 /* CustomReward.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3586D8BAD3C9F4D1D7E553A31992DC /* CustomReward.swift */; };
 		2F062F128ADF734E7C20FFD39DE7AC21 /* DeleteVideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38AE53D7E24C5E6D295788AE337D56CB /* DeleteVideoResponse.swift */; };
 		3102FB31D9EEB3E5269D8A0B61C0FDC8 /* GetModeratorEventsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22E03ED01EAFC24624A1A4D846F065CE /* GetModeratorEventsRequest.swift */; };
@@ -171,7 +170,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00CF533E0D28F1B1C400107DF32DEE98 /* Pods_TwitchAPIWrapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchAPIWrapper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00CF533E0D28F1B1C400107DF32DEE98 /* Pods_TwitchAPIWrapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TwitchAPIWrapper_Tests.framework; path = "Pods-TwitchAPIWrapper_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0101B49F90DDDA9EBEE4FF2D60F6D508 /* TWAuthWebviewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TWAuthWebviewController.swift; sourceTree = "<group>"; };
 		04A6C9E0E7CEB09AE6254D5F6F2E2897 /* Leaderboard.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Leaderboard.swift; sourceTree = "<group>"; };
 		05007AA3AC17585120AACF912235B75A /* ExtensionAnalytics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionAnalytics.swift; sourceTree = "<group>"; };
@@ -211,9 +210,9 @@
 		3966EAC202D362A9B8D87E44BE4DD50F /* DeleteVideoRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DeleteVideoRequest.swift; sourceTree = "<group>"; };
 		39EECD6A39F31FC286F6F5823918E97C /* URLExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = URLExtension.swift; sourceTree = "<group>"; };
 		3E3FB9464D660DF7EFF88689AAB80DD1 /* TwitchAPIWrapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TwitchAPIWrapper-dummy.m"; sourceTree = "<group>"; };
-		45092ABAFC99F0AC089A2134D0AF67CC /* TwitchAPIWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TwitchAPIWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		45092ABAFC99F0AC089A2134D0AF67CC /* TwitchAPIWrapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TwitchAPIWrapper.framework; path = TwitchAPIWrapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		465F681223E2F0308409BADB3141C5D7 /* Commercial.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Commercial.swift; sourceTree = "<group>"; };
-		4A0EBE010E80033A79F8FDC4581D4D86 /* Pods_TwitchAPIWrapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwitchAPIWrapper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A0EBE010E80033A79F8FDC4581D4D86 /* Pods_TwitchAPIWrapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TwitchAPIWrapper_Example.framework; path = "Pods-TwitchAPIWrapper_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A5983B33AF2B714A2E177A74D53AB04 /* StreamKey.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StreamKey.swift; sourceTree = "<group>"; };
 		4B120CEDA9378C29856E12D2707C2CDE /* JSONDecoderExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONDecoderExtension.swift; sourceTree = "<group>"; };
 		4F29C8B0ABCFE0DE88D3404605275003 /* ClipRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClipRequest.swift; sourceTree = "<group>"; };
@@ -222,7 +221,7 @@
 		54EB0B22453E33E78DBD06CDAE1A29ED /* ExtensionAnalyticsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionAnalyticsRequest.swift; sourceTree = "<group>"; };
 		57F4CCB7A872F138B87AFD39F28EB1C1 /* TwitchAPIWrapper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TwitchAPIWrapper.debug.xcconfig; sourceTree = "<group>"; };
 		58A0C791D7811F2CD7D464E2AFEE4BEB /* RestRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RestRequest.swift; sourceTree = "<group>"; };
-		59F413D907242BB1430E0EEBDEFD3B53 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		59F413D907242BB1430E0EEBDEFD3B53 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		5A856A1360D94A3C3467FD86F11C2554 /* UserExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserExtension.swift; sourceTree = "<group>"; };
 		5A8DD6314FBAFC79F2637C7248B56528 /* TwitchEndpoints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TwitchEndpoints.swift; path = Sources/TwitchAPIWrapper/TwitchEndpoints.swift; sourceTree = "<group>"; };
 		5C64CD9FC4791830F1E139706232FBBA /* Pods-TwitchAPIWrapper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TwitchAPIWrapper_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -241,7 +240,7 @@
 		788B810809B8F8088328CCCDB30CC89F /* UpdateEventSubscriptionRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UpdateEventSubscriptionRequest.swift; sourceTree = "<group>"; };
 		7A21D2B1A516015C42AC12C06CCEF909 /* DropsEntitlementRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DropsEntitlementRequest.swift; sourceTree = "<group>"; };
 		7B42AD46C6063D5FDA252039B6250CA8 /* BannedUsers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BannedUsers.swift; sourceTree = "<group>"; };
-		7CAE8B9EF912AA7C0964669022DCEC63 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7CAE8B9EF912AA7C0964669022DCEC63 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		7E1ADC86D2C08CED45167AC0CB9C9607 /* AllStreamTagRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AllStreamTagRequest.swift; sourceTree = "<group>"; };
 		7E2098BEDB0143E2F06FCBCAC92F986C /* ChannelInformationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChannelInformationRequest.swift; sourceTree = "<group>"; };
 		7FD4C15128832EA38772DFE0EF03AB4F /* FailableDecodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FailableDecodable.swift; path = Sources/TwitchAPIWrapper/FailableDecodable.swift; sourceTree = "<group>"; };
@@ -266,7 +265,7 @@
 		97BAD917FBC400773B4B50D68B9DF4CF /* GetBannedEventsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetBannedEventsRequest.swift; sourceTree = "<group>"; };
 		996924F355FE8C2872A5E3A3652EEB7A /* ExtensionTransactions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExtensionTransactions.swift; sourceTree = "<group>"; };
 		9B8AF60D6EADE219C39BEA21A1426D5E /* StreamMarker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StreamMarker.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9FA9B0016B3449A9CF52B3DA7FFF1BD0 /* GetStreamMarkersRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetStreamMarkersRequest.swift; sourceTree = "<group>"; };
 		A0FA4C245241658FBD0355004CB6A782 /* SearchChannel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SearchChannel.swift; sourceTree = "<group>"; };
 		A1AFE72AECFFA10F265D22055A2F35B7 /* KeychainAccess.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = KeychainAccess.modulemap; sourceTree = "<group>"; };
@@ -305,7 +304,7 @@
 		D33967E5F9062C86127B476BF01F3576 /* TwitchAPIWrapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TwitchAPIWrapper-prefix.pch"; sourceTree = "<group>"; };
 		D900EDF1BFD0200B583DFD18B7DAEDF2 /* KeychainAccess-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KeychainAccess-umbrella.h"; sourceTree = "<group>"; };
 		E1A4EB488D327329BE04FFD72D9D4B1A /* ModifyUserFollowRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ModifyUserFollowRequest.swift; sourceTree = "<group>"; };
-		E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8EE7F078656FABB8F6821D10FF994BB /* KeychainAccess.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = KeychainAccess.framework; path = KeychainAccess.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E95BA928D8D2F48CA2955232606086E1 /* CreateStreamMarker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CreateStreamMarker.swift; sourceTree = "<group>"; };
 		EA21C5A66B61A06C6443D7634E0D2948 /* GetBroadcastSubscriptionsRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GetBroadcastSubscriptionsRequest.swift; sourceTree = "<group>"; };
 		EADA451432F68336CBA0782592F4880F /* Pods-TwitchAPIWrapper_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TwitchAPIWrapper_Example-Info.plist"; sourceTree = "<group>"; };
@@ -323,7 +322,7 @@
 		FAB7EED3436FE1E3DB3A5423FBB8818B /* UserBlockListRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UserBlockListRequest.swift; sourceTree = "<group>"; };
 		FAE071745A2EA90A8AC7B41D6DA1B976 /* Credentials.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		FC7E7E735627BA36A2FA8BC4730E602F /* ChannelTeam.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChannelTeam.swift; sourceTree = "<group>"; };
-		FDC7CDB7A31A2EDE80EAE5DFFD0A61E3 /* TwitchAPIWrapper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TwitchAPIWrapper.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		FDC7CDB7A31A2EDE80EAE5DFFD0A61E3 /* TwitchAPIWrapper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TwitchAPIWrapper.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FE275BF231BB42BCF13BBEDAE6CC9E8D /* StreamTag.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = StreamTag.swift; sourceTree = "<group>"; };
 		FE6A5E5279CA34B8AC74D54A7B92EE4C /* GameRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = GameRequest.swift; sourceTree = "<group>"; };
 		FE8E3F0889E984797AF65ED717CCF752 /* Pods-TwitchAPIWrapper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TwitchAPIWrapper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -353,7 +352,6 @@
 			files = (
 				2DB7F51C5A0A8E43B819F181CAC145AE /* Foundation.framework in Frameworks */,
 				927772DB09FDCFDAF80B4FC38CA7E6F6 /* KeychainAccess.framework in Frameworks */,
-				2E589C8A26BC70D90022E69A /* KeychainAccess in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +465,7 @@
 				0101B49F90DDDA9EBEE4FF2D60F6D508 /* TWAuthWebviewController.swift */,
 				F08229244323E182CC182BA844924851 /* TwitchAuthorizationManager.swift */,
 			);
+			name = Authorization;
 			path = Authorization;
 			sourceTree = "<group>";
 		};
@@ -490,6 +489,7 @@
 			children = (
 				B7485EA27FCA22AE86760F7C3F5A044F /* TwitchService.swift */,
 			);
+			name = Service;
 			path = Service;
 			sourceTree = "<group>";
 		};
@@ -499,6 +499,7 @@
 				B3EDC7F5AB062228320A8F30E874DBF5 /* Keychain.swift */,
 				7139A0FCEFAB916F2769918041C0A2D4 /* Support Files */,
 			);
+			name = KeychainAccess;
 			path = KeychainAccess;
 			sourceTree = "<group>";
 		};
@@ -697,6 +698,7 @@
 				CE85B794E4AEE25F4AB93AE1BE359948 /* ConstructableRequest.swift */,
 				58A0C791D7811F2CD7D464E2AFEE4BEB /* RestRequest.swift */,
 			);
+			name = Protocols;
 			path = Protocols;
 			sourceTree = "<group>";
 		};
@@ -790,9 +792,6 @@
 				65869A29925C62398CB5639AEE2D9921 /* PBXTargetDependency */,
 			);
 			name = TwitchAPIWrapper;
-			packageProductDependencies = (
-				2E589C8926BC70D90022E69A /* KeychainAccess */,
-			);
 			productName = TwitchAPIWrapper;
 			productReference = 45092ABAFC99F0AC089A2134D0AF67CC /* TwitchAPIWrapper.framework */;
 			productType = "com.apple.product-type.framework";
@@ -835,9 +834,6 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			packageReferences = (
-				2E589C8826BC70D90022E69A /* XCRemoteSwiftPackageReference "KeychainAccess" */,
-			);
 			productRefGroup = ED433B07351AA72310CD7F9AACC7FB93 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1077,11 +1073,7 @@
 				INFOPLIST_FILE = "Target Support Files/KeychainAccess/KeychainAccess-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KeychainAccess/KeychainAccess.modulemap";
 				PRODUCT_MODULE_NAME = KeychainAccess;
 				PRODUCT_NAME = KeychainAccess;
@@ -1096,9 +1088,9 @@
 			};
 			name = Release;
 		};
-		0F1529E154B109A8C82A8AC85017E2A7 /* Release */ = {
+		0858006DCFB1B79B9886E5787A425015 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87EC8F857549CD974DEF5936CBD3C605 /* Pods-TwitchAPIWrapper_Example.release.xcconfig */;
+			baseConfigurationReference = 7274138EE3570D15390F6DD48D119082 /* Pods-TwitchAPIWrapper_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
@@ -1111,16 +1103,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Example/Pods-TwitchAPIWrapper_Example-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Example/Pods-TwitchAPIWrapper_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1134,6 +1122,38 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		0C35C8B7032E5639679A786A229CD07D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57F4CCB7A872F138B87AFD39F28EB1C1 /* TwitchAPIWrapper.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper.modulemap";
+				PRODUCT_MODULE_NAME = TwitchAPIWrapper;
+				PRODUCT_NAME = TwitchAPIWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		19E2CC06AAD6D97EDF2F49E9D202D30B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -1152,11 +1172,7 @@
 				INFOPLIST_FILE = "Target Support Files/KeychainAccess/KeychainAccess-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/KeychainAccess/KeychainAccess.modulemap";
 				PRODUCT_MODULE_NAME = KeychainAccess;
 				PRODUCT_NAME = KeychainAccess;
@@ -1170,7 +1186,7 @@
 			};
 			name = Debug;
 		};
-		2AC25FA3F9E5D4871F2EB7EB635BE26E /* Debug */ = {
+		1CE29F98D539B583F14A387346F2528D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 39482C17CF21BBC9696EC464C0D2FE9C /* Pods-TwitchAPIWrapper_Example.debug.xcconfig */;
 			buildSettings = {
@@ -1187,12 +1203,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Example/Pods-TwitchAPIWrapper_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Example/Pods-TwitchAPIWrapper_Example.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1208,46 +1220,7 @@
 			};
 			name = Debug;
 		};
-		446C0178539DD54FEB942A08C582582C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7274138EE3570D15390F6DD48D119082 /* Pods-TwitchAPIWrapper_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		4AAFCCAA6C7229F90C19B0D70841E51C /* Debug */ = {
+		39864A392BA342901791A6B4D4226076 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0FA8004859A8BF965A8909B1A690CB87 /* Pods-TwitchAPIWrapper_Tests.debug.xcconfig */;
 			buildSettings = {
@@ -1264,12 +1237,8 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Tests/Pods-TwitchAPIWrapper_Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -1285,7 +1254,40 @@
 			};
 			name = Debug;
 		};
-		4BC7450F9457737EE3E637BA155B56F7 /* Debug */ = {
+		9B56EA620461CE8CA9EAC19A098BA292 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B70579C03FE65AA7F49BE2A135A68A58 /* TwitchAPIWrapper.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper.modulemap";
+				PRODUCT_MODULE_NAME = TwitchAPIWrapper;
+				PRODUCT_NAME = TwitchAPIWrapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1338,7 +1340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1351,80 +1353,7 @@
 			};
 			name = Debug;
 		};
-		4F8B4E988082C95CCEE38875FF0E06FB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 57F4CCB7A872F138B87AFD39F28EB1C1 /* TwitchAPIWrapper.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper.modulemap";
-				PRODUCT_MODULE_NAME = TwitchAPIWrapper;
-				PRODUCT_NAME = TwitchAPIWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		5E785E0D58B56EB4F2270763EE4D411F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B70579C03FE65AA7F49BE2A135A68A58 /* TwitchAPIWrapper.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/TwitchAPIWrapper/TwitchAPIWrapper.modulemap";
-				PRODUCT_MODULE_NAME = TwitchAPIWrapper;
-				PRODUCT_NAME = TwitchAPIWrapper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */ = {
+		C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1474,7 +1403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1486,14 +1415,49 @@
 			};
 			name = Release;
 		};
+		EF1DB4B9900BB8297D5453E0F2818551 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87EC8F857549CD974DEF5936CBD3C605 /* Pods-TwitchAPIWrapper_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Example/Pods-TwitchAPIWrapper_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TwitchAPIWrapper_Example/Pods-TwitchAPIWrapper_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4BC7450F9457737EE3E637BA155B56F7 /* Debug */,
-				8B5A46FF8D3C1289CDEE3BAFACABCD2A /* Release */,
+				BC01E0B73776AF6B58DC318A9BE988D7 /* Debug */,
+				C605C363CC9F26F9FF97DBB1D5C6E25C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1510,8 +1474,8 @@
 		5AA989FEA90A3897DBF2DAC111F49E44 /* Build configuration list for PBXNativeTarget "Pods-TwitchAPIWrapper_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2AC25FA3F9E5D4871F2EB7EB635BE26E /* Debug */,
-				0F1529E154B109A8C82A8AC85017E2A7 /* Release */,
+				1CE29F98D539B583F14A387346F2528D /* Debug */,
+				EF1DB4B9900BB8297D5453E0F2818551 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1519,8 +1483,8 @@
 		A891190F598F2580CE49C0E4E103BFD9 /* Build configuration list for PBXNativeTarget "TwitchAPIWrapper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4F8B4E988082C95CCEE38875FF0E06FB /* Debug */,
-				5E785E0D58B56EB4F2270763EE4D411F /* Release */,
+				0C35C8B7032E5639679A786A229CD07D /* Debug */,
+				9B56EA620461CE8CA9EAC19A098BA292 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1528,32 +1492,13 @@
 		E9EF73A2F72823F640DC98FF14B85455 /* Build configuration list for PBXNativeTarget "Pods-TwitchAPIWrapper_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				4AAFCCAA6C7229F90C19B0D70841E51C /* Debug */,
-				446C0178539DD54FEB942A08C582582C /* Release */,
+				39864A392BA342901791A6B4D4226076 /* Debug */,
+				0858006DCFB1B79B9886E5787A425015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2E589C8826BC70D90022E69A /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2E589C8926BC70D90022E69A /* KeychainAccess */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2E589C8826BC70D90022E69A /* XCRemoteSwiftPackageReference "KeychainAccess" */;
-			productName = KeychainAccess;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 }
