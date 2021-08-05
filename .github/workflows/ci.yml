@@ -28,13 +28,13 @@ env:
   EXAMPLE_PROJECT: Example/TwitchAPIWrapper.xcworkspace
   EXAMPLE_SCHEME: TwitchAPIWrapper-Example
 
-  IOS_DEST: "OS=14.0,name=iPhone 12"
+  IOS_DEST: "platform=iOS Simulator,name=iPhone 12,OS=14.4"
   IOS_SDK: iphonesimulator14.4
 
 jobs:
   env-details:
     name: Environment details
-    runs-on: macOS-latest
+    runs-on: macOS-11
     steps:
       - name: xcode version
         run: xcodebuild -version -sdk
@@ -45,7 +45,7 @@ jobs:
           xcrun simctl list
   test-example:
     name: Example Project Test
-    runs-on: macOS-latest
+    runs-on: macOS-11
     steps:
       - name: git checkout
         uses: actions/checkout@v2
