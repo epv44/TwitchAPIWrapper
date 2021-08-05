@@ -12,14 +12,36 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Requirements
 
 ## Installation
-
+### CocoaPods
 TwitchAPIWrapper is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'TwitchAPIWrapper'
 ```
-
+###Swift Package Manager
+Add `TwitchAPIWrapper` as a dependency, or [add via xcode](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app)
+```
+dependencies: [
+    .package(url: "https://github.com/epv44/TwitchAPIWrapper.git", from: "1.0.0")
+]
+```
+## Documentation
+## How To User
+See the available API calls for more details on what is supported. In general, make a request in the form of:
+```
+// Different requests have different params, everything mirrors the server requests
+let userRequest = UserRequest(id: nil, login: ["evennaro1"])
+  TwitchService().gen(forRequest: userRequest) { (result: Result<UserResponse>) in
+    switch result {
+    case .success(let r):
+    print(r.users[0])
+    case .failure(let error):
+        print(error)
+    }
+}
+```
+See the example project for more details
 ## Available API Calls
 
 | Twitch API Method | Swift Request Object | Swift Result Object | Supported? |
@@ -71,9 +93,9 @@ pod 'TwitchAPIWrapper'
 | Replace Stream Tags | ReplaceStreamTagRequest | EmptyResponse | ✅ |
 | Get Channel Teams | ChannelTeamsRequest | ChannelTeamResponse | ✅ |
 | Get Teams | TeamRequest | TeamResponse  | ✅ |
-| Get Users | UserRequest  | ✅ |
-| Update User | UserUpdateRequest | ✅ |
-| Get User Follows | UserFollowRequest  | ✅ |
+| Get Users | UserRequest | UserResponse | ✅ |
+| Update User | UserUpdateRequest | UserResponse | ✅ |
+| Get User Follows | UserFollowRequest | UserFollowResponse | ✅ |
 | Create User Follows | ModifyUserFollowRequest | EmptyResponse | ✅ |
 | Delete User Follows | ModifyUserFollowRequest | EmptyResponse | ✅ |
 | Get User Block List | UserBlockListRequest | UserBlocklistResponse | ✅ |
