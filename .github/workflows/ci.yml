@@ -54,7 +54,7 @@ jobs:
         run: |
           set -o pipefail
           xcodebuild clean test \
-              -project "$EXAMPLE_PROJECT" \
+              -workspace "$EXAMPLE_PROJECT" \
               -scheme "$EXAMPLE_SCHEME" \
               -sdk "$IOS_SDK" \
               -destination "$IOS_DEST" \
