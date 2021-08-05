@@ -9,6 +9,17 @@ on:
       [master, refactor]
 
 jobs:
+  env-details:
+    name: Environment details
+    runs-on: macOS-latest
+    steps:
+      - name: xcode version
+        run: xcodebuild -version -sdk
+
+      - name: list simulators
+        run: |
+          xcrun simctl delete unavailable
+          xcrun simctl list
   build:
     runs-on: macOS-latest
     steps:
