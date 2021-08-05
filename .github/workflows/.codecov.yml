@@ -28,7 +28,7 @@ jobs:
       - name: Build and Test
         run:  |
           set -o pipefail
-          xcodebuild clean test \
+          xcodebuild test \
             -workspace Example/TwitchAPIWrapper.xcworkspace \
             -scheme TwitchAPIWrapper-Example \
             -sdk iphonesimulator14.4 \
