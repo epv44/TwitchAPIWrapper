@@ -29,6 +29,7 @@ env:
   EXAMPLE_SCHEME: TwitchAPIWrapper-Example
 
   IOS_DEST: "OS=15.0,name=iPhone 12"
+  IOS_SDK: iphonesimulator15.0
 
 jobs:
   env-details:
