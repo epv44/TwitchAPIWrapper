@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '14.0'
   s.swift_version = '5.0'
-  s.source_files = 'Lib/**/*'
+  s.source_files = 'Sources/TwitchAPIWrapper/**/*'
   
 #  s.test_spec 'Tests' do |test_spec|
 #      test_spec.source_files = 'Tests/**/*'
