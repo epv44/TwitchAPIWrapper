@@ -6,7 +6,7 @@ name: SwiftPM Integration
 on:
   push:
     branches:
-      - main
+      - master
     paths:
       - '.github/workflows/spm.yml'
       - 'Package*'
@@ -14,7 +14,7 @@ on:
       - 'Tests/**/*.*'
   pull_request:
     branches:
-      - main
+      - master
     paths:
       - '.github/workflows/spm.yml'
       - 'Package*'
