@@ -28,6 +28,8 @@ env:
   EXAMPLE_PROJECT: Example/TwitchAPIWrapper.xcworkspace
   EXAMPLE_SCHEME: TwitchAPIWrapper-Example
 
+  IOS_DEST: "OS=15.0,name=iPhone 12"
+
 jobs:
   env-details:
     name: Environment details
