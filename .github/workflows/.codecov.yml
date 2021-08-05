@@ -1,4 +1,4 @@
-name: TwitchAPIWrapper Codecov
+name: Codecov
 
 on:
   push:
