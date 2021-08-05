@@ -16,7 +16,7 @@
     "tag": "1.0.0"
   },
   "platforms": {
-    "ios": "14.5"
+    "ios": "14.4"
   },
   "swift_versions": "5.0",
   "source_files": "Sources/TwitchAPIWrapper/**/*",

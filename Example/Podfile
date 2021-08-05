@@ -1,6 +1,6 @@
 use_frameworks!
 target 'TwitchAPIWrapper_Example' do
-  platform :ios, '14.5'
+  platform :ios, '14.4'
   pod 'TwitchAPIWrapper', :path => '../'
 
   target 'TwitchAPIWrapper_Tests' do
