@@ -19,7 +19,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'TwitchAPIWrapper'
 ```
-###Swift Package Manager
+### Swift Package Manager
 Add `TwitchAPIWrapper` as a dependency, or [add via xcode](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app)
 ```
 dependencies: [
@@ -27,6 +27,7 @@ dependencies: [
 ]
 ```
 ## Documentation
+Read the [docs](https://epv44.github.io/docs/TwitchAPIWrapper/index.html) generated with Jazzy.
 ## How To User
 See the available API calls for more details on what is supported. In general, make a request in the form of:
 ```
