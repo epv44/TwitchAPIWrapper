@@ -1,0 +1,36 @@
+# GitHub Actions Virtual Environments
+# https://github.com/actions/virtual-environments/
+
+name: SwiftPM Integration
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/spm.yml'
+      - 'Package*'
+      - 'Sources/**/*.*'
+      - 'Tests/**/*.*'
+  pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/spm.yml'
+      - 'Package*'
+      - 'Sources/**/*.*'
+      - 'Tests/**/*.*'
+
+jobs:
+  main:
+    name: SwiftPM Build
+    runs-on: macOS-latest
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v2
+
+      - name: xcode version
+        run: xcodebuild -version -sdk
+
+      - name: swift build
+        run: swift build
