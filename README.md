@@ -31,6 +31,7 @@ dependencies: [
 ## Documentation
 Read the [docs](https://epv44.github.io/docs/TwitchAPIWrapper/index.html) generated with Jazzy.
 ## How To User
+### Making A Request
 See the available API calls for more details on what is supported. In general, make a request in the form of:
 ```
 // Different requests have different params, everything mirrors the server requests
@@ -43,6 +44,26 @@ let userRequest = UserRequest(id: nil, login: ["evennaro1"])
         print(error)
     }
 }
+```
+### Handling Authentication/Authorization
+This project has a Authentication module that handles the bearer oauth flow for the API. You can choose to utilize it or manage tokens yourself and manually add them.
+```
+// The authorization manager login call will kick off the flow. Add your secrets and scopes however you wish.
+TwitchAuthorizationManager.sharedInstance.clientID = configuration["clientID"] as? String
+TwitchAuthorizationManager.sharedInstance.redirectURI = configuration["redirectURI"] as? String
+TwitchAuthorizationManager.sharedInstance.scopes = configuration["scopes"] as? String
+TwitchAuthorizationManager.sharedInstance.clientSecret = configuration["clientSecret"] as? String
+TwitchAuthorizationManager.sharedInstance.contextProvider = self
+if !TwitchAuthorizationManager.sharedInstance.hasOAuthToken() {
+    do {
+        try TwitchAuthorizationManager.sharedInstance.login()
+    } catch {
+    }
+}
+```
+You can manually add credentials to the credentials object
+```
+TwitchAuthorizationManager.sharedInstance.credentials = Credentials(...)
 ```
 See the example project for more details
 ## Available API Calls
