@@ -1,6 +1,6 @@
 PODS:
   - KeychainAccess (4.2.2)
-  - TwitchAPIWrapper (0.1.0):
+  - TwitchAPIWrapper (1.0.0):
     - KeychainAccess (~> 4.2)
 
 DEPENDENCIES:
@@ -16,8 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   KeychainAccess: c0c4f7f38f6fc7bbe58f5702e25f7bd2f65abf51
-  TwitchAPIWrapper: 6d716222d7789e184d3bbbaf2677d7a9688dac28
+  TwitchAPIWrapper: 7696261f756310e64a1c730ba8d7654a0ffbeadc
 
-PODFILE CHECKSUM: e019799dc139c9fe3ddfa30fe864077c564076b1
+PODFILE CHECKSUM: 2065fd6e3822cc193f6167776887434e8f0e717a
 
-COCOAPODS: 1.10.1
+COCOAPODS: 1.10.2
