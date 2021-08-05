@@ -10,7 +10,9 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
-
+* Xcode 12.5+
+* Swift 5+
+* iOS 11.0+
 ## Installation
 ### CocoaPods
 TwitchAPIWrapper is available through [CocoaPods](https://cocoapods.org). To install
